@@ -11,8 +11,7 @@ const cardData = [
 
       buttonName: "Jindal Strainless HR JT N1 Finish Sheets",
       delivery: "Delivery in 2-5 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/7uZEEnLRXY8tVuhS4YwegD/c1cef233b56e8c7051231398539acfeb/ezgif.com-gif-maker__48_.webp?fit=fill&w=280&h=153&fm=webp",
-    },
+      image: "ezgif.com-gif-maker__32_.webp",    },
     {
       title: "TATA Steel Hot Rolled Sheets",
       brand: "Brand: TATA Steel",
@@ -20,8 +19,7 @@ const cardData = [
       width: "600-1500mm",
       buttonName: "Order Now",
       delivery: "Delivery in 3-7 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/7uZEEnLRXY8tVuhS4YwegD/c1cef233b56e8c7051231398539acfeb/ezgif.com-gif-maker__48_.webp?fit=fill&w=280&h=153&fm=webp",
-    },
+      image: "ezgif.com-gif-maker__32_.webp",    },
     // {
     //   title: "SAIL Steel Plates",
     //   brand: "Brand: SAIL",

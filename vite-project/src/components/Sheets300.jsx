@@ -11,8 +11,7 @@ const cardData = [
       width: "1250-1500mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/7uZEEnLRXY8tVuhS4YwegD/c1cef233b56e8c7051231398539acfeb/ezgif.com-gif-maker__48_.webp?fit=fill&w=280&h=153&fm=webp",
-    length:"2500-6000mm"
+      image: "ezgif.com-gif-maker__32_.webp",    length:"2500-6000mm"
     },
     {
       title: "Jindal Stainless Steel HRAP 310S N1 Finish Sheets",
@@ -21,8 +20,8 @@ const cardData = [
       width: "1250-1500mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 3-5 days",
-      image:"https://images.ctfassets.net/o0otttl8ele8/7uZEEnLRXY8tVuhS4YwegD/c1cef233b56e8c7051231398539acfeb/ezgif.com-gif-maker__48_.webp?fit=fill&w=280&h=153&fm=webp",
-      length:"2500-3000mm"
+      image: "ezgif.com-gif-maker__32_.webp",  
+          length:"2500-3000mm"
     },
     // {
     //   title: "SAIL Steel Cold Plates",

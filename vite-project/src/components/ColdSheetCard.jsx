@@ -11,7 +11,7 @@ const cardData = [
       width: "900-2000mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/4ubXVVcmsXR99QDz8Cy5Ug/9a77a55c17d477439f21144aa91fbde1/ezgif.com-gif-maker__32_.webp?fit=fill&w=280&h=153&fm=webp",
+      image: "ezgif.com-gif-maker__32_.webp",
     },
     {
       title: "TATA Steel Cold Rolled Sheets",
@@ -20,8 +20,7 @@ const cardData = [
       width: "600-1500mm",
       buttonName: "Order Now",
       delivery: "Delivery in 3-7 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/4ubXVVcmsXR99QDz8Cy5Ug/9a77a55c17d477439f21144aa91fbde1/ezgif.com-gif-maker__32_.webp?fit=fill&w=280&h=153&fm=webp",
-    },
+      image: "ezgif.com-gif-maker__32_.webp",    },
     // {
     //   title: "SAIL Steel Cold Plates",
     //   brand: "Brand: SAIL",

@@ -10,7 +10,7 @@ const cardData = [
       width: "900-2000mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
+      image: "cr-steel-advantages-min.webp",
     },
     {
       title: "TATA Steel Hot Rolled Sheets",
@@ -19,7 +19,7 @@ const cardData = [
       width: "600-1500mm",
       buttonName: "Order Now",
       delivery: "Delivery in 3-7 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
+      image: "cr-steel-advantages-min.webp",
     },
     {
       title: "SAIL Steel Plates",

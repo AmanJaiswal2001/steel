@@ -20,7 +20,7 @@ const Video = () => {
     </div>
     <div className=''>
     <img className='w-full h-full'
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+      src="public\prefab_buildings__2_.jpg" 
      />
 </div>
   </div>

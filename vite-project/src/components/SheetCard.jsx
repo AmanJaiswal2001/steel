@@ -11,7 +11,7 @@ const cardData = [
       width: "900-2000mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
+      image: "ezgif.com-gif-maker__48_.webp",
     length:"500-12000mm"
     },
     {
@@ -21,7 +21,7 @@ const cardData = [
       width: "600-1500mm",
       buttonName: "Order Now",
       delivery: "Delivery in 3-7 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/MvfSYHy6ytLlMgXw30NOY/3743c4446ff719bbf68e3d2e7b03ce2a/hrsheet.jpg?w=1000&h=1000&fm=webp",
+      image: "ezgif.com-gif-maker__48_.webp",
       length:"500-12000mm"
     },
     // {
