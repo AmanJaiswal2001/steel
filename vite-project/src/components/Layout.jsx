@@ -2,6 +2,7 @@ import React from 'react'
 import Section from './Section'
 import Strainless from './Strainless'
 import Blog from './Blog'
+import Video from './Video'
 
 const Layout = () => {
   return (
@@ -12,6 +13,7 @@ const Layout = () => {
     </div>
     <Strainless/>
     <Blog/>
+    <Video/>
     </>
   )
 }

@@ -11,7 +11,7 @@ const CardSheet= (
         alt="Shoes" />
     </figure>
     <div className="card-body m-0 p-0 ">
-      <h2 className="card-title px-2">{title}</h2>
+      <h2 className="card-title px-2 ">{title}</h2>
       <h5 className='px-2'>{brand}</h5>
       <p className='px-2'><span className='font-semibold'>Thickness</span>{" "}{thickness}</p>
       <p className='px-2'><span className='font-semibold'>Width</span>{" "}{width}</p>

@@ -2,16 +2,17 @@ import React from 'react'
 import DroupdownMenu, { DropdownMenu1, DropdownMenu2 } from './DroupdownMenu'
 import Crousel from './Crousel'
 import Section from './Section'
+import image from "../../public/Group 599.png"
 
 const Nav = () => {
   return (
-    <div className='w-full  overflow-hidden'>
+    <div className='w-full  overflow-hidden pt-5'>
     <div className='flex justify-between  mx-20'>
     <div className='flex items-center gap-10 w-2/3 '> 
     <div>
            <img 
-           className='w-32 h-28'
-           src="https://www.shutterstock.com/image-vector/illustration-vector-graphic-logo-steel-260nw-1711160476.jpg" />
+           className='w-36  '
+           src = {image} />
         </div>
         <div className='flex w-full'>
             {/* search  */}

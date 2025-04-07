@@ -1,6 +1,7 @@
 import React from 'react'
 import ArticleCard from './ArticleCard'
 import { Link } from 'react-router-dom'
+import Button from './Button'
 
 const Blog = () => {
   return (
@@ -36,6 +37,13 @@ const Blog = () => {
     />
    </Link>
    </div>
+<div className='mt-5 m-auto flex justify-center'>
+   <Button
+ buttonName="View all"
+ rounded="rounded-lg"
+  text="text-[#2241a6]"  bgColor="bg-white hover:bg-[#cae0fe]" border="border-2 border-[#2241a6]"
+  width="w-40" />
+</div>
   
    </div>
   )
