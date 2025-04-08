@@ -7,6 +7,7 @@ import Nav from './components/Nav'
 
 import Layout from './components/Layout'
 import CardContainer from './components/CardContainer';
+import Footer from "./components/Footer";
 
 
 
@@ -43,7 +44,7 @@ function App() {
   <Layout/>
   
  
-
+<Footer/>
     </Router>
   )
 }

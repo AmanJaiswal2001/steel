@@ -5,7 +5,7 @@ import Button from './Button'
 
 const Blog = () => {
   return (
-    <div className='h-screen w-full  overflow-x-hidden '>
+    <div className='h-screen w-full   '>
     <h1 className='font-bold text-4xl px-20 py-5 '>Browse articles & blogs</h1>
    
    

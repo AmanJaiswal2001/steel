@@ -3,6 +3,7 @@ import Section from './Section'
 import Strainless from './Strainless'
 import Blog from './Blog'
 import Video from './Video'
+import Workflow from './Workflow'
 
 const Layout = () => {
   return (
@@ -14,6 +15,7 @@ const Layout = () => {
     <Strainless/>
     <Blog/>
     <Video/>
+    <Workflow/>
     </>
   )
 }

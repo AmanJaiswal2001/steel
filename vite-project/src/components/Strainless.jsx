@@ -16,7 +16,7 @@ const Strainless= () => {
 
    
     return (
-    <div className='h-screen w-full  overflow-x-hidden '>
+    <div className='h-screen w-full   '>
     <h1 className='font-bold text-4xl px-20 '>Stainless Steel</h1>
     {/* sidebar */}
 

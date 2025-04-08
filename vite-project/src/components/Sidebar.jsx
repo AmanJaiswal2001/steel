@@ -27,10 +27,10 @@ const Sidebar = ({activeType,setActiveType,items}) => {
             key={idx}
             to={item.link || "#"}
             onClick={() => setActiveType(item.type)}
-            className={`p-4 text-lg text-left m-auto rounded-lg w-[80%] ${
+            className={`p-4 text-[1rem] text-left m-auto rounded-lg w-[80%] ${
               activeType === item.type
                 ? 'bg-[#e6f0ff] text-black font-semibold'
-                : 'text-blue-400'
+                : 'text-[#2241a6]'
             }`}
           >
             {item.label}
