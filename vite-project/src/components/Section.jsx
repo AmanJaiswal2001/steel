@@ -15,7 +15,7 @@ const Section= () => {
 
    
     return (
-    <div className='h-screen w-full  overflow-x-hidden '>
+    <div className='h-screen w-full   '>
     <h1 className='font-bold text-[1.5rem] text-[#262626] font-manrope px-20 '>Mild Steel</h1>
     {/* sidebar */}
 

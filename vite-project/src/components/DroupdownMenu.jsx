@@ -231,7 +231,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
   export const DropdownMenu2=({buttonName})=>{
     const [open, setOpen] = useState(false);
    return(
-   <div className="relative inline-block  h-60 "
+   <div className="relative inline-block z-20  h-60 "
     >
     
           
@@ -242,11 +242,11 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
           {/* Main Dropdown Menu */}
           {open && (
     
-    <div className="bg-red-400  "
+    <div className="bg-red-400 z-50  "
     
               
     >
-    <ul className="absolute -left-20 h-64  flex flex-col gap-5 p-5 text-sm w-64 bg-white border rounded shadow-lg">
+    <ul className="absolute -left-20 h-64 z-50 flex flex-col gap-5 p-5 text-sm w-64 bg-white border rounded shadow-lg">
       <li>
       <div className="flex gap-5">
       <div>

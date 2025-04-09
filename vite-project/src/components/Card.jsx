@@ -4,13 +4,13 @@ const Card = (
     {title,brand,thickness,width,buttonName,delivery,image}
 ) => {
   return (
-    <div className="card hover:shadow-2xl hover:bg-transparent hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 full  shadow-sm ">
+    <div className=" card hover:shadow-2xl -z-10 hover:bg-transparent hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 full  shadow-sm ">
     <figure>
       <img className='w-full object-fit    '
         src={image}
         alt="Shoes" />
     </figure>
-    <div className="card-body m-0 p-0 ">
+    <div className="card-body -z-10 m-0 p-0 ">
       <h2 className=" px-2 mt-2 font-manrope font-medium h-12  text-[1rem]">{title}</h2>
       <h5 className='px-2 font-manrope font-medium   text-[1rem]'>{brand}</h5>
       <p className='px-2 font-manrope font-medium   text-[1rem]'><span className='font-semibold'>Thickness</span> {thickness}</p>

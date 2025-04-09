@@ -4,7 +4,7 @@ const CardSheet= (
     {title,brand,thickness,width,buttonName,delivery,image,length}
 ) => {
   return (
-    <div className="card hover:shadow-2xl hover:bg-transparent hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 h-96  shadow-sm ">
+    <div className="card hover:shadow-2xl hover:bg-transparent -z-10 hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 h-96  shadow-sm ">
     <figure className='w-full object-fit '>
       <img className='w-full object-fit    '
         src={image}

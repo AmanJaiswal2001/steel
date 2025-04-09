@@ -4,11 +4,16 @@ import Strainless from './Strainless'
 import Blog from './Blog'
 import Video from './Video'
 import Workflow from './Workflow'
+import Crousel from './Crousel'
 
 const Layout = () => {
   return (
   <>
-  <div className='mt-72'>
+   <div className='absolute top-50  '>
+        <Crousel/>
+
+        </div>
+  <div className='mt-72 '>
         <Section/>
 
     </div>

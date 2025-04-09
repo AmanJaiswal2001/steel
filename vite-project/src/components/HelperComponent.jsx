@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaSquareWhatsapp } from "react-icons/fa6";
 const HelperComponent = ({bgColor, textColor,width,height,description}) => {
   return (
@@ -24,3 +24,171 @@ export default HelperComponent
             </div>
   )
 }
+
+// filter dropdown
+export const FilterDropdown=({title,options=[]})=>{
+ 
+    const [open, setOpen] = useState(false);
+    return(
+    <div className="relative inline-block w-full h-1/2 border border-gray-300  rounded-md    "
+     >
+     
+           
+     <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex justify-between items-center cursor-pointer px-6 py-2 bg-[#f5f7fc] "
+      >
+        <span className="text-lg font-medium">{title}</span>
+        <svg
+          className={`w-5 h-5 transform transition-transform duration-300 ${
+            open ? "rotate-180" : ""
+          }`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && (
+        <div className="px-6 py-2 flex flex-col bg-white border-t border-gray-200 text-gray-700">
+       
+       {options.map((option,index)=>(
+        <label key={index} className='flex items-center space-x-2 m-1'>
+          <input type="checkbox"/>
+          <span>{option}</span>
+        </label>
+       ))}
+       
+       
+     
+     
+       
+        </div>
+      )}
+    </div>
+       
+    )
+// </div>
+  
+};
+
+
+// thickness //width//length//
+
+
+
+export const CommonFilter = ({
+  title, minLabel,maxLabel,minOptions,maxOptions
+}) => {
+  const [isMinOpen, setIsMinOpen] = useState(false);
+  const [isMaxOpen, setIsMaxOpen] = useState(false);
+  const [selectedMin, setSelectedMin] = useState(null);
+  const [selectedMax, setSelectedMax] = useState(null);
+
+  // const minOptions = ["12.2", "11.5", "12.5"];
+  // const maxOptions = ["15.2", "14.0", "13.8"];
+
+  return (
+    <div className="relative inline-block w-full border border-gray-300  rounded-md bg-[#f5f7fc] p-4">
+      <p className="text-[1rem] font-semibold mb-2">{title}</p>
+
+      <div className="flex gap-2 relative ">
+        {/* Min Button */}
+        <div className="relative w-1/2">
+          <button
+            onClick={() => {
+              setIsMinOpen(!isMinOpen);
+              setIsMaxOpen(false); // close max if open
+            }}
+            className="w-full flex justify-between rounded-lg items-center hover:border  cursor-pointer px-4 py-2 bg-white border border-gray-300"
+          >
+            <span className="text-base " >{selectedMin || minLabel}</span>
+            <svg
+              className={`w-5 h-5 transform transition-transform duration-300 ${
+                isMinOpen ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {isMinOpen && (
+            <div className="absolute left-0 top-full mt-0 w-full bg-white border border-gray-300 shadow z-10">
+              {minOptions.map((option, index) => (
+                <div
+                 onClick={() => {
+                    // setSelectedMin(option);
+                    setIsMinOpen(false);
+                  }}
+                 key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  {option}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+<p className='py-2'>To</p>
+        {/* Max Button */}
+        <div className="relative w-1/2">
+          <button
+            onClick={() => {
+              setIsMaxOpen(!isMaxOpen);
+              setIsMinOpen(false); // close min if open
+            }}
+            className="w-full flex justify-between rounded-lg items-center cursor-pointer px-4 py-2 bg-white border border-gray-300"
+          >
+            <span className="text-base">{selectedMax ||maxLabel}</span>
+            <svg
+              className={`w-5 h-5 transform transition-transform duration-300 ${
+                isMaxOpen ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {isMaxOpen && (
+            <div className="absolute left-0 top-full mt-1 w-full bg-white border border-gray-200 shadow z-20">
+              {maxOptions.map((option, index) => (
+                <div
+                  onClick={() => {
+                    // setSelectedMax(option);
+                    setIsMaxOpen(false);
+            }}
+                 key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  {option}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+export const ThicknessGrid=({values})=>{
+  return(
+    <div className="grid grid-cols-12 gap-2 w-full max-w-5xl">
+      {values.map((value, index) => (
+        <button
+          key={index}
+          onClick={() => onSelect(value)}
+          className="text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-full"
+        >
+          {value}
+        </button>
+      ))}
+    </div>  );
+};

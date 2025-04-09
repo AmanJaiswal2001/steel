@@ -80,10 +80,7 @@ className='text-xl  '
     <DropdownMenu2 buttonName="Connect with us"/>
     </div>
     
-        <div className='absolute top-50  '>
-        <Crousel/>
-
-        </div>
+       
 
 
       
