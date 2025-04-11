@@ -30,19 +30,23 @@ export const FilterDropdown=({title,options=[]})=>{
  
     const [open, setOpen] = useState(false);
     return(
-    <div className="relative inline-block w-full h-1/2 border border-gray-300  rounded-md    "
+    <div className="relative  inline-block w-full  border border-gray-300  rounded-md    "
+    onClick={() => {setOpen(!open)}}
      >
      
            
      <button
-        onClick={() => setOpen(!open)}
+       
+          // console.log('Dropdown is now:', !open ? 'Opening' : 'Closing');
+        // }}
         className="w-full flex justify-between items-center cursor-pointer px-6 py-2 bg-[#f5f7fc] "
+     
       >
+      
         <span className="text-lg font-medium">{title}</span>
         <svg
-          className={`w-5 h-5 transform transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
+        onClick={()=>setOpen(!open)}
+          className={`w-5 h-5 transform transition-transform duration-300 ${open ? "rotate-180" : ""}`}
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -69,7 +73,7 @@ export const FilterDropdown=({title,options=[]})=>{
       )}
     </div>
        
-    )
+    );
 // </div>
   
 };
@@ -178,17 +182,70 @@ export const CommonFilter = ({
 };
 
 
-export const ThicknessGrid=({values})=>{
+export const ThicknessGrid=({values,title,onSelect,selected})=>{
   return(
+    <>
+    <div className='flex gap-4 items-center'>
+    <p className='font-manrope text-[1rem] font-semibold'>{title} (mm)</p>
+    {!selected && (
+  <span className="text-[#e87205] font-manrope px-2 py-1   text-[1rem]">
+    Select <b>Thickness (mm)</b> to view available width
+  </span>
+)}
+    </div>
+   
     <div className="grid grid-cols-12 gap-2 w-full max-w-5xl">
       {values.map((value, index) => (
         <button
           key={index}
           onClick={() => onSelect(value)}
-          className="text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-full"
+          className={`text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-full   ${selected === value ? 'bg-blue-100 border-blue-500' : 'border-gray-300'}`}
         >
           {value}
         </button>
       ))}
-    </div>  );
+    </div>
+    </>  );
+};
+
+export const WidthGrid=({values,title,selected,onSelect, disable})=>{
+  return(
+    <>
+    <p className='font-manrope text-[1rem] font-semibold ' >{title} (mm)</p>
+    <div className="grid grid-cols-4 gap-2 w-96 max-w-5xl">
+      {values.map((value, index) => (
+        <button
+          key={index}
+          onClick={() =>!disable&& onSelect(value)}
+          disabled={disable}
+          className={`text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-20  ${disable ? 'bg-gray-100 cursor-not-allowed text-gray-400 border-gray-200' :
+                selected === value ? 'bg-blue-100 border-blue-500' : 'cursor-pointer border-gray-300'} `}
+        >
+          {value}
+        </button>
+      ))}
+    </div>
+    </>  );
+};
+
+
+
+export const LengthGrid=({values,title,selected,onSelect, disable})=>{
+  return(
+    <>
+    <p className=' font-manrope text-[1rem] font-semibold'>{title} (mm)</p>
+    <div className="grid grid-cols-4 gap-2 w-96 max-w-5xl">
+      {values.map((value, index) => (
+        <button
+          key={index}
+          onClick={() => !disable&& onSelect(value)}
+          disabled={disable}
+          className={`text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-20  ${disable ? 'bg-gray-100 cursor-not-allowed text-gray-400 border-gray-200' :
+                selected === value ? 'bg-blue-100 border-blue-500' : 'cursor-pointer border-gray-300'}`}
+        >
+          {value}
+        </button>
+      ))}
+    </div>
+    </>  );
 };

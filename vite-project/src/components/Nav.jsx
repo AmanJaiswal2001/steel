@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
-    <div className='w-full  overflow-hidden pt-5'>
+    <div className='w-full  overflow-hidden  pt-5'>
     <div className='flex justify-between  mx-20'>
     <div className='flex items-center gap-10 w-2/3 '> 
     <div>
@@ -44,9 +44,9 @@ className='text-xl  '
         </div>
     </div>
     <hr className='text-gray-400 mt-5'></hr>
-  <div className='relative flex items-center  justify-between mx-20 z-10'>
+  <div className='relative  flex items-center  justify-between mx-20 '>
    <div className='flex    w-3/4  '>
-    <div className='z-10'>
+    <div className=' z-20'>
     <DroupdownMenu         menuItems={[
           "Hot Rolled",
           "Cold Rolled",
@@ -77,7 +77,10 @@ className='text-xl  '
     </div>
    
   </div>
-    <DropdownMenu2 buttonName="Connect with us"/>
+  <div className='-mt-10'>
+  <DropdownMenu2 buttonName="Connect with us"/>
+  </div>
+   
     </div>
     
        

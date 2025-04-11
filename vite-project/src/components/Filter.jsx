@@ -3,7 +3,7 @@ import { CommonFilter, FilterDropdown } from './HelperComponent'
 
 const Filter = () => {
   return (
-    <div className='w-full h-1/2 flex flex-col gap-4'>
+    <div className='w-full  flex flex-col gap-4'>
     {/* header part */}
     <div className='flex w-full justify-between'>
 <div className=' w-full flex gap-2 items-center '>
@@ -19,14 +19,14 @@ const Filter = () => {
 </div>
 </div>
 {/* filter dropdown */}
-<div className=' w-full flex flex-col gap-4  '>
-<div className='w-full'>
+{/* <div className=' w-full h-full flex flex-col gap-4 relative  '> */}
+{/* <div className='w-full h-full'>
 <FilterDropdown
   title="Brand"
         options={["JSW Steel", "SAIL", "JSPL", "AMNS"]}
      
 />
-</div>
+</div> */}
 <div>
 <FilterDropdown
     title="Grade"
@@ -35,7 +35,7 @@ const Filter = () => {
 />
 </div>
 
-</div>
+
 {/* comon filter */}
 <div className='flex flex-col gap-4 w-full  '>
  <div>

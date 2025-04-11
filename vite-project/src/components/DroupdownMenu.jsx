@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 const  DropdownMenu = ({menuItems=[],buttonName}) => {
   const [open, setOpen] = useState(false);
   const [subMenu, setSubMenu] = useState(false);
@@ -8,7 +9,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
 
   return (
-    <div className="relative inline-block   h-64 "
+    <div className="relative inline-block   h-96 "
 // onMouseEnter={() => setOpen(true)}
 //       onMouseLeave={() => {
 //         setOpen(false);
@@ -25,12 +26,12 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
       {/* Main Dropdown Menu */}
       {open && (
 
-<div className="relative bg-red-400 w-40 "
+<div className="relative bg-red-400 w-40 h-auto "
 
           
 >
 
-        <ul className="absolute left-0 mt-2  bg-white border rounded shadow-lg">
+        <ul className="absolute h-20 left-0 mt-2  bg-white border rounded shadow-lg">
           {menuItems.map((item) => (
             <li className=" hover:bg-gray-100 " key={item}
             
@@ -49,13 +50,17 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
             
 
               {/* Submenu */}
+              {/* <div className="relative"> */}
               {subMenu === "Hot Rolled" && (
-                <ul className="absolute left-40 top-0 mt-2 h-96 w-40 bg-white border rounded shadow-lg">
+                <ul className="absolute left-40 top-0 mt-2 h-56 w-40 bg-white border rounded shadow-lg">
                 
                 {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
                 (
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                ))
+                  <li className=" py-2 hover:bg-gray-100 cursor-pointer">
+                  <Link to="/hotRolled" className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</Link>
+        
+                  </li>
+                  ))
                 }
 
                 
@@ -64,15 +69,20 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                 </ul>
               )}
               {subMenu === "Cold Rolled" && (
-                <ul className="absolute left-40 top-10 mt-2 w-40 bg-white border rounded shadow-lg">
+                <ul className="absolute h- left-40 top-10 mt-2 w-40 bg-white border rounded shadow-lg">
                 {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
                 (
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
+               
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >
+                <Link to="/">{item}</Link>
+                </li>
                 ))
                 }
                
                 </ul>
               )}
+              {/* </div> */}
+              
               {/* {subMenu ===  "Wire Rods" && (
                 <ul className="absolute left-40 top-20 mt-2 w-40 bg-white border rounded shadow-lg">
                 {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
@@ -231,11 +241,10 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
   export const DropdownMenu2=({buttonName})=>{
     const [open, setOpen] = useState(false);
    return(
-   <div className="relative inline-block z-20  h-60 "
-    >
+   <div className="relative   h-80 ">
     
           
-    <button onClick={() => setOpen(!open)} className="px-4  py-[0.45rem] cursor-pointer hover:text-blue-700 rounded flex">
+    <button onClick={() => setOpen(!open)} className="px-4   cursor-pointer hover:text-blue-700 rounded flex">
                 {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
               </button>
     
@@ -246,7 +255,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
     
               
     >
-    <ul className="absolute -left-20 h-64 z-50 flex flex-col gap-5 p-5 text-sm w-64 bg-white border rounded shadow-lg">
+    <ul className="absolute -left-20  z-40 pb-4 flex flex-col gap-5 p-5 text-sm w-64 bg-white border rounded shadow-lg" >
       <li>
       <div className="flex gap-5">
       <div>
