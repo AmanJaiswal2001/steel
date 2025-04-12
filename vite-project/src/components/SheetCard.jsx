@@ -11,17 +11,17 @@ const cardData = [
       width: "900-2000mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "ezgif.com-gif-maker__48_.webp",
+      image: "/hrs.webp",
     length:"500-12000mm"
     },
     {
-      title: "TATA Steel Cold Rolled Sheets",
+      title: "TATA Steel Cold Rolled Sheets 2062:2011 E250A",
       brand: "Brand: TATA Steel",
       thickness: "0.5-3mm",
       width: "600-1500mm",
-      buttonName: "Order Now",
+      buttonName: "Purchase now",
       delivery: "Delivery in 3-7 days",
-      image: "ezgif.com-gif-maker__48_.webp",
+      image: "/hrs1.webp",
       length:"500-12000mm"
     },
     // {

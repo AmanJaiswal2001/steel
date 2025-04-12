@@ -9,11 +9,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
   return (
     <div className="relative group"
-// onMouseEnter={() => setOpen(true)}
-//       onMouseLeave={() => {
-//         setOpen(false);
-//         setSubMenu(null);
-    //   }}
+
    
     onMouseEnter={() => setOpen(true)}
   onMouseLeave={() => {
@@ -24,8 +20,6 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
       
       <button onClick={() => setOpen(!open)} 
-      //  onMouseEnter={() => setOpen(true)} // Open dropdown on hover
-      //   onMouseLeave={() => setOpen(false)} // Close dropdown when hover leaves
       
       className="px-4 w-40 py-[0.45rem] relative  rounded flex cursor-pointer hover:text-blue-700">
         {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
@@ -60,9 +54,9 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
               {/* Submenu */}
               {/* <div className="relative"> */}
-              {subMenu === "Hot Rolled" && (
+              {["Hot Rolled", "Cold Rolled"].includes(item) && subMenu === item &&  (
                 <ul className=" absolute top-0 left-full w-40 bg-white   shadow-lg z-50"
-                 onMouseEnter={() => setSubMenu("Hot Rolled")} // Open submenu on hover
+                 onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
               onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
             
                 >
@@ -76,8 +70,18 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
               // onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
             
                   >
-                  <Link to="/hotRolled" className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</Link>
-        
+                 <Link
+  to={
+    item === "Hot Rolls Sheet"
+      ? "/hotRolled"
+      : item === "Cold Rolled"
+      ? "/coldRolled"
+      : "/"
+  }
+  className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
+>
+  {item}
+</Link>
                   </li>
                   ))
                 }
@@ -86,60 +90,8 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                
                
                 </ul>
-              )}
-              { subMenu === "Cold Rolled" && (
-                <ul className=" absolute top-10 left-full  mt-2 w-40 bg-white  shadow-lg"
-                 onMouseEnter={() => setSubMenu("Cold Rolled")} // Open submenu on hover
-              onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
-            >
-                {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                (
-               
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" 
-                //  onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
-                //         onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
-                    
-                     >
-                <Link to="/">{item}</Link>
-                </li>
-                ))
-                }
-               
-                </ul>
-              )}
-              {/* </div> */}
-              
-              {/* {subMenu ===  "Wire Rods" && (
-                <ul className="absolute left-40 top-20 mt-2 w-40 bg-white border rounded shadow-lg">
-                {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                (
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                ))
-                }
-               
-                </ul>
-              )}
-              {subMenu ===  "Coated" && (
-                <ul className="absolute left-40 top-40 mt-2 w-40 bg-white border rounded shadow-lg">
-                {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                (
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                ))
-                }
-               
-                </ul>
-              )}
-
-              {subMenu ===  "Colour Coated" && (
-                <ul className="absolute left-40 top-0 mt-2 w-40 bg-white border rounded shadow-lg">
-                {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                (
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                ))
-                }
-               
-                </ul>
-              )} */}
+            )}
+         
             </li>
           ))}
           

@@ -4,7 +4,7 @@ const Card = (
     {title,brand,thickness,width,buttonName,delivery,image}
 ) => {
   return (
-    <div className=" card hover:shadow-2xl -z-10 hover:bg-transparent hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 full  shadow-sm ">
+    <div className=" card hover:shadow-2xl hover:bg-transparent  hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 h-96  shadow-sm">
     <figure>
       <img className='w-full object-fit    '
         src={image}

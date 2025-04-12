@@ -1,14 +1,15 @@
 import React from 'react'
 import image from "../../public/Group 599.png"
+import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <div className='flex justify-between  mx-20'>
     <div className='flex items-center gap-10 w-2/3 '> 
-    <div>
+    <Link to="/">
            <img 
            className='w-36  '
            src = {image} />
-        </div>
+        </Link>
         <div className='flex w-full'>
             {/* search  */}
 
