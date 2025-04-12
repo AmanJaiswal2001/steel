@@ -17,8 +17,8 @@ const CardSheet= (
       <p className='px-2 font-manrope font-medium   text-[1rem]'><span className='font-semibold'>Width</span>{" "}{width}</p>
       <p className='px-2 font-manrope font-medium   text-[1rem]'><span className='font-semibold'>Length</span>{" "}{length}</p>
       <div className='bg-blue-100 rounded-b-lg w-full'>
-      <div className="  w-80 m-0 p-0 text-left   ">
-        <button className=" p-2 w-80 m-0  text-left bg-bl-200 font-manrope cursor-pointer font-medium   text-[1rem] ">{buttonName}</button>
+      <div className="  w-52 m-0 p-0 text-left   ">
+        <button className=" p-2 w-full m-0  text-left bg-bl-200 font-manrope cursor-pointer font-medium   text-[1rem] ">{buttonName}</button>
       </div>
       <hr className='text-gray-300 mx-2 px-2'></hr>
       <div className='flex gap-1 px-2 mb-2'>

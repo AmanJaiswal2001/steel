@@ -9,11 +9,11 @@ import Crousel from './Crousel'
 const Layout = () => {
   return (
   <>
-   <div className='absolute top-36'>
+   <div className='absolute pt-5  '>
         <Crousel/>
 
         </div>
-  <div className=' '>
+  <div className=' pt-96 '>
         <Section/>
 
     </div>

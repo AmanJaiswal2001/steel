@@ -49,7 +49,9 @@ function AppLayout() {
   //  <Router>
   <>
   <Nav />
-  <Outlet />
+  <main className=" ">
+        <Outlet />
+      </main>
    
   
 

@@ -30,7 +30,7 @@ export const FilterDropdown=({title,options=[]})=>{
  
     const [open, setOpen] = useState(false);
     return(
-    <div className="relative  inline-block w-full  border border-gray-300  rounded-md    "
+    <div className="relative   w-full  border border-gray-300  rounded-md    "
     onClick={() => {setOpen(!open)}}
      >
      
@@ -106,7 +106,7 @@ export const CommonFilter = ({
               setIsMinOpen(!isMinOpen);
               setIsMaxOpen(false); // close max if open
             }}
-            className="w-full flex justify-between rounded-lg items-center hover:border  cursor-pointer px-4 py-2 bg-white border border-gray-300"
+            className="w-full flex justify-between  rounded-lg items-center hover:border  cursor-pointer px-4 py-2 bg-white border border-gray-300"
           >
             <span className="text-base " >{selectedMin || minLabel}</span>
             <svg

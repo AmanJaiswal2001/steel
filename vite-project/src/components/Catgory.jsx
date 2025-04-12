@@ -4,7 +4,7 @@ import HotRolledCatgory from './HotRolledCatgory'
 
 const Catgory = () => {
   return (
-    <div className='  h-full bg-red-400  flex w-full gap-10 ' >
+    <div className='  h-full mt-10 flex w-full gap-10 ' >
     {/* filter */}
    
     <div className='w-2/5  px-20  '>

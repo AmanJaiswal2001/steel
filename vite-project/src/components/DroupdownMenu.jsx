@@ -4,59 +4,78 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 const  DropdownMenu = ({menuItems=[],buttonName}) => {
   const [open, setOpen] = useState(false);
-  const [subMenu, setSubMenu] = useState(false);
-
+  const [subMenu, setSubMenu] = useState(null);
 
 
   return (
-    <div className="relative inline-block   h-96 "
+    <div className="relative group"
 // onMouseEnter={() => setOpen(true)}
 //       onMouseLeave={() => {
 //         setOpen(false);
 //         setSubMenu(null);
     //   }}
-    >
+   
+    onMouseEnter={() => setOpen(true)}
+  onMouseLeave={() => {
+    setOpen(false);
+    setSubMenu(null);
+  }}  >
       {/* Main Dropdown Button */}
 
       
-      <button onClick={() => setOpen(!open)} className="px-4 w-40 py-[0.45rem] relative  rounded flex cursor-pointer hover:text-blue-700">
+      <button onClick={() => setOpen(!open)} 
+      //  onMouseEnter={() => setOpen(true)} // Open dropdown on hover
+      //   onMouseLeave={() => setOpen(false)} // Close dropdown when hover leaves
+      
+      className="px-4 w-40 py-[0.45rem] relative  rounded flex cursor-pointer hover:text-blue-700">
         {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
       </button>
 
       {/* Main Dropdown Menu */}
-      {open && (
+     
 
-<div className="relative bg-red-400 w-40 h-auto "
+{/* <div className=" left-0 mt-2 w-40 bg-white border rounded shadow-lg z-50" */}
 
           
->
+{open && (
 
-        <ul className="absolute h-20 left-0 mt-2  bg-white border rounded shadow-lg">
+        <ul className=" absolute  left-0 mt-0  bg-white border rounded shadow-lg z-50 ">
           {menuItems.map((item) => (
-            <li className=" hover:bg-gray-100 " key={item}
+            <li className=" hover:bg-gray-100 relative group " key={item}
             
             >
               <button
                 onClick={() => setSubMenu(subMenu === item ? null : item) 
                   
                }
-            //    onMouseEnter={() => setOpen(true)}
-            //    onMouseLeave={() => setOpen(false)}
+               onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
+                onMouseLeave={() => setSubMenu(null)}
                 className="w-40  flex justify-between text-left px-4 py-2 hover:bg-gray-100 cursor-pointer"
               >
               
-               <p>{item}</p>  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
+               <span>{item}</span> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
               </button>
             
 
               {/* Submenu */}
               {/* <div className="relative"> */}
               {subMenu === "Hot Rolled" && (
-                <ul className="absolute left-40 top-0 mt-2 h-56 w-40 bg-white border rounded shadow-lg">
+                <ul className=" absolute top-0 left-full w-40 bg-white   shadow-lg z-50"
+                 onMouseEnter={() => setSubMenu("Hot Rolled")} // Open submenu on hover
+              onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
+            
+                >
                 
                 {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
                 (
-                  <li className=" py-2 hover:bg-gray-100 cursor-pointer">
+                  <li 
+                  className=" py-2 hover:bg-gray-100 cursor-pointer"
+                   key={item}
+              //      onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
+              // onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
+            
+                  >
                   <Link to="/hotRolled" className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</Link>
         
                   </li>
@@ -68,12 +87,19 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                
                 </ul>
               )}
-              {subMenu === "Cold Rolled" && (
-                <ul className="absolute h- left-40 top-10 mt-2 w-40 bg-white border rounded shadow-lg">
+              { subMenu === "Cold Rolled" && (
+                <ul className=" absolute top-10 left-full  mt-2 w-40 bg-white  shadow-lg"
+                 onMouseEnter={() => setSubMenu("Cold Rolled")} // Open submenu on hover
+              onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
+            >
                 {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
                 (
                
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" 
+                //  onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
+                //         onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
+                    
+                     >
                 <Link to="/">{item}</Link>
                 </li>
                 ))
@@ -118,7 +144,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
           ))}
           
         </ul>
-        </div>
+       
       )}
     </div>
   );
@@ -133,7 +159,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
   
   
     return (
-        <div className="relative inline-block  h-60 "
+        <div className="relative inline-block   "
         // onMouseEnter={() => setOpen(true)}
         //       onMouseLeave={() => {
         //         setOpen(false);
@@ -150,7 +176,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
               {/* Main Dropdown Menu */}
               {open && (
         
-        <div className="bg-red-400 ">
+        <nav className="bg-red-400 ">
         
                 <ul className="absolute left-0  w-64 bg-white border rounded shadow-lg">
                   {menuItems.map((item) => (
@@ -232,7 +258,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
                   ))}
                   
                 </ul>
-                </div>
+                </nav>
               )}
             </div>
     );
@@ -241,7 +267,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
   export const DropdownMenu2=({buttonName})=>{
     const [open, setOpen] = useState(false);
    return(
-   <div className="relative   h-80 ">
+   <div className=" relative group   ">
     
           
     <button onClick={() => setOpen(!open)} className="px-4   cursor-pointer hover:text-blue-700 rounded flex">
@@ -251,11 +277,12 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
           {/* Main Dropdown Menu */}
           {open && (
     
-    <div className="bg-red-400 z-50  "
+ 
     
               
+ 
+    <ul className="absolute  z-40 pb-4 flex flex-col gap-5 p-5 text-sm w-64 bg-white border rounded shadow-lg" 
     >
-    <ul className="absolute -left-20  z-40 pb-4 flex flex-col gap-5 p-5 text-sm w-64 bg-white border rounded shadow-lg" >
       <li>
       <div className="flex gap-5">
       <div>
@@ -302,7 +329,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
  
     
             
-            </div>
+         
           )}
         </div>
    )

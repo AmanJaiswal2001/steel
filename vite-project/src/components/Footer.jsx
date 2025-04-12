@@ -53,11 +53,11 @@ const Footer = () => {
    <span className="cursor-pointer  hover:text-[#2241a6] font-light text-sm ">Help&support</span>
    </a> 
    
-   <h5 className='font-semibold text-lg font-manrope text-[#262626]'>Download our App</h5>
+   {/* <h5 className='font-semibold text-lg font-manrope text-[#262626]'>Download our App</h5>
    
    <a>
    <img className='w-40 ' src="Google_Play_Store_badge_EN.svg.webp"/>
-   </a>
+   </a> */}
     </nav>
 
 </footer>

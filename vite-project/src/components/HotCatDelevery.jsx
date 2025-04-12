@@ -31,7 +31,7 @@ const[customNumber,setcustomNumber]=useState(null);
   if (!product) return <div>Product not found</div>;
 
   return (
-    <div className=" w-full px-20 z-10 relative -top-40 ">
+    <div className=" w-full px-20 z-10 pt-10 ">
      
      <div className="flex w-full px-10 gap-5 justify-between  ">
       <div className=" w-1/2 h-80 ">
