@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaSquareWhatsapp } from "react-icons/fa6";
 const HelperComponent = ({bgColor, textColor,width,height,description}) => {
   return (
@@ -26,11 +26,11 @@ export default HelperComponent
 }
 
 // filter dropdown
-export const FilterDropdown=({title,options=[]})=>{
+export const FilterDropdown=({title,options=[],selectedOptions = [], onChange })=>{
  
     const [open, setOpen] = useState(false);
     return(
-    <div className="relative   w-full  border border-gray-300  rounded-md    "
+    <div className="relative   w-full  border border-gray-300  rounded-md "
     onClick={() => {setOpen(!open)}}
      >
      
@@ -56,11 +56,17 @@ export const FilterDropdown=({title,options=[]})=>{
         </svg>
       </button>
       {open && (
-        <div className="px-6 py-2 flex flex-col bg-white border-t border-gray-200 text-gray-700">
+        <div className="px-6 py-2 flex flex-col bg-white border-t border-gray-200 text-gray-700"
+            onClick={(e) => e.stopPropagation()}
+        >
        
        {options.map((option,index)=>(
         <label key={index} className='flex items-center space-x-2 m-1'>
-          <input type="checkbox"/>
+          <input type="checkbox"
+ checked={selectedOptions.includes(option)}
+ onChange={() => onChange(title, option)}
+
+          />
           <span>{option}</span>
         </label>
        ))}
@@ -84,7 +90,7 @@ export const FilterDropdown=({title,options=[]})=>{
 
 
 export const CommonFilter = ({
-  title, minLabel,maxLabel,minOptions,maxOptions
+  title, minLabel,maxLabel,minOptions,maxOptions, onRangeChange,  value = { min: null, max: null },
 }) => {
   const [isMinOpen, setIsMinOpen] = useState(false);
   const [isMaxOpen, setIsMaxOpen] = useState(false);
@@ -93,6 +99,24 @@ export const CommonFilter = ({
 
   // const minOptions = ["12.2", "11.5", "12.5"];
   // const maxOptions = ["15.2", "14.0", "13.8"];
+
+  useEffect(() => {
+    setSelectedMin(value.min);
+    setSelectedMax(value.max);
+  }, [value]);
+  const handleMinSelect = (option) => {
+    setSelectedMin(option);
+    setSelectedMax(null); // clear max on min select
+    setIsMinOpen(false);
+    onRangeChange(title, option, null);
+  };
+
+  const handleMaxSelect = (option) => {
+    setSelectedMax(option);
+    setSelectedMin(null); // clear min on max select
+    setIsMaxOpen(false);
+    onRangeChange(title, null, option);
+  };
 
   return (
     <div className="relative inline-block w-full border border-gray-300  rounded-md bg-[#f5f7fc] p-4">
@@ -126,11 +150,12 @@ export const CommonFilter = ({
             <div className="absolute left-0 top-full mt-0 w-full bg-white border border-gray-300 shadow z-10">
               {minOptions.map((option, index) => (
                 <div
-                 onClick={() => {
-                    // setSelectedMin(option);
-                    setIsMinOpen(false);
-                  }}
-                 key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  key={index}
+                  onClick={() => handleMinSelect(option)
+                   // setSelectedMin(option);
+                    // setIsMinOpen(false);
+                  }
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                   {option}
                 </div>
               ))}
@@ -165,11 +190,10 @@ export const CommonFilter = ({
             <div className="absolute left-0 top-full mt-1 w-full bg-white border border-gray-200 shadow z-20">
               {maxOptions.map((option, index) => (
                 <div
-                  onClick={() => {
-                    // setSelectedMax(option);
-                    setIsMaxOpen(false);
-            }}
-                 key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    key={index}
+                    onClick={() => handleMaxSelect(option)}
+           
+               className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                   {option}
                 </div>
               ))}

@@ -2,6 +2,17 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+
+const submenuMapping = {
+  "Hot Rolled": [
+    { label: "Hot Rolled Sheet", path: "/hotRolled/sheet" },
+    { label: "Hot Rolled Coils", path: "/hotRolled/coils" },
+  ],
+  "Cold Rolled": [
+    { label: "Cold Rolled Sheet", path: "/coldRolled/sheet" },
+    { label: "Cold Rolled Coils", path: "/coldRolled/coils" },
+  ],
+};
 const  DropdownMenu = ({menuItems=[],buttonName}) => {
   const [open, setOpen] = useState(false);
   const [subMenu, setSubMenu] = useState(null);
@@ -54,49 +65,28 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
               {/* Submenu */}
               {/* <div className="relative"> */}
-              {["Hot Rolled", "Cold Rolled"].includes(item) && subMenu === item &&  (
+              {submenuMapping[item] && subMenu === item &&  (
                 <ul className=" absolute top-0 left-full w-40 bg-white   shadow-lg z-50"
                  onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
               onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
             
                 >
                 
-                {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                (
-                  <li 
-                  className=" py-2 hover:bg-gray-100 cursor-pointer"
-                   key={item}
-              //      onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
-              // onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
-            
-                  >
-                 <Link
-  to={
-    item === "Hot Rolls Sheet"
-      ? "/hotRolled"
-      : item === "Cold Rolled"
-      ? "/coldRolled"
-      : "/"
-  }
-  className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
->
-  {item}
-</Link>
-                  </li>
-                  ))
-                }
-
-                
-               
-               
+                {submenuMapping[item].map((subItem) => (
+                    <li key={subItem.label} className="hover:bg-gray-100">
+                      <Link
+                        to={subItem.path}
+                        className="block px-4 py-2 cursor-pointer"
+                      >
+                        {subItem.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
-            )}
-         
+              )}
             </li>
           ))}
-          
         </ul>
-       
       )}
     </div>
   );

@@ -11,6 +11,8 @@ import Footer from "./components/Footer";
 import Catgory from "./components/Catgory";
 import ColdCatgory from "./components/ColdCatgory";
 import HotCatDelevery from "./components/HotCatDelevery";
+import Hotrolledcoilcat from "./components/Hotrolledcoilcat";
+import HotCatCoilsDEl from "./components/HotCatCoilsDEl";
 
 const appRouter = createBrowserRouter([
   {
@@ -18,14 +20,16 @@ const appRouter = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: "hotRolled",
+        path: "hotRolled/sheet",
         element: <Catgory />,
       },
       {
-        path: "coldRolled",
-        element: <ColdCatgory />,
+        path: "hotRolled/coils",
+        element: <Hotrolledcoilcat />,
       },
       { path: "product/:id", element: <HotCatDelevery /> },
+      { path: "coilproduct/:id", element: <HotCatCoilsDEl /> },
+    
       {
         index: true,
         element: <Layout />, // This will render on root "/"

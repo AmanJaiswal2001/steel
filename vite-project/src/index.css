@@ -8,6 +8,31 @@
  
 }
 
+:root, body {
+  color: BLACK !important;
+  background-color: #ffffff !important;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Optional - for safe resets */
+
+
+body {
+  color: #213547;
+  background-color: #ffffff;
+}
+
+/* .card {
+
+} */
+
+/* a {
+  color: #2241a6;
+  text-decoration: none;
+} */
+/* a:hover {
+  text-decoration: underline;
+} */
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

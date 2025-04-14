@@ -1,8 +1,9 @@
 import React from 'react'
 import CardSheet from './CardSheet';
 import { Link } from 'react-router-dom';
-import cardData from './data/hotrolledcarddarta';
-const HotRolledCatgory = ({filters}) => {
+import cardData from '././data/hotrollcoils';
+import Card from './Card';
+const  CoilsCat = ({filters}) => {
   
 
 
@@ -117,8 +118,8 @@ const HotRolledCatgory = ({filters}) => {
 
 
  {filteredData.map((card,index)=>(
-    <Link key={index} to={`/product/${index}`}>
-    <CardSheet {...card} />
+    <Link key={index} to={`/coilproduct/${index}`}>
+    <Card {...card} />
   </Link> ))}
 
     
@@ -127,4 +128,4 @@ const HotRolledCatgory = ({filters}) => {
   )
 }
 
-export default HotRolledCatgory
+export default CoilsCat

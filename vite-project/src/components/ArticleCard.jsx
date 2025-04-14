@@ -3,7 +3,9 @@ import React from 'react'
 const ArticleCard = ({image, buttonName,description, buttonNavigate}) => {
   return (
     <div className='w-full'>
-        <div className="card bg-base-100 w-full border border-gray-200 hover:shadow-violet-500  ">
+        <div 
+         data-theme="light" 
+         className="card bg-base-100 w-full border border-gray-200 hover:shadow-violet-500  ">
   <figure className='w-full object-fit '>
     <img className='w-full h-80 bg-red-400 object-cover object-fit  '
       src={image}

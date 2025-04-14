@@ -4,7 +4,9 @@ const Card = (
     {title,brand,thickness,width,buttonName,delivery,image}
 ) => {
   return (
-    <div className=" card hover:shadow-2xl hover:bg-transparent  hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 h-96  shadow-sm">
+    <div 
+     data-theme="light" 
+    className=" card hover:shadow-2xl  hover:bg-transparent  hover:scale-[98%] transform transition  ease-in-out  duration-300   bg-base-100 w-64 h-96  shadow-sm">
     <figure>
       <img className='w-full object-fit    '
         src={image}
@@ -16,8 +18,8 @@ const Card = (
       <p className='px-2 font-manrope font-medium   text-[1rem]'><span className='font-semibold'>Thickness</span> {thickness}</p>
       <p className='px-2 font-manrope font-medium   text-[1rem]'><span className='font-semibold'>Width </span> {width}</p>
       <div className='bg-blue-100 rounded-b-lg w-full'>
-      <div className="  w-80 m-0 p-0 text-left   ">
-        <button className=" p-2 w-80 m-0  text-left bg-bl-200 font-manrope cursor-pointer font-medium   text-[1rem]">{buttonName}</button>
+      <div className="  w-52 m-0 p-0 text-left   ">
+        <button className=" p-2 w-full m-0  text-left bg-bl-200 font-manrope cursor-pointer font-medium   text-[1rem] ">{buttonName}</button>
       </div>
       <hr className='text-gray-300 mx-2 px-2'></hr>
       <div className='flex gap-1 px-2 mb-2 '>

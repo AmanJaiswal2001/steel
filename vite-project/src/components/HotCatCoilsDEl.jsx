@@ -1,12 +1,12 @@
 // ProductDetail.jsx
 import { useParams } from "react-router-dom";
-import cardData from "./data/hotrolledcarddarta"; // move cardData to separate file if needed
+import cardData from "./data/hotrollcoils"; // move cardData to separate file if needed
 import { LengthGrid, ThicknessGrid,WidthGrid } from "./HelperComponent";
 import { useState } from "react";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import hotrolledproductdata from "./data/hotrolledproductdata"
 import { Hotrolledinfo } from "./Hotrolledinfo";
-const HotCatDelevery = () => {
+const HotCatCoilsDEl = () => {
 
 const [selectedThickness,setSelectedThickness]=useState(null);
 const [selectedWidth,setSelectedWidth]=useState(null);
@@ -16,13 +16,13 @@ const[customNumber,setcustomNumber]=useState(null);
 
 
     const thicknessValues = [
-        "1.6", "1.8", "2.0", "2.2", "2.5", "2.8", "3.0",
-        "3.2", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0",
-        "6.5", "7.0", "7.5", "8.0", "9.0", "10.0",
-        "11.0", "12.0", "13.0", "14.0", "15.0",
-        "16.0", "18.0", "20.0", "22.0", "25.0", "30.0"
+        "1.6", "1.8", "2.",  "2.5",  "3.0",
+        "4.0",  "5.0", "5.8", "6.0",
+        "7.8", "8.0",  "10.0",
+        "12.0", 
+        "16.0", "20.0"
       ];
-      const widthValues=["900","1250","1500","2000"]
+      const widthValues=["1250","1500","2000"]
       const lengthValues=["2500","3000","6300"]
   const { id } = useParams();
   const product = cardData[id];
@@ -202,4 +202,4 @@ onClick={()=>{
   );
 };
 
-export default HotCatDelevery;
+export default HotCatCoilsDEl;

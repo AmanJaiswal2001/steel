@@ -16,6 +16,15 @@ const Nav = () => {
 
     <div className='flex w-2/3      items-center  '>
    
+    
+  
+ 
+ 
+  
+    {/* {/* </div> */}
+    <div className='flex gap-10 items-center '>
+  
+    <Link to="/">Home</Link>
     <DroupdownMenu         menuItems={[
           "Hot Rolled",
           "Cold Rolled",
@@ -23,13 +32,7 @@ const Nav = () => {
         ]} buttonName=" Mild Steel"/>
    
   
-  
- 
- 
-  
-    {/* {/* </div> */}
-    <div className='flex gap-10  '>
-    <Link to="#">Home</Link>
+   
   <Link to="#">About</Link>
   <Link to="#">Contact</Link>
 
