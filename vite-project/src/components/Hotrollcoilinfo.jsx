@@ -9,21 +9,21 @@ const tabs = [
 const data = {
   "Chemical composition": [
     { "name": "Carbon % (Min)", "value": "" },
-    { "name": "Carbon % (Max)", "value": "" },
+    { "name": "Carbon % (Max)", value: "0.23" },
     { "name": "Silicon % (Min)", "value": "" },
-    { "name": "Silicon % (Max)", "value": "" },
-    { "name": "Manganese % (Min)", "value": "" },
-    { "name": "Manganese % (Max)", "value": "" },
-    { "name": "Phosphorus % (Min)", "value": "" },
-    { "name": "Phosphorus % (Max)", "value": "" },
-    { "name": "Sulphur % (Min)", "value": "" },
-    { "name": "Sulphur % (Max)", "value": "" },
-    { "name": "Aluminium % (Min)", "value": "" },
-    { "name": "Aluminium % (Max)", "value": "" },
-    { "name": "Nitrogen % (Min)", "value": "" },
-    { "name": "Nitrogen % (Max)", "value": "" },
-    { "name": "Chromium % (Min)", "value": "" },
-    { "name": "Chromium % (Max)", "value": "" },
+    { "name": "Silicon % (Max)",value: "0.4" },
+    { "name": "Manganese % (Min)", value: "" },
+    { "name": "Manganese % (Max)", value: "1.5" },
+    { "name": "Phosphorus % (Min)", value: "" },
+    { "name": "Phosphorus % (Max)", value: "0.045" },
+    { "name": "Sulphur % (Min)", value: "" },
+    { "name": "Sulphur % (Max)", value: "0.045" },
+    { "name": "Aluminium % (Min)", value: "" },
+    { "name": "Aluminium % (Max)", value: "0.07" },
+    { "name": "Nitrogen % (Min)", value: "" },
+    { "name": "Nitrogen % (Max)", value: "0.012" },
+    { "name": "Chromium % (Min)", value: "" },
+    { "name": "Chromium % (Max)",value: "" },
     { "name": "Boron % (Min)", "value": "" },
     { "name": "Boron % (Max)", "value": "" },
     { "name": "Molybdenum % (Min)", "value": "" },
@@ -38,32 +38,59 @@ const data = {
     { "name": "Vanadium % (Max)", "value": "" },
     { "name": "Lead % (Min)", "value": "" },
     { "name": "Lead % (Max)", "value": "" },
-    { "name": "Niobium + Vanadium + Titanium", "value": "" },
+    { "name": "Niobium + Vanadium + Titanium", value: "0.25" },
     { "name": "Others", "value": "" },
-    { "name": "Cerium % (Max)", "value": "" },
+    { "name": "Cerium % (Max)", value: "0.42" },
     { "name": "Sulphur + Phosphorus", "value": "" } 
     // { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" }, { name: "Phosphorus %" },
     // ... Add all
   ],
   "Mechanical Properties": [
-    { name: "Bend",},
+    { name: "Bend",value: "2T on 180 degree "},
     { name: "Hardness" },
     { name: "Impact " },
     // ... More
   ],
   "Tolerance properties": [
-    {name:"*Width (mm) "},
-    {name:"*Thickness (mm)  "},  
-    {name:"Flatness  "},
-    {name:"Camber  "},
-    {name:"*Tolerance type  "},
-    {name:"*Thickness Tolerance Type "},
-    // ... More
-  ]
+    {
+        name: "*Width (mm)",
+        value: "W < 1500 mm: 0 to 20 mm\nW > 1500 mm: 0 to 25 mm"
+      },
+      {
+        name: "*Thickness (mm)",
+        value:
+          "1.6 - 2.0 mm: +0.12\n" +
+          "2.01 - 3.0 mm: +0.15\n" +
+          "3.01 - 6.0 mm: +0.2\n" +
+          "6.01 - 8.0 mm: +0.25\n" +
+          "8.01 - 12.0 mm: +0.3\n" +
+          "12.01 - 15.0 mm: +0.4\n" +
+          "15.01 - 20.0 mm: +0.4\n" +
+          "20.01 - 25.0 mm: +0.45"
+      },
+      {
+        name: "Flatness",
+        value: "T < 2 mm: 40 mm max\nT > 2 mm: as per EN"
+      },
+      {
+        name: "Camber",
+        value: "20 mm max in 5 meter length except ID/OD"
+      },
+      {
+        name: "*Tolerance type",
+        value: "As per EN standards or mill standard depending on product spec"
+      },
+      {
+        name: "*Thickness Tolerance Type",
+        value: "Positive side only"
+      }
+    ]
+    
+    
 };
 
 
-export const  Hotrolledinfo = () => {
+export const  Hotrollcoilinfo = () => {
     const [activeTab, setActiveTab] = useState("Chemical composition");
   
     return (
@@ -99,7 +126,8 @@ export const  Hotrolledinfo = () => {
                   <td className="px-4 py-2 w-1/2 text-center border-b font-sans font-medium text-[1rem] border-r border-[#f1f1f1] ">{item.name}</td>
                   {/* {/* <td className="px-4 py-2">{`${item.value}${item.value2}`}</td> */}
                   {/* <td className="px-4 py-2"></td>  */}
-                  <td className="px-4 py-2  border-b border-r border-[#f1f1f1] "></td>
+                  <td className="px-4 py-2 text-center border-b border-r border-[#f1f1f1] whitespace-pre-line "> 
+                  {item.value !== undefined ? item.value : ""}</td>
               
                 </tr>
                 

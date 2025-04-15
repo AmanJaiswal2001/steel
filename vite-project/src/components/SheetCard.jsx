@@ -85,18 +85,18 @@ const SheetCard = ({type}) => {
         }
       };
     return (
-        <div className="relative max-w-4xl mx-auto  border-t  border-t-gray-300">
-        <div className=" flex gap-5 justify-center mt-10  ">
+        <div className="relative max-w-full mx-auto  ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10  ">
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
-            <div className=' h-96'>
+            <div className='w-full flex justify-center gap-0'>
             <CardSheet key={index} {...card} />
             </div>
           ))}
          </div>
          
          <button
-             className={`absolute left-0 top-1/2  bg-blue-200 flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex===0?"hidden":"block"}`}
+             className={`absolute left-0 top-1/2  hidden bg-blue-200 md:flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex===0?"hidden":"block"}`}
              onClick={prevSlide}
             disabled={currentIndex === 0}
           >
@@ -106,7 +106,7 @@ const SheetCard = ({type}) => {
     
           {/* Next Button */}
           <button
-            className={`absolute right-5 top-1/2  bg-blue-200 flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
+            className={`absolute right-5 top-1/2  hidden bg-blue-200 md:flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
             onClick={nextSlide}
             disabled={currentIndex + visibleCards >= cardData.length}
           >

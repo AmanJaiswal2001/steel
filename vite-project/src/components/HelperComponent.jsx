@@ -3,7 +3,7 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 const HelperComponent = ({bgColor, textColor,width,height,description}) => {
   return (
     <div className={`${bgColor} ${textColor} ${width} ${height}  flex justify-center   items-center `}>
-<p className='w-64 text-center font-medium  font-manrope'>{description}</p>
+<p className='w-64 text-center font-medium  font-sans'>{description}</p>
     </div>
   )
 }
@@ -13,7 +13,7 @@ export default HelperComponent
  export const  Design =({description})=>{
   return(
     <div className='bg-[#e6f0ff] h-full flex items-center '>
-    <h4 className='font-manrope font-normal w-2/3 text-[1.5rem] mx-20'>{description} </h4>
+    <h4 className='font-sans font-normal w-2/3 text-[1.5rem] mx-20'>{description} </h4>
     <button className='flex gap-2 items-center justify-center p-2 rounded-lg w-64 bg-[#007bff]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
@@ -210,9 +210,9 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
   return(
     <>
     <div className='flex gap-4 items-center'>
-    <p className='font-manrope text-[1rem] font-semibold'>{title} (mm)</p>
+    <p className='font-sans text-[1rem] font-semibold'>{title} (mm)</p>
     {!selected && (
-  <span className="text-[#e87205] font-manrope px-2 py-1   text-[1rem]">
+  <span className="text-[#e87205] font-sans px-2 py-1   text-[1rem]">
     Select <b>Thickness (mm)</b> to view available width
   </span>
 )}
@@ -235,7 +235,7 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
 export const WidthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
-    <p className='font-manrope text-[1rem] font-semibold ' >{title} (mm)</p>
+    <p className='font-sans text-[1rem] font-semibold ' >{title} (mm)</p>
     <div className="grid grid-cols-4 gap-2 w-96 max-w-5xl">
       {values.map((value, index) => (
         <button
@@ -257,7 +257,7 @@ export const WidthGrid=({values,title,selected,onSelect, disable})=>{
 export const LengthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
-    <p className=' font-manrope text-[1rem] font-semibold'>{title} (mm)</p>
+    <p className=' font-sans text-[1rem] font-semibold'>{title} (mm)</p>
     <div className="grid grid-cols-4 gap-2 w-96 max-w-5xl">
       {values.map((value, index) => (
         <button

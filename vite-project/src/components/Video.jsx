@@ -12,8 +12,8 @@ const Video = () => {
 
 
     <div className='w-1/2'>
-      <b className="text-[26px]  font-extrabold font-manrope  ">Box Office News!</b>
-      <p className="font-bold  text-[26px] font-manrope border-box">
+      <b className="text-[26px]  font-extrabold font-sans  ">Box Office News!</b>
+      <p className="font-bold  text-[26px] font-sans border-box">
       Your one-stop, digital marketplace for your material procurement needs
       </p>
     

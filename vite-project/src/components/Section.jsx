@@ -5,6 +5,7 @@ import CardContainer from './CardContainer';
 import ColdContainer from './ColdContainer';
 import SheetCard from './SheetCard';
 import ColdSheetCard from './ColdSheetCard';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,12 +16,12 @@ const Section= () => {
 
    
     return (
-    <div className='relative h-auto w-full  mt-20  '>
-    <h1 className='font-bold text-[1.5rem] text-[#262626] font-manrope px-20 '>Mild Steel</h1>
+    <div className='relative h-auto w-full  md:mt-20 mt-0  '>
+    <h1 className='font-bold text-3xl text-[#262626] leading-6 font-sans md:px-20 px-10  '>Mild Steel</h1>
     {/* sidebar */}
 
-<div className='flex gap-10 w-[90%] mt-5  rounded-lg mx-auto  border border-gray-300'>
-    <div className=' w-1/4 '>
+<div className='flex gap-10 md:w-[90%] w-full md:mt-5 mt-0  rounded-lg mx-auto  md:border md:border-gray-300'>
+    <div className=' w-1/4 hidden md:block '>
 <Sidebar activeType={activeType} setActiveType={setActiveType} 
 items={[
     { type: 'hot', label: 'Hot Rolled', link: '/' },
@@ -30,20 +31,69 @@ items={[
 />
     </div> 
 <div className='w-full mt-2'>
-<div className='flex   mt-3  gap-10 px-24    '>
+<div className='flex   mt-3  gap-10 md:px-24 px-10   '>
+
+
+{/* Mobile Sidebar */}
+<div className="md:hidden">
+  <div className="flex  gap-4 mt-4">
+    {/* Hot Rolled */}
+    <button
+      onClick={() => setActiveType("hot")}
+      className={`text-left font-sans  text-sm  font-normal ${
+        activeType === "hot" ?  'border-b-2 border-black  text-black font-bold' : "text-[#70737a]"
+      }`}
+    >
+      Hot Rolled
+    </button>
+
+    {/* Cold Rolled */}
+    <button
+      onClick={() => setActiveType("cold")}
+      className={`text-left font-sans px-4 py-2   text-sm font-normal ${
+        activeType === "cold" ?  'border-b-2 border-black  text-black font-bold' : "text-[#70737a]"
+      }`}
+    >
+      Cold Rolled
+    </button>
+  </div>
+</div>
+
+{/* <div className='px-4'> */}
+
 <button 
- className={`font-semibold pt-1 font-manrope  text-xl ${activeProduct === 'coil' ?   'border-b-4 border-black  text-black font-bold' 
+ className={`font-semibold hidden md:block pt-1 font-sans  text-xl ${activeProduct === 'coil' ?   'border-b-4 border-black  text-black font-bold' 
         : 'text-gray-600'}`}
               onClick={() => setActiveProduct('coil')}
             >
 Coils</button>
-<button  className={`font-semibold font-manrope text-xl ${activeProduct === 'sheet'  ? 'border-b-4  border-black  text-black  font-bold' 
+<button  className={`font-semibold hidden md:block font-sans text-xl ${activeProduct === 'sheet'  ? 'border-b-4  border-black  text-black  font-bold' 
         : 'text-gray-600'}`}
               onClick={() => setActiveProduct('sheet')}
             >
 Sheets</button>
+
+
 </div>
-<div className='w-full '>
+<div className='w-full  border-t  border-t-gray-300 '>
+
+
+<div className='flex gap-10 mt-5 md:hidden mx-10 md:mx-0'>
+<button 
+ className={`font-normal cursor-pointer  text-sm w-20 p-2 font-sans  rounded-sm ${activeProduct === 'coil' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[rgb(93, 116, 166)] ' 
+        : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]' }`}
+              onClick={() => setActiveProduct('coil')}
+            >
+Coils</button>
+<button  className={`font-normal cursor-pointer  text-sm w-20 p-2 font-sans  rounded-sm ${activeProduct === 'sheet'  ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[rgb(93, 116, 166)]' 
+        : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]'}`}
+              onClick={() => setActiveProduct('sheet')}
+            >
+Sheets</button>
+</div>
+
+
+
 {/* <CardContainer/> */}
 {activeProduct === 'coil' ? (
               activeType === 'hot' ? <CardContainer /> : <ColdContainer />

@@ -11,7 +11,8 @@
 :root, body {
   color: BLACK !important;
   background-color: #ffffff !important;
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope";
+  /* font-family: sans-serif; */
 }
 
 /* Optional - for safe resets */

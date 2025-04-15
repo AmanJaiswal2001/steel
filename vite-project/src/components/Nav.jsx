@@ -22,9 +22,9 @@ const Nav = () => {
  
   
     {/* {/* </div> */}
-    <div className='flex gap-10 items-center '>
+    <div className='md:flex font-sans text-sm gap-10 md:items-center hidden  '>
   
-    <Link to="/">Home</Link>
+    <Link className='text-sm font-medium font-sans text-[#343a41]' to="/">Home</Link>
     <DroupdownMenu         menuItems={[
           "Hot Rolled",
           "Cold Rolled",
@@ -33,13 +33,13 @@ const Nav = () => {
    
   
    
-  <Link to="#">About</Link>
-  <Link to="#">Contact</Link>
+  <Link className='text-sm font-medium font-sans text-[#343a41]' to="#">About</Link>
+  <Link className='text-sm font-medium font-sans text-[#343a41]' to="#">Contact</Link>
 
     </div>
    
   </div>
-  <div className='mt-0  flex justify-end mr-20 '>
+  <div className='mt-0 hidden  md:flex justify-end mr-20 '>
   <DropdownMenu2 buttonName="Connect with us"/>
   </div>
    

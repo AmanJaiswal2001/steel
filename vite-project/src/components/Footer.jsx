@@ -5,7 +5,7 @@ import { faSquareYoutube,faLinkedin, faSquareInstagram, faFacebook } from '@fort
 const Footer = () => {
   return (
     <div className='w-full h-1/3 absolute border-0  border-b-0'>
-<footer className="footer w-full font-manrope sm:footer-horizontal  p-10 h-80">
+<footer className="footer w-full font-sans sm:footer-horizontal  p-10 h-80">
  
  <nav className='flex justify-center h-40 gap-5 mx-10 items-center  w-40'>
  <a className="link link-hover">    <FontAwesomeIcon className='text-red-500  w-6 h-6' icon={faSquareYoutube} size="2x" /></a>
@@ -53,7 +53,7 @@ const Footer = () => {
    <span className="cursor-pointer  hover:text-[#2241a6] font-light text-sm ">Help&support</span>
    </a> 
    
-   {/* <h5 className='font-semibold text-lg font-manrope text-[#262626]'>Download our App</h5>
+   {/* <h5 className='font-semibold text-lg font-sans text-[#262626]'>Download our App</h5>
    
    <a>
    <img className='w-40 ' src="Google_Play_Store_badge_EN.svg.webp"/>
