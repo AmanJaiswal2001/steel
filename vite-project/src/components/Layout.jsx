@@ -13,7 +13,7 @@ const Layout = () => {
         <Crousel/>
 
         </div>
-  <div className=' relative pt-96 '>
+  <div className=' relative pt-36 sm:pt-60 md:pt-[180px] lg:pt-60 xl:pt-96 '>
         <Section/>
 
     </div>

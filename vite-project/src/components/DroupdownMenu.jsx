@@ -212,8 +212,8 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
    <div className=" relative group   ">
     
           
-    <button onClick={() => setOpen(!open)} className="px-4   cursor-pointer hover:text-blue-700 rounded flex">
-                {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
+    <button onClick={() => setOpen(!open)} className="px-4 font-semibold font-sans  cursor-pointer text-[#2241a6]  flex">
+                {buttonName}{" "} {open ? <svg className="text-[#2241a6] " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
               </button>
     
           {/* Main Dropdown Menu */}
@@ -223,19 +223,19 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
     
               
  
-    <ul className="absolute  z-40 pb-4 flex flex-col gap-5 p-5 text-sm w-64 bg-white border rounded shadow-lg" 
+    <ul className="absolute  z-40 pb-4 flex flex-col gap-5 p-5 text-sm  bg-white border rounded shadow-lg" 
     >
       <li>
       <div className="flex gap-5">
       <div>
       <a href="#" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.95 21q-3.125 0-6.187-1.35T8.2 15.8t-3.85-5.55T3 4.05V3h5.9l.925 5.025l-2.85 2.875q.55.975 1.225 1.85t1.45 1.625q.725.725 1.588 1.388T13.1 17l2.9-2.9l5 1.025V21z"/></svg>
+      <svg className="bg-[#e6f0ff] rounded-full p-2 h-10 w-10 border border-[#7a8dca]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.95 21q-3.125 0-6.187-1.35T8.2 15.8t-3.85-5.55T3 4.05V3h5.9l.925 5.025l-2.85 2.875q.55.975 1.225 1.85t1.45 1.625q.725.725 1.588 1.388T13.1 17l2.9-2.9l5 1.025V21z"/></svg>
 </a>
       </div>
       <div>
-      <p>Callus</p>
-     <p>+917208055523</p>
-     <p>Mon-Fri 10am to 7pm </p>
+      <p className="font-semibold text-[#262626]  text-[16px] font-sans">Callus</p>
+     <Link href="#" className="font-semibold text-[#000]  text-sm font-sans">+917208055523</Link>
+     <p className="font-normal text-[#262626]  text-sm font-sans">Mon-Fri 10am to 7pm </p>
       </div>
   
       </div>
@@ -245,11 +245,11 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
       <div className="flex gap-5">
       <div>
       <a href="#" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"/></svg></a>
+      <svg className="bg-[#e6f0ff] rounded-full p-2 h-10 w-10 border border-[#7a8dca]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"/></svg></a>
       </div>
       <div>
-      <p>Write to us</p>
-     <p>support@jswonemsme.com</p>
+      <p className="font-semibold text-[#262626]  text-[16px] font-sans">Write to us</p>
+     <Link  href="#" className="font-semibold text-[#000]  text-sm font-sans">support@jswonemsme.com</Link>
    
       </div>
   
@@ -259,7 +259,7 @@ export const DropdownMenu1=({menuItems=[],buttonName})=>{
 
       <li>
       <div className="flex items-center justify-center">
-      <button className="w-40 h-14 border border-blue-700 text-blue-700 cursor-pointer hover:bg-sky-100 rounded-lg ">
+      <button className="w-40 h-14 font-sans hover:bg-[#cae0fe] border border-[#2241a6] font-medium text-[#2241a6]  cursor-pointer  rounded-lg ">
         Help&support
       </button>
   
