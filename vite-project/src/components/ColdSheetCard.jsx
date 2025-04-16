@@ -95,7 +95,7 @@ const ColdSheetCard = ({type}) => {
          </div>
          
          <button
-             className={`absolute left-0 top-1/2  hidden bg-blue-200 md:flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex===0?"hidden":"block"}`}
+             className={`absolute left-0 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex===0?"hidden":"block"}`}
              onClick={prevSlide}
             disabled={currentIndex === 0}
           >
@@ -105,7 +105,7 @@ const ColdSheetCard = ({type}) => {
     
           {/* Next Button */}
           <button
-            className={`absolute right-5 top-1/2 hidden  bg-blue-200 md:flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
+            className={`absolute -right-2  h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
             onClick={nextSlide}
             disabled={currentIndex + visibleCards >= cardData.length}
           >

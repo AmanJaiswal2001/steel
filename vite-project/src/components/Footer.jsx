@@ -4,8 +4,8 @@ import { faSquareYoutube,faLinkedin, faSquareInstagram, faFacebook } from '@fort
 
 const Footer = () => {
   return (
-    <div className='w-full h-1/3 absolute border-0  border-b-0'>
-<footer className="footer w-full font-sans sm:footer-horizontal  p-10 h-80">
+    <div className='w-full h-1/3 absolute border-0   border-b-0'>
+<footer className="footer w-full font-sans sm:footer-horizontal   p-10 h-80">
  
  <nav className='flex justify-center h-40 gap-5 mx-10 items-center  w-40'>
  <a className="link link-hover">    <FontAwesomeIcon className='text-red-500  w-6 h-6' icon={faSquareYoutube} size="2x" /></a>

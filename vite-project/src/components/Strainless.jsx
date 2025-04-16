@@ -19,7 +19,7 @@ const Strainless= () => {
 
    
     return (
-    <div className='h-screen w-full relative   md:mt-20 mt-0  '>
+    <div className='h-full w-full relative    md:mt-20 mt-0  '>
     <h1 className='font-bold md:text-3xl sm:text-2xl text-xl text-[#262626] leading-6 font-sans md:px-20 sm:px-10 px-5 '>Stainless Steel</h1>
     {/* sidebar */}
 

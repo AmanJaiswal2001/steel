@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Button = ({buttonName,bgColor = 'bg-blue-500', width = 'w-72', border,text,rounded}) => {
+const Button = ({buttonName,bgColor = 'bg-blue-500', width , border,text,rounded}) => {
   return (
-    <div>
+    // <div>
         <button className={`btn ${bgColor}  ${border} ${width} ${text} ${rounded} font-sans font-semibold text-[16px]`}>{buttonName}</button>
-    </div>
+    // </div>
   )
 }
 

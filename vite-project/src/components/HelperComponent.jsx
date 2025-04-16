@@ -3,7 +3,7 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 const HelperComponent = ({bgColor, textColor,width,height,description}) => {
   return (
     <div className={`${bgColor} ${textColor} ${width} ${height}  flex justify-center   items-center `}>
-<p className='w-64 text-center font-medium  font-sans'>{description}</p>
+<p className='w-64  text-center font-medium text-sm   font-sans'>{description}</p>
     </div>
   )
 }
@@ -12,14 +12,14 @@ export default HelperComponent
 
  export const  Design =({description})=>{
   return(
-    <div className='bg-[#e6f0ff] h-full flex items-center '>
-    <h4 className='font-sans font-normal w-2/3 text-[1.5rem] mx-20'>{description} </h4>
-    <button className='flex gap-2 items-center justify-center p-2 rounded-lg w-64 bg-[#007bff]'>      
+    <div className='bg-[#e6f0ff] h-full lg:flex md:flex-row sm:flex-row lg:flex-row flex flex-col items-center '>
+    <h4 className='font-sans font-normal lg:w-2/3 lg:text-[1.5rem] mt-5 lg:mt-0 text-sm text-center mx-5 lg:mx-20'>{description} </h4>
+    <button className='flex gap-2 items-center justify-center mt-10 lg:mt-0 p-2 rounded-lg w-64 bg-[#2241a6]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
-     className='w-10 h-10 text-white '
+     className='md:w-10 md:h-10 lg:w-10 lg:h-10 w-8 h-8 text-white '
       />
-        </a><span className='text-white'>Connect on whatsapp</span>
+        </a><span className='text-white font-sans'>Connect on whatsapp</span>
 </button>
             </div>
   )
