@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaSquareWhatsapp } from "react-icons/fa6";
 
 const image=[
@@ -20,19 +20,25 @@ const image=[
 const Crousel = () => {
  const [current,setCurrent]=useState(0);
 
- const nextSlide=()=>{
-    setCurrent(current===image.length-1?0:current+1);
- }
+ const nextSlide = () => {
+   setCurrent(prev => (prev === image.length - 1 ? 0 : prev + 1));
+ };
 
- const previousSlide=()=>{
-    setCurrent(current===0?image.length-1:current-1)
- }
+ const previousSlide = () => {
+   setCurrent(prev => (prev === 0 ? image.length - 1 : prev - 1));
+ };
+ 
+ useEffect(() => {
+   const interval = setInterval(nextSlide, 4000); // 3 seconds
+   return () => clearInterval(interval); // Cleanup on unmount
+ }, []);
+   
  
  
-    return (
+ return (
     <div className='relative   w-full mx-auto '>
     <div onClick={previousSlide}
-      className="absolute left-2 top-1/2    bg-blue-200 flex items-center justify-center  cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500"
+      className="absolute left-2 top-[40%]  -translate-y-1/2  bg-blue-200 hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 z-20"
   
     >
         {/* left arrow */}
@@ -46,19 +52,21 @@ current===index&&( <img
 className='w-full h-full object-cover '
  key={index} src={item}/>
         ))}
-     <div className='relative bottom-20  left-20 w-40'>      
+     <div className='relative bottom-20  left-10  lg:left-20 lg:w-40'>      
+     <button className='flex gap-2 lg:items-center  lg:justify-center  cursor-pointer mt-12 lg:mt-0 lg:p-2 rounded-lg sm:w-48 lg:w-64 bg-[#2241a6]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
-     className='w-10 h-10 text-blue-700 '
+     className='md:w-10 md:h-10 lg:w-10 lg:h-10 w-8 h-8 sm:w-10 sm:h-10 text-white '
       />
-        </a>
+        </a><span className='text-white text-sm font-sans hidden sm:block lg:block'>Connect on whatsapp</span>
+</button>
 </div>
 
       
        
     </div>
     <div onClick={nextSlide}
-     className="absolute right-2 top-1/2  bg-blue-200  text-white p-2 cursor-pointer rounded-lg hover:bg-blue-500"
+     className="absolute right-2 top-[40%] z-20  bg-blue-200 hidden lg:flex  text-white p-2 cursor-pointer rounded-lg hover:bg-blue-500"
      >
         {/* right arrow */}
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887t.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75t-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1t-.375-.888t.375-.887z"/></svg>    </div>
