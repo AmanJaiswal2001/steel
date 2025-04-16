@@ -25,33 +25,33 @@ const cardData = [
       delivery: "Delivery in 3-7 days",
       image: "/series200.webp",  
     length:"2500-6000mm"  },
-    // {
-    //   title: "SAIL Steel Plates",
-    //   brand: "Brand: SAIL",
-    //   thickness: "2-40mm",
-    //   width: "1200-2500mm",
-    //   buttonName: "Get Quote",
-    //   delivery: "Delivery in 4-6 days",
-    //   image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-    // },
-    //  {
-    //   title: "Essar Hot Rolled Sheets",
-    //   brand: "Brand: Essar Steel",
-    //   thickness: "1.2-16mm",
-    //   width: "800-2200mm",
-    //   buttonName: "Buy Now",
-    //   delivery: "Delivery in 5-8 days",
-    //   image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-    //  },
-    //  {
-    //   title: "Jindal Galvanized Coils",
-    //   brand: "Brand: Jindal Steel",
-    //   thickness: "0.4-2mm",
-    //   width: "700-1800mm",
-    //   buttonName: "Purchase",
-    //   delivery: "Delivery in 2-4 days",
-    //   image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-    //  },
+    {
+      title: "SAIL Steel Plates",
+      brand: "Brand: SAIL",
+      thickness: "2-40mm",
+      width: "1200-2500mm",
+      buttonName: "Get Quote",
+      delivery: "Delivery in 4-6 days",
+      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
+    },
+     {
+      title: "Essar Hot RolTATA Steel Hot 204 Rolled Sheets",
+      brand: "Brand: Essar Steel",
+      thickness: "1.2-16mm",
+      width: "800-2200mm",
+      buttonName: "Buy Now",
+      delivery: "Delivery in 5-8 days",
+      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
+     },
+     {
+      title: "TATA Steel Hot 204 Rolled Sheets",
+      brand: "Brand: Jindal Steel",
+      thickness: "0.4-2mm",
+      width: "700-1800mm",
+      buttonName: "Purchase",
+      delivery: "Delivery in 2-4 days",
+      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
+     },
   ];
   
 
@@ -95,32 +95,32 @@ const SheetsTwo = ({type}) => {
         }
       };
     return (
-        <div className="relative max-w-4xl mx-auto  border-t  border-t-gray-300">
-        <div className=" flex gap-5 justify-center mt-10  ">
+        <div className="relative max-w-full mx-auto ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10  ">
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
-            <div className='h-80'>
+            <div className='w-full flex justify-center gap-0 '>
             <CardSheet key={index} {...card} />
             </div>
           ))}
          </div>
          
          <button
-            className={`absolute left-0 top-1/2  bg-blue-200 flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex===0?"hidden":"block"}`}
+            className={`absolute left-0 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] md:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex===0?"hidden":"block"}`}
             onClick={prevSlide}
             disabled={currentIndex === 0}
           >
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/></svg>
+             <svg className='text-center font-normal' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/></svg>
     
           </button>
     
           {/* Next Button */}
           <button
-            className={`absolute right-5 top-1/2  bg-blue-200 flex items-center justify-center bg-opacity-50 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
+            className={`absolute -right-2  h-9 w-9 top-[40%] hidden bg-[#e6f0ff] md:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
             onClick={nextSlide}
             disabled={currentIndex + visibleCards >= cardData.length}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887t.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75t-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1t-.375-.888t.375-.887z"/></svg>    
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887t.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75t-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1t-.375-.888t.375-.887z"/></svg>    
            
         
           </button>

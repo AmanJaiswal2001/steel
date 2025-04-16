@@ -81,12 +81,12 @@ Series 300</button>
 
 <div className='flex sm:gap-10 gap-5 mt-5 lg:hidden  mx-5 sm:mx-10 lg:mx-0'>
 <button 
- className={`font-normal cursor-pointer  text-sm sm:w-28 w-24 p-2 font-sans  rounded-sm ${activeProduct === 'coil' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6] ' 
+ className={`font-normal cursor-pointer  text-sm sm:w-28 w-24 p-2 font-sans  rounded-sm ${activeProduct === 'Series200' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6] ' 
   : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]' }`}
   onClick={() => setActiveProduct('Series200')}
             >
 Series 200</button>
-<button  className={`font-normal cursor-pointer  text-sm sm:w-28 w-24 p-2 font-sans  rounded-sm ${activeProduct === 'sheet'  ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6]' 
+<button  className={`font-normal cursor-pointer  text-sm sm:w-28 w-24 p-2 font-sans  rounded-sm ${activeProduct === 'Series300'  ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6]' 
         : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]'}`}
         onClick={() => setActiveProduct('Series300')}
             >
@@ -99,6 +99,8 @@ Series 300</button>
             
 {activeProduct === "Series200" ? (
               activeType === 'hot' ? <SheetsTwo /> : <Coil200 />
+              
+
             ) : (
               activeType === 'hot' ? <Sheet300 /> : <Coil300 />
             )}
