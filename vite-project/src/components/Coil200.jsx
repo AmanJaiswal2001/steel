@@ -5,7 +5,7 @@ import CardSheet from './CardSheet';
 
 const cardData = [
     {
-        title: "Jindal Srainless HR JT N1 Finish Coils",
+        title: "Jindal Srainless HR JT 200 N1 Finish Coils",
         brand: "Brand: Jindal Stainless",
         thickness: "3-15mm",
         width: "1250-1500mm",
@@ -14,7 +14,7 @@ const cardData = [
         image: "https://images.ctfassets.net/o0otttl8ele8/7fY5BhlngTvs5rOCHSEd2a/469a1ae4ecc6c387a59bc6878fcbe6ad/SS-HR-coil-PDP__1_.webp?w=1000&h=1000&fm=webp",
       },
       {
-          title: "Jindal Srainless HR JT N1 Finish Coils",
+          title: "Jindal Srainless HR JT 204 N1 Finish Coils",
           brand: "Brand: Jindal Stainless",
           thickness: "3-15mm",
           width: "1250-1500mm",
@@ -88,7 +88,7 @@ const Coil200 = ({type}) => {
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
             <div>
-            <CardSheet key={index} {...card} />
+            <Card key={index} {...card} />
             </div>
           ))}
          </div>

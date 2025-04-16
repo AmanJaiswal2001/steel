@@ -88,7 +88,7 @@ const Coil300 = ({type}) => {
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
             <div>
-            <CardSheet key={index} {...card} />
+            <Card key={index} {...card} />
             </div>
           ))}
          </div>

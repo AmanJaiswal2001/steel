@@ -80,12 +80,12 @@ Sheets</button>
 
 <div className='flex sm:gap-10 gap-5 mt-5 lg:hidden  mx-5 sm:mx-10 lg:mx-0'>
 <button 
- className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-sans  rounded-sm ${activeProduct === 'coil' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[rgb(93, 116, 166)] ' 
+ className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-sans  rounded-sm ${activeProduct === 'coil' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6] ' 
         : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]' }`}
               onClick={() => setActiveProduct('coil')}
             >
 Coils</button>
-<button  className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-sans  rounded-sm ${activeProduct === 'sheet'  ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[rgb(93, 116, 166)]' 
+<button  className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-sans  rounded-sm ${activeProduct === 'sheet'  ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6]' 
         : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]'}`}
               onClick={() => setActiveProduct('sheet')}
             >

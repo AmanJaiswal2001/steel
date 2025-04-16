@@ -1,25 +1,30 @@
 import React, { useState,useEffect } from 'react'
 import Card from './Card';
 import Button from './Button';
+import CardSheet from './CardSheet';
 
 const cardData = [
     {
-      title: "Jindal Strainless HR JT N1 Finish Sheets",
+      title: "Jindal Strainless HR JT 204 N1 Finish Sheets",
       brand: "Jindal Strainless",
       thickness: "3-20mm",
       width: "1250-1500mm",
 
-      buttonName: "Jindal Strainless HR JT N1 Finish Sheets",
+      buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "ezgif.com-gif-maker__32_.webp",    },
+      image: "/series200.webp",   
+    length:"2500-6000mm"
+  
+  },
     {
-      title: "TATA Steel Hot Rolled Sheets",
+      title: "TATA Steel Hot 204 Rolled Sheets",
       brand: "Brand: TATA Steel",
       thickness: "0.5-3mm",
       width: "600-1500mm",
-      buttonName: "Order Now",
+      buttonName: "Purchase now",
       delivery: "Delivery in 3-7 days",
-      image: "ezgif.com-gif-maker__32_.webp",    },
+      image: "/series200.webp",  
+    length:"2500-6000mm"  },
     // {
     //   title: "SAIL Steel Plates",
     //   brand: "Brand: SAIL",
@@ -50,20 +55,19 @@ const cardData = [
   ];
   
 
-const Sheets200 = ({type}) => {
+const SheetsTwo = ({type}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const visibleCards = 3; 
   
 
     const filteredCards = cardData.filter((card) => {
-        const title = card.title.toLowerCase();
-        const brand = (card.brand || '').toLowerCase();
-      
-        if (type === "") {
-            return title.includes("hot") || brand.includes("hot");
-          } else if (type === "cold") {
-            return title.includes("cold") || brand.includes("cold");
-          }
+      const title = card.title.toLowerCase();
+      const match = title.match(/\b(\d{3})\b/); // Extract 3-digit number like 204, 304
+  
+      const series = match ? parseInt(match[1]) : null;
+      return series && series >= 200;
+    });
+    
 
 
         // if (type === "hot") {
@@ -72,7 +76,7 @@ const Sheets200 = ({type}) => {
         //   return card.title.toLowerCase().includes("cold");
         // }
         // return true; // fallback for all
-      });
+   
     
       // Reset index when type changes
       useEffect(() => {
@@ -96,7 +100,7 @@ const Sheets200 = ({type}) => {
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
             <div className='h-80'>
-            <Card key={index} {...card} />
+            <CardSheet key={index} {...card} />
             </div>
           ))}
          </div>
@@ -133,4 +137,4 @@ const Sheets200 = ({type}) => {
   )
 }
 
-export default Sheets200
+export default SheetsTwo

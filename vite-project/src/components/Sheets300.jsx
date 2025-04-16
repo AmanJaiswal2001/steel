@@ -11,7 +11,8 @@ const cardData = [
       width: "1250-1500mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "ezgif.com-gif-maker__32_.webp",    length:"2500-6000mm"
+      image: "ezgif.com-gif-maker__32_.webp",   
+       length:"2500-6000mm"
     },
     {
       title: "Jindal Stainless Steel HRAP 310S N1 Finish Sheets",
