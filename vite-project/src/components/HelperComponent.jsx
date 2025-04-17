@@ -212,18 +212,19 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
     <div className='flex gap-4 items-center'>
     <p className='font-sans text-[1rem] font-semibold'>{title} (mm)</p>
     {!selected && (
-  <span className="text-[#e87205] font-sans px-2 py-1   text-[1rem]">
+  <span className="text-[#e87205] font-sans px-2 py-1  text-[12px]  lg:text-[1rem]">
     Select <b>Thickness (mm)</b> to view available width
   </span>
 )}
     </div>
    
-    <div className="grid grid-cols-12 gap-2 w-full max-w-5xl">
+    <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full">
       {values.map((value, index) => (
         <button
           key={index}
           onClick={() => onSelect(value)}
-          className={`text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-full   ${selected === value ? 'bg-blue-100 border-blue-500' : 'border-gray-300'}`}
+          className={`text-sm  cursor-pointer rounded-sm border p-2 flex justify-center items-center gap-2  
+          ${selected === value ? 'bg-[#f2f6ff] border border-[#afc4f3] font-semibold text-[rgb(93,116,166)]' : 'border-[rgba(0,0,0,.125)] border font-normal text-[#212529]'}`}
         >
           {value}
         </button>
@@ -236,15 +237,15 @@ export const WidthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
     <p className='font-sans text-[1rem] font-semibold ' >{title} (mm)</p>
-    <div className="grid grid-cols-4 gap-2 w-96 max-w-5xl">
+    <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full ">
       {values.map((value, index) => (
         <button
           key={index}
           onClick={() =>!disable&& onSelect(value)}
           disabled={disable}
-          className={`text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-20  ${disable ? 'bg-gray-100 cursor-not-allowed text-gray-400 border-gray-200' :
-                selected === value ? 'bg-blue-100 border-blue-500' : 'cursor-pointer border-gray-300'} `}
-        >
+          className={`text-sm  cursor-pointer rounded-sm border p-2 w-full   
+          ${selected === value ? 'bg-[#f2f6ff] border border-[#afc4f3] font-semibold text-[rgb(93,116,166)]' : 'border-[rgba(0,0,0,.125)] border font-normal text-[#212529]'}`}
+       >
           {value}
         </button>
       ))}
@@ -258,15 +259,15 @@ export const LengthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
     <p className=' font-sans text-[1rem] font-semibold'>{title} (mm)</p>
-    <div className="grid grid-cols-4 gap-2 w-96 max-w-5xl">
+    <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full">
       {values.map((value, index) => (
         <button
           key={index}
           onClick={() => !disable&& onSelect(value)}
           disabled={disable}
-          className={`text-[12px] font-normal cursor-pointer rounded-sm border border-gray-300 p-2 w-20  ${disable ? 'bg-gray-100 cursor-not-allowed text-gray-400 border-gray-200' :
-                selected === value ? 'bg-blue-100 border-blue-500' : 'cursor-pointer border-gray-300'}`}
-        >
+          className={`text-sm  cursor-pointer rounded-sm border p-2 w-full   
+          ${selected === value ? 'bg-[#f2f6ff] border border-[#afc4f3] font-semibold text-[rgb(93,116,166)]' : 'border-[rgba(0,0,0,.125)] border font-normal text-[#212529]'}`}
+         >
           {value}
         </button>
       ))}

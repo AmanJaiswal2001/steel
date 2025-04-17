@@ -1,7 +1,7 @@
 const cardData = [
     {
       title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-      brand: "Brand: JSW Steel",
+      brand: " JSW Steel",
       thickness: "1.6-25mm",
       width: "900-2000mm",
       buttonName: "Purchase now",

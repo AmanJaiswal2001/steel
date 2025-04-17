@@ -61,26 +61,26 @@ const HotRolledCatgory = ({filters}) => {
     return true;
   });
     return (
-    <div>
+    <div className='relative  w-full mx-auto'>
 {(
   filters.Grade.length > 0 ||
   (filters.Thickness?.min || filters.Thickness?.max) ||
   (filters.Width?.min || filters.Width?.max) ||
   (filters.Length?.min || filters.Length?.max)
 ) && (
-  <p className="text-sm text-black mb-4 font-semibold">
+  <p className="text-sm text-black mb-4 font-sans font-semibold">
     Filters applied:
     
     {/* Grade First */}
     {filters.Grade.length > 0 && (
-      <span className="font-medium text-[#2241a6] text-sm">
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
         {" Grade: " + filters.Grade.join(", ")}
       </span>
     )}
 
     {/* Then Thickness */}
     {(filters.Thickness?.min || filters.Thickness?.max) && (
-      <span className="font-medium text-[#2241a6] text-sm">
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
         {"  Thickness: "}
         {filters.Thickness.min && `${filters.Thickness.min}mm`}
         {filters.Thickness.min && filters.Thickness.max && " - "}
@@ -90,7 +90,7 @@ const HotRolledCatgory = ({filters}) => {
 
     {/* Then Width */}
     {(filters.Width?.min || filters.Width?.max) && (
-      <span className="font-medium text-[#2241a6] text-sm">
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
         {"  Width: "}{" "}
         {filters.Width.min && `${filters.Width.min}mm`}
         {filters.Width.min && filters.Width.max && " - "}
@@ -100,7 +100,7 @@ const HotRolledCatgory = ({filters}) => {
 
     {/* Then Length */}
     {(filters.Length?.min || filters.Length?.max) && (
-      <span className="font-medium text-[#2241a6] text-sm">
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
         {"  Length: "}
         {filters.Length.min && `${filters.Length.min}mm`}
         {filters.Length.min && filters.Length.max && " - "}
@@ -112,7 +112,7 @@ const HotRolledCatgory = ({filters}) => {
 
 
 
-    <div class="grid grid-cols-3 grid-rows-2 gap-10 w-full  ">
+    <div class="grid  grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10  ">
  {/* <div> */}
 
 
