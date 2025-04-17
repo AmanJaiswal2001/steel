@@ -39,11 +39,11 @@ export const FilterDropdown=({title,options=[],selectedOptions = [], onChange })
        
           // console.log('Dropdown is now:', !open ? 'Opening' : 'Closing');
         // }}
-        className="w-full flex justify-between items-center cursor-pointer px-6 py-2 bg-[#f5f7fc] "
+        className="w-full flex justify-between items-center cursor-pointer  px-6 py-3 bg-[#f5f7fc] "
      
       >
       
-        <span className="text-lg font-medium">{title}</span>
+        <span className="text-[1rem] font-sans  font-semibold">{title}</span>
         <svg
         onClick={()=>setOpen(!open)}
           className={`w-5 h-5 transform transition-transform duration-300 ${open ? "rotate-180" : ""}`}
@@ -67,7 +67,7 @@ export const FilterDropdown=({title,options=[],selectedOptions = [], onChange })
  onChange={() => onChange(title, option)}
 
           />
-          <span>{option}</span>
+          <span className='font-medium text-sm font-sans text-left'>{option}</span>
         </label>
        ))}
        
@@ -120,7 +120,7 @@ export const CommonFilter = ({
 
   return (
     <div className="relative inline-block w-full border border-gray-300  rounded-md bg-[#f5f7fc] p-4">
-      <p className="text-[1rem] font-semibold mb-2">{title}</p>
+      <p className="text-[1rem] font-sans text-[#262626] text-left font-semibold mb-2">{title}</p>
 
       <div className="flex gap-2 relative ">
         {/* Min Button */}
@@ -130,9 +130,9 @@ export const CommonFilter = ({
               setIsMinOpen(!isMinOpen);
               setIsMaxOpen(false); // close max if open
             }}
-            className="w-full flex justify-between  rounded-lg items-center hover:border  cursor-pointer px-4 py-2 bg-white border border-gray-300"
+            className="w-full flex justify-between  rounded-lg items-center hover:border  cursor-pointer px-4 py-2 bg-white border border-[#b1b8c9]"
           >
-            <span className="text-base " >{selectedMin || minLabel}</span>
+            <span className=" text-sm font-sans font-normal text-[#70737a] " >{selectedMin || minLabel}</span>
             <svg
               className={`w-5 h-5 transform transition-transform duration-300 ${
                 isMinOpen ? "rotate-180" : ""
@@ -155,7 +155,7 @@ export const CommonFilter = ({
                    // setSelectedMin(option);
                     // setIsMinOpen(false);
                   }
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm font-sans font-normal text-[#70737a]">
                   {option}
                 </div>
               ))}
@@ -172,7 +172,7 @@ export const CommonFilter = ({
             }}
             className="w-full flex justify-between rounded-lg items-center cursor-pointer px-4 py-2 bg-white border border-gray-300"
           >
-            <span className="text-base">{selectedMax ||maxLabel}</span>
+            <span className="text-sm font-sans font-normal text-[#70737a]">{selectedMax ||maxLabel}</span>
             <svg
               className={`w-5 h-5 transform transition-transform duration-300 ${
                 isMaxOpen ? "rotate-180" : ""
@@ -193,7 +193,7 @@ export const CommonFilter = ({
                     key={index}
                     onClick={() => handleMaxSelect(option)}
            
-               className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+               className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm font-sans font-normal text-[#70737a]">
                   {option}
                 </div>
               ))}

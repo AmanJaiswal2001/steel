@@ -62,7 +62,7 @@ const  CoilsCat = ({filters}) => {
     return true;
   });
     return (
-    <div>
+    <div className='relative  w-full mx-auto'>
 {(
   filters.Grade.length > 0 ||
   (filters.Thickness?.min || filters.Thickness?.max) ||
@@ -113,7 +113,7 @@ const  CoilsCat = ({filters}) => {
 
 
 
-    <div class="grid grid-cols-3 grid-rows-2 gap-10 w-full  ">
+    <div class="grid  grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10  ">
  {/* <div> */}
 
 

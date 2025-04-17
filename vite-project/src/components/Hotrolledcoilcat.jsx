@@ -8,10 +8,10 @@ const Hotrolledcoilcat = () => {
     Width: null,
     Length: null });
   return (
-    <div className='  h-full mt-10 flex w-full gap-10 ' >
+    <div className='  h-full mt-10 flex w-full  xl:gap-10 px-5 gap-5 lg:px-16 lg:gap-8 md:px-10 md:gap-8 xl:px-20 ' >
     {/* filter */}
    
-    <div className='w-2/5  px-20  '>
+    <div className='w-96 hidden   lg:block xl:block   '>
     <Filter onFilterChange={setFilters}
 hideFields={["Length"]}
 
@@ -19,10 +19,13 @@ hideFields={["Length"]}
     </div>
   
     {/* catgory */}
-    <div className=' flex flex-col gap-2 h-full w-3/5'>
+    <div className=' flex flex-col gap-2 h-full w-full lg:w-3/5'>
    
-    <h1 className='font-extrabold text-[1.25rem]  '>Hot Rolled Mild Steel Sheets</h1>
-    <CoilsCat filters={filters}/>
+    <h1 className='font-extrabold text-2xl text-[#262626] font-sans text-left '>Hot Rolled Mild Steel Sheets</h1>
+   <div className='relative max-w-full mx-auto  lg:mx-0 xl:mx-0'>
+   <CoilsCat filters={filters}/>
+   </div>
+  
     </div>
    
     </div>
