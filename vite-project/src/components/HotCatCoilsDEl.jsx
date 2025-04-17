@@ -29,13 +29,14 @@ const[customNumber,setcustomNumber]=useState(null);
   const product = cardData[id];
   // const productDetail=hotrolledproductdata[""];
 
-  if (!product) return <div>Product not found</div>;
+  if (!product) return <div className="font-sans text-3xl font-bold text-center">Product not found</div>;
 
   return (
-    <div className=" w-full px-20 z-10 pt-10 ">
+    <div className=" w-full px-5  lg:px-20 z-10 pt-10  ">
      
-     <div className="flex w-full px-10 gap-5 justify-between  ">
-      <div className=" w-1/2 h-80 ">
+     <div className="flex w-full  lg:gap-5 lg:justify-between  ">
+     <div className="w-full  lg:px-0 lg:flex lg:gap-5">
+      <div className=" lg:w-1/2 h-80  lg:px-0 ">
         {/* img */}
         <img 
         className=" h-full object-cover rounded-lg" 
@@ -43,13 +44,15 @@ const[customNumber,setcustomNumber]=useState(null);
    
 
       </div>
-      <div className="w-4/3 flex flex-col gap-2">
+      <div className="lg:w-4/3 pt-4 lg:pt-0 flex flex-col gap-2">
 {/* detail */}
 
-<h1 className="text-2xl  font-bold mb-4">{product.title}</h1>
-         <p>{product.brand}</p>
+<h1 className="text-xl font-extrabold  sm:w-[420px] w-80 lg:w-full text-[#262626] font-sans mb-2">{product.title}</h1>
+<div className="flex gap-2">
+<span className="text-sm font-normal font-sans text-[#262626]">Brand:</span> <span className="font-semibold text-sm font-sans text-[#262626] ">{product.brand}</span>
 
-         <div className="flex justify-between pb-2 border-b-2 border-gray-200">
+</div>
+         <div className="flex w-[100%] sm:w-full  justify-between pb-2 border-b-2 border-gray-200">
           <h3 className="font-semibold text-[#262626] font-sans text-[1rem]">Select attributes</h3>
          <div className="flex   "
          onClick={()=>{
@@ -105,7 +108,7 @@ setSelectedWidth(null)
 
 
   <div className="pt-4">
-<p className="text-[#262626] font-sans">
+<p className="text-[#262626] font-sans font-sm font-semibold">
 Specify quantity (In number of sheets)</p>
 <input 
 value={customNumber}
@@ -124,11 +127,11 @@ onClick={()=>{
 </div>
 
 
-
+</div>
 
      
 </div>
-<div className="h-40 p-5 m-5 flex flex-col gap-4 border border-gray-300 rounded-lg">
+<div className="h-48  lg:w-80 w-72 hidden  p-5 m-5 sm:flex md:flex lg:flex flex-col gap-4 border border-gray-300 rounded-lg">
 <h1 className="font-sans font-bold text-lg pt-4">Send the all details on whatapps </h1>
 <a className="cursor-pointer z-1"
        href={`https://wa.me/918447175255?text=${encodeURIComponent(`Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness || "-"} mm\nWidth: ${selectedWidth || "-"} mm\n mm\nQuantity: ${customNumber || "-"} sheets`
@@ -138,12 +141,12 @@ onClick={()=>{
 >
       
         {/* whatapps buttom */}
-        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#007bff]'>      
+        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#2241a6]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '
       />
-        </a><span className='text-white'>Connect on whatsapp</span>
+        </a><span className='text-white font-sans font-medium'>Connect on whatsapp</span>
 </button>
       </a>
 </div>

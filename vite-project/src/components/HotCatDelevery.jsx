@@ -52,7 +52,7 @@ const[customNumber,setcustomNumber]=useState(null);
 
 </div>
 
-         <div className="flex w-96 sm:w-full  justify-between pb-2 border-b-2 border-gray-200">
+         <div className="flex w-[100%] sm:w-full  justify-between pb-2 border-b-2 border-gray-200">
           <h3 className="font-semibold text-[#262626] font-sans text-[1rem]">Select attributes</h3>
          <div className="flex   "
          onClick={()=>{
@@ -147,7 +147,7 @@ onClick={()=>{
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '
       />
-        </a><span className='text-white'>Connect on whatsapp</span>
+        </a><span className='text-white font-sans font-medium'>Connect on whatsapp</span>
 </button>
       </a>
 </div>
