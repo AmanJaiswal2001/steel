@@ -124,7 +124,7 @@ const ColdRolledCatgory = ({filters}) => {
   ) : (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
       {filteredData.map((card, index) => (
-        <Link key={index} to={`/product/${index}`}>
+        <Link key={index} to={`/coldproductsheet/${index}`}>
           <CardSheet {...card} />
         </Link>
       ))}

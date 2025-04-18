@@ -6,7 +6,7 @@
       width: "900-2000mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-5 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
+      image: "/crs.webp",
       length:"2500-12000mm"
     },
     {
@@ -16,8 +16,7 @@
       width: "600-1500mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 3-7 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",   
-      length:"2500-12000mm" },
+      image: "/crs.webp",     length:"2500-12000mm" },
     {
       title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
       brand: "Brand: SAIL",
@@ -25,8 +24,7 @@
       width: "1200-2500mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 4-6 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-      length:"2500-12000mm"
+      image: "/crs.webp",   length:"2500-12000mm"
     },
      {
       title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
@@ -35,8 +33,7 @@
       width: "800-2200mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 5-8 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-      length:"2500-12000mm"
+      image: "/crs.webp",      length:"2500-12000mm"
     },
      {
       title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
@@ -45,8 +42,7 @@
       width: "700-1800mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-4 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-      length:"2500-12000mm"
+      image: "/crs.webp",     length:"2500-12000mm"
     },
     {
         title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
@@ -55,8 +51,7 @@
         width: "700-1800mm",
         buttonName: "Purchase now",
         delivery: "Delivery in 2-4 days",
-        image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-        length:"2500-12000mm"
+        image: "/crs.webp",       length:"2500-12000mm"
       }, {
         title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
         brand: "Brand: Jindal Steel",
@@ -64,8 +59,7 @@
         width: "700-1800mm",
         buttonName: "Purchase now",
         delivery: "Delivery in 2-4 days",
-        image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-        length:"2500-12000mm"
+        image: "/crs.webp",        length:"2500-12000mm"
       }, {
         title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
         brand: "Brand: Jindal Steel",
@@ -73,7 +67,6 @@
         width: "700-1800mm",
         buttonName: "Purchase now",
         delivery: "Delivery in 2-4 days",
-        image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-        length:"2500-12000mm"
+        image: "/crs.webp",     length:"2500-12000mm"
       },
   ];
