@@ -155,7 +155,7 @@ onClick={()=>{
      </div>
      
      
-     <div className="w-3/4 h-full border border-[#e6e6e6] rounded-lg mt-10 p-4">
+     <div className="w-3/4 hidden md:block h-full border border-[#e6e6e6] rounded-lg mt-10 p-4">
      <h4 className="text-[18px] font-bold font-sans border-b-2 text-[#262626] pb-4 border-b-gray-100">Overview</h4>
      <p className="text-[1rem] pt-2 font-semibold text-[#262626] wrap-normal font-sans">Product information</p>
      <p className="text-sm font-sans font-normal pt-2 text-[#262626]">{hotrolledproductdata.description}</p>
@@ -197,7 +197,77 @@ onClick={()=>{
 
      </div>
     
-     
+     <div className="block md:hidden border-b-4 px-4 mt-4  border-[#f1f1f1]">
+        <button
+          className="w-full text-left flex justify-between items-center py-4"
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+        >
+          <h4 className="text-[16px] font-normal font-sans text-[#262626]">
+            Overview
+          </h4>
+          <span className="text-xl">{isMobileOpen ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}</span>
+        </button>
+
+        {isMobileOpen && (
+          <div className="transition-all duration-300 ease-in-out">
+            <p className="text-[1rem] pt-2 border-t-2 border-[#f1f1f1] font-semibold text-[#262626] font-sans">
+              Product information
+            </p>
+            <p className="text-sm font-sans font-normal pt-2 text-[#262626]">
+              {hotrolledproductdata.description}
+            </p>
+
+            <ul className="border-b-2 border-[#f1f1f1] pb-2 pl-4 pt-4 list-disc">
+              {hotrolledproductdata.features.map((product, index) => (
+                <li className="font-normal text-sm" key={index}>
+                  {product}
+                </li>
+              ))}
+            </ul>
+
+            <div>
+              <p className="text-[1rem] font-semibold pt-2 font-sans">
+                Item details
+              </p>
+              <div className="flex flex-col gap-4 pt-3">
+                <div>
+                  <p className="text-[#70737a] font-medium text-[0.875rem]">
+                    Brand name
+                  </p>
+                  <p className="font-bold text-[.875rem] text-black">
+                    {hotrolledproductdata.brand}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[#70737a] font-medium text-[0.875rem]">
+                    Sheet weight
+                  </p>
+                  <p className="font-bold text-[.875rem] text-black">
+                    {hotrolledproductdata.sheetWeight}
+                  </p>
+                </div>
+              </div>
+
+              <div className="border-b-2 border-[#f1f1f1] pb-4 pt-3">
+                <p className="text-[#70737a] font-medium text-[0.875rem]">
+                  Supply condition
+                </p>
+                <p className="font-bold text-[.875rem] text-black">
+                  {hotrolledproductdata.supplyCondition.join(", ")}
+                </p>
+              </div>
+
+              <div className="pt-3">
+                <p className="text-[0.875rem] font-bold">Packaging</p>
+                <p className="font-normal text-[.875rem] mb-4 text-black">
+                  {hotrolledproductdata.packaging}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
      
      <Hotrollcoilinfo/>
      
