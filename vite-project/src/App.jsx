@@ -14,6 +14,9 @@ import HotCatDelevery from "./components/HotCatDelevery";
 import Hotrolledcoilcat from "./components/Hotrolledcoilcat";
 import HotCatCoilsDEl from "./components/HotCatCoilsDEl";
 import ColdSheetDel from "./components/ColdSheetDel";
+import ColdCoils from "./components/ColdCoils";
+
+import ColdCoilsdel from "./components/ColdCoilsdel";
 
 const appRouter = createBrowserRouter([
   {
@@ -32,9 +35,15 @@ const appRouter = createBrowserRouter([
         path:"/coldRolled/sheet",
         element:<ColdCatgory/>
       },
+      {
+        path:"/coldRolled/coils",
+        element:<ColdCoils/>
+      },
       { path: "product/:id", element: <HotCatDelevery /> },
       { path: "coilproduct/:id", element: <HotCatCoilsDEl /> },
       { path: "coldproductsheet/:id", element: <ColdSheetDel /> },
+       { path: "/coldproductcoil/:id", element: <ColdCoilsdel /> },
+     
       {
         index: true,
         element: <Layout />, // This will render on root "/"
