@@ -44,13 +44,9 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
           
 {open && (
 
-  <div className="absolute left-0 mt-3 w-44 bg-white border rounded shadow-lg z-50">
-          {/* Arrow */}
-          <div className="absolute -top-2 left-4 w-4 h-4 bg-white rotate-45 shadow-md z-[-1]" />
-
-          <ul>
+  
        
-        {/* <ul className=" absolute hover:text-[#2241a6]  left-0 mt-0  bg-white   rounded shadow-lg z-50 "> */}
+        <ul className=" absolute hover:text-[#2241a6]  left-0 mt-0  bg-white   rounded shadow-lg z-50 ">
           {menuItems.map((item) => (
             <li className=" hover:bg-gray-100 relative group " key={item}
             
@@ -93,7 +89,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
             </li>
           ))}
         </ul>
-        </div>
+    
       )}
     </div>
   );
