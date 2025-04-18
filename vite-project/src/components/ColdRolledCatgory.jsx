@@ -1,100 +1,135 @@
 import React from 'react'
 import CardSheet from './CardSheet';
 import { Link } from 'react-router-dom';
-
-const ColdRolledCatgory = () => {
+import {cardData} from './data/coldrollcoilshhet';
+const ColdRolledCatgory = ({filters}) => {
   
-    const cardData = [
-        {
-          title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
-          brand: "Brand: JSW Steel",
-          thickness: "1.6-25mm",
-          width: "900-2000mm",
-          buttonName: "Purchase now",
-          delivery: "Delivery in 2-5 days",
-          image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-          length:"2500-12000mm"
-        },
-        {
-          title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
-          brand: "Brand: JSPL",
-          thickness: "0.5-3mm",
-          width: "600-1500mm",
-          buttonName: "Purchase now",
-          delivery: "Delivery in 3-7 days",
-          image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",   
-          length:"2500-12000mm" },
-        {
-          title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
-          brand: "Brand: SAIL",
-          thickness: "2-40mm",
-          width: "1200-2500mm",
-          buttonName: "Purchase now",
-          delivery: "Delivery in 4-6 days",
-          image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-          length:"2500-12000mm"
-        },
-         {
-          title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
-          brand: "Brand: Essar Steel",
-          thickness: "1.2-16mm",
-          width: "800-2200mm",
-          buttonName: "Purchase now",
-          delivery: "Delivery in 5-8 days",
-          image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-          length:"2500-12000mm"
-        },
-         {
-          title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
-          brand: "Brand: Jindal Steel",
-          thickness: "0.4-2mm",
-          width: "700-1800mm",
-          buttonName: "Purchase now",
-          delivery: "Delivery in 2-4 days",
-          image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-          length:"2500-12000mm"
-        },
-        {
-            title: "JSW Steel Cold Rolled Sheet IS 2062:2011 E250Br",
-            brand: "Brand: Jindal Steel",
-            thickness: "0.4-2mm",
-            width: "700-1800mm",
-            buttonName: "Purchase now",
-            delivery: "Delivery in 2-4 days",
-            image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-            length:"2500-12000mm"
-          }, {
-            title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-            brand: "Brand: Jindal Steel",
-            thickness: "0.4-2mm",
-            width: "700-1800mm",
-            buttonName: "Purchase now",
-            delivery: "Delivery in 2-4 days",
-            image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-            length:"2500-12000mm"
-          }, {
-            title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-            brand: "Brand: Jindal Steel",
-            thickness: "0.4-2mm",
-            width: "700-1800mm",
-            buttonName: "Purchase now",
-            delivery: "Delivery in 2-4 days",
-            image: "https://images.ctfassets.net/o0otttl8ele8/2mf3iSpFsm4edsiOtsQLSk/121916c354de98f0c44a31ed261ab8d0/ezgif.com-gif-maker__41_.webp?fit=fill&w=280&h=153&fm=webp",
-            length:"2500-12000mm"
-          },
-      ];
-    return (
-    <div>
-    <div class="grid grid-cols-3 grid-rows-2 gap-10 w-full  ">
- {/* <div> */}
- {cardData.map((card,index)=>(
-    <Link key={index} to={`/product/${index}`}>
-    <CardSheet {...card} />
-  </Link>
- ))}
 
+  const parseRange = (rangeStr) => {
+    const [min, max] = rangeStr.split('-').map(parseFloat);
+    return { min, max };
+  };
+
+  
+  const isWithinRange = (cardRange, selectedMin, selectedMax) => {
+    if (!selectedMin && !selectedMax) return true;
+    const { min, max } = parseRange(cardRange);
+    if (selectedMin && max < parseFloat(selectedMin)) return false;
+    if (selectedMax && min > parseFloat(selectedMax)) return false;
+    return true;
+  };
+
+   
+  const filteredData = cardData.filter((card) => {
+    // Grade filter
+    const gradeFilters = filters.Grade || [];
+    if (gradeFilters.length > 0 &&
+      !gradeFilters.some(grade => 
+        card.title.includes(grade) || card.thickness.includes(grade))
+    ) {
+      return false;
+    }
+
+    // Thickness filter
+    if (
+      !isWithinRange(
+        card.thickness,
+        filters.Thickness?.min,
+        filters.Thickness?.max
+      )  ) {
+         return false;
     
+    }
+
+    // Width filter
+    if (
+      !isWithinRange(card.width, filters.Width?.min, filters.Width?.max)
+    ) {
+      return false;
+    }
+
+
+    // Length filter
+    if (
+      !isWithinRange(card.length, filters.Length?.min, filters.Length?.max)
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+
+    return (
+    <div className='relative  w-full mx-auto'>
+   
+   
+   {(
+  filters.Grade.length > 0 ||
+  (filters.Thickness?.min || filters.Thickness?.max) ||
+  (filters.Width?.min || filters.Width?.max) ||
+  (filters.Length?.min || filters.Length?.max)
+) && (
+  <p className="text-sm text-black mb-4 font-sans font-semibold">
+    Filters applied:
+    
+    {/* Grade First */}
+    {filters.Grade.length > 0 && (
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
+        {" Grade: " + filters.Grade.join(", ")}
+      </span>
+    )}
+
+    {/* Then Thickness */}
+    {(filters.Thickness?.min || filters.Thickness?.max) && (
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
+        {"  Thickness: "}
+        {filters.Thickness.min && `${filters.Thickness.min}mm`}
+        {filters.Thickness.min && filters.Thickness.max && " - "}
+        {filters.Thickness.max && `${filters.Thickness.max}mm`}
+      </span>
+    )}
+
+    {/* Then Width */}
+    {(filters.Width?.min || filters.Width?.max) && (
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
+        {"  Width: "}{" "}
+        {filters.Width.min && `${filters.Width.min}mm`}
+        {filters.Width.min && filters.Width.max && " - "}
+        {filters.Width.max && `${filters.Width.max}mm`}
+      </span>
+    )}
+
+    {/* Then Length */}
+    {(filters.Length?.min || filters.Length?.max) && (
+      <span className="font-medium font-sans text-[#2241a6] text-sm">
+        {"  Length: "}
+        {filters.Length.min && `${filters.Length.min}mm`}
+        {filters.Length.min && filters.Length.max && " - "}
+        {filters.Length.max && `${filters.Length.max}mm`}
+      </span>
+    )}
+  </p>
+)}
+   
+   
+   
+   
+   
+   
+   
+{filteredData.length === 0 ? (
+    <p className="text-center text-gray-600 font-medium mt-10">
+      No products found matching the selected filters.
+    </p>
+  ) : (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+      {filteredData.map((card, index) => (
+        <Link key={index} to={`/product/${index}`}>
+          <CardSheet {...card} />
+        </Link>
+      ))}
     </div>
+  )}
     </div>
   )
 }

@@ -27,6 +27,10 @@ const appRouter = createBrowserRouter([
         path: "hotRolled/coils",
         element: <Hotrolledcoilcat />,
       },
+      {
+        path:"/coldRolled/sheet",
+        element:<ColdCatgory/>
+      },
       { path: "product/:id", element: <HotCatDelevery /> },
       { path: "coilproduct/:id", element: <HotCatCoilsDEl /> },
     

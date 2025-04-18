@@ -65,10 +65,12 @@ const data = {
 
 export const  Hotrolledinfo = () => {
     const [activeTab, setActiveTab] = useState("Chemical composition");
-  
+    const [openAccordion, setOpenAccordion] = useState("");
     return (
-      <div className="w-3/4  mt-10 border border-gray-200 rounded-lg">
+      <div>
+      <div className="w-3/4  mt-10 md:border md:border-gray-200 rounded-lg">
         {/* Tabs */}
+      <div className="hidden md:block">
         <div className="flex  justify-between   flex-wrap gap-0 mb-4  ">
           {tabs.map((tab,index) => (
             <button
@@ -107,6 +109,40 @@ export const  Hotrolledinfo = () => {
             </tbody>
           </table>
         </div>
+</div>
+        <div className="block md:hidden">
+        {tabs.map((tab) => (
+          <div key={tab} className="border-b-4 border-[#f1f1f1] ">
+            <button
+              onClick={() =>
+                setOpenAccordion(openAccordion === tab ? "" : tab)
+              }
+              className="w-full flex cursor-pointer justify-between items-center py-3 px-4"
+            >
+              <span className="text-[16px] font-normal text-[#262626] font-sans">
+                {tab}
+              </span>
+              <span className="text-xl">{openAccordion === tab ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}</span>
+            </button>
+
+            {openAccordion === tab && (
+              <table className="min-w-full  border-t border-[#f1f1f1] text-sm">
+                <tbody>
+                  {data[tab].map((item, index) => (
+                    <tr key={index}>
+                      <td className="px-4 py-2 w-1/2 border-b font-sans font-medium text-[1rem] border-r border-[#f1f1f1]">
+                        {item.name}
+                      </td>
+                      <td className="px-4 py-2 border-b border-r border-[#f1f1f1]"></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
+        ))}
+      </div>
+      </div>
     //   </div>
     );
   };

@@ -14,7 +14,7 @@ const [selectedWidth,setSelectedWidth]=useState(null);
 // const [selectedLength,setSelectedLength]=useState(null);
 // const[customLength,setcustomLength]=useState(null);
 const[customNumber,setcustomNumber]=useState(null);
-
+const [isMobileOpen, setIsMobileOpen] = useState(false);
 
     const thicknessValues = [
         "1.6", "1.8", "2.",  "2.5",  "3.0",
