@@ -13,7 +13,7 @@ const ArticleCard = ({image, buttonName,description, buttonNavigate}) => {
   </figure>
   <div className="card-body  ">
     <button className="card-title bg-[#deb887] w-20 flex font-sans justify-center items-center font-semibold rounded-lg  text-[#262626] ">{buttonName}</button>
-    <h5 className='font-sans text-[#262626] h-20 break-words cousor-pointer text-[1.125rem] font-medium '>{description}</h5>
+    <h5 className='font-sans text-[#262626] w-96 h-20 break-words cousor-pointer text-[1.125rem] font-medium '>{description}</h5>
     <div className="card-actions justify-start mt-2 mb-4">
       <button className="font-semibold cursor-pointer break-word text-[#2241a6] text-[.875rem] ">{buttonNavigate}</button>
     </div>

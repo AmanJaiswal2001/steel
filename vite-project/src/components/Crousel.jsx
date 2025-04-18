@@ -36,7 +36,7 @@ const Crousel = () => {
  
  
  return (
-    <div className='relative   w-full mx-auto '>
+    <div className='relative   -mt-4 h-full w-full mx-auto '>
     <div onClick={previousSlide}
       className="absolute left-2 top-[40%]  -translate-y-1/2  bg-blue-200 hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 z-20"
   
@@ -52,7 +52,7 @@ current===index&&( <img
 className='w-full h-full object-cover '
  key={index} src={item}/>
         ))}
-     <div className='relative bottom-20  left-10  lg:left-20 lg:w-40'>      
+     <div className='relative bottom-20  left-10 md:bottom-32 sm:bottom-24 lg:left-20 lg:w-40'>      
      <button className='flex gap-2 lg:items-center  lg:justify-center  cursor-pointer mt-12 lg:mt-0 lg:p-2 rounded-lg sm:w-48 lg:w-64 bg-[#2241a6]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp

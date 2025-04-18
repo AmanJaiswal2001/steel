@@ -19,7 +19,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
 
   return (
-    <div className="relative group mt-1"
+    <div className="relative group  mt-1"
 
    
     onMouseEnter={() => setOpen(true)}
@@ -32,7 +32,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
       
       <button onClick={() => setOpen(!open)} 
       
-      className="px-4 w-40 py-[0.45rem] relative  rounded flex cursor-pointer hover:text-blue-700">
+      className="  py-[0.45rem] relative text-[#343a41] font-medium font-sans  text-sm rounded flex cursor-pointer hover:text-[#2241a6]">
         {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
       </button>
 
@@ -44,7 +44,13 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
           
 {open && (
 
-        <ul className=" absolute  left-0 mt-0  bg-white border rounded shadow-lg z-50 ">
+  <div className="absolute left-0 mt-3 w-44 bg-white border rounded shadow-lg z-50">
+          {/* Arrow */}
+          <div className="absolute -top-2 left-4 w-4 h-4 bg-white rotate-45 shadow-md z-[-1]" />
+
+          <ul>
+       
+        {/* <ul className=" absolute hover:text-[#2241a6]  left-0 mt-0  bg-white   rounded shadow-lg z-50 "> */}
           {menuItems.map((item) => (
             <li className=" hover:bg-gray-100 relative group " key={item}
             
@@ -55,10 +61,10 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                }
                onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
                 onMouseLeave={() => setSubMenu(null)}
-                className="w-40  flex justify-between text-left px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                className="w-40  flex justify-between text-left px-4 py-2 hover:bg-gray-100 hover:text-[#2241a6] cursor-pointer"
               >
               
-               <span>{item}</span> 
+               <span className=" text-[#343a41] hover:text-[#2241a6] font-medium font-sans">{item}</span> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
               </button>
             
@@ -73,10 +79,10 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                 >
                 
                 {submenuMapping[item].map((subItem) => (
-                    <li key={subItem.label} className="hover:bg-gray-100">
+                    <li key={subItem.label} className="hover:bg-gray-100  text-[#343a41] font-medium font-sans">
                       <Link
                         to={subItem.path}
-                        className="block px-4 py-2 cursor-pointer"
+                        className="block px-4 py-2 hover:text-[#2241a6] cursor-pointer"
                       >
                         {subItem.label}
                       </Link>
@@ -87,6 +93,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
             </li>
           ))}
         </ul>
+        </div>
       )}
     </div>
   );
@@ -94,117 +101,117 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
 export default DropdownMenu;
 
-export const DropdownMenu1=({menuItems=[],buttonName})=>{
-    const [open, setOpen] = useState(false);
-    const [subMenu, setSubMenu] = useState(false);
+// export const DropdownMenu1=({menuItems=[],buttonName})=>{
+//     const [open, setOpen] = useState(false);
+//     const [subMenu, setSubMenu] = useState(false);
   
   
   
-    return (
-        <div className="relative inline-block   "
-        // onMouseEnter={() => setOpen(true)}
-        //       onMouseLeave={() => {
-        //         setOpen(false);
-        //         setSubMenu(null);
-        //       }}
-            >
-              {/* Main Dropdown Button */}
+//     return (
+//         <div className="relative inline-block   "
+//         // onMouseEnter={() => setOpen(true)}
+//         //       onMouseLeave={() => {
+//         //         setOpen(false);
+//         //         setSubMenu(null);
+//         //       }}
+//             >
+//               {/* Main Dropdown Button */}
         
               
-              <button onClick={() => setOpen(!open)} className="px-4  py-[0.45rem]  rounded flex cursor-pointer hover:text-blue-700">
-                {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
-              </button>
+//               <button onClick={() => setOpen(!open)} className="px-4  py-[0.45rem]  rounded flex cursor-pointer hover:text-blue-700">
+//                 {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
+//               </button>
         
-              {/* Main Dropdown Menu */}
-              {open && (
+//               {/* Main Dropdown Menu */}
+//               {open && (
         
-        <nav className="bg-red-400 ">
+//         <nav className="bg-red-400 ">
         
-                <ul className="absolute left-0  w-64 bg-white border rounded shadow-lg">
-                  {menuItems.map((item) => (
-                    <li key={item}
-                    //  onMouseEnter={() => setSubMenu(item)}
-                    //   onMouseLeave={() => setSubMenu(null)}
+//                 <ul className="absolute left-0  w-64 bg-white border rounded shadow-lg">
+//                   {menuItems.map((item) => (
+//                     <li key={item}
+//                     //  onMouseEnter={() => setSubMenu(item)}
+//                     //   onMouseLeave={() => setSubMenu(null)}
                   
-                    >
-                      <button
-                        onClick={() => setSubMenu(subMenu === item ? null : item) 
+//                     >
+//                       <button
+//                         onClick={() => setSubMenu(subMenu === item ? null : item) 
                           
-                       }
-                    //    onMouseEnter={() => setOpen(true)}
-                    //    onMouseLeave={() => setOpen(false)}
-                        className="w-full flex justify-between text-left px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                      >
+//                        }
+//                     //    onMouseEnter={() => setOpen(true)}
+//                     //    onMouseLeave={() => setOpen(false)}
+//                         className="w-full flex justify-between text-left px-4 py-2 hover:bg-gray-100 cursor-pointer"
+//                       >
                       
-                        {item} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
-                      </button>
+//                         {item} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
+//                       </button>
                     
         
-                      {/* Submenu */}
-                      {subMenu === "Hot rolled sheets" && (
-                        <ul className="absolute left-64 top-0 mt-2 w-40 bg-white border rounded shadow-lg">
+//                       {/* Submenu */}
+//                       {subMenu === "Hot rolled sheets" && (
+//                         <ul className="absolute left-64 top-0 mt-2 w-40 bg-white border rounded shadow-lg">
                         
-                        {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                        (
-                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                        ))
-                        }
+//                         {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
+//                         (
+//                         <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
+//                         ))
+//                         }
         
                         
                        
                        
-                        </ul>
-                      )}
-                      {subMenu === "Hot rolled coils" && (
-                        <ul className="absolute left-64 top-10 mt-2 w-40 bg-white border rounded shadow-lg">
-                        {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                        (
-                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                        ))
-                        }
+//                         </ul>
+//                       )}
+//                       {subMenu === "Hot rolled coils" && (
+//                         <ul className="absolute left-64 top-10 mt-2 w-40 bg-white border rounded shadow-lg">
+//                         {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
+//                         (
+//                         <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
+//                         ))
+//                         }
                        
-                        </ul>
-                      )}
-                      {subMenu ===  "Could rolled sheets" && (
-                        <ul className="absolute left-64 top-20 mt-2 w-40 bg-white border rounded shadow-lg">
-                        {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                        (
-                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                        ))
-                        }
+//                         </ul>
+//                       )}
+//                       {subMenu ===  "Could rolled sheets" && (
+//                         <ul className="absolute left-64 top-20 mt-2 w-40 bg-white border rounded shadow-lg">
+//                         {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
+//                         (
+//                         <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
+//                         ))
+//                         }
                        
-                        </ul>
-                      )}
-                      {subMenu ===  "Cold rolled coils" && (
-                        <ul className="absolute left-64 top-40 mt-2 w-40 bg-white border rounded shadow-lg">
-                        {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                        (
-                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                        ))
-                        }
+//                         </ul>
+//                       )}
+//                       {subMenu ===  "Cold rolled coils" && (
+//                         <ul className="absolute left-64 top-40 mt-2 w-40 bg-white border rounded shadow-lg">
+//                         {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
+//                         (
+//                         <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
+//                         ))
+//                         }
                        
-                        </ul>
-                      )}
+//                         </ul>
+//                       )}
         
-                      {subMenu ===  "Colour Coated" && (
-                        <ul className="absolute left-64 top-0 mt-2 w-40 bg-white border rounded shadow-lg">
-                        {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
-                        (
-                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
-                        ))
-                        }
+//                       {subMenu ===  "Colour Coated" && (
+//                         <ul className="absolute left-64 top-0 mt-2 w-40 bg-white border rounded shadow-lg">
+//                         {["Hot Rolls Sheet","Cold Rolled","Wire Rods","Coated","Colour coated"].map((item)=>
+//                         (
+//                         <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >{item}</li>
+//                         ))
+//                         }
                        
-                        </ul>
-                      )}
-                    </li>
-                  ))}
+//                         </ul>
+//                       )}
+//                     </li>
+//                   ))}
                   
-                </ul>
-                </nav>
-              )}
-            </div>
-    );
-  };
+//                 </ul>
+//                 </nav>
+//               )}
+//             </div>
+//     );
+//   };
 
   export const DropdownMenu2=({buttonName})=>{
     const [open, setOpen] = useState(false);
