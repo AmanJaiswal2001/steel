@@ -5,7 +5,7 @@ import Button from './Button';
 const cardData = [
     {
       title: "JSW Steel Cold Rolled Coils IS 2062:2011 E250A",
-      brand: "Brand: JSW Steel",
+      brand: " JSW Steel",
       thickness: "1.6-25mm",
       width: "900-2000mm",
       buttonName: "Purchase now",
@@ -14,7 +14,7 @@ const cardData = [
     },
     {
       title: "TATA Steel Cold Rolled Sheets",
-      brand: "Brand: TATA Steel",
+      brand: " TATA Steel",
       thickness: "0.5-3mm",
       width: "600-1500mm",
       buttonName: "Order Now",
@@ -23,7 +23,7 @@ const cardData = [
     },
     {
       title: "SAIL Steel Cold Plates",
-      brand: "Brand: SAIL",
+      brand: " SAIL",
       thickness: "2-40mm",
       width: "1200-2500mm",
       buttonName: "Get Quote",
@@ -32,7 +32,7 @@ const cardData = [
     },
      {
       title: "Essar Cold Rolled Sheets",
-      brand: "Brand: Essar Steel",
+      brand: " Essar Steel",
       thickness: "1.2-16mm",
       width: "800-2200mm",
       buttonName: "Buy Now",
@@ -41,7 +41,7 @@ const cardData = [
      },
      {
       title: "Jindal Cold Galvanized Coils",
-      brand: "Brand: Jindal Steel",
+      brand: " Jindal Steel",
       thickness: "0.4-2mm",
       width: "700-1800mm",
       buttonName: "Purchase",

@@ -1,7 +1,7 @@
 const cardData = [
     {
       title: "JSW Steel Hot Rolled Coils IS 2062:2011 E250A",
-      brand: "Brand: JSW Steel",
+      brand: " JSW Steel",
       thickness: "1.6-25mm",
       width: "900-2000mm",
       buttonName: "Purchase now",
@@ -11,7 +11,7 @@ const cardData = [
     },
     {
       title: "SAIL Steel Hot Rolled Coils IS 2062:2011 E250A",
-      brand: "Brand: SAIL",
+      brand: " SAIL",
       thickness: "0.5-3mm",
       width: "600-1500mm",
       buttonName: "Purchase now",
@@ -19,7 +19,7 @@ const cardData = [
      image: "/hrc1.webp",    },
     {
       title: "JSW Steel Hot Rolled Sheet IS 3502:2009 E250Br",
-      brand: "Brand: SAIL",
+      brand: " SAIL",
       thickness: "2-40mm",
       width: "1200-2500mm",
       buttonName: "Purchase now",
@@ -28,7 +28,7 @@ const cardData = [
     },
      {
       title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-      brand: "Brand: Essar Steel",
+      brand: " Essar Steel",
       thickness: "1.2-16mm",
       width: "800-2200mm",
       buttonName: "Purchase now",
@@ -36,7 +36,7 @@ const cardData = [
     image: "/hrc1.webp",   },
      {
       title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-      brand: "Brand: Jindal Steel",
+      brand: " Jindal Steel",
       thickness: "0.4-2mm",
       width: "700-1800mm",
       buttonName: "Purchase now",
@@ -45,7 +45,7 @@ const cardData = [
     },
     {
         title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-        brand: "Brand: Jindal Steel",
+        brand: " Jindal Steel",
         thickness: "0.4-2mm",
         width: "700-1800mm",
         buttonName: "Purchase now",
@@ -53,7 +53,7 @@ const cardData = [
       image: "/hrc1.webp",    
       }, {
         title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-        brand: "Brand: Jindal Steel",
+        brand: " Jindal Steel",
         thickness: "0.4-2mm",
         width: "700-1800mm",
         buttonName: "Purchase now",
@@ -61,7 +61,7 @@ const cardData = [
        image: "/hrc1.webp",   
       }, {
         title: "JSW Steel Hot Rolled Sheet IS 2062:2011 E250Br",
-        brand: "Brand: Jindal Steel",
+        brand: " Jindal Steel",
         thickness: "0.4-2mm",
         width: "700-1800mm",
         buttonName: "Purchase now",

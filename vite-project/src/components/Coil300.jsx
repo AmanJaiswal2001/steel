@@ -6,7 +6,7 @@ import CardSheet from './CardSheet';
 const cardData = [
     {
         title: "Jindal Srainless HR 304 N1 Finish Coils",
-        brand: "Brand: Jindal Stainless",
+        brand: " Jindal Stainless",
         thickness: "3-15mm",
         width: "1250-1500mm",
         buttonName: "Purchase now",
@@ -15,7 +15,7 @@ const cardData = [
       },
     {
         title: "Jindal Srainless HR 304 N1 Finish Coils",
-        brand: "Brand: Jindal Stainless",
+        brand: " Jindal Stainless",
         thickness: "3-15mm",
         width: "1250-1500mm",
         buttonName: "Purchase now",

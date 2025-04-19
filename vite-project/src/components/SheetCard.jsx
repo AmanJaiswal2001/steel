@@ -6,7 +6,7 @@ import Button from './Button';
 const cardData = [
     {
       title: "JSW Steel Cold Rolled Coils IS 2062:2011 E250A",
-      brand: "Brand: JSW Steel",
+      brand: " JSW Steel",
       thickness: "1.6-25mm",
       width: "900-2000mm",
       buttonName: "Purchase now",
@@ -16,7 +16,7 @@ const cardData = [
     },
     {
       title: "TATA Steel Cold Rolled Sheets 2062:2011 E250A",
-      brand: "Brand: TATA Steel",
+      brand: " TATA Steel",
       thickness: "0.5-3mm",
       width: "600-1500mm",
       buttonName: "Purchase now",
