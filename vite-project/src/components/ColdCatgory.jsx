@@ -18,10 +18,10 @@ const ColdCatgory = () => {
     </div>
   
     {/* catgory */}
-    <div className=' flex flex-col gap-2 h-full w-full lg:w-3/5'>
+    <div className=' flex flex-col gap-2 h-full w-full lg:w-3/4'>
    
     <h1 className='font-extrabold text-2xl text-[#262626] font-sans text-left '>Cold Rolled Mild Steel Sheets</h1>
-    <div className='relative max-w-full mx-auto  lg:mx-0 xl:mx-0'>
+    <div className='relative max-w-full mx-auto mb-10  lg:mx-0 xl:mx-0'>
 
     <ColdRolledCatgory filters={filters}/>
     </div>
