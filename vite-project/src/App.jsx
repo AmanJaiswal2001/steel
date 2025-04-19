@@ -17,6 +17,7 @@ import ColdSheetDel from "./components/ColdSheetDel";
 import ColdCoils from "./components/ColdCoils";
 
 import ColdCoilsdel from "./components/ColdCoilsdel";
+import PhoneCall from "./components/PhoneCall";
 
 const appRouter = createBrowserRouter([
   {
@@ -74,7 +75,7 @@ function AppLayout() {
   
 
   <Footer /> 
-  
+  <PhoneCall/>
 
 </>
     // </Router>
