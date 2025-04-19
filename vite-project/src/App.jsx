@@ -68,14 +68,14 @@ function AppLayout() {
   //  <Router>
   <>
   <Nav />
-  <main className=" ">
+  <main className="overflow-x-hidden ">
         <Outlet />
       </main>
    
   
 
   <Footer /> 
-  <PhoneCall/>
+  {/* <PhoneCall/> */}
 
 </>
     // </Router>

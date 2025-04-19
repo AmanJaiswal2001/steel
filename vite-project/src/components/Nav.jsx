@@ -7,7 +7,7 @@ import Header from './Header'
 
 const Nav = () => {
   return (
-    <div className='w-full   pt-5'>
+    <div className='w-full    pt-5'>
    
     
     <Header/>
@@ -41,7 +41,7 @@ const Nav = () => {
     </div>
    
   </div>
-  <div className='mt-0 hidden  md:flex justify-end mr-20 '>
+  <div className='mt-0 hidden   md:flex  lg:mr-20 md:mr-0  '>
   <DropdownMenu2 buttonName="Connect with us"/>
   </div>
    

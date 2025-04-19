@@ -4,7 +4,7 @@ const Video = () => {
   return (
     <div>
 
-<div className="bg-white mx-20 pt-20">
+<div className=" px-20  pt-20">
   <div className=" justify-between  flex flex-col-reverse   lg:flex lg:flex-row w-full">
     {/* <img
       src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" */}

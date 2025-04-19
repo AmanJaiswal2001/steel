@@ -29,7 +29,7 @@ export const MobileSidebar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full  w-[35%] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full  w-[60%] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -51,31 +51,41 @@ export const MobileSidebar = () => {
 
         {/* Menu */}
         <ul className="p-4 text-[rgb(52, 58, 65)] ">
-          <li className="text-[17px] text-[rgb(52, 58, 65)] leading-6 font-semibold font-sans">Mild Steel
-            <ul className=" p-3 text-[17px] leading-6 text-[rgb(52, 58, 65)] font-semibold font-sans">
-             <Link>
-             <li className="  text-[17px]  leading-6 font-semibold font-sans">
-              Hot Rolled
+          <li className="text-[16px] text-[rgb(52, 58, 65)] leading-6 font-semibold font-sans">Mild Steel
+            <ul className=" p-2 text-[16px] leading-6 text-[rgb(52, 58, 65)] font-semibold font-sans">
+             <Link to="/hotRolled/sheet">
+             <li className="  text-[17px]  pt-2 leading-6 font-semibold font-sans">
+              Hot Rolled Sheet
               
               </li>
              </Link>
-              <Link>
-              <li className=" text-[17px] pt-2 leading-6 font-semibold font-sans cursor-pointer">Cold Rolled</li>
+             <Link to="/hotRolled/coils">
+             <li className="  text-[16px] pt-2  leading-6 font-semibold font-sans">
+              Hot Rolled Coils
+              
+              </li>
+             </Link>
+              <Link to="/coldRolled/sheet">
+              <li className=" text-[16px] pt-2 leading-6 font-semibold font-sans cursor-pointer">Cold Rolled Sheet</li>
+          
+              </Link>
+              <Link to="/coldRolled/coils">
+              <li className=" text-[16px] pt-2 leading-6 font-semibold font-sans cursor-pointer">Cold Rolled Coils</li>
           
               </Link>
                </ul>
           </li>
          <Link>
-         <li className="text-[17px] leading-6 font-semibold font-sans">Home</li>
+         <li className="text-[16px] leading-6 font-semibold font-sans">Home</li>
        
          </Link>
           
           <Link>
-          <li className="text-[17px] leading-6  pt-2 font-semibold font-sans">About</li>
+          <li className="text-[16px] leading-6  pt-2 font-semibold font-sans">About</li>
         
           </Link>
           <Link>
-          <li className="text-[17px] leading-6  pt-2 font-semibold font-sans">Contact</li>
+          <li className="text-[16px] leading-6  pt-2 font-semibold font-sans">Contact</li>
         
           </Link>
           </ul>

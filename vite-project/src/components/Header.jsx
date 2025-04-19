@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {MobileSidebar} from './MobileSidebar'
 const Header = () => {
   return (
-    <div className='flex md:justify-between w-screen gap-5 md:gap-0  md:bg-none sm:bg-none lg:bg-none fixed lg:static md:static sm:static z-40 lg:z-0  top-0   px-10 md:px-20'>
+    <div className='flex md:justify-between w-full gap-5 md:gap-0 bg-white  md:bg-none sm:bg-none lg:bg-none fixed lg:static md:static sm:static z-40 lg:z-0  top-0   px-10 md:px-20'>
    <div className="md:hidden ">
           <MobileSidebar />
         </div>
@@ -15,7 +15,7 @@ const Header = () => {
            className='w-36   '
            src = {image} />
         </Link>
-        <div className='flex md:w-full   mt-1 sm:mt-0 md:mt-0  md:justify-center md:h-10 h-9  md:mx-20 md:items-center'>
+        <div className='flex md:w-full max-w-xl  mt-1 sm:mt-0 md:mt-0  md:justify-center md:h-10 h-9  md:mx-20 md:items-center'>
             {/* search  */}
 {/* <div className='flex  md:justify-center h-10  mx-20 items-center'> */}
 <input type='search'

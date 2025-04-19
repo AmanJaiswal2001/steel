@@ -9,7 +9,7 @@ import Crousel from './Crousel'
 const Layout = () => {
   return (
   <>
-   <div className='absolute pt-5  '>
+   <div className='absolute pt-5 w-full max-w-screen overflow-hidden '>
         <Crousel/>
 
         </div>

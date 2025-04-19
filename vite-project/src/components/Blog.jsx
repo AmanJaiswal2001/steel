@@ -5,11 +5,11 @@ import Button from './Button'
 
 const Blog = () => {
   return (
-    <div className='h-full w-full mt-10  '>
+    <div className='h-full w-full mt-10   '>
     <h1 className='font-bold lg:text-3xl text-2xl w-96 lg:px-20 sm:px-10 px-5 py-5 font-sans text-[#262626] '>Browse articles & blogs</h1>
    
    
-   <div className='flex gap-20 lg:px-20 sm:px-10 px-5 w-full flex-row  lg:overflow-hidden overflow-x-auto'>
+   <div className='flex gap-20 lg:px-20 sm:px-10 px-5 w-full flex-row  lg:overflow-hidden overflow-x-scroll'>
    <Link>
    <ArticleCard 
    

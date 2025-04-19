@@ -36,7 +36,7 @@ const Crousel = () => {
  
  
  return (
-    <div className='relative   -mt-4 h-full w-full mx-auto '>
+    <div className='relative    h-full w-full mx-auto '>
     <div onClick={previousSlide}
       className="absolute left-2 top-[40%]  -translate-y-1/2  bg-blue-200 hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 z-20"
   
@@ -49,7 +49,7 @@ const Crousel = () => {
        
         {image.map((item,index)=>
 current===index&&( <img  
-className='w-full h-full object-cover '
+className='w-full h-auto object-cover max-h-[500px] '
  key={index} src={item}/>
         ))}
      <div className='relative bottom-20  left-10 md:bottom-32 sm:bottom-24 lg:left-20 lg:w-40'>      

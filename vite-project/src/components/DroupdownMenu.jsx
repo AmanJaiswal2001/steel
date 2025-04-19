@@ -215,7 +215,7 @@ export default DropdownMenu;
    <div className=" relative group   ">
     
           
-    <button onClick={() => setOpen(!open)} className="px-4 font-semibold font-sans  cursor-pointer text-[#2241a6]  flex">
+    <button onClick={() => setOpen(!open)} className="px-4 font-semibold font-sans  cursor-pointer  text-[#2241a6]   flex">
                 {buttonName}{" "} {open ? <svg className="text-[#2241a6] " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
               </button>
     
@@ -226,7 +226,7 @@ export default DropdownMenu;
     
               
  
-    <ul className="absolute  z-40 pb-4 flex flex-col gap-5 p-5 text-sm  bg-white border rounded shadow-lg" 
+    <ul className="absolute  z-40 pb-4 flex flex-col gap-5 p-5 text-sm right-0.5 bg-white border rounded shadow-lg" 
     >
       <li>
       <div className="flex gap-5">
