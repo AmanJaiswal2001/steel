@@ -11,7 +11,7 @@ const Nav = () => {
    
     
     <Header/>
-    <hr className='text-gray-400  mt-20 sm:mt-4 md:mt-4 lg:mt-4'></hr>
+    <hr className='text-gray-400  mt-24 sm:mt-4 md:mt-4 lg:mt-4'></hr>
   <div className='relative mx-20  flex items-center  pt-0 justify-between  '>
    {/* <div className='flex h-full  items-center justify-between gap-10  '> */}
 

@@ -18,6 +18,7 @@ import ColdCoils from "./components/ColdCoils";
 
 import ColdCoilsdel from "./components/ColdCoilsdel";
 import PhoneCall from "./components/PhoneCall";
+import SearchPage from "./components/SearchPage";
 
 const appRouter = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const appRouter = createBrowserRouter([
         path:"/coldRolled/coils",
         element:<ColdCoils/>
       },
+      {
+        path:"/search",
+        element:<SearchPage/>
+      },
+      
       { path: "product/:id", element: <HotCatDelevery /> },
       { path: "coilproduct/:id", element: <HotCatCoilsDEl /> },
       { path: "coldproductsheet/:id", element: <ColdSheetDel /> },
