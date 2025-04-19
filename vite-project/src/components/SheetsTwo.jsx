@@ -6,7 +6,7 @@ import CardSheet from './CardSheet';
 const cardData = [
     {
       title: "Jindal Strainless HR JT 204 N1 Finish Sheets",
-      brand: "Jindal Strainless",
+      brand: "SONATEK",
       thickness: "3-20mm",
       width: "1250-1500mm",
 
@@ -18,7 +18,7 @@ const cardData = [
   },
     {
       title: "TATA Steel Hot 204 Rolled Sheets",
-      brand: " TATA Steel",
+      brand: " SONATEK",
       thickness: "0.5-3mm",
       width: "600-1500mm",
       buttonName: "Purchase now",
@@ -27,31 +27,28 @@ const cardData = [
     length:"2500-6000mm"  },
     {
       title: "SAIL Steel Plates",
-      brand: " SAIL",
+      brand: " SONATEK",
       thickness: "2-40mm",
       width: "1200-2500mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 4-6 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-    },
+      image: "/series200.webp",   },
      {
       title: "Essar Hot RolTATA Steel Hot 204 Rolled Sheets",
-      brand: " Essar Steel",
+      brand: " SONATEK",
       thickness: "1.2-16mm",
       width: "800-2200mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 5-8 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-     },
+      image: "/series200.webp",     },
      {
       title: "TATA Steel Hot 204 Rolled Sheets",
-      brand: " Jindal Steel",
+      brand: " SONATEK",
       thickness: "0.4-2mm",
       width: "700-1800mm",
       buttonName: "Purchase now",
       delivery: "Delivery in 2-4 days",
-      image: "https://images.ctfassets.net/o0otttl8ele8/3HILc9ZoCKpUsn6crHWRSA/f25ae168abf380cf756b19a6e22caefa/ezgif.com-gif-maker__35_.webp?fit=fill&w=280&h=153&fm=webp",
-     },
+      image: "/series200.webp",     },
   ];
   
 

@@ -6,7 +6,7 @@ import Button from './Button';
 const cardData = [
     {
       title: "Jindal Stainless Steel HRAP 310S N1 Finish Sheets",
-      brand: "Jindal Stainless",
+      brand: "SONATEK",
       thickness: "5-25mm",
       width: "1250-1500mm",
       buttonName: "Purchase now",
@@ -16,7 +16,7 @@ const cardData = [
     },
     {
       title: "Jindal Stainless Steel HRAP 310S N1 Finish Sheets",
-      brand: " Jindal Stainless",
+      brand: " SONATEK",
       thickness: "0.5-5mm",
       width: "1250-1500mm",
       buttonName: "Purchase now",

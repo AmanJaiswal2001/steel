@@ -5,7 +5,7 @@ import Button from './Button';
 const cardData = [
     {
       title: "JSW Steel Hot Rolled Coils IS 2062:2011 E250A",
-      brand: "JSW Steel",
+      brand: "SONATEK",
       thickness: "1.6-25mm",
       width: "900-2000mm",
       buttonName: "Purchase now",
@@ -14,7 +14,7 @@ const cardData = [
     },
     {
       title: "SAIL Steel Hot Rolled Sheets 2062:2011 E250A",
-      brand: ": TATA Steel",
+      brand: " SONATEK",
       thickness: "0.5-3mm",
       width: "600-1500mm",
       buttonName: "Order Now",
@@ -23,7 +23,7 @@ const cardData = [
     },
     {
       title: "SAIL Steel Plates 2062:2011 E250A",
-      brand: " SAIL",
+      brand: " SONATEK",
       thickness: "2-40mm",
       width: "1200-2500mm",
       buttonName: "Get Quote",
@@ -32,7 +32,7 @@ const cardData = [
     },
      {
       title: "Essar Hot Rolled Sheets 2062:2011 E250A",
-      brand: " Essar Steel",
+      brand: " SONATEK",
       thickness: "1.2-16mm",
       width: "800-2200mm",
       buttonName: "Buy Now",
@@ -41,7 +41,7 @@ const cardData = [
      },
      {
       title: "Jindal Galvanized Coils",
-      brand: " Jindal Steel",
+      brand: " SONATEK",
       thickness: "0.4-2mm",
       width: "700-1800mm",
       buttonName: "Purchase",

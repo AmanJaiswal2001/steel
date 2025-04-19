@@ -6,22 +6,21 @@ import CardSheet from './CardSheet';
 const cardData = [
     {
         title: "Jindal Srainless HR JT 200 N1 Finish Coils",
-        brand: " Jindal Stainless",
+        brand: " SONATEK",
         thickness: "3-15mm",
         width: "1250-1500mm",
         buttonName: "Purchase now",
         delivery: "Delivery in 2-5 days",
-        image: "https://images.ctfassets.net/o0otttl8ele8/7fY5BhlngTvs5rOCHSEd2a/469a1ae4ecc6c387a59bc6878fcbe6ad/SS-HR-coil-PDP__1_.webp?w=1000&h=1000&fm=webp",
+        image: "/series200coil.webp",
       },
       {
           title: "Jindal Srainless HR JT 204 N1 Finish Coils",
-          brand: "Jindal Stainless",
+          brand: "SONATEK",
           thickness: "3-15mm",
           width: "1250-1500mm",
           buttonName: "Purchase now",
           delivery: "Delivery in 2-5 days",
-          image: "https://images.ctfassets.net/o0otttl8ele8/7fY5BhlngTvs5rOCHSEd2a/469a1ae4ecc6c387a59bc6878fcbe6ad/SS-HR-coil-PDP__1_.webp?w=1000&h=1000&fm=webp",
-        },
+          image: "/series200coil.webp",     },
     // {
     //   title: "SAIL Steel Cold Plates",
     //   brand: "Brand: SAIL",
