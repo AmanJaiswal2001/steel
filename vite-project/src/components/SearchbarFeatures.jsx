@@ -5,15 +5,28 @@ const SearchbarFeatures = ({ data }) => {
   const [filtered, setFiltered] = useState(data)
 
   useEffect(() => {
-    const term = search.toLowerCase()
-    const result = data.filter(item =>
-      item.title.toLowerCase().includes(term) 
-    //   item.brand.toLowerCase().includes(term) ||
-    //   item.category.toLowerCase().includes(term)
-    )
-    setFiltered(result)
-  }, [search, data])
-
+    const term = search.toLowerCase().trim();
+  
+    const result = data.filter(item => {
+      const title = item.title?.toLowerCase() || "";
+  
+      // Check if the search term is "hot rolled" or "cold rolled"
+      if (term.includes("hot rolled") && !term.includes("cold rolled")) {
+        return title.includes("hot rolled") && !title.includes("cold rolled");
+      }
+  
+      if (term.includes("cold rolled") && !term.includes("hot rolled")) {
+        return title.includes("cold rolled");
+      }
+  
+      // If it's just a general search term (neither hot nor cold rolled)
+      return title.includes(term);
+    });
+  
+    console.log("Filtered Data:", result); // Debug log to check if it's filtering correctly
+    setFiltered(result);
+  }, [search, data]);
+  
   return (
     <div className="w-full p-4">
       {/* Input */}
