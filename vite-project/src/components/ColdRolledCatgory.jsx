@@ -69,19 +69,19 @@ const ColdRolledCatgory = ({filters}) => {
   (filters.Width?.min || filters.Width?.max) ||
   (filters.Length?.min || filters.Length?.max)
 ) && (
-  <p className="text-sm text-black mb-4 font-sans font-semibold">
+  <p className="text-sm text-black mb-4 font-poppins font-semibold">
     Filters applied:
     
     {/* Grade First */}
     {filters.Grade.length > 0 && (
-      <span className="font-medium font-sans text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#2241a6] text-sm">
         {" Grade: " + filters.Grade.join(", ")}
       </span>
     )}
 
     {/* Then Thickness */}
     {(filters.Thickness?.min || filters.Thickness?.max) && (
-      <span className="font-medium font-sans text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#2241a6] text-sm">
         {"  Thickness: "}
         {filters.Thickness.min && `${filters.Thickness.min}mm`}
         {filters.Thickness.min && filters.Thickness.max && " - "}
@@ -91,7 +91,7 @@ const ColdRolledCatgory = ({filters}) => {
 
     {/* Then Width */}
     {(filters.Width?.min || filters.Width?.max) && (
-      <span className="font-medium font-sans text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#2241a6] text-sm">
         {"  Width: "}{" "}
         {filters.Width.min && `${filters.Width.min}mm`}
         {filters.Width.min && filters.Width.max && " - "}
@@ -101,7 +101,7 @@ const ColdRolledCatgory = ({filters}) => {
 
     {/* Then Length */}
     {(filters.Length?.min || filters.Length?.max) && (
-      <span className="font-medium font-sans text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#2241a6] text-sm">
         {"  Length: "}
         {filters.Length.min && `${filters.Length.min}mm`}
         {filters.Length.min && filters.Length.max && " - "}

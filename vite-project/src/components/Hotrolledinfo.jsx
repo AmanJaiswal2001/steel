@@ -76,7 +76,7 @@ export const  Hotrolledinfo = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 font-sans text-center flex-1 cursor-pointer hover:text-[#2241a6] hover:border-b-2 border-b-[#2241a6]
+              className={`px-4 py-2 font-poppins text-center flex-1 cursor-pointer hover:text-[#2241a6] hover:border-b-2 border-b-[#2241a6]
                 ${activeTab === tab ? "text-[#2241a6] border-b-2 border-[#2241a6]  font-semibold  ": "text-black bg-white "}
                      ${index !== tabs.length - 1 ? "border-r border-gray-300" : ""}`}
             >
@@ -98,7 +98,7 @@ export const  Hotrolledinfo = () => {
             <tbody className="w-1/2 ">
               {data[activeTab].map((item, index) => (
                 <tr key={index} className="">
-                  <td className="px-4 py-2 w-1/2 text-center border-b font-sans font-medium text-[1rem] border-r border-[#f1f1f1] ">{item.name}</td>
+                  <td className="px-4 py-2 w-1/2 text-center border-b font-poppins font-medium text-[1rem] border-r border-[#f1f1f1] ">{item.name}</td>
                   {/* {/* <td className="px-4 py-2">{`${item.value}${item.value2}`}</td> */}
                   {/* <td className="px-4 py-2"></td>  */}
                   <td className="px-4 py-2  border-b border-r border-[#f1f1f1] "></td>
@@ -119,7 +119,7 @@ export const  Hotrolledinfo = () => {
               }
               className="w-full flex cursor-pointer justify-between items-center py-3 px-4"
             >
-              <span className="text-[16px] font-normal text-[#262626] font-sans">
+              <span className="text-[16px] font-normal text-[#262626] font-poppins">
                 {tab}
               </span>
               <span className="text-xl">{openAccordion === tab ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}</span>
@@ -130,7 +130,7 @@ export const  Hotrolledinfo = () => {
                 <tbody>
                   {data[tab].map((item, index) => (
                     <tr key={index}>
-                      <td className="px-4 py-2 w-1/2 border-b font-sans font-medium text-[1rem] border-r border-[#f1f1f1]">
+                      <td className="px-4 py-2 w-1/2 border-b font-poppins font-medium text-[1rem] border-r border-[#f1f1f1]">
                         {item.name}
                       </td>
                       <td className="px-4 py-2 border-b border-r border-[#f1f1f1]"></td>

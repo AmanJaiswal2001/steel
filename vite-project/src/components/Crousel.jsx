@@ -58,7 +58,7 @@ className='w-full h-auto object-cover max-h-[500px] '
      <FaSquareWhatsapp
      className='md:w-10 md:h-10 lg:w-10 lg:h-10 w-8 h-8 sm:w-10 sm:h-10 text-white '
       />
-        </a><span className='text-white text-sm font-sans hidden sm:block lg:block'>Connect on whatsapp</span>
+        </a><span className='text-white text-sm font-poppins hidden sm:block lg:block'>Connect on whatsapp</span>
 </button>
 </div>
 
@@ -84,7 +84,7 @@ export const CrouselCard=({images})=>{
     <div className="carousel gap-5 carousel-end ">
       {images.map((src, index) => (
         <div className="carousel-item" key={index}>
-          <img src={src} alt={`carousel-${index}`} />
+          <img className='w-[856px]' src={src} alt={`carousel-${index}`} />
         </div>
       ))}
     </div> 

@@ -32,7 +32,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
       
       <button onClick={() => setOpen(!open)} 
       
-      className="  py-[0.45rem] relative text-[#343a41] font-medium font-sans  text-sm rounded flex cursor-pointer hover:text-[#2241a6]">
+      className="  py-[0.45rem] relative text-[#343a41] font-medium font-poppins  text-sm rounded flex cursor-pointer hover:text-[#2241a6]">
         {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
       </button>
 
@@ -60,7 +60,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                 className="w-40  flex justify-between text-left px-4 py-2 hover:bg-gray-100 hover:text-[#2241a6] cursor-pointer"
               >
               
-               <span className=" text-[#343a41] hover:text-[#2241a6] font-medium font-sans">{item}</span> 
+               <span className=" text-[#343a41] hover:text-[#2241a6] font-medium font-poppins">{item}</span> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
               </button>
             
@@ -75,7 +75,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                 >
                 
                 {submenuMapping[item].map((subItem) => (
-                    <li key={subItem.label} className="hover:bg-gray-100  text-[#343a41] font-medium font-sans">
+                    <li key={subItem.label} className="hover:bg-gray-100  text-[#343a41] font-medium font-poppins">
                       <Link
                         to={subItem.path}
                         className="block px-4 py-2 hover:text-[#2241a6] cursor-pointer"
@@ -215,7 +215,7 @@ export default DropdownMenu;
    <div className=" relative group   ">
     
           
-    <button onClick={() => setOpen(!open)} className="px-4 font-semibold font-sans  cursor-pointer  text-[#2241a6]   flex">
+    <button onClick={() => setOpen(!open)} className="px-4 font-semibold font-poppins  cursor-pointer  text-[#2241a6]   flex">
                 {buttonName}{" "} {open ? <svg className="text-[#2241a6] " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
               </button>
     
@@ -236,9 +236,9 @@ export default DropdownMenu;
 </a>
       </div>
       <div>
-      <p className="font-semibold text-[#262626]  text-[16px] font-sans">Callus</p>
-     <Link href="#" className="font-semibold text-[#000]  text-sm font-sans">+917208055523</Link>
-     <p className="font-normal text-[#262626]  text-sm font-sans">Mon-Fri 10am to 7pm </p>
+      <p className="font-semibold text-[#262626]  text-[16px] font-poppins">Callus</p>
+     <Link href="#" className="font-semibold text-[#000]  text-sm font-poppins">+917208055523</Link>
+     <p className="font-normal text-[#262626]  text-sm font-poppins">Mon-Fri 10am to 7pm </p>
       </div>
   
       </div>
@@ -251,8 +251,8 @@ export default DropdownMenu;
       <svg className="bg-[#e6f0ff] rounded-full p-2 h-10 w-10 border border-[#7a8dca]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"/></svg></a>
       </div>
       <div>
-      <p className="font-semibold text-[#262626]  text-[16px] font-sans">Write to us</p>
-     <Link  href="#" className="font-semibold text-[#000]  text-sm font-sans">support@jswonemsme.com</Link>
+      <p className="font-semibold text-[#262626]  text-[16px] font-poppins">Write to us</p>
+     <Link  href="#" className="font-semibold text-[#000]  text-sm font-poppins">support@jswonemsme.com</Link>
    
       </div>
   
@@ -262,7 +262,7 @@ export default DropdownMenu;
 
       <li>
       <div className="flex items-center justify-center">
-      <button className="w-40 h-14 font-sans hover:bg-[#cae0fe] border border-[#2241a6] font-medium text-[#2241a6]  cursor-pointer  rounded-lg ">
+      <button className="w-40 h-14 font-poppins hover:bg-[#cae0fe] border border-[#2241a6] font-medium text-[#2241a6]  cursor-pointer  rounded-lg ">
         Help&support
       </button>
   

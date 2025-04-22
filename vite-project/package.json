@@ -14,8 +14,11 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@tailwindcss/vite": "^4.1.1",
+    "lucide-react": "^0.503.0",
+    "owl.carousel": "^2.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.30.0",
     "tailwindcss": "^4.1.1",
     "vite": "^6.2.5"

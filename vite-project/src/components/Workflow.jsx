@@ -6,12 +6,12 @@ const Workflow = () => {
   return (
     <div className='w-full h-full '>
         <div className=''>
-            <h1 className='text-blue-700 font-bold text-4xl text-center font-sans pt-10'>How it works?</h1>
-            <h5 className='text-gray-400 text-sm text-center font-sans '>Our 2-minutes registration process</h5>
+            <h1 className='text-blue-700 font-bold text-4xl text-center font-poppins pt-10'>How it works?</h1>
+            <h5 className='text-gray-400 text-sm text-center font-poppins '>Our 2-minutes registration process</h5>
             <img className='pt-4' src="Homepage_Infographic-01.jpg"/>
-            <h1 className='text-blue-700 font-bold text-4xl font-sans leading-1 text-center pt-10'>Why  SONATEK</h1>
-            <h5 className='text-gray-400 text-sm text-center font-sans  pt-5 '>Discover our key features</h5>
-            <div className='mt-5 flex flex-srink w-full m-auto font-sans overflow-x-scroll lg:overflow-x-hidden lg:px-20 item-center  '>
+            <h1 className='text-blue-700 font-bold text-4xl font-poppins leading-1 text-center pt-10'>Why  SONATEK</h1>
+            <h5 className='text-gray-400 text-sm text-center font-poppins  pt-5 '>Discover our key features</h5>
+            <div className='mt-5 flex flex-srink w-full m-auto font-poppins overflow-x-scroll lg:overflow-x-hidden lg:px-20 item-center  '>
  <HelperComponent bgColor="bg-[#007bff]" 
  textColor="text-white"
  description="Product quality assurance"

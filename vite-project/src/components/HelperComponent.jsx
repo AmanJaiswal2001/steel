@@ -3,7 +3,7 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 const HelperComponent = ({bgColor, textColor,width,height,description}) => {
   return (
     <div className={`${bgColor} ${textColor} ${width} ${height}  flex justify-center   items-center `}>
-<p className='w-64  text-center font-medium text-sm   font-sans'>{description}</p>
+<p className='w-64  text-center font-medium text-sm   font-poppins'>{description}</p>
     </div>
   )
 }
@@ -13,13 +13,13 @@ export default HelperComponent
  export const  Design =({description})=>{
   return(
     <div className='bg-[#e6f0ff] h-full lg:flex md:flex-row sm:flex-row lg:flex-row flex flex-col items-center '>
-    <h4 className='font-sans font-normal lg:w-2/3 lg:text-[1.5rem] mt-5 lg:mt-0 text-sm text-center mx-5 lg:mx-20'>{description} </h4>
+    <h4 className='font-poppins font-normal lg:w-2/3 lg:text-[1.5rem] mt-5 lg:mt-0 text-sm text-center mx-5 lg:mx-20'>{description} </h4>
     <button className='flex gap-2 items-center justify-center mt-10 lg:mt-0 p-2 rounded-lg w-64 bg-[#2241a6]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
      className='md:w-10 md:h-10 lg:w-10 lg:h-10 w-8 h-8 text-white '
       />
-        </a><span className='text-white font-sans'>Connect on whatsapp</span>
+        </a><span className='text-white font-poppins'>Connect on whatsapp</span>
 </button>
             </div>
   )
@@ -43,7 +43,7 @@ export const FilterDropdown=({title,options=[],selectedOptions = [], onChange })
      
       >
       
-        <span className="text-[1rem] font-sans  font-semibold">{title}</span>
+        <span className="text-[1rem] font-poppins  font-semibold">{title}</span>
         <svg
         onClick={()=>setOpen(!open)}
           className={`w-5 h-5 transform transition-transform duration-300 ${open ? "rotate-180" : ""}`}
@@ -67,7 +67,7 @@ export const FilterDropdown=({title,options=[],selectedOptions = [], onChange })
  onChange={() => onChange(title, option)}
 
           />
-          <span className='font-medium text-sm font-sans text-left'>{option}</span>
+          <span className='font-medium text-sm font-poppins text-left'>{option}</span>
         </label>
        ))}
        
@@ -120,7 +120,7 @@ export const CommonFilter = ({
 
   return (
     <div className="relative inline-block w-full border border-gray-300  rounded-md bg-[#f5f7fc] p-4">
-      <p className="text-[1rem] font-sans text-[#262626] text-left font-semibold mb-2">{title}</p>
+      <p className="text-[1rem] font-poppins text-[#262626] text-left font-semibold mb-2">{title}</p>
 
       <div className="flex gap-2 relative ">
         {/* Min Button */}
@@ -132,7 +132,7 @@ export const CommonFilter = ({
             }}
             className="w-full flex justify-between  rounded-lg items-center hover:border  cursor-pointer px-4 py-2 bg-white border border-[#b1b8c9]"
           >
-            <span className=" text-sm font-sans font-normal text-[#70737a] " >{selectedMin || minLabel}</span>
+            <span className=" text-sm font-poppins font-normal text-[#70737a] " >{selectedMin || minLabel}</span>
             <svg
               className={`w-5 h-5 transform transition-transform duration-300 ${
                 isMinOpen ? "rotate-180" : ""
@@ -155,7 +155,7 @@ export const CommonFilter = ({
                    // setSelectedMin(option);
                     // setIsMinOpen(false);
                   }
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm font-sans font-normal text-[#70737a]">
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm font-poppins font-normal text-[#70737a]">
                   {option}
                 </div>
               ))}
@@ -172,7 +172,7 @@ export const CommonFilter = ({
             }}
             className="w-full flex justify-between rounded-lg items-center cursor-pointer px-4 py-2 bg-white border border-gray-300"
           >
-            <span className="text-sm font-sans font-normal text-[#70737a]">{selectedMax ||maxLabel}</span>
+            <span className="text-sm font-poppins font-normal text-[#70737a]">{selectedMax ||maxLabel}</span>
             <svg
               className={`w-5 h-5 transform transition-transform duration-300 ${
                 isMaxOpen ? "rotate-180" : ""
@@ -193,7 +193,7 @@ export const CommonFilter = ({
                     key={index}
                     onClick={() => handleMaxSelect(option)}
            
-               className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm font-sans font-normal text-[#70737a]">
+               className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm font-poppins font-normal text-[#70737a]">
                   {option}
                 </div>
               ))}
@@ -210,9 +210,9 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
   return(
     <>
     <div className='flex gap-4 items-center'>
-    <p className='font-sans text-[1rem] font-semibold'>{title} (mm)</p>
+    <p className='font-poppins text-[1rem] font-semibold'>{title} (mm)</p>
     {!selected && (
-  <span className="text-[#e87205] font-sans px-2 py-1  text-[12px]  lg:text-[1rem]">
+  <span className="text-[#e87205] font-poppins px-2 py-1  text-[12px]  lg:text-[1rem]">
     Select <b>Thickness (mm)</b> to view available width
   </span>
 )}
@@ -236,7 +236,7 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
 export const WidthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
-    <p className='font-sans text-[1rem] font-semibold ' >{title} (mm)</p>
+    <p className='font-poppins text-[1rem] font-semibold ' >{title} (mm)</p>
     <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full ">
       {values.map((value, index) => (
         <button
@@ -258,7 +258,7 @@ export const WidthGrid=({values,title,selected,onSelect, disable})=>{
 export const LengthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
-    <p className=' font-sans text-[1rem] font-semibold'>{title} (mm)</p>
+    <p className=' font-poppins text-[1rem] font-semibold'>{title} (mm)</p>
     <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full">
       {values.map((value, index) => (
         <button

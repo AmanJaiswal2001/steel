@@ -17,7 +17,7 @@ const Section= () => {
    
     return (
     <div className='relative  h-auto w-full   md:mt-20 mt-0   '>
-    <h1 className='font-bold md:text-3xl sm:text-2xl text-xl text-[#262626] leading-6 font-sans w-96 md:px-20 sm:px-10 px-5 '>Mild Steel</h1>
+    <h1 className='font-bold md:text-3xl sm:text-2xl text-xl text-[#262626] leading-6 font-poppins w-96 md:px-20 sm:px-10 px-5 '>Mild Steel</h1>
     {/* sidebar */}
 
 <div className='flex gap-10 md:w-[90%] w-full md:mt-5 mt-0  rounded-lg mx-auto  md:border md:border-gray-300'>
@@ -40,7 +40,7 @@ items={[
     {/* Hot Rolled */}
     <button
       onClick={() => setActiveType("hot")}
-      className={`text-left font-sans  text-sm  font-normal ${
+      className={`text-left font-poppins  text-sm  font-normal ${
         activeType === "hot" ?  'border-b-2 border-black  text-black font-bold' : "text-[#70737a]"
       }`}
     >
@@ -50,7 +50,7 @@ items={[
     {/* Cold Rolled */}
     <button
       onClick={() => setActiveType("cold")}
-      className={`text-left font-sans px-4 py-2   text-sm font-normal ${
+      className={`text-left font-poppins px-4 py-2   text-sm font-normal ${
         activeType === "cold" ?  'border-b-2 border-black  text-black font-bold' : "text-[#70737a]"
       }`}
     >
@@ -62,12 +62,12 @@ items={[
 {/* <div className='px-4'> */}
 
 <button 
- className={`font-semibold hidden lg:block pt-1 font-sans  text-xl ${activeProduct === 'coil' ?   'border-b-4 border-black  text-black font-bold' 
+ className={`font-semibold hidden lg:block pt-1 font-poppins  text-xl ${activeProduct === 'coil' ?   'border-b-4 border-black  text-black font-bold' 
         : 'text-gray-600'}`}
               onClick={() => setActiveProduct('coil')}
             >
 Coils</button>
-<button  className={`font-semibold hidden lg:block font-sans text-xl ${activeProduct === 'sheet'  ? 'border-b-4  border-black  text-black  font-bold' 
+<button  className={`font-semibold hidden lg:block font-poppins text-xl ${activeProduct === 'sheet'  ? 'border-b-4  border-black  text-black  font-bold' 
         : 'text-gray-600'}`}
               onClick={() => setActiveProduct('sheet')}
             >
@@ -80,12 +80,12 @@ Sheets</button>
 
 <div className='flex sm:gap-10 gap-5 mt-5 lg:hidden  mx-5 sm:mx-10 lg:mx-0'>
 <button 
- className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-sans  rounded-sm ${activeProduct === 'coil' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6] ' 
+ className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-poppins  rounded-sm ${activeProduct === 'coil' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6] ' 
         : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]' }`}
               onClick={() => setActiveProduct('coil')}
             >
 Coils</button>
-<button  className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-sans  rounded-sm ${activeProduct === 'sheet'  ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6]' 
+<button  className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-poppins  rounded-sm ${activeProduct === 'sheet'  ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#2241a6]' 
         : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]'}`}
               onClick={() => setActiveProduct('sheet')}
             >

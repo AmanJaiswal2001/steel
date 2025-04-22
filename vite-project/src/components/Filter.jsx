@@ -45,13 +45,13 @@ const isHidden = (field) => hideFields.includes(field);
 <div className=' w-full flex gap-2 items-center '>
     {/* icon */}
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 20v-7L2.95 4h18.1L14 13v7zm2-7.7L16.95 6h-9.9zm0 0"/></svg>
-    <span className='font-sans font-semibold text-[#262626] text-left text-[1.25rem]'>Filter</span>
+    <span className='font-poppins font-semibold text-[#262626] text-left text-[1.25rem]'>Filter</span>
     {/* filter */}
 </div>
 
 <div className='w-full  flex   justify-end '>
 {/* button */}
-<button className='text-[#2241a6] font-sans cursor-pointer text-end text-sm font-semibold'
+<button className='text-[#2241a6] font-poppins cursor-pointer text-end text-sm font-semibold'
  onClick={() => {
   const cleared = {
     Grade: [],

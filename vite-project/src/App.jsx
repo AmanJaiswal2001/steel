@@ -79,7 +79,7 @@ function AppLayout() {
   //  <Router>
   <>
   <Nav />
-  <main className="overflow-x-hidden ">
+  <main className="overflow-x-hidden flex-grow ">
         <Outlet />
       </main>
    
