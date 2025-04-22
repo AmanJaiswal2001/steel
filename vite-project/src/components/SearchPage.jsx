@@ -19,7 +19,7 @@ const SearchPage = () => {
   const searchTerm = query.get('query') || ''
 
   return (
-    <div className="pt-20 px-4"> {/* Padding to avoid header overlap */}
+    <div className="pt-10 px-20 flex  w-[80%]  m-auto justify-center mb-20 items-center"> {/* Padding to avoid header overlap */}
       <SearchbarFeatures data={allProducts} defaultSearch={searchTerm} />
     </div>
   )

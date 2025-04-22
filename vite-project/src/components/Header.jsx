@@ -10,6 +10,11 @@ const Header = () => {
       navigate(`/search?query=${encodeURIComponent(search)}`)
     }
   }
+  // const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  //   if (e.key === 'Enter') {
+  //     applySearch(search)
+  //   }
+  // }
   
   return (
     <div className='flex md:justify-between w-full gap-5 md:gap-0 bg-white  md:bg-none sm:bg-none lg:bg-none fixed lg:static md:static sm:static z-40 lg:z-0  top-0   px-10 md:px-20'>
@@ -29,6 +34,11 @@ const Header = () => {
 <input type='search'
 value={search}
 onChange={(e) => setSearch(e.target.value)}
+onKeyDown={(e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  }}
     className='md:w-full w-[100%]  px-2 h-full border-1 border-gray-200 outline-0 rounded-l-2xl '
 />
 <div className='md:h-10 md:w-[30%] h-9   '>
