@@ -19,6 +19,7 @@ import ColdCoils from "./components/ColdCoils";
 import ColdCoilsdel from "./components/ColdCoilsdel";
 import PhoneCall from "./components/PhoneCall";
 import SearchPage from "./components/SearchPage";
+import Home from "./components/Home";
 
 const appRouter = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/search",
         element:<SearchPage/>
+      },
+      {
+        path:"/home",
+        element:<Home/>
       },
       
       { path: "product/:id", element: <HotCatDelevery /> },

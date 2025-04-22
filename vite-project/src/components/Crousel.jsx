@@ -76,3 +76,17 @@ className='w-full h-auto object-cover max-h-[500px] '
 }
 
 export default Crousel
+
+
+
+export const CrouselCard=({images})=>{
+  return (
+    <div className="carousel gap-5 carousel-end ">
+      {images.map((src, index) => (
+        <div className="carousel-item" key={index}>
+          <img src={src} alt={`carousel-${index}`} />
+        </div>
+      ))}
+    </div> 
+  )
+}
