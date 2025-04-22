@@ -26,7 +26,7 @@ const Nav = () => {
     {/* {/* </div> */}
     <div className='md:flex font-sans text-sm gap-10 md:items-center hidden   '>
   
-    <Link className='text-[#343a41] font-medium font-sans  text-sm rounded flex  cursor-pointer hover:text-[#2241a6]' to="/">Home</Link>
+    <Link className='text-[#343a41] font-medium font-sans  text-sm rounded flex  cursor-pointer hover:text-[#2241a6]' to="/home">Home</Link>
     <DroupdownMenu         menuItems={[
           "Hot Rolled",
           "Cold Rolled",
