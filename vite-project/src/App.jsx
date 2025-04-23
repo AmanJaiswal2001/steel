@@ -20,6 +20,9 @@ import ColdCoilsdel from "./components/ColdCoilsdel";
 import PhoneCall from "./components/PhoneCall";
 import SearchPage from "./components/SearchPage";
 import Home from "./components/Home";
+import Product from "./components/Product";
+import Section from "./components/Section";
+import Strainless from "./components/Strainless";
 
 const appRouter = createBrowserRouter([
   {
@@ -45,6 +48,14 @@ const appRouter = createBrowserRouter([
       {
         path:"/search",
         element:<SearchPage/>
+      },
+      {
+        path:"/mild",
+        element:<Section/>
+      },
+      {
+        path:"/stainless",
+        element:<Strainless/>
       },
      
       

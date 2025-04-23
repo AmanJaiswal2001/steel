@@ -16,7 +16,7 @@ const Section= () => {
 
    
     return (
-    <div className='relative  h-auto w-full   md:mt-20 mt-0   '>
+    <div className='relative  h-auto w-full   md:mt-5 mb-20 mt-0   '>
     <h1 className='font-bold md:text-3xl sm:text-2xl text-xl text-[#262626] leading-6 font-poppins w-96 md:px-20 sm:px-10 px-5 '>Mild Steel</h1>
     {/* sidebar */}
 
@@ -24,8 +24,8 @@ const Section= () => {
     <div className=' w-1/4 hidden lg:block '>
 <Sidebar activeType={activeType} setActiveType={setActiveType} 
 items={[
-    { type: 'hot', label: 'Hot Rolled', link: '/' },
-    { type: 'cold', label: 'Cold Rolled', link: '/' },
+    { type: 'hot', label: 'Hot Rolled', link: '/mild' },
+    { type: 'cold', label: 'Cold Rolled', link: '/mild' },
   ]}
 
 />

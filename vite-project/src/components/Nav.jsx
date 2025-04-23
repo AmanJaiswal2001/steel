@@ -31,6 +31,7 @@ const Nav = () => {
     <DroupdownMenu         menuItems={[
           "Hot Rolled",
           "Cold Rolled",
+          "Steel"
          
         ]} buttonName=" Mild Steel"/>
    
@@ -42,9 +43,9 @@ const Nav = () => {
     </div>
    
   </div>
-  <div className='mt-0 hidden   md:flex  lg:mr-20 md:mr-0  '>
+  {/* <div className='mt-0 hidden   md:flex  lg:mr-20 md:mr-0  '>
   <DropdownMenu2 buttonName="Connect with us"/>
-  </div>
+  </div> */}
    
     </div>
     </div>

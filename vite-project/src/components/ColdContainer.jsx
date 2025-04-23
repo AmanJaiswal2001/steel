@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import Card from './Card';
 import Button from './Button';
+import { Link, useNavigate } from 'react-router-dom';
 
 const cardData = [
     {
@@ -55,7 +56,7 @@ const ColdContainer = ({type}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const visibleCards = 3; 
   
-
+const navigate=useNavigate();
     const filteredCards = cardData.filter((card) => {
         if (type === "hot") {
           return card.title.toLowerCase().includes("hot");
@@ -86,9 +87,9 @@ const ColdContainer = ({type}) => {
         <div className="  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10  ">
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
-            <div className='w-full flex justify-center gap-0 '>
+            <Link  key={index} to={`/coldproductcoil/${index}`} className='w-full flex justify-center gap-0 '>
             <Card key={index} {...card} />
-            </div>
+            </Link>
           ))}
          </div>
          
@@ -113,6 +114,7 @@ const ColdContainer = ({type}) => {
           </button>
           <div className='lg:mt-20 mt-10 mb-5 flex justify-center'>
 <Button
+  onClick={()=>navigate("/coldRolled/coils")}
  buttonName="View all"
  rounded="rounded-lg"
   text="text-[#2241a6]"  bgColor="bg-white hover:bg-[#cae0fe]" border="border-2 border-[#2241a6]"

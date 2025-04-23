@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import Card from './Card';
 import Button from './Button';
 import CardSheet from './CardSheet';
+import { useNavigate } from 'react-router-dom';
 
 const cardData = [
     {
@@ -53,7 +54,10 @@ const cardData = [
   
 
 const SheetsTwo = ({type}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+   
+  const navigate=useNavigate();
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
     const visibleCards = 3; 
   
 
@@ -122,7 +126,9 @@ const SheetsTwo = ({type}) => {
         
           </button>
 <div className='mt-20 mb-5 flex justify-center'>
-<Button
+<Button 
+onClick={(()=>navigate("hotRolled/sheet")) 
+}
  buttonName="View all"
  rounded="rounded-lg"
   text="text-[#2241a6]"  bgColor="bg-white hover:bg-[#cae0fe]" border="border-2 border-[#2241a6]"

@@ -12,6 +12,11 @@ const submenuMapping = {
     { label: "Cold Rolled Sheet", path: "/coldRolled/sheet" },
     { label: "Cold Rolled Coils", path: "/coldRolled/coils" },
   ],
+
+  "Steel": [
+    { label: "Mild Steel", path: "/mild" },
+    { label: "Stainless Steel", path: "/stainless" },
+  ],
 };
 const  DropdownMenu = ({menuItems=[],buttonName}) => {
   const [open, setOpen] = useState(false);
@@ -48,6 +53,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
        
         <ul className=" absolute hover:text-[#2241a6]  left-0 mt-0  bg-white   rounded shadow-lg z-50 ">
           {menuItems.map((item) => (
+           <>
             <li className=" hover:bg-gray-100 relative group " key={item}
             
             >
@@ -63,12 +69,12 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                <span className=" text-[#343a41] hover:text-[#2241a6] font-medium font-poppins">{item}</span> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
               </button>
-            
+          
 
               {/* Submenu */}
               {/* <div className="relative"> */}
               {submenuMapping[item] && subMenu === item &&  (
-                <ul className=" absolute top-0 left-full w-40 bg-white   shadow-lg z-50"
+                <ul className=" absolute top-0 left-full w-56 bg-white   shadow-lg z-50"
                  onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
               onMouseLeave={() => setSubMenu(null)} // Close submenu when mouse leaves item
             
@@ -87,6 +93,8 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                 </ul>
               )}
             </li>
+            
+            </>
           ))}
         </ul>
     

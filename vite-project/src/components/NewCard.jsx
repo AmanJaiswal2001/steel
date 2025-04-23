@@ -55,10 +55,11 @@ const products = [
       top: "300px",
       left: "220px",
      
+     
     };
   
     return (
-      <div className="flex flex-wrap gap-8">
+      <div className="flex flex-wrap gap-2 px-5">
         <style>
           {`
             .inverted-radius {
@@ -75,6 +76,7 @@ const products = [
               display: flex;
               align-items: center;
               justify-content: center;
+              
   
               --_m: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%, #0000 72%);
               --_g: conic-gradient(from 90deg at calc(100% - var(--r)) calc(100% - var(--r)), #0000 25%, #000 0);
@@ -90,8 +92,8 @@ const products = [
         </style>
   
         {products.map((product) => (
-          <div key={product.id} className="relative flex flex-col  m-auto px-5 ">
-            <div className="inverted-radius ">
+          <div key={product.id} className="relative flex flex-col   m-auto px-5 ">
+            <div className="inverted-radius  ">
               <img src={product.image} alt={product.label} style={imageStyle} />
             </div>
             <Link to="#">

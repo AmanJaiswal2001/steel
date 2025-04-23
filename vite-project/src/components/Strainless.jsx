@@ -19,7 +19,7 @@ const Strainless= () => {
 
    
     return (
-    <div className='h-full w-full relative    md:mt-20 mt-0  '>
+    <div className='h-full w-full relative  mb-20  md:mt-5 mt-0  '>
     <h1 className='font-bold md:text-3xl sm:text-2xl w-96 text-xl text-[#262626] leading-6 font-poppins md:px-20 sm:px-10 px-5 '>Stainless Steel</h1>
     {/* sidebar */}
 
@@ -27,8 +27,8 @@ const Strainless= () => {
     <div className='w-1/4 hidden lg:block'>
 <Sidebar activeType={activeType} setActiveType={setActiveType} 
  items={[
-              { type: 'hot', label: 'Hot rolled sheets', link: '/' },
-              { type: 'cold', label: 'Cold rolled coils', link: '/' },
+              { type: 'hot', label: 'Hot rolled sheets', link: '/stainless' },
+              { type: 'cold', label: 'Cold rolled coils', link: '/stainless' },
             ]}
 
 />
@@ -62,12 +62,12 @@ const Strainless= () => {
 </div>
 
 <button 
- className={`font-semibold hidden lg:block pt-1 font-poppins  text-xl ${activeProduct === 'Series200' ? 'border-b-4 border-black  text-black font-bold' 
+ className={`font-semibold hidden lg:block pt-1 font-poppins  text-xl ${activeProduct === 'Series200' ? 'border-b-2 border-black  text-black font-bold' 
   : 'text-gray-600'}`}
   onClick={() => setActiveProduct('Series200')}
             >
 Series 200</button>
-<button  className={`font-semibold hidden lg:block font-poppins text-xl ${activeProduct === 'Series300'  ? 'border-b-4  border-black  text-black  font-bold' 
+<button  className={`font-semibold hidden lg:block font-poppins text-xl ${activeProduct === 'Series300'  ? 'border-b-2  border-black  text-black  font-bold' 
         : 'text-gray-600'}`}
         onClick={() => setActiveProduct('Series300')}
             >

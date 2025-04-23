@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import Card from './Card';
 import CardSheet from './CardSheet';
 import Button from './Button';
-
+import { Link, useNavigate } from 'react-router-dom';
 const cardData = [
     {
       title: "SONATEK Steel Cold Rolled Coils IS 2062:2011 E250A",
@@ -57,7 +57,7 @@ const cardData = [
 const SheetCard = ({type}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const visibleCards = 3; 
-  
+    const navigate = useNavigate();
 
     const filteredCards = cardData.filter((card) => {
         if (type === "hot") {
@@ -89,9 +89,9 @@ const SheetCard = ({type}) => {
         <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10  ">
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
-            <div className='w-full flex justify-center gap-0'>
+            <Link  key={index} to={`/product/${index}`} className='w-full flex justify-center gap-0'>
             <CardSheet key={index} {...card} />
-            </div>
+            </Link>
           ))}
          </div>
          
@@ -117,6 +117,7 @@ const SheetCard = ({type}) => {
 
           <div className='mt-20 mb-5 flex justify-center'>
 <Button
+onClick={() => navigate("/hotRolled/sheet")}
  buttonName="View all"
  rounded="rounded-lg"
   text="text-[#2241a6]"  bgColor="bg-white hover:bg-[#cae0fe]" border="border-2 border-[#2241a6]"

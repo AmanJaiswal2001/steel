@@ -13,7 +13,7 @@ const Blog = () => {
    <Link>
    <ArticleCard 
    
-   image="/prefab_buildings__2_.jpg" 
+   image="/crc.webp" 
    buttonName="Article" 
    description="Steel fabrication for infrastucture"
    buttonNavigate="Read now"
@@ -22,14 +22,14 @@ const Blog = () => {
   
    <Link>
    <ArticleCard  
-    image="/prefab_buildings__2_.jpg"   
+    image="/hrs.webp"   
     buttonName="Article" description="The advantages of PEB structures for industrial applications"
    buttonNavigate="Read now"
     />
    </Link>
    <Link>
    <ArticleCard 
-   image="/prefab_buildings__2_.jpg"     
+   image="/hrc1.webp"     
    buttonName="Article" description="Steel's role in disaster-resilient prefabricated buildings"
    buttonNavigate="Read now"
     />
