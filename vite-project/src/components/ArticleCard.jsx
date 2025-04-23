@@ -2,10 +2,10 @@ import React from 'react'
 
 const ArticleCard = ({image, buttonName,description, buttonNavigate}) => {
   return (
-    <div className='w-full  '>
+    <div className='w-full '>
         <div 
          data-theme="light" 
-         className="card bg-base-100 w-96 hover:shadow-lg  hover:bg-transparent  hover:scale-[98%] transform transition  ease-in-out  duration-300    border border-gray-200 hover:shadow-violet-100  ">
+         className="card bg-base-100 w-[430px] hover:shadow-lg  hover:bg-transparent  hover:scale-[98%] transform transition  ease-in-out  duration-300    border border-gray-200 hover:shadow-violet-100  ">
   <figure className='w-full object-fit '>
     <img className='w-full h-80  object-cover object-fit  '
       src={image}

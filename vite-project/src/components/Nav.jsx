@@ -11,8 +11,9 @@ const Nav = () => {
    
     
     <Header/>
-    <hr className='text-gray-400  mt-24 sm:mt-4 md:mt-4 lg:mt-4'></hr>
+    <hr className='text-gray-400  mt-5 sm:mt-4 md:mt-4 lg:mt-4'></hr>
   <div className='relative mx-20  flex items-center  pt-0 justify-between  '>
+
    {/* <div className='flex h-full  items-center justify-between gap-10  '> */}
 
 
@@ -26,7 +27,7 @@ const Nav = () => {
     {/* {/* </div> */}
     <div className='md:flex font-poppins text-[16px] gap-10 md:items-center hidden   '>
   
-    <Link className='text-[#343a41] font-medium font-poppins  text-[16px] rounded flex  cursor-pointer hover:text-[#2241a6]' to="/home">Home</Link>
+    <Link className='text-[#343a41] font-medium font-poppins  text-[16px] rounded flex  cursor-pointer hover:text-[#2241a6]' to="/">Home</Link>
     <DroupdownMenu         menuItems={[
           "Hot Rolled",
           "Cold Rolled",

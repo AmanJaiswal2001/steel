@@ -5,19 +5,21 @@ import Blog from './Blog'
 import Video from './Video'
 import Workflow from './Workflow'
 import Crousel from './Crousel'
+import Home from './Home'
 
 const Layout = () => {
   return (
   <>
-   <div className='absolute pt-5 w-full max-w-screen overflow-hidden '>
+   {/* <div className='absolute pt-5 w-full max-w-screen overflow-hidden '>
         <Crousel/>
 
-        </div>
-  <div className='  relative pt-36 sm:pt-60 md:pt-[180px] lg:pt-60 xl:pt-96 '>
+        </div> */}
+  {/* <div className='  relative pt-36 sm:pt-60 md:pt-[180px] lg:pt-60 xl:pt-96 '>
         <Section/>
 
-    </div>
-    <Strainless/>
+    </div> */}
+    {/* <Strainless/> */}
+    <Home/>
     <Blog/>
     <Video/>
     <Workflow/>

@@ -5,13 +5,13 @@ import HelperComponent, { Design } from './HelperComponent'
 const Workflow = () => {
   return (
     <div className='w-full h-full '>
-        <div className=''>
+        {/* <div className=''>
             <h1 className='text-blue-700 font-bold text-4xl text-center font-poppins pt-10'>How it works?</h1>
             <h5 className='text-gray-400 text-sm text-center font-poppins '>Our 2-minutes registration process</h5>
             <img className='pt-4' src="Homepage_Infographic-01.jpg"/>
             <h1 className='text-blue-700 font-bold text-4xl font-poppins leading-1 text-center pt-10'>Why  SONATEK</h1>
             <h5 className='text-gray-400 text-sm text-center font-poppins  pt-5 '>Discover our key features</h5>
-            <div className='mt-5 flex flex-srink w-full m-auto font-poppins overflow-x-scroll lg:overflow-x-hidden lg:px-20 item-center  '>
+            {/* <div className='mt-5 flex flex-srink w-full m-auto font-poppins overflow-x-scroll lg:overflow-x-hidden lg:px-20 item-center  '>
  <HelperComponent bgColor="bg-[#007bff]" 
  textColor="text-white"
  description="Product quality assurance"
@@ -34,8 +34,8 @@ const Workflow = () => {
  textColor="text-black"
  width="w-full" height="h-20"
  description="Expert finacial and operational advisory" />
-</div>
-        </div>
+</div> */}
+        {/* </div>  */}
 
      <div className='h-[200px]'>
      <Design description="Join us to gain access to our extensive network of distributors and resources"/>

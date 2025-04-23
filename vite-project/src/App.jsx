@@ -46,10 +46,7 @@ const appRouter = createBrowserRouter([
         path:"/search",
         element:<SearchPage/>
       },
-      {
-        path:"/home",
-        element:<Home/>
-      },
+     
       
       { path: "product/:id", element: <HotCatDelevery /> },
       { path: "coilproduct/:id", element: <HotCatCoilsDEl /> },
@@ -86,7 +83,7 @@ function AppLayout() {
   
 
   <Footer /> 
-  {/* <PhoneCall/> */}
+  <PhoneCall/>
 
 </>
     // </Router>

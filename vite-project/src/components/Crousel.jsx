@@ -7,9 +7,11 @@ const image=[
 
     // "https://images.ctfassets.net/o0otttl8ele8/46U7cIK5AomnCu6Jrt8j2K/4ea2e87838b8eed2a665c8eac35df1f1/Website_banner-04_desktop__1_.jpg?w=1536&h=415&fm=webp",
 
-     "/Website_banner-04_desktop__1_.webp",
-  "/Website_banner-07.webp"
-
+    "/sonatch.jpg",
+    "/sonatch.jpg", "/sonatch.jpg", "/sonatch.jpg",
+    // "/desktop__1_.webp",
+    // "/banner-07.webp",
+    // "/desktop__1_.webp",
   ]
 
 
@@ -38,18 +40,18 @@ const Crousel = () => {
  return (
     <div className='relative    h-full w-full mx-auto '>
     <div onClick={previousSlide}
-      className="absolute left-2 top-[40%]  -translate-y-1/2  bg-blue-200 hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-lg hover:bg-blue-500 z-20"
+      className="absolute left-2 top-[50%] h-16 w-16  -translate-y-1/2  bg-blue-200 hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-full hover:bg-blue-500 z-20"
   
     >
         {/* left arrow */}
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/></svg>
+        <svg className='' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/></svg>
     </div>
-    <div className='  w-full h-full object-cover'>
+    <div className='  w-full xl:h-full object-cover'>
         {/* image */}
        
         {image.map((item,index)=>
 current===index&&( <img  
-className='w-full h-auto object-cover max-h-[500px] '
+className='w-full h-auto object-cover  '
  key={index} src={item}/>
         ))}
      <div className='relative bottom-20  left-10 md:bottom-32 sm:bottom-24 lg:left-20 lg:w-40'>      
@@ -66,7 +68,7 @@ className='w-full h-auto object-cover max-h-[500px] '
        
     </div>
     <div onClick={nextSlide}
-     className="absolute right-2 top-[40%] z-20  bg-blue-200 hidden lg:flex  text-white p-2 cursor-pointer rounded-lg hover:bg-blue-500"
+     className="absolute right-4 top-[50%] h-16 w-16  -translate-y-1/2  bg-blue-200 hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-full hover:bg-blue-500 z-20"
      >
         {/* right arrow */}
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887t.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75t-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1t-.375-.888t.375-.887z"/></svg>    </div>
