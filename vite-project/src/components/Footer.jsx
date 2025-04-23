@@ -4,19 +4,24 @@ import { faSquareYoutube,faLinkedin, faSquareInstagram, faFacebook } from '@fort
 
 const Footer = () => {
   return (
-    <div className='w-full  bg-[#2241a6] border-t-2 border-white '>
-<footer className="footer w-full    font-poppins sm:footer-horizontal  bg-[#2241a6]  p-10  md:h-72 sm:h-80 lg:h-80">
- 
- <nav className='flex justify-center md:h-40 sm:h-40 lg:h-40 h-full gap-5 mx-10 items-center  w-40'>
+    <div className='w-full  bg-[#2241a6] border-b-2 border-white '>
+<footer className="lg:flex sm:flex lg:flex-row md:flex-row sm:flex-row  md:flex  flex flex-col   gap-5 w-full border-b-2 border-white justify-evenly  font-poppins sm:footer-horizontal  bg-[#2241a6]  p-10  ">
+
+ <nav  className='flex flex-col   justify-center pt-2   h-full  gap-5 items-center  w-40'>
+
+ <img src="/Group 611.png"/>
+ <div className='flex  justify-center  h-full gap-5 items-center  w-40'>
  <a className="link link-hover">    <FontAwesomeIcon className='text-white  w-6 h-6' icon={faSquareYoutube} size="2x" /></a>
     <a className="link link-hover ">  <FontAwesomeIcon className='text-white w-8  h-6' icon={faLinkedin} size="2x" /></a>
     <a className="link link-hover">  <FontAwesomeIcon  className='text-white w-6 h-6' icon={faSquareInstagram} size="2x" /></a>
     <a className="link link-hover">    <FontAwesomeIcon className='text-white w-6 h-6' icon={faFacebook} size="2x" /></a>
 
+ </div>
+
  </nav>
  
  
-  <nav>
+  <nav className=' flex flex-col gap-3 font-poppins'>
     <h3 className=" text-lg text-white  font-semibold">Buy online</h3>
     <a className="cursor-pointer text-white  font-light text-sm ">Mild Steel</a>
     <a className="cursor-pointer text-white  font-light text-sm ">Stainless Steel</a>
@@ -24,20 +29,20 @@ const Footer = () => {
     <a className="cursor-pointer text-white  font-light text-sm ">TMT</a>
     <a className="cursor-pointer text-white  font-light text-sm ">Cement</a>
   </nav>
-  <nav>
+  <nav className=' flex flex-col gap-3 font-poppins' >
     <h3 className=" text-lg text-white font-semibold">Sonatek </h3>
     <a className="cursor-pointer text-white  font-light text-sm ">About us</a>
     <a className="cursor-pointer text-white  font-light text-sm ">Blogs</a>
     <a className="cursor-pointer text-white  font-light text-sm ">Sitemap</a>
     <a className="cursor-pointer text-white  font-light text-sm ">Sonatek</a>
   </nav>
-  <nav>
+  <nav className=' flex flex-col gap-3 font-poppins'>
     <h3 className=" text-lg text-white font-semibold">Policy </h3>
     <a className="cursor-pointer text-white  font-light text-sm ">Terms& conditions</a>
     <a className="cursor-pointer text-white  font-light text-sm ">Privacy policy</a>
     <a className="cursor-pointer text-white  font-light text-sm ">Return policy</a>
   </nav>
-  <nav>
+  <nav className='flex flex-col gap-3 font-poppins'>
     <h3 className=" text-lg text-white font-semibold">Support  </h3>
    
     <a className=" flex gap-2"><svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg>
@@ -58,9 +63,16 @@ const Footer = () => {
    <a>
    <img className='w-40 ' src="Google_Play_Store_badge_EN.svg.webp"/>
    </a> */}
+   
     </nav>
-    
+    {/* <div className='border-t border-gray-300'>
+hello
+    </div> */}
 </footer>
+<div className='border-t mb-5 border-gray-300 flex items-center justify-center'>
+
+<p className='text-white font-poppins text-sm pt-5'>© Copyright 2025 Sonatek, all rights reserved</p>
+    </div>
  
 
     </div>
