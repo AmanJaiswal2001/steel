@@ -62,12 +62,12 @@ items={[
 {/* <div className='px-4'> */}
 
 <button 
- className={`font-semibold hidden lg:block pt-1 font-poppins  text-xl ${activeProduct === 'coil' ?   'border-b-4 border-black  text-black font-bold' 
+ className={`font-semibold hidden lg:block pt-1 font-poppins  text-xl ${activeProduct === 'coil' ?   'border-b-2 border-black  text-black font-bold' 
         : 'text-gray-600'}`}
               onClick={() => setActiveProduct('coil')}
             >
 Coils</button>
-<button  className={`font-semibold hidden lg:block font-poppins text-xl ${activeProduct === 'sheet'  ? 'border-b-4  border-black  text-black  font-bold' 
+<button  className={`font-semibold hidden lg:block font-poppins text-xl ${activeProduct === 'sheet'  ? 'border-b-2  border-black  text-black  font-bold' 
         : 'text-gray-600'}`}
               onClick={() => setActiveProduct('sheet')}
             >

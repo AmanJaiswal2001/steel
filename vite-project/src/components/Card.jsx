@@ -6,9 +6,9 @@ const Card = (
   return (
     <div 
      data-theme="light" 
-    className=" card gap-0 hover:shadow-lg  hover:bg-transparent  hover:-translate-y-1 transform transition  ease-in-out  duration-300   bg-base-100  w-72 h-[420px]  shadow-sm">
+    className=" card gap-0 carousel carousel-center rounded-box hover:shadow-lg  hover:bg-transparent  hover:-translate-y-1 transform transition  ease-in-out  duration-300   bg-base-100  w-72 h-[420px]  shadow-sm">
     <figure>
-      <img className='w-full object-fit  h-44  '
+      <img className='w-full object-fit  h-44 carousel-item '
         src={image}
         alt="card" />
     </figure>
