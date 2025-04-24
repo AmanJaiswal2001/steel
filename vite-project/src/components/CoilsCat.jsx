@@ -81,7 +81,7 @@ const  CoilsCat = ({filters}) => {
 
     {/* Then Thickness */}
     {(filters.Thickness?.min || filters.Thickness?.max) && (
-      <span className="font-medium font-poppins text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#12396d] text-sm">
         {"  Thickness: "}
         {filters.Thickness.min && `${filters.Thickness.min}mm`}
         {filters.Thickness.min && filters.Thickness.max && " - "}
@@ -91,7 +91,7 @@ const  CoilsCat = ({filters}) => {
 
     {/* Then Width */}
     {(filters.Width?.min || filters.Width?.max) && (
-      <span className="font-medium font-poppins text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#12396d] text-sm">
         {"  Width: "}{" "}
         {filters.Width.min && `${filters.Width.min}mm`}
         {filters.Width.min && filters.Width.max && " - "}
@@ -101,7 +101,7 @@ const  CoilsCat = ({filters}) => {
 
     {/* Then Length */}
     {(filters.Length?.min || filters.Length?.max) && (
-      <span className="font-medium font-poppins text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#12396d] text-sm">
         {"  Length: "}
         {filters.Length.min && `${filters.Length.min}mm`}
         {filters.Length.min && filters.Length.max && " - "}

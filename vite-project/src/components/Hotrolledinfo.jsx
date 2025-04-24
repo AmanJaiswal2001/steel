@@ -76,8 +76,8 @@ export const  Hotrolledinfo = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 font-poppins text-center flex-1 cursor-pointer hover:text-[#2241a6] hover:border-b-2 border-b-[#2241a6]
-                ${activeTab === tab ? "text-[#2241a6] border-b-2 border-[#2241a6]  font-semibold  ": "text-black bg-white "}
+              className={`px-4 py-2 font-poppins text-center flex-1 cursor-pointer hover:text-[#12396d] hover:border-b-2 border-b-[#12396d]
+                ${activeTab === tab ? "text-[#12396d] border-b-2 border-[#12396d]  font-semibold  ": "text-black bg-white "}
                      ${index !== tabs.length - 1 ? "border-r border-gray-300" : ""}`}
             >
               {tab}

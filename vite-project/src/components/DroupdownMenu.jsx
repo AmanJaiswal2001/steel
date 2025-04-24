@@ -37,7 +37,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
       
       <button onClick={() => setOpen(!open)} 
       
-      className="  py-[0.45rem] relative text-[#343a41] font-medium font-poppins  text-[16px] rounded flex cursor-pointer hover:text-[#2241a6]">
+      className="  py-[0.45rem] relative text-[#343a41] font-medium font-poppins  text-[16px] rounded flex cursor-pointer hover:text-[#12396d]">
         {buttonName}{" "} {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
       </button>
 
@@ -51,7 +51,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
 
   
        
-        <ul className=" absolute hover:text-[#2241a6]  left-0 mt-0  bg-white   rounded shadow-lg z-50 ">
+        <ul className=" absolute hover:text-[#12396d]  left-0 mt-0  bg-white   rounded shadow-lg z-50 ">
           {menuItems.map((item) => (
            <>
             <li className=" hover:bg-gray-100 relative group " key={item}
@@ -63,10 +63,10 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                }
                onMouseEnter={() => setSubMenu(item)} // Open submenu on hover
                 onMouseLeave={() => setSubMenu(null)}
-                className="w-40  flex justify-between text-left px-4 py-2 hover:bg-gray-100 hover:text-[#2241a6] cursor-pointer"
+                className="w-40  flex justify-between text-left px-4 py-2 hover:bg-gray-100 hover:text-[#12396d] cursor-pointer"
               >
               
-               <span className=" text-[#343a41] hover:text-[#2241a6] font-medium font-poppins">{item}</span> 
+               <span className=" text-[#343a41] hover:text-[#12396d] font-medium font-poppins">{item}</span> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
               </button>
           
@@ -84,7 +84,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                     <li key={subItem.label} className="hover:bg-gray-100  text-[#343a41] font-medium font-poppins">
                       <Link
                         to={subItem.path}
-                        className="block px-4 py-2 hover:text-[#2241a6] cursor-pointer"
+                        className="block px-4 py-2 hover:text-[#12396d] cursor-pointer"
                       >
                         {subItem.label}
                       </Link>
@@ -223,8 +223,8 @@ export default DropdownMenu;
    <div className=" relative group   ">
     
           
-    <button onClick={() => setOpen(!open)} className="px-4 font-semibold font-poppins  cursor-pointer  text-[#2241a6]   flex">
-                {buttonName}{" "} {open ? <svg className="text-[#2241a6] " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
+    <button onClick={() => setOpen(!open)} className="px-4 font-semibold font-poppins  cursor-pointer  text-[#12396d]   flex">
+                {buttonName}{" "} {open ? <svg className="text-[#12396d] " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>}
               </button>
     
           {/* Main Dropdown Menu */}

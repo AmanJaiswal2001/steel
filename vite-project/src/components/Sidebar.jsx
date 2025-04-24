@@ -30,7 +30,7 @@ const Sidebar = ({activeType,setActiveType,items}) => {
             className={`p-4 text-[1rem] text-left transition-all duration-300 ease-in-out cursor-pointer font-poppins m-auto rounded-lg w-[80%] ${
               activeType === item.type
                 ? 'bg-[#e6f0ff] text-black font-bold'
-                : 'text-[#2241a6]'
+                : 'text-[#12396d]'
             }`}
           >
             {item.label}

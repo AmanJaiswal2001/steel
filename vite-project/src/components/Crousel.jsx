@@ -38,7 +38,7 @@ const Crousel = () => {
  
  
  return (
-    <div className='relative    h-full w-full mx-auto '>
+    <div className='relative     w-full mx-auto '>
     <div onClick={previousSlide}
       className="absolute left-2 top-[50%] h-16 w-16  -translate-y-1/2  bg-blue-200 hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-full hover:bg-blue-500 z-20"
   
@@ -46,16 +46,16 @@ const Crousel = () => {
         {/* left arrow */}
         <svg className='' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/></svg>
     </div>
-    <div className='  w-full xl:h-full object-cover'>
+    <div className='  w-full h-auto object-cover'>
         {/* image */}
        
         {image.map((item,index)=>
 current===index&&( <img  
-className='w-full h-auto object-cover  '
+className='w-full h-full object-cover  '
  key={index} src={item}/>
         ))}
      <div className='relative bottom-20  left-10 md:bottom-32 sm:bottom-24 lg:left-20 lg:w-40'>      
-     <button className='flex gap-2 lg:items-center  lg:justify-center  cursor-pointer mt-12 lg:mt-0 lg:p-2 rounded-lg sm:w-48 lg:w-64 bg-[#2241a6]'>      
+     <button className='flex gap-2 lg:items-center  lg:justify-center  cursor-pointer mt-12 lg:mt-0 lg:p-2 rounded-lg sm:w-48 lg:w-64 bg-[#12396d]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
      className='md:w-10 md:h-10 lg:w-10 lg:h-10 w-8 h-8 sm:w-10 sm:h-10 text-white '

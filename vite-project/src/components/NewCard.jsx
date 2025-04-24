@@ -11,22 +11,22 @@ import { Link } from "react-router-dom";
 const products = [
     {
       id: 1,
-      image: "/hrc1.webp",
+      image: "/hotrolledsheet.jpg",
       label: "Hot Rolled Coil",
     },
     {
       id: 2,
-      image: "/hrs.webp",
+      image: "/hotsheet.jpg",
       label: "Hot Rolled Sheet",
     },
     {
       id: 3,
-      image: "/crc.webp",
+      image: "/cold1.jpg",
       label: "Cold Rolled Coil",
     },
     {
       id: 4,
-      image: "/crs.webp",
+      image: "/coil.jpg",
       label: "Hot Rolled Sheet",
     },
   ];
@@ -108,7 +108,7 @@ const products = [
               {product.label}
             </span>
   
-            <div className="bg-[#003375] cursor-pointer w-48 rounded-full flex justify-center h-16 items-center gap-2 text-white mt-4">
+            <div className="bg-[#12396d] cursor-pointer w-48 rounded-full flex justify-center h-16 items-center gap-2 text-white mt-4">
               <button className="text-sm font-normal font-poppins">
                 ViewBrochure
               </button>

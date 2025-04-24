@@ -28,16 +28,16 @@ const Home = () => {
     
         
     <div className='w-full h-full '>
-    <div className='w-full xl:h-screen  '>
+    <div className='w-full xl:h-screen h-auto  '>
     <Crousel/>
     </div>
     
 
-    <div className='w-full xl:mt-15 lg:-mt-0 -mt-15 h-24  flex items-center bg-[#003375]'>      
-    <div className="w-full px-10 ">
+    <div className='w-full xl:mt-15 lg:-mt-0 -mt-15 h-24  flex items-center bg-[#12396d]'>      
+    <div className="w-full  ">
 <Marquee>
-<div className='flex gap-20 text-4xl uppercase font-anton font-bold  w-full text-white   justify-between items-center align-middle '>
-<p className='w-80 text-center'>Hot Rolled Coil</p>
+<div className='flex gap-20 text-4xl h-24  uppercase font-anton font-bold  w-full text-white   justify-between items-center align-middle '>
+<p className='w-80 text-center '>Hot Rolled Coil</p>
 <p className='w-80 text-center  '>Hot Rolled Sheet</p>
 <p className='w-80 text-center  '>Cold Rolled Coil</p>
 <p className='w-80 text-center  uppercase'>Hot Rolled Sheet</p>   

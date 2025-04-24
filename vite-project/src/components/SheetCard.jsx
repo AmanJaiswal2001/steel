@@ -96,7 +96,7 @@ const SheetCard = ({type}) => {
          </div>
          
          <button
-             className={`absolute left-0 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex===0?"hidden":"block"}`}
+             className={`absolute left-0 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex===0?"hidden":"block"}`}
              onClick={prevSlide}
             disabled={currentIndex === 0}
           >
@@ -106,7 +106,7 @@ const SheetCard = ({type}) => {
     
           {/* Next Button */}
           <button
-            className={`absolute -right-2  h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
+            className={`absolute -right-2  h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
             onClick={nextSlide}
             disabled={currentIndex + visibleCards >= cardData.length}
           >
@@ -120,7 +120,7 @@ const SheetCard = ({type}) => {
 onClick={() => navigate("/hotRolled/sheet")}
  buttonName="View all"
  rounded="rounded-lg"
-  text="text-[#2241a6]"  bgColor="bg-white hover:bg-[#cae0fe]" border="border-2 border-[#2241a6]"
+  text="text-[#12396d]"  bgColor="bg-white hover:bg-[#cae0fe]" border="border-2 border-[#2241a6]"
   width="w-60" />
 </div>
         </div>

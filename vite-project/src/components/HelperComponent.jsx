@@ -14,7 +14,7 @@ export default HelperComponent
   return(
     <div className='bg-[#e6f0ff] h-full lg:flex md:flex-row sm:flex-row lg:flex-row flex flex-col items-center '>
     <h4 className='font-poppins font-normal lg:w-2/3 lg:text-[1.5rem] mt-5 lg:mt-0 text-sm text-center mx-5 lg:mx-20'>{description} </h4>
-    <button className='flex gap-2 items-center justify-center mt-10 lg:mt-0 p-2 rounded-lg w-64 bg-[#2241a6]'>      
+    <button className='flex gap-2 items-center justify-center mt-10 lg:mt-0 p-2 rounded-lg w-64 bg-[#12396d]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
      className='md:w-10 md:h-10 lg:w-10 lg:h-10 w-8 h-8 text-white '
@@ -212,7 +212,7 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
     <div className='flex gap-4 items-center'>
     <p className='font-poppins text-[1rem] font-semibold'>{title} (mm)</p>
     {!selected && (
-  <span className="text-[#e87205] font-poppins px-2 py-1  text-[12px]  lg:text-[1rem]">
+  <span className="text-[#12396d] font-poppins px-2 py-1  text-[12px]  lg:text-[1rem]">
     Select <b>Thickness (mm)</b> to view available width
   </span>
 )}

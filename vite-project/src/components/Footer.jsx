@@ -4,8 +4,8 @@ import { faSquareYoutube,faLinkedin, faSquareInstagram, faFacebook } from '@fort
 
 const Footer = () => {
   return (
-    <div className='w-full  bg-[#2241a6] border-b-2 border-white '>
-<footer className="lg:flex sm:flex lg:flex-row md:flex-row sm:flex-row  md:flex  flex flex-col   gap-5 w-full border-b-2 border-white justify-evenly  font-poppins sm:footer-horizontal  bg-[#2241a6]  p-10  ">
+    <div className='w-full px-5   bg-[#12396d] border-b-2 border-white '>
+<footer className="lg:flex sm:flex  lg:flex-row md:flex-row sm:flex-row  md:flex  flex flex-col   gap-5 w-full border-b-2 border-white justify-evenly  font-poppins sm:footer-horizontal  bg-[#12396d]  p-10  ">
 
  <nav  className='flex flex-col   justify-center pt-2   h-full  gap-5 items-center  w-40'>
 
@@ -45,33 +45,29 @@ const Footer = () => {
   <nav className='flex flex-col gap-3 font-poppins'>
     <h3 className=" text-lg text-white font-semibold">Support  </h3>
    
-    <a className=" flex gap-2"><svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg>
-   <span className="cursor-pointer text-white   font-light text-sm ">+91720805523</span>
+    <a   href="tel:+919891998846" className=" flex gap-2"><svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg>
+   <span className="cursor-pointer text-white   font-light text-sm ">91-9891998846</span>
    </a>
-   <a className=" flex gap-2">
+   <a href="mailto:sonateksteels@gmail.com" className=" flex gap-2">
    <svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zM20 8l-7.475 4.675q-.125.075-.262.113t-.263.037t-.262-.037t-.263-.113L4 8v10h16zm-8 3l8-5H4zM4 8v.25v-1.475v.025V6v.8v-.012V8.25zv10z"/></svg>
-   <span className="cursor-pointer text-white  font-light text-sm ">support@sonatek.com</span>
+   <span className="cursor-pointer text-white  font-light text-sm ">sonateksteels@gmail.com </span>
    </a>   
-   <a className=" flex gap-2">
-   <svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21H5q-.825 0-1.412-.587T3 19v-7q0-1.875.713-3.512t1.924-2.85t2.85-1.925T12 3t3.513.713t2.85 1.924t1.925 2.85T21 12v7q0 .825-.587 1.413T19 21h-2q-.825 0-1.412-.587T15 19v-4q0-.825.588-1.412T17 13h2v-1q0-2.925-2.037-4.962T12 5T7.038 7.038T5 12v1h2q.825 0 1.413.588T9 15v4q0 .825-.587 1.413T7 21m0-6H5v4h2zm10 0v4h2v-4zM7 15H5zm10 0h2z"/></svg>   
-   
-   <span className="cursor-pointer text-white   font-light text-sm ">Help&support</span>
+   <a href="https://www.google.com/maps/search/?api=1&query=X-7,+Loha+Mandi,+Naraina,+New+Delhi+-+110028" target="_blank" rel="noopener noreferrer" className=" flex gap-2">
+   <svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2h.5q.25 0 .5.05v2.025q-.25-.05-.488-.063T12 4Q9.475 4 7.738 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35q3.05-2.8 4.525-5.087T18 10.2V10h2v.2q0 2.5-1.987 5.438T12 22m0-10q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m6-4h2V5h3V3h-3V0h-2v3h-3v2h3z"/></svg>  <span className="cursor-pointer text-white   font-light text-sm ">X-7, Loha Mandi, Naraina, New Delhi - 110028</span>
    </a> 
    
-   {/* <h5 className='font-semibold text-lg font-poppins text-[#262626]'>Download our App</h5>
    
-   <a>
-   <img className='w-40 ' src="Google_Play_Store_badge_EN.svg.webp"/>
-   </a> */}
    
     </nav>
     {/* <div className='border-t border-gray-300'>
 hello
     </div> */}
 </footer>
-<div className='border-t mb-5 border-gray-300 flex items-center justify-center'>
+<div className='border-t-0 mb-5 rounded-full border-gray-300 flex items-center justify-center'>
 
-<p className='text-white font-poppins text-sm pt-5'>© Copyright 2025 Sonatek, all rights reserved</p>
+<p className='text-white font-poppins text-sm pt-5'>© Copyright 2025 Sonatek </p>  <a   target='_blank' 
+    rel='noopener noreferrer'
+    href='https://ganesyx.com/' className='text-white font-bold font-poppins mx-2 text-sm pt-5'>Design by Ganesyx</a>
     </div>
  
 

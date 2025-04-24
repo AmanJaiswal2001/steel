@@ -73,7 +73,7 @@ const HotRolledCatgory = ({filters}) => {
     
     {/* Grade First */}
     {filters.Grade.length > 0 && (
-      <span className="font-medium font-poppins text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#12396d] text-sm">
         {" Grade: " + filters.Grade.join(", ")}
       </span>
     )}
@@ -90,7 +90,7 @@ const HotRolledCatgory = ({filters}) => {
 
     {/* Then Width */}
     {(filters.Width?.min || filters.Width?.max) && (
-      <span className="font-medium font-poppins text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#12396d] text-sm">
         {"  Width: "}{" "}
         {filters.Width.min && `${filters.Width.min}mm`}
         {filters.Width.min && filters.Width.max && " - "}
@@ -100,7 +100,7 @@ const HotRolledCatgory = ({filters}) => {
 
     {/* Then Length */}
     {(filters.Length?.min || filters.Length?.max) && (
-      <span className="font-medium font-poppins text-[#2241a6] text-sm">
+      <span className="font-medium font-poppins text-[#12396d] text-sm">
         {"  Length: "}
         {filters.Length.min && `${filters.Length.min}mm`}
         {filters.Length.min && filters.Length.max && " - "}

@@ -142,7 +142,7 @@ onClick={()=>{
 >
       
         {/* whatapps buttom */}
-        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#2241a6]'>      
+        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#12396d]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '

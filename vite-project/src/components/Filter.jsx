@@ -51,7 +51,7 @@ const isHidden = (field) => hideFields.includes(field);
 
 <div className='w-full  flex   justify-end '>
 {/* button */}
-<button className='text-[#2241a6] font-poppins cursor-pointer text-end text-sm font-semibold'
+<button className='text-[#12396d] font-poppins cursor-pointer text-end text-sm font-semibold'
  onClick={() => {
   const cleared = {
     Grade: [],

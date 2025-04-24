@@ -64,8 +64,8 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
          }}
          
          >
-         <svg className="text-[#2241a6]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14q-.825 0-1.412-.587T10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14m0 7q-3.475 0-6.025-2.287T3.05 13H5.1q.35 2.6 2.313 4.3T12 19q2.925 0 4.963-2.037T19 12t-2.037-4.962T12 5q-1.725 0-3.225.8T6.25 8H9v2H3V4h2v2.35q1.275-1.6 3.113-2.475T12 3q1.875 0 3.513.713t2.85 1.924t1.925 2.85T21 12t-.712 3.513t-1.925 2.85t-2.85 1.925T12 21"/></svg>
-         <h3 className="font-semibold  text-[1rem] text-[#2241a6] cursor-pointer font-poppins">Reset Selection</h3>
+         <svg className="text-[#12396d]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14q-.825 0-1.412-.587T10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14m0 7q-3.475 0-6.025-2.287T3.05 13H5.1q.35 2.6 2.313 4.3T12 19q2.925 0 4.963-2.037T19 12t-2.037-4.962T12 5q-1.725 0-3.225.8T6.25 8H9v2H3V4h2v2.35q1.275-1.6 3.113-2.475T12 3q1.875 0 3.513.713t2.85 1.924t1.925 2.85T21 12t-.712 3.513t-1.925 2.85t-2.85 1.925T12 21"/></svg>
+         <h3 className="font-semibold  text-[1rem] text-[#12396d] cursor-pointer font-poppins">Reset Selection</h3>
          </div>
          </div>
      <div>
@@ -141,7 +141,7 @@ onClick={()=>{
 >
       
         {/* whatapps buttom */}
-        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#2241a6]'>      
+        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#12396d]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '

@@ -10,7 +10,7 @@ const ColdCatgory = () => {
     Length: null });
   
   return (
-    <div className='  h-full mt-10 flex w-full  xl:gap-10 px-5 gap-5 lg:px-16 lg:gap-8 md:px-10 md:gap-8 xl:px-20' >
+    <div className='  h-full mt-10 flex w-full  xl:gap-10 px-5 gap-5 lg:px-16 lg:gap-8 md:px-10 md:gap-8 xl:px-10' >
     {/* filter */}
    
     <div className='w-96 hidden   lg:block xl:block   '>
