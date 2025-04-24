@@ -108,7 +108,7 @@ const products = [
               {product.label}
             </span>
   
-            <div className="bg-[#12396d] cursor-pointer w-48 rounded-full flex justify-center h-16 items-center gap-2 text-white mt-4">
+            <div className="bg-[#12396d] cursor-pointer w-72 rounded-full flex justify-center h-16 items-center gap-2 text-white mt-4">
               <button className="text-sm font-normal font-poppins">
                 ViewBrochure
               </button>

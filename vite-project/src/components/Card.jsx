@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Card = (
-    {title,brand,thickness,width,buttonName,delivery,image}
-) => {
+    {title,brand,thickness,width,buttonName,delivery,image,direction}) => {
+
+
+      const [transformClass, setTransformClass] = useState("");
+
+      useEffect(() => {
+        if (direction === "right") {
+          setTransformClass("translate-x-20 opacity-0");
+          setTimeout(() => setTransformClass("translate-x-0 opacity-100"), 10);
+        } else if (direction === "left") {
+          setTransformClass("-translate-x-20 opacity-0");
+          setTimeout(() => setTransformClass("translate-x-0 opacity-100"), 10);
+        }
+      }, [direction]);
   return (
     <div 
      data-theme="light" 
-    className=" card gap-0 carousel carousel-center rounded-box hover:shadow-lg  hover:bg-transparent  hover:-translate-y-1 transform transition  ease-in-out  duration-300   bg-base-100  w-72 h-[420px]  shadow-sm">
-    <figure>
+    className={`transition-all duration-300 ease-in-out transform ${transformClass} card carousel rounded-box hover:shadow-lg bg-base-100 w-72 h-[420px] shadow-sm`}>
+    <figure className="carousel-item">
       <img className='w-full object-fit  h-44 carousel-item '
         src={image}
         alt="card" />

@@ -20,10 +20,10 @@ const Strainless= () => {
    
     return (
     <div className='h-full w-full relative  mb-20  md:mt-5 mt-0  '>
-    <h1 className='font-bold md:text-3xl sm:text-2xl w-96 text-xl text-[#262626] leading-6 font-poppins md:px-20 sm:px-10 px-5 '>Stainless Steel</h1>
+    <h1 className='font-bold md:text-3xl sm:text-2xl w-96 text-xl text-[#262626] leading-6 font-poppins md:px-10 sm:px-10 px-5 '>Stainless Steel</h1>
     {/* sidebar */}
 
-<div className='flex gap-10 md:w-[90%] w-full md:mt-5 mt-0  rounded-lg mx-auto  md:border md:border-gray-300'>
+<div className='flex gap-10 md:w-[90%] w-full md:mt-5 mt-0  rounded-lg mx-10  md:border md:border-gray-300'>
     <div className='w-1/4 hidden lg:block'>
 <Sidebar activeType={activeType} setActiveType={setActiveType} 
  items={[

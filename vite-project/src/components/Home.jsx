@@ -10,6 +10,9 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import NewCard, {  VariableWidth } from './NewCard';
 import Marquee from "react-fast-marquee";
+import Numbers from './Numbers';
+import { Testimonial } from './Testimonial';
+import ConstructionAwardsSection from './ConstructionAwardsSection';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
@@ -35,7 +38,7 @@ const Home = () => {
 
     <div className='w-full xl:mt-15 lg:-mt-0 -mt-15 h-24  flex items-center bg-[#12396d]'>      
     <div className="w-full  ">
-<Marquee>
+<Marquee speed={100}>
 <div className='flex gap-20 text-4xl h-24  uppercase font-anton font-bold  w-full text-white   justify-between items-center align-middle '>
 <p className='w-80 text-center '>Hot Rolled Coil</p>
 <p className='w-80 text-center  '>Hot Rolled Sheet</p>
@@ -53,7 +56,18 @@ const Home = () => {
     </div>
 
     
+<div>
+    <Numbers/>
+</div>
 
+<div>
+    <ConstructionAwardsSection></ConstructionAwardsSection>
+</div>
+
+
+<div>
+   <Testimonial/>
+</div>
 {/* <VariableWidth/> */}
 
         {/* <div className='w-full flex px-20 mb-20'>

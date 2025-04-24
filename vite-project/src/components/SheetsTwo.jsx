@@ -127,7 +127,7 @@ const SheetsTwo = ({type}) => {
           </button>
 <div className='mt-20 mb-5 flex justify-center'>
 <Button 
-onClick={(()=>navigate("hotRolled/sheet")) 
+onClick={(()=>navigate("/hotRolled/sheet")) 
 }
  buttonName="View all"
  rounded="rounded-lg"

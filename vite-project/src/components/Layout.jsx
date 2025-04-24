@@ -20,7 +20,7 @@ const Layout = () => {
     </div> */}
     {/* <Strainless/> */}
     <Home/>
-    <Blog/>
+    {/* <Blog/> */}
     <Video/>
     <Workflow/>
     </>

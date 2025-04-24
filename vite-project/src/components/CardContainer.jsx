@@ -53,7 +53,9 @@ const cardData = [
   
 
 const CardContainer = ({type}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    
+  const [slideDirection, setSlideDirection] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
     const visibleCards = 3; 
   
     const navigate = useNavigate();
@@ -73,23 +75,25 @@ const CardContainer = ({type}) => {
 
     const nextSlide = () => {
         if (currentIndex + visibleCards < filteredCards.length) {
+          setSlideDirection("right");
           setCurrentIndex(currentIndex + 1);
         }
       };
     
       const prevSlide = () => {
         if (currentIndex > 0) {
+          setSlideDirection("left");
           setCurrentIndex(currentIndex - 1);
         }
       };
     return (
-        <div className="relative max-w-full mx-auto ">
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10  ">
+        <div className="relative max-w-full mx-auto  ">
+        <div className="  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 transition-transform duration-200 ease-in-out ">
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
             <Link key={index} to={`/coilproduct/${index}`}
              className='w-full flex justify-center gap-0 '>
-            <Card key={index} {...card} />
+            <Card key={index} {...card} direction={slideDirection} />
             </Link>
           ))}
          </div>
