@@ -37,7 +37,7 @@ const Nav = () => {
    
   
    
-  <Link className='text-[#343a41] font-medium font-poppins  text-[16px] rounded flex cursor-pointer hover:text-[#12396d]' to="#">About</Link>
+  <Link className='text-[#343a41] font-medium font-poppins  text-[16px] rounded flex cursor-pointer hover:text-[#12396d]' to="/about">About</Link>
   <Link className='text-[#343a41] font-medium font-poppins  text-[16px] rounded flex cursor-pointer hover:text-[#12396d]' to="#">Contact</Link>
 
     </div>

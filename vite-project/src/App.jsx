@@ -23,6 +23,7 @@ import Home from "./components/Home";
 import Product from "./components/Product";
 import Section from "./components/Section";
 import Strainless from "./components/Strainless";
+import About from "./components/About";
 
 const appRouter = createBrowserRouter([
   {
@@ -56,6 +57,11 @@ const appRouter = createBrowserRouter([
       {
         path:"/stainless",
         element:<Strainless/>
+      },
+
+      {
+        path:"/about",
+        element:<About/>
       },
      
       
