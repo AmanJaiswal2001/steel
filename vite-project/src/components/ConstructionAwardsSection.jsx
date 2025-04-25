@@ -26,10 +26,16 @@ function ConstructionAwardsSection() {
     const { largeImage, smallImage } = yearData[selectedYear];
   
   return (
-    <div className="w-[80%] m-auto rounded-xl bg-black mt-5 text-white relative overflow-hidden py-12">
+    <div className="w-[80%] m-auto rounded-xl  mt-10 text-white relative overflow-hidden py-16 px-10">
       {/* Wave-like background */}
       <div className="absolute inset-0">
-        <div className="absolute w-full h-full bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
+        <img 
+          src="/1.png" 
+          alt="Background" 
+          className="w-full h-full object-cover "
+        />
+        {/* Optional dark overlay for better text readability */}
+        <div className="absolute inset-0 "></div>
       </div>
       
       <div className="container mx-auto px-6 relative">
@@ -82,15 +88,15 @@ function ConstructionAwardsSection() {
             </div>
             
             {/* Oval images stacked vertically */}
-            <div className="mt-16 pr-24">
-              <div className="rounded-full overflow-hidden w-[450px] h-64 mb-6 transition-all duration-300">
+            <div className="mt-5 pr-24">
+              <div className="rounded-full overflow-hidden w-[380px] h-64 mb-6 transition-all duration-300">
                 <img
                   src={largeImage}
                   alt={`Main for ${selectedYear}`}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="rounded-full overflow-hidden w-full h-40 transition-all duration-300">
+              <div className="rounded-full overflow-hidden w-[540px] h-52 transition-all duration-300">
                 <img
                   src={smallImage}
                   alt={`Sub for ${selectedYear}`}

@@ -82,7 +82,7 @@ const Coil200 = ({type}) => {
         }
       };
     return (
-        <div className="relative max-w-full mx-auto ">
+        <div className="relative max-w-full  h-full  mx-auto ">
         <div className="   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10  ">
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (

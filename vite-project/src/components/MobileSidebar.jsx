@@ -73,6 +73,22 @@ export const MobileSidebar = () => {
               <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Cold Rolled Coils</li>
           
               </Link>
+              {/* <Link to="/coldRolled/coils">
+              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Cold Rolled Coils</li>
+          
+              </Link>
+              <Link to="/coldRolled/coils">
+              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Cold Rolled Coils</li>
+          
+              </Link> */}
+              <Link to="/mild">
+              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Mild Steel</li>
+          
+              </Link>
+              <Link to="/stainless">
+              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Stainless Steel</li>
+          
+              </Link>
                </ul>
           </li>
          <Link>
@@ -88,6 +104,7 @@ export const MobileSidebar = () => {
           <li className="text-[16px] leading-6  pt-2 font-semibold font-poppins">Contact</li>
         
           </Link>
+          
           </ul>
       </div>
     </>

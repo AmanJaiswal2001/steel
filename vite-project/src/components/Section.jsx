@@ -17,10 +17,10 @@ const Section= () => {
    
     return (
     <div className='relative  h-auto w-full   md:mt-5 mb-20 mt-0   '>
-    <h1 className='font-bold md:text-3xl sm:text-2xl text-xl text-[#262626] leading-6 font-poppins w-96 md:px-10 sm:px-10 px-5 '>Mild Steel</h1>
+    <h1 className='font-bold md:text-3xl sm:text-2xl text-xl text-[#262626] leading-6 font-poppins w-96 md:px-10 sm:px-10 px-5'>Mild Steel</h1>
     {/* sidebar */}
 
-<div className='flex gap-10 md:w-[90%] w-full md:mt-5 mt-0  rounded-lg mx-10  md:border md:border-gray-300'>
+<div className='flex gap-10 md:w-[90%] w-full md:mt-5 mt-0 px-5 rounded-lg md:mx-10    md:border md:border-gray-300'>
     <div className=' w-1/4 hidden lg:block '>
 <Sidebar activeType={activeType} setActiveType={setActiveType} 
 items={[
@@ -30,8 +30,8 @@ items={[
 
 />
     </div> 
-<div className='w-full mt-2'>
-<div className='flex   mt-3   gap-10 lg:px-24 sm:px-10 px-5   '>
+<div className='w-full  mt-2'>
+<div className='flex   mt-3   gap-10 lg:px-24 sm:px-10    '>
 
 
 {/* Mobile Sidebar */}
@@ -78,7 +78,7 @@ Sheets</button>
 <div className='w-full  border-t  border-t-gray-300 '>
 
 
-<div className='flex sm:gap-10 gap-5 mt-5 lg:hidden  mx-5 sm:mx-10 lg:mx-0'>
+<div className='flex sm:gap-10 gap-5 mt-5 lg:hidden   sm:mx-10 lg:mx-0'>
 <button 
  className={`font-normal cursor-pointer  text-sm sm:w-20 w-16 p-2 font-poppins  rounded-sm ${activeProduct === 'coil' ? 'border border-[#a0ceff]  bg-[#e6f0ff] text-[#12396d] ' 
         : 'text-[rgb(38, 38, 38)]   border border-[#b1b8c9]' }`}

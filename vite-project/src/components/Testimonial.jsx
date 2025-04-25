@@ -93,7 +93,7 @@ const TestimonialItem = ({ testimonial, isActive }) => (
     className={`shadow-xl rounded-2xl transition-all duration-300 p-6 
       ${isActive 
         ? "scale-110 z-10 bg-[#12396d] text-white" 
-        : "scale-90 opacity-70 bg-white dark:bg-slate-800"}`}
+        : "scale-90 opacity-70 bg-white text-black "}`}
   >
     <div className="mt-4">
       <Rating rating={testimonial.rating} />
@@ -154,7 +154,7 @@ export const  Testimonial=()=> {
   };
 
   return (
-    <section className="py-14 md:py-24 bg-white dark:bg-slate-900 text-zinc-900 dark:text-white">
+    <section className="py-14 md:py-24 bg-white  text-zinc-900 dark:text-white">
       <div className="container px-4 mx-auto">
         <div className="flex justify-center md:mb-6">
           <div className="sm:max-w-lg text-center">
@@ -212,7 +212,7 @@ export const  Testimonial=()=> {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300
-                ${index === currentIndex ? "bg-blue-600 w-6" : "bg-gray-300 dark:bg-gray-600"}`}
+                ${index === currentIndex ? "bg-blue-600 w-6" : "bg-gray-300 "}`}
             />
           ))}
         </div>

@@ -86,6 +86,7 @@ function AppLayout() {
 
   //  <Router>
   <>
+  
   <Nav />
   <main className="overflow-x-hidden flex-grow ">
         <Outlet />
@@ -94,7 +95,7 @@ function AppLayout() {
   
 
   <Footer /> 
-  <PhoneCall/>
+  {/* <PhoneCall/> */}
 
 </>
     // </Router>

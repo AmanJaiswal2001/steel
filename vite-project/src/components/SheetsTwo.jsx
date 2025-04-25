@@ -97,7 +97,7 @@ const SheetsTwo = ({type}) => {
       };
     return (
         <div className="relative max-w-full mx-auto ">
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10  ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 transition-transform duration-200 ease-in-out ">
        
         {filteredCards.slice(currentIndex, currentIndex + visibleCards).map((card, index) => (
             <div className='w-full flex justify-center gap-0 '>
@@ -125,7 +125,7 @@ const SheetsTwo = ({type}) => {
            
         
           </button>
-<div className='mt-20 mb-5 flex justify-center'>
+<div className='mt-20 mb-5 w-full flex justify-center'>
 <Button 
 onClick={(()=>navigate("/hotRolled/sheet")) 
 }
