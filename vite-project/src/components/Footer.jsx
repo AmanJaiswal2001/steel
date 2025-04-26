@@ -11,7 +11,11 @@ const Footer = () => {
 
  <img src="/Group 611.png"/>
  <div className='flex  justify-center  h-full gap-5 items-center  w-40'>
- <a className="link link-hover">    <FontAwesomeIcon className='text-white  w-6 h-6' icon={faSquareYoutube} size="2x" /></a>
+ <a className="link link-hover">   
+  <FontAwesomeIcon className='text-white bg-none   w-6 h-6' icon={faSquareYoutube} size="2x" />
+  
+  
+  </a>
     <a className="link link-hover ">  <FontAwesomeIcon className='text-white w-8  h-6' icon={faLinkedin} size="2x" /></a>
     <a className="link link-hover">  <FontAwesomeIcon  className='text-white w-6 h-6' icon={faSquareInstagram} size="2x" /></a>
     <a className="link link-hover">    <FontAwesomeIcon className='text-white w-6 h-6' icon={faFacebook} size="2x" /></a>
@@ -23,11 +27,11 @@ const Footer = () => {
  
   <nav className=' flex flex-col gap-3 font-poppins'>
     <h3 className=" text-lg text-white  font-semibold">Buy online</h3>
-    <a className="cursor-pointer text-white  font-light text-sm ">Mild Steel</a>
-    <a className="cursor-pointer text-white  font-light text-sm ">Stainless Steel</a>
-    <a className="cursor-pointer text-white  font-light text-sm ">Structure Steel</a>
-    <a className="cursor-pointer text-white  font-light text-sm ">TMT</a>
-    <a className="cursor-pointer text-white  font-light text-sm ">Cement</a>
+    <a className="cursor-pointer text-white  font-light text-sm ">Hot Rolled Sheets</a>
+    <a className="cursor-pointer text-white  font-light text-sm ">Hot Rolled Coils</a>
+    <a className="cursor-pointer text-white  font-light text-sm ">Cold Rolled Sheets</a>
+    <a className="cursor-pointer text-white  font-light text-sm ">Cold Rolled Coils</a>
+
   </nav>
   <nav className=' flex flex-col gap-3 font-poppins' >
     <h3 className=" text-lg text-white font-semibold">Sonatek </h3>

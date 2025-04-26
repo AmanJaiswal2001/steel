@@ -91,16 +91,16 @@ export const MobileSidebar = () => {
               </Link>
                </ul>
           </li>
-         <Link>
+         <Link to="/">
          <li className="text-[16px] leading-6 font-semibold font-poppins">Home</li>
        
          </Link>
           
-          <Link>
+          <Link to="/about">
           <li className="text-[16px] leading-6  pt-2 font-semibold font-poppins">About</li>
         
           </Link>
-          <Link>
+          <Link to="/contact">
           <li className="text-[16px] leading-6  pt-2 font-semibold font-poppins">Contact</li>
         
           </Link>

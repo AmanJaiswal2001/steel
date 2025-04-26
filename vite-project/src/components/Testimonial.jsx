@@ -158,10 +158,10 @@ export const  Testimonial=()=> {
       <div className="container px-4 mx-auto">
         <div className="flex justify-center md:mb-6">
           <div className="sm:max-w-lg text-center">
-            <h2 className="text-3xl leading-none md:text-4xl font-bold mb-4">
-              Community Reviews
+            <h2 className="text-3xl text-black leading-none md:text-4xl font-bold mb-4">
+              Testimonial
             </h2>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-black ">
               It's easier to reach your savings goals when you have the right
               savings account. Take a look and find the right one for you!
             </p>
@@ -212,7 +212,7 @@ export const  Testimonial=()=> {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300
-                ${index === currentIndex ? "bg-blue-600 w-6" : "bg-gray-300 "}`}
+                ${index === currentIndex ? "bg-[#12396d] w-6" : "bg-gray-300 "}`}
             />
           ))}
         </div>

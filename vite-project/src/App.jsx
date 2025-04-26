@@ -24,6 +24,7 @@ import Product from "./components/Product";
 import Section from "./components/Section";
 import Strainless from "./components/Strainless";
 import About from "./components/About";
+import ContactFrom from "./components/ContactForm"
 
 const appRouter = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/about",
         element:<About/>
+      },
+      {
+        path:"/contact",
+        element:<ContactFrom/>
       },
      
       
