@@ -113,8 +113,7 @@ const  ColdCoilCat = ({filters}) => {
 
 
 
-    <div class="grid  grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10  ">
- {/* <div> */}
+<div class="grid w-[90%]  grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-10  place-items-center ">{/* <div> */}
 
 
  {filteredData.map((card,index)=>(

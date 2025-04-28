@@ -39,7 +39,7 @@ export const FilterDropdown=({title,options=[],selectedOptions = [], onChange })
        
           // console.log('Dropdown is now:', !open ? 'Opening' : 'Closing');
         // }}
-        className="w-full flex justify-between items-center cursor-pointer  px-6 py-3 bg-[#f5f7fc] "
+        className="w-full flex justify-between items-center cursor-pointer  px-6 py-3 bg-[#f5f7fc]  "
      
       >
       
@@ -56,18 +56,18 @@ export const FilterDropdown=({title,options=[],selectedOptions = [], onChange })
         </svg>
       </button>
       {open && (
-        <div className="px-6 py-2 flex flex-col bg-white border-t border-gray-200 text-gray-700"
+        <div className="px-6 py-2 flex flex-col bg-white border-t border-gray-200 "
             onClick={(e) => e.stopPropagation()}
         >
        
        {options.map((option,index)=>(
-        <label key={index} className='flex items-center space-x-2 m-1'>
-          <input type="checkbox"
+        <label key={index} className='flex items-center space-x-2 m-1 bg-[#f5f7fc] dark:bg-white'>
+          <input type="checkbox" className='accent-[#2241a6]  bg-[#f5f7fc] dark:bg-[#f5f7fc]'
  checked={selectedOptions.includes(option)}
  onChange={() => onChange(title, option)}
 
           />
-          <span className='font-medium text-sm font-poppins text-left'>{option}</span>
+          <span className='font-medium text-sm font-poppins text-left bg-[#f5f7fc] dark:bg-white'>{option}</span>
         </label>
        ))}
        
@@ -237,14 +237,22 @@ export const WidthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
     <p className='font-poppins text-[1rem] font-semibold ' >{title} (mm)</p>
-    <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full ">
+   
+    {disable && (
+          <span className="text-[#12396d] font-poppins px-2 py-1 text-[12px] lg:text-[1rem]">
+            Select <b>Thickness (mm)</b> to view available width
+          </span>
+        )}
+   
+    <div className={`grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full ${disable ? 'opacity-50 pointer-events-none' : ''}`}>
+    
       {values.map((value, index) => (
         <button
           key={index}
           onClick={() =>!disable&& onSelect(value)}
           disabled={disable}
           className={`text-sm  cursor-pointer rounded-sm border p-2 w-full   
-          ${selected === value ? 'bg-[#f2f6ff] border border-[#afc4f3] font-semibold text-[rgb(93,116,166)]' : 'border-[rgba(0,0,0,.125)] border font-normal text-[#212529]'}`}
+          ${selected === value ? 'bg-[#f2f6ff] border border-[#afc4f3] font-semibold text-[rgb(93,116,166)]' : 'border-[rgba(0,0,0,.125)] border font-normal  text-[#212529]'}`}
        >
           {value}
         </button>
@@ -259,7 +267,14 @@ export const LengthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
     <p className=' font-poppins text-[1rem] font-semibold'>{title} (mm)</p>
-    <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full">
+    
+    {disable && (
+          <span className="text-[#12396d] font-poppins px-2 py-1 text-[12px] lg:text-[1rem]">
+            Select <b>Width (mm)</b> to view available length
+          </span>
+        )}
+    
+    <div className={`grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full ${disable ? 'opacity-50 pointer-events-none' : ''}`}>
       {values.map((value, index) => (
         <button
           key={index}

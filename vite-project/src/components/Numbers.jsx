@@ -9,7 +9,7 @@ const Numbers = () => {
   ];
 
   return (
-    <div className="w-[80%] max-w-7xl mx-auto mt-10 p-8  bg-gray-800 rounded-2xl">
+    <div className="w-[94%]  px-10 space-x-5 mx-auto  mt-10 p-8  bg-gray-800 rounded-lg">
       <div className="flex flex-col lg:flex-row flex-wrap justify-center items-center gap-10">
         {/* Main Card */}
         <div className="h-40 w-full sm:w-80 bg-[#12396d] rounded-2xl relative">

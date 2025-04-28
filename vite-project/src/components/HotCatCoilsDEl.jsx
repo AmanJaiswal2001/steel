@@ -32,7 +32,7 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
   if (!product) return <div className="font-poppins text-3xl font-bold text-center">Product not found</div>;
 
   return (
-    <div className=" w-full px-5  lg:px-20 z-10 pt-10  ">
+    <div className=" w-full px-5  mb-20 lg:px-20 z-10 pt-10  ">
      
      <div className="flex w-full  lg:gap-5 lg:justify-between  ">
      <div className="w-full  lg:px-0 lg:flex lg:gap-5">
@@ -112,7 +112,21 @@ setSelectedWidth(null)
 Specify quantity (In number of sheets)</p>
 <input 
 value={customNumber}
-onChange={(e)=>setcustomNumber(e.target.value)}
+onChange={(e) => {
+      if (selectedThickness && selectedWidth ) {
+        setcustomNumber(e.target.value.replace(/\D/g, ""));
+      }
+    }}
+    onKeyDown={(e) => {
+      if (!(selectedThickness && selectedWidth )) {
+        e.preventDefault();
+      }
+    }}
+    onPaste={(e) => {
+      if (!(selectedThickness && selectedWidth )) {
+        e.preventDefault();
+      }
+    }}
 disabled={!selectedThickness&&selectedWidth}
 onClick={()=>{
 
@@ -133,16 +147,32 @@ onClick={()=>{
 </div>
 <div className="h-48  lg:w-80 w-72 hidden  p-5 m-5 sm:flex md:flex lg:flex flex-col gap-4 border border-gray-300 rounded-lg">
 <h1 className="font-poppins font-bold text-lg pt-4">Send the all details on whatapps </h1>
-<a className="cursor-pointer z-1"
-       href={`https://wa.me/918447175255?text=${encodeURIComponent(`Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness || "-"} mm\nWidth: ${selectedWidth || "-"} mm\n mm\nQuantity: ${customNumber || "-"} sheets`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
+<a 
 >
       
         {/* whatapps buttom */}
-        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#12396d]'>      
-     <a href="#" target="_blank">
+        <button className={`flex gap-2 items-center justify-center p-2 rounded-lg w-64 
+      ${selectedThickness && selectedWidth  || customNumber 
+        ? 'bg-[#12396d] cursor-pointer' 
+        : 'bg-gray-400 cursor-not-allowed'}`}
+       onClick={() => {
+      if (selectedThickness && selectedWidth  || customNumber)
+      {
+        window.open(
+          `https://wa.me/918447175255?text=${encodeURIComponent(
+            `Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness} mm\nWidth: ${selectedWidth} mm\ \nQuantity: ${customNumber} sheets`
+          )}`,
+          "_blank"
+        );
+
+        setSelectedThickness(null);
+    setSelectedWidth(null);
+    // setSelectedLength(null);
+    // setcustomLength("");
+    setcustomNumber("");
+      } 
+    }}>      
+     <a  >
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '
       />

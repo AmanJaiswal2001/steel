@@ -31,7 +31,7 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
   if (!product) return <div className="font-poppins text-3xl font-bold text-center">Product not found</div>;
 
   return (
-    <div className=" w-full px-5  lg:px-20 z-10 pt-10 ">
+    <div className=" w-full px-5 mb-20  lg:px-20 z-10 pt-10 ">
      
      <div className="flex w-full  lg:gap-5 lg:justify-between  ">
     <div className="w-full  lg:px-0 lg:flex lg:gap-5">
@@ -59,8 +59,8 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
           setSelectedLength(null);
           setSelectedThickness(null)
           setSelectedWidth(null)
-          setcustomLength(null)
-          setcustomNumber(null)
+          setcustomLength("")
+          setcustomNumber("")
          }}
          
          >
@@ -85,7 +85,7 @@ setSelectedWidth(null)
   disable={!selectedThickness} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);setSelectedLength(null);}}
 />
 <LengthGrid title="Length" values={lengthValues}
-  disable={!selectedWidth} selected={selectedLength} onSelect={(value)=>setSelectedLength(value)}
+ disable={!selectedWidth || (!!customLength && customLength.length > 0)}  selected={selectedLength} onSelect={(value)=>setSelectedLength(value)}
 />
 
 
@@ -95,8 +95,22 @@ setSelectedWidth(null)
 <h6 className="font-poppins lg:font-sm text-[12px] font-semibold">Custom length (mm):</h6>
 <input 
  value={customLength}
- onChange={(e) => setcustomLength(e.target.value)}
- type="text" className="outline-none w-20 lg:h-6 h-8 p-2 rounded-sm border border-gray-300 bg-white"/>
+ onChange={(e) => {
+          if (selectedWidth && !selectedLength) { // width selected ho aur length select NA ho
+            const onlyNumsWithDecimal = e.target.value.replace(/[^0-9.]/g, "");
+            setcustomLength(onlyNumsWithDecimal);
+          }
+        }}
+        disabled={!selectedWidth || selectedLength} // <-- yeh condition: ya to width nahi ya length selected
+    
+ type="text" 
+ className={`outline-none w-20 lg:h-6 h-8 p-2 rounded-sm border 
+          ${!selectedWidth || selectedLength
+            ? "bg-gray-400 text-gray-500 border-gray-500 cursor-not-allowed"
+            : "bg-white text-black border-gray-300"
+          }`}
+
+ />
 </span>
 
 
@@ -112,15 +126,28 @@ setSelectedWidth(null)
 Specify quantity (In number of sheets)</p>
 <input 
 value={customNumber}
-onChange={(e)=>setcustomNumber(e.target.value)}
-disabled={!selectedThickness&&selectedLength&&selectedWidth}
-onClick={()=>{
+onChange={(e) => {
+      if (selectedThickness && selectedWidth && (selectedLength||customLength)) {
+        setcustomNumber(e.target.value.replace(/\D/g, ""));
+      }
+    }}
 
-}}
+    onKeyDown={(e) => {
+      if (!(selectedThickness && selectedWidth && (selectedLength||customLength))) {
+        e.preventDefault();
+      }
+    }}
+    onPaste={(e) => {
+      if (!(selectedThickness && selectedWidth && (selectedLength || customLength))) {
+        e.preventDefault();
+      }
+    }}
+    disabled={!(selectedThickness && selectedWidth && (selectedLength || customLength))} 
+ 
  type="search" 
  className={`outline-none m-1 w-56 h-10 p-2 rounded-sm border 
-      ${selectedThickness && selectedWidth && selectedLength ? "bg-white border-gray-400" : "bg-[#e9ecef] border-gray-300 cursor-not-allowed"}`}
-    placeholder="Enter custom number"
+      ${(selectedThickness && selectedWidth && (selectedLength || customLength)) ? "bg-white border-gray-400" : "bg-[#e9ecef] border-gray-300 cursor-not-allowed"}`}
+     placeholder="Enter custom number"
   />
 
 
@@ -134,16 +161,32 @@ onClick={()=>{
 </div>
 <div className="h-48  lg:w-80 w-72 hidden  p-5 m-5 sm:flex md:flex lg:flex flex-col gap-4 border border-gray-300 rounded-lg">
 <h1 className="font-poppins font-bold text-lg pt-4">Send the all details on whatapps </h1>
-<a className="cursor-pointer z-1"
-       href={`https://wa.me/918447175255?text=${encodeURIComponent(`Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness || "-"} mm\nWidth: ${selectedWidth || "-"} mm\nLength: ${selectedLength || customLength || "-"} mm\nQuantity: ${customNumber || "-"} sheets`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
+<a 
 >
       
         {/* whatapps buttom */}
-        <button className='flex gap-2 cursor-pointer items-center justify-center p-2 rounded-lg w-64 bg-[#2241a6]'>      
-     <a href="#" target="_blank">
+        <button className={`flex gap-2 items-center justify-center p-2 rounded-lg w-64 
+      ${selectedThickness && selectedWidth && (selectedLength || customLength) || customNumber 
+        ? 'bg-[#12396d] cursor-pointer' 
+        : 'bg-gray-400 cursor-not-allowed'}`}
+       onClick={() => {
+      if (selectedThickness && selectedWidth && (selectedLength || customLength) || customNumber)
+      {
+        window.open(
+          `https://wa.me/918447175255?text=${encodeURIComponent(
+            `Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness} mm\nWidth: ${selectedWidth} mm\nLength: ${selectedLength || customLength} mm\nQuantity: ${customNumber} sheets`
+          )}`,
+          "_blank"
+        );
+
+        setSelectedThickness(null);
+    setSelectedWidth(null);
+    setSelectedLength(null);
+    setcustomLength("");
+    setcustomNumber("");
+      } 
+    }}>      
+     <a  >
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '
       />

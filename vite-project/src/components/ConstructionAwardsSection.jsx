@@ -26,7 +26,7 @@ function ConstructionAwardsSection() {
     const { largeImage, smallImage } = yearData[selectedYear];
   
   return (
-    <div className="w-[80%] m-auto rounded-xl  mt-10 text-white relative overflow-hidden py-16 px-10">
+    <div className="w-[94%] m-auto rounded-xl  mt-10 text-white relative overflow-hidden py-16 px-10">
       {/* Wave-like background */}
       <div className="absolute inset-0">
         <img 

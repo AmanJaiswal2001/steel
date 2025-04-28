@@ -19,7 +19,7 @@ const About = () => {
      
 
 
-    <div className='xl:w-4/3 w-full text-wrap  flex flex-col gap-3 pt-5'>
+    <div className='xl:w-4/3 w-full text-wrap  flex flex-col gap-3 sm:pt-5'>
       <p className="text-5xl  font-bold font-poppins uppercase text-[#12396d] ">ABOUT OUR COMPANY  </p>
       {/* <p className="text-5xl leading-16 font-extrabold font-poppins uppercase text-[#12396d] ">for your industrial needs</p> */}
       <p className="  text-[#666666]  text-[15px] font-normal  font-poppins border-box">
@@ -57,7 +57,7 @@ qualified professionals, we aim to engineer excellence in everything we do.</p>
      
 
 
-    <div className='xl:w-[57%] w-full  text-wrap flex flex-col  pt-5'>
+    <div className='xl:w-[57%] w-full  text-wrap flex flex-col  sm:pt-5'>
      <div className='w-full h-[500px] relative '>
      <img className='w-full h-full ' src="/Galvalume.webp"/>
      <div className='flex absolute bottom-0 right-0'>
@@ -87,8 +87,8 @@ qualified professionals, we aim to engineer excellence in everything we do.</p>
 
 
 
-    <div className='xl:w-1/2 w-full pr-10  h-96'>
-    <div className="flex flex-col xl:mt-20 pl-16 h-full xl:w-full justify-center relative">
+    <div className='xl:w-1/2 w-full pr-10  xl:h-96'>
+    <div className="flex flex-col xl:mt-20 pl-8 xl:pl-16 h-full xl:w-full justify-center relative">
     <p className='font-medium text-lg  text-gray-600 font-poppins'> What We Do?  </p> 
     <br></br>
     <p className='text-4xl font-bold text-black mt-5 '>We Provide Comprehensive Range Of Steel Products            </p>
@@ -107,13 +107,13 @@ their product portfolio.	</p>
 
 
 
-  <div className=" justify-between   flex flex-col  lg:flex lg:flex-row-reverse w-full">
+  <div className=" justify-between pt-5 sm:pt-0  flex flex-col  lg:flex lg:flex-row-reverse w-full">
     {/* <img
       src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" */}
      
 
 
-    <div className='lg:w-[49%] w-full pl-5 text-wrap flex flex-col  '>
+    <div className='lg:w-[49%] w-full xl:pl-5 text-wrap flex flex-col  '>
      <div className='w-full  h-96 relative '>
      <img className='w-full h-full ' src="/coil-steel.jpg"/>
      
@@ -131,7 +131,7 @@ their product portfolio.	</p>
 
 
     <div className='xl:w-1/2 w-full   xl:h-96'>
-    <div className="flex flex-col h-full pt-5 xl:pt-0 pl-20 xl:w-full justify-center relative">
+    <div className="flex flex-col h-full pt-5 xl:pt-0 pl-5  sm:pl-20 xl:w-full justify-center relative">
     <p className='font-medium text-lg  text-gray-600 font-poppins'> Leadership With A Vision </p> 
     <br></br>
     <p className='text-4xl font-bold text-black mt-5 '>Our Management       </p>
@@ -173,34 +173,34 @@ their product portfolio.	</p>
 
 
     <div className='xl:w-1/2 w-full pr-10  xl:h-96'>
-    <div className="flex flex-col h-full pt-5 xl:pt-0 pl-20 xl:w-full justify-center relative">
+    <div className="flex flex-col h-full pt-5 xl:pt-0 pl-5 xl:pl-20 xl:w-full justify-center relative">
     <p className='font-medium text-lg  text-gray-600 font-poppins'>Technical Solutions</p> 
     <br></br>
     <p className='text-4xl font-bold text-black mt-5 '>Health & Safety      </p>
 <p className='font-normal text-sm  pt-2 text-gray-600 font-poppins mt-5'>Safety is the utmost priority at Sonatech Steels. Everyone adheres to the policies and guidelines to ensure their well-being and the welfare of other people, property and environment. 	</p>
-<div className='mt-5'>
+<div className='mt-5 flex flex-col gap-1'>
 
 <div className='flex gap-2 items-center'>
-<svg className=' text-[#12396d]' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
-<p className='font-poppins text-sm font-normal '>Comply with applicable legislation, protocols and regulations</p>
+<svg className=' text-[#12396d] sm:w-5 sm:h-5 w-8' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+<p className='font-poppins sm:text-sm  text-[12px] font-normal '>Comply with applicable legislation, protocols and regulations</p>
 </div>
 <div className='flex gap-2 items-center'>
-<svg className=' text-[#12396d]' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
-<p className='font-poppins text-sm font-normal '>
+<svg className=' text-[#12396d] sm:w-5 sm:h-5 w-8' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+<p className='font-poppins sm:text-sm  text-[12px] font-normal '>
 Report workplace hazards and take proactive action to mitigate potential incidents </p>
 </div>
 
-<div className='flex gap-2 items-center'>
-<svg className=' text-[#12396d]' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
-<p className='font-poppins text-sm font-normal '>Maintain fire protection and other emergency systems and facilities</p>
+<div className='flex gap-2  sm:items-center'>
+<svg className=' text-[#12396d] sm:w-5 sm:h-5 w-8' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+<p className='font-poppins sm:text-sm  text-[12px] font-normal '>Maintain fire protection and other emergency systems and facilities</p>
 </div>
 <div className='flex gap-2 items-center'>
-<svg className=' text-[#12396d]' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
-<p className='font-poppins text-sm font-normal '>Regular checking of internaional safety standards and procedures</p>
+<svg className=' text-[#12396d]  sm:w-5 sm:h-5 w-8' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+<p className='font-poppins sm:text-sm  text-[12px] font-normal '>Regular checking of internaional safety standards and procedures</p>
 </div>
 <div className='flex gap-2 items-center'>
-<svg className=' text-[#12396d]' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
-<p className='font-poppins text-sm font-normal '>Maintain Occupation Health Center (OHC)</p>
+<svg className='sm:w-5 sm:h-5  w-5 text-[#12396d] ' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+<p className='font-poppins sm:text-sm  text-[12px] font-normal '>Maintain Occupation Health Center (OHC)</p>
 </div>
 </div>
 

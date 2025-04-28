@@ -21,7 +21,7 @@ const Video = () => {
     
     </div>
     <div className='lg:w-1/2 w-full'>
-    <div className="flex justify-center">
+    <div className="flex justify-center overflow-hidden">
   <iframe
     src="https://www.instagram.com/reel/DIwB0C2yVux/embed"
     width="800"

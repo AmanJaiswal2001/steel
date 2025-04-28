@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
- import { BrowserRouter as Router, Routes, Route, Navigate, createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+ import { BrowserRouter as Router, Routes, Route, Navigate, createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
 import './App.css'
 import Nav from './components/Nav'
 
@@ -25,6 +25,7 @@ import Section from "./components/Section";
 import Strainless from "./components/Strainless";
 import About from "./components/About";
 import ContactFrom from "./components/ContactForm"
+import { useEffect } from "react";
 
 const appRouter = createBrowserRouter([
   {
@@ -85,7 +86,12 @@ const appRouter = createBrowserRouter([
 
 function AppLayout() {
    
- 
+  const location = useLocation(); // Hook to get the current location
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top on route change
+  }, [location]);
+
   
   
   

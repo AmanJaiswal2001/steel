@@ -97,7 +97,7 @@ const TestimonialItem = ({ testimonial, isActive }) => (
   >
     <div className="mt-4">
       <Rating rating={testimonial.rating} />
-      <p className={`mb-6 text-sm ${isActive ? "opacity-90" : "opacity-50"}`}>
+      <p className={`mb-6 h-20 text-sm ${isActive ? "opacity-90" : "opacity-50"}`}>
         {testimonial.description}
       </p>
       <div className="flex items-center">
@@ -123,27 +123,27 @@ const TestimonialItem = ({ testimonial, isActive }) => (
 // Main Testimonial component with carousel
 export const  Testimonial=()=> {
   const [currentIndex, setCurrentIndex] = useState(1);
-  const [visibleTestimonials, setVisibleTestimonials] = useState([]);
+  // const [visibleTestimonials, setVisibleTestimonials] = useState([]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the screen is mobile-sized
   useEffect(() => {
-    updateVisibleTestimonials();
-  }, [currentIndex]);
-
-  const updateVisibleTestimonials = () => {
-    let visibleItems = [];
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
     
-    // Get previous, current, and next items
-    const prevIndex = (currentIndex - 1 + testimonialList.length) % testimonialList.length;
-    const nextIndex = (currentIndex + 1) % testimonialList.length;
+    // Initial check
+    checkScreenSize();
     
-    visibleItems = [
-      { ...testimonialList[prevIndex], isActive: false },
-      { ...testimonialList[currentIndex], isActive: true },
-      { ...testimonialList[nextIndex], isActive: false }
-    ];
+    // Add listener for resize events
+    window.addEventListener('resize', checkScreenSize);
     
-    setVisibleTestimonials(visibleItems);
-  };
+    // Clean up
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialList.length);
@@ -153,6 +153,25 @@ export const  Testimonial=()=> {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonialList.length) % testimonialList.length);
   };
 
+  // Calculate visible testimonials for desktop view
+  const getVisibleTestimonials = () => {
+    if (isMobile) {
+      // On mobile, show only current testimonial
+      return [{ ...testimonialList[currentIndex], isActive: true }];
+    } else {
+      // On desktop, show 3 testimonials (prev, current, next)
+      const prevIndex = (currentIndex - 1 + testimonialList.length) % testimonialList.length;
+      const nextIndex = (currentIndex + 1) % testimonialList.length;
+    
+     
+      return [
+        { ...testimonialList[prevIndex], isActive: false },
+        { ...testimonialList[currentIndex], isActive: true },
+        { ...testimonialList[nextIndex], isActive: false }
+      ];
+    }
+  }
+  const visibleTestimonials = getVisibleTestimonials();
   return (
     <section className="py-14 md:py-24 bg-white  text-zinc-900 dark:text-white">
       <div className="container px-4 mx-auto">
@@ -184,7 +203,7 @@ export const  Testimonial=()=> {
             {visibleTestimonials.map((item, index) => (
               <div 
                 key={index} 
-                className={`transition-all duration-500 w-full max-w-sm
+                className={`transition-all duration-500 w-full 
                   ${index === 1 ? "z-10" : "z-0"}`}
               >
                 <TestimonialItem 

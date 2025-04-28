@@ -13,6 +13,7 @@ import Marquee from "react-fast-marquee";
 import Numbers from './Numbers';
 import { Testimonial } from './Testimonial';
 import ConstructionAwardsSection from './ConstructionAwardsSection';
+import { Expandingcard } from './Expandingcard';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
@@ -39,12 +40,13 @@ const Home = () => {
     <div className='w-full xl:mt-15 lg:-mt-0 -mt-15 h-24  flex items-center bg-[#12396d]'>      
     <div className="w-full  ">
 <Marquee speed={100}>
-<div className='flex gap-20 text-4xl h-24  uppercase font-anton font-bold  w-full text-white   justify-between items-center align-middle '>
-<p className='w-80 text-center '>Hot Rolled Coil</p>
-<p className='w-80 text-center  '>Hot Rolled Sheet</p>
-<p className='w-80 text-center  '>Cold Rolled Coil</p>
-<p className='w-80 text-center  uppercase'>Hot Rolled Sheet</p>   
-</div>
+<div className="flex gap-10 text-4xl font-bold h-24 uppercase font-rowdies w-full text-white items-center">
+        {["Hot Rolled Coil", "Cold Rolled Coil", "Hot Rolled Sheet", , "Hot Rolled Sheet"].map((item, index) => (
+          <p key={index} className="flex-1 w-[400px] text-center">
+            {item}
+          </p>
+        ))}
+      </div>
  
 
 </Marquee>
@@ -52,7 +54,8 @@ const Home = () => {
 </div>
 
     <div className='w-full xl:mt-10 mt-5 '>
-    <NewCard/>
+    {/* <NewCard/> */}
+    <Expandingcard/>
     </div>
 
     
