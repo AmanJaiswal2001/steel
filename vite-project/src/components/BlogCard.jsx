@@ -72,11 +72,11 @@ export  const BlogCard=()=> {
                   
                   {/* Description - only visible when active */}
                   <div className={`transition-all duration-700 overflow-hidden
-                                 ${activeIndex === index ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
+                                 ${activeIndex === index ? 'max-h-40 opacity-100 mt-3' : 'max-h-28 opacity-20'}`}>
                     <p className="text-white text-opacity-90">{card.description}</p>
                     <a 
                       href="#" 
-                      className="inline-block mt-4 font-poppins font-bold text-[#12396d]  hover:text-[#12396d] transition-colors"
+                      className="inline-block mt-4 font-poppins  font-bold text-white   transition-colors"
                     >
                       Read More →
                     </a>
