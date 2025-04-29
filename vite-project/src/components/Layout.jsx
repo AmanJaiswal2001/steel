@@ -6,6 +6,7 @@ import Video from './Video'
 import Workflow from './Workflow'
 import Crousel from './Crousel'
 import Home from './Home'
+import { BlogCard } from './BlogCard'
 
 const Layout = () => {
   return (
@@ -22,7 +23,10 @@ const Layout = () => {
     <Home/>
     {/* <Blog/> */}
     <Video/>
-    <Workflow/>
+    {/* <Workflow/> */}
+    <div>
+<BlogCard/>
+</div>
     </>
   )
 }

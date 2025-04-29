@@ -112,7 +112,7 @@ function AppLayout() {
   
 
   <Footer /> 
-  {/* <PhoneCall/> */}
+  <PhoneCall/>
 
 </>
     // </Router>

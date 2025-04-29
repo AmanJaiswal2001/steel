@@ -76,7 +76,7 @@ export  const BlogCard=()=> {
                     <p className="text-white text-opacity-90">{card.description}</p>
                     <a 
                       href="#" 
-                      className="inline-block mt-4 font-poppins  font-bold text-white   transition-colors"
+                      className="inline-block mt-4 font-poppins  font-bold  text-orange-600   transition-colors"
                     >
                       Read More →
                     </a>

@@ -16,6 +16,7 @@ import ConstructionAwardsSection from './ConstructionAwardsSection';
 import { Expandingcard } from './Expandingcard';
 import { BlogCard } from './BlogCard';
 import Founder from './Founder';
+import ColorChangeOnScroll from './ColorChangeOnScroll';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
@@ -39,7 +40,7 @@ const Home = () => {
     </div>
     
 
-    <div className='w-full xl:mt-15 lg:-mt-0 -mt-15 h-24  flex items-center bg-[#12396d]'>      
+    {/* <div className='w-full xl:mt-15 lg:-mt-0 -mt-15 h-24  flex items-center bg-[#12396d]'>      
     <div className="w-full  ">
 <Marquee speed={100}>
 <div className="flex gap-10 text-4xl font-bold h-24 uppercase font-rowdies w-full text-white items-center">
@@ -53,6 +54,12 @@ const Home = () => {
 
 </Marquee>
   </div>
+</div> */}
+
+
+
+<div>
+    <ColorChangeOnScroll/>
 </div>
 
     <div className='w-full xl:mt-10 mt-5 '>
@@ -73,9 +80,7 @@ const Home = () => {
 <div>
    <Testimonial/>
 </div>
-<div>
-<BlogCard/>
-</div>
+
 <div>
 <Founder/>
 </div>

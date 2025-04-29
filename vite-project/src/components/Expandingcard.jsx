@@ -4,25 +4,25 @@ export const Expandingcard=()=> {
   const cards = [
     { 
       id: 1, 
-      text: "HotRolledSheet", 
+      text: "HR Sheets", 
       description: "Explore",
       image: "/hotrolledsheet.jpg"
     },
     { 
       id: 2, 
-      text: "ColdRolledCoils", 
+      text: "CR Coils", 
       description: "Explore",
       image: "/cold1.jpg"
     },
     { 
       id: 3, 
-      text: "ColdRolledCoils", 
+      text: "CR Sheets", 
       description: "Explore",
       image: "/cold1.jpg"
     },
     { 
         id: 3, 
-        text: "HotRolledSheet", 
+        text: "HR Coils", 
         description: "Explore",
         image: "/hotsheet.jpg"
       }
@@ -51,16 +51,18 @@ export const Expandingcard=()=> {
 
 <div className=" absolute top-0 left-0 bg-opacity-60 p-2 
                             transition-opacity duration-500">
-              <h3 className=" font-bold text-3xl font-poppins text-white">{card.text}</h3>
-             </div>
-             <div className=" absolute bottom-0 left-0 bg-opacity-60 p-2 
+              </div>
+             <div className=" absolute bottom-2 left-3 bg-opacity-60 p-2 
                             transition-opacity duration-500">
-               <p  className="text-white text-sm font-poppins font-bold">{card.description}</p>
+               <h3 className=" font-bold text-3xl font-poppins text-white">{card.text}</h3>
+            
+               <p  className="text-white  text-sm font-poppins font-normal">{card.description}</p>
+
                </div>
             
             
             {/* Blue overlay that disappears on hover */}
-            <div className="absolute inset-0 bg-[#12396d] opacity-60 hover:opacity-0 transition-opacity duration-500"></div>
+            <div className="absolute inset-0  opacity-60 hover:opacity-0 transition-opacity duration-500"></div>
             
             {/* Title that shows in non-expanded state */}
            

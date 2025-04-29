@@ -8,9 +8,9 @@ const image=[
     // "https://images.ctfassets.net/o0otttl8ele8/46U7cIK5AomnCu6Jrt8j2K/4ea2e87838b8eed2a665c8eac35df1f1/Website_banner-04_desktop__1_.jpg?w=1536&h=415&fm=webp",
 
     "/SONATEK BANNERS.jpg",
-    // "/desktop__1_.webp",
-    // "/banner-07.webp",
-    // "/desktop__1_.webp",
+     "/sonatch.jpg",
+     "/SONATEKbaner2.jpg",
+     "/SONATEKbaner3.jpg",
   ]
 
 

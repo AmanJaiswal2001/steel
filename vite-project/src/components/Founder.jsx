@@ -10,7 +10,7 @@ export const Founder = () => {
 
     <div className='lg:w-[40%]  w-full xl:pl-5 text-wrap flex flex-col  '>
      <div className='w-[450px]  pl-20 relative '>
-     <img className='w-full h-full  ' src="/founder.webp"/>
+     <img className='w-full h-full  ' src="/hrs.webp"/>
      
      
      </div>
@@ -38,8 +38,8 @@ export const Founder = () => {
     <p className='text-[18px] font-medium text-gray-700 mt-5 '>India's rise as an economic superpower will be the headline of the next decade. Our natural resources and human resources are its foundation. At Vedanta, we will make in India for the world while achieving sustainability for society and Mother Earth. An exciting future is unfolding. Let us all play our part in it.   </p>
 
 
-<p className='font-semibold text-[28px]  text-[#12396d] font-poppins'>OwnerName</p>
-<p className='text-[18px] font-medium text-gray-700  '>Chairman, Vedanta Group</p>
+<p className='font-semibold text-[28px]  text-[#12396d] font-poppins'>Aadi Jain</p>
+<p className='text-[18px] font-medium text-gray-700  '>Chairman, Sonatek</p>
 <div className='bg-[#12396d] w-[30%] cursor-pointer  h-16 rounded-2xl mt-2 flex items-center justify-center text-white group overflow-hidden'>
 <svg
 className="transform -translate-x-6 opacity-0 group-hover:translate-x-0.5 group-hover:opacity-100 transition-all duration-300 ease-in-out"
