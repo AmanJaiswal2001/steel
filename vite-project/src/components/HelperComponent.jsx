@@ -209,13 +209,14 @@ export const CommonFilter = ({
 export const ThicknessGrid=({values,title,onSelect,selected})=>{
   return(
     <>
-    <div className='flex gap-4 items-center'>
+   <div className='flex flex-col justify-between gap-0 mt-2 '>
     <p className='font-poppins text-[1rem] font-semibold'>{title} (mm)</p>
     {!selected && (
-  <span className="text-[#12396d] font-poppins px-2 py-1  text-[12px]  lg:text-[1rem]">
-    Select <b>Thickness (mm)</b> to view available width
+  <span className="text-orange-600 font-poppins  text-[12px]  lg:text-[1rem]">
+     Please select <b>Thickness (mm)</b> to view available width
   </span>
 )}
+
     </div>
    
     <div className="grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full">
@@ -236,14 +237,15 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
 export const WidthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
-    <p className='font-poppins text-[1rem] font-semibold ' >{title} (mm)</p>
+     <div className='flex flex-col justify-between gap-0 mt-2 '>
+         <p className='font-poppins text-[1rem] font-semibold ' >{title} (mm)</p>
    
     {disable && (
-          <span className="text-[#12396d] font-poppins px-2 py-1 text-[12px] lg:text-[1rem]">
-            Select <b>Thickness (mm)</b> to view available width
+          <span className="text-orange-600 font-poppins  text-[12px] lg:text-[1rem]">
+           Please select <b>Width (mm)</b> to view available length
           </span>
         )}
-   
+        </div>
     <div className={`grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full ${disable ? 'opacity-50 pointer-events-none' : ''}`}>
     
       {values.map((value, index) => (
@@ -266,13 +268,16 @@ export const WidthGrid=({values,title,selected,onSelect, disable})=>{
 export const LengthGrid=({values,title,selected,onSelect, disable})=>{
   return(
     <>
+     <div className='flex flex-col justify-between gap-0 mt-2 '>
+ 
     <p className=' font-poppins text-[1rem] font-semibold'>{title} (mm)</p>
     
     {disable && (
-          <span className="text-[#12396d] font-poppins px-2 py-1 text-[12px] lg:text-[1rem]">
-            Select <b>Width (mm)</b> to view available length
+          <span className="text-orange-600 font-poppins   text-[12px] lg:text-[1rem]">
+            Please select <b>Available Length (mm)</b> or add custom length
           </span>
         )}
+        </div>
     
     <div className={`grid grid-cols-6 sm:grid-cols-5 md:grid-cols-8 gap-2 w-full ${disable ? 'opacity-50 pointer-events-none' : ''}`}>
       {values.map((value, index) => (

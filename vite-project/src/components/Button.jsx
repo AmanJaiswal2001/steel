@@ -5,9 +5,11 @@ const Button = ({buttonName,bgColor = 'bg-blue-500', width ,   onClick,  border,
     // <div>
         <button 
          onClick={onClick}
-         className={`btn ${bgColor}  ${border} ${width} ${text} ${rounded} font-poppins font-semibold text-[16px]`}>{buttonName}</button>
+         className={`btn ${bgColor}  ${border} ${width} ${text} ${rounded} font-poppins  font-semibold text-xl `}>{buttonName}</button>
+
     // </div>
   )
 }
 
 export default Button
+

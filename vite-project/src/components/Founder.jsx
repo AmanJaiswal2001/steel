@@ -10,7 +10,7 @@ export const Founder = () => {
 
     <div className='lg:w-[40%]  w-full xl:pl-5 text-wrap flex flex-col  '>
      <div className='w-[450px]  pl-20 relative '>
-     <img className='w-full h-full  ' src="/hrs.webp"/>
+     <img className='w-full h-full  ' src="/eraseb.png"/>
      
      
      </div>
@@ -28,17 +28,17 @@ export const Founder = () => {
     <div className='xl:w-[60%] w-full mr-20  xl:h-96'>
 
     <div>
-    <div>
-        <img src="/icon.png"/>
+    <div className='w-16'>
+        <img src="/quotation-mark-svgrepo-com (2).svg"/>
     </div>
     <div className="flex flex-col h-full pt-5 xl:pt-0 pl-5  sm:pl-20 xl:w-full justify-center relative">
-    <p className='font-semibold text-[28px]  text-[#12396d] font-poppins'> I believe that our journey to
-    an Atmanirbhar Bharat is truly underway.</p> 
+    <p className='font-semibold text-[28px]  text-[#12396d] font-poppins'> 
+    At Sonatek Tech, we take pride in our extensive experience in the steel and industrial solutions sector.</p> 
     <br></br>
-    <p className='text-[18px] font-medium text-gray-700 mt-5 '>India's rise as an economic superpower will be the headline of the next decade. Our natural resources and human resources are its foundation. At Vedanta, we will make in India for the world while achieving sustainability for society and Mother Earth. An exciting future is unfolding. Let us all play our part in it.   </p>
+    <p className='text-[18px] font-medium text-gray-700 mt-5 '>Our team brings decades of expertise in handling Hot Rolled, Cold Rolled, Galvanized, and Pickled & Oiled steel products. We specialize in sourcing, processing, and supplying steel in customized formats — ensuring clients receive precisely what they need, when they need it.  </p>
 
 
-<p className='font-semibold text-[28px]  text-[#12396d] font-poppins'>Aadi Jain</p>
+<p className='font-semibold text-[28px]  text-[#12396d] font-poppins'>Adish Jain</p>
 <p className='text-[18px] font-medium text-gray-700  '>Chairman, Sonatek</p>
 <div className='bg-[#12396d] w-[30%] cursor-pointer  h-16 rounded-2xl mt-2 flex items-center justify-center text-white group overflow-hidden'>
 <svg

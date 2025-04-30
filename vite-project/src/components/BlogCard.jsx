@@ -32,7 +32,7 @@ export  const BlogCard=()=> {
   };
  
     return (
-        <div className="w-full  mx-auto px-10 py-12">
+        <div className="w-full  mx-auto px-10 py-20">
           <h1 className="text-4xl font-bold text-gray-800 mb-10">
             Touching lives of over 44 million people in India
           </h1>
@@ -42,7 +42,7 @@ export  const BlogCard=()=> {
               <div 
                 key={card.id}
                 className={`relative overflow-hidden rounded-lg transition-all duration-700 cursor-pointer
-                          ${activeIndex === index ? 'w-2/3' : 'w-1/3'}`}
+                          ${activeIndex === index ? 'w-2/3' : 'w-1/2'}`}
                 onMouseEnter={() => handleMouseEnter(index)}
               >
                 {/* Image */}
@@ -64,7 +64,7 @@ export  const BlogCard=()=> {
             ></div> 
                 {/* Content */}
                 <div className={`absolute inset-x-0 text-white p-6 transition-all duration-500
-                              ${activeIndex === index ? 'bottom-0' : 'bottom-0'}`}>
+                              ${activeIndex === index ? 'bottom-0' : 'bottom-10'}`}>
                   <h2 className={`text-3xl font-bold mb-2 transition-all duration-300
                                 ${activeIndex === index ? 'translate-y-0' : 'translate-y-16'}`}>
                     {card.title}
@@ -72,7 +72,7 @@ export  const BlogCard=()=> {
                   
                   {/* Description - only visible when active */}
                   <div className={`transition-all duration-700 overflow-hidden
-                                 ${activeIndex === index ? 'max-h-40 opacity-100 mt-3' : 'max-h-28 opacity-20'}`}>
+                                 ${activeIndex === index ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-20'}`}>
                     <p className="text-white text-opacity-90">{card.description}</p>
                     <a 
                       href="#" 

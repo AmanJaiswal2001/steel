@@ -1,5 +1,5 @@
 import React from 'react'
-import Crousel, { CrouselCard } from './Crousel';
+import  Crousel   from './Crousel';
 // import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -57,15 +57,17 @@ const Home = () => {
 </div> */}
 
 
-
+<div className='bg-gray-50'>
 <div>
     <ColorChangeOnScroll/>
 </div>
 
-    <div className='w-full xl:mt-10 mt-5 '>
+    <div className='w-full xl:mt-10 mt-5  '>
     {/* <NewCard/> */}
     <Expandingcard/>
     </div>
+</div>
+
 
     
 <div>

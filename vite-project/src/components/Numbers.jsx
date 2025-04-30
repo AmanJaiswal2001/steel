@@ -3,9 +3,9 @@ import CountUp from 'react-countup';
 
 const Numbers = () => {
   const stats = [
-    { label: 'Years of Experience', value: 13, deg: '+' },
-    { label: 'Happy Clients', value: 12, deg: '' },
-    { label: 'Projects Delivered', value: 20, deg: 'k' },
+    { label: 'Locations', value: 13, deg: '+' },
+    { label: 'Industries Helped', value: 120, deg: '' },
+    { label: 'Projects Delivered', value: 200, deg: 'k' },
   ];
 
   return (
@@ -20,9 +20,9 @@ const Numbers = () => {
             <div className="flex justify-between items-center p-5">
               <div className="text-white">
                 <p className="text-6xl font-bold font-poppins">
-                  <CountUp end={50} duration={5} separator="," />K+
+                  <CountUp end={500} duration={3} separator="," />K+
                 </p>
-                <p className="text-sm font-poppins font-normal">Years of Experience</p>
+                <p className="text-sm font-poppins font-normal">Tones Of Steel Delivered</p>
               </div>
               <div className="h-20 w-20 rounded-full bg-white flex justify-center items-center">
                 <svg
@@ -38,7 +38,7 @@ const Numbers = () => {
                 </svg>
               </div>
             </div>
-            <p className="text-white text-sm px-5">Projects Delivered</p>
+            {/* <p className="text-white text-sm px-5">Projects Delivered</p> */}
           </div>
 
           {/* Stats Cards with Hover Effects */}

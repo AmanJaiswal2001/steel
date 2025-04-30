@@ -35,7 +35,7 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
      
      <div className="flex w-full  lg:gap-5 lg:justify-between  ">
     <div className="w-full  lg:px-0 lg:flex lg:gap-5">
-      <div className=" lg:w-1/2 h-80  lg:px-0 ">
+      <div className=" lg:w-1/2  h-[520px]  lg:px-0 ">
         {/* img */}
         <img 
         className=" h-full object-cover rounded-lg" 
@@ -154,20 +154,15 @@ onChange={(e) => {
 </div>
 
 
-
-
-     
-</div>
-</div>
-<div className="h-48  lg:w-80 w-72 hidden  p-5 m-5 sm:flex md:flex lg:flex flex-col gap-4 border border-gray-300 rounded-lg">
+<div className="h-48  lg:w-80 w-72 hidden    sm:flex md:flex lg:flex flex-col gap-4  rounded-lg">
 <h1 className="font-poppins font-bold text-lg pt-4">Send the all details on whatapps </h1>
 <a 
 >
       
-        {/* whatapps buttom */}
-        <button className={`flex gap-2 items-center justify-center p-2 rounded-lg w-64 
+        {/* whatapps buttom*/}
+       <button className={`flex gap-2 items-center justify-center p-2 rounded-lg w-64 
       ${selectedThickness && selectedWidth && (selectedLength || customLength) || customNumber 
-        ? 'bg-[#12396d] cursor-pointer' 
+        ? 'bg-green-500 cursor-pointer' 
         : 'bg-gray-400 cursor-not-allowed'}`}
        onClick={() => {
       if (selectedThickness && selectedWidth && (selectedLength || customLength) || customNumber)
@@ -190,9 +185,15 @@ onChange={(e) => {
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '
       />
-        </a><span className='text-white font-poppins font-medium'>Connect on whatsapp</span>
+        </a><span className='text-white font-poppins font-medium'>Enquire On Whatsapp</span>
 </button>
       </a>
+</div>
+
+
+
+     
+</div>
 </div>
 
       

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ReactPlayer from 'react-player'
+import NewCard from './NewCard'
 const Video = () => {
   return (
     <div>
@@ -17,24 +18,24 @@ const Video = () => {
 <div className='absolute px-10 gap-10 top-20 flex'>
 
     <div className='lg:w-1/2 flex flex-col gap-3 pt-5'>
-      <p className="text-5xl  font-extrabold font-poppins uppercase text-[#12396d] ">Your one stop solution   </p>
+      {/* <p className="text-5xl  font-extrabold font-poppins uppercase text-[#12396d] ">Your one stop solution   </p> */}
       {/* <p className="text-5xl leading-16 font-extrabold font-poppins uppercase text-[#12396d] ">for your industrial needs</p> */}
-      <p className="font-medium md:text-2xl text-white  text-lg  font-poppins border-box">
-      India’s leading supplier and stockist of Cold Rolled (CR), Hot Rolled (HR), Galvanised Iron (GI), and Hot Rolled Pickled Oil (HRPO) steel sheets and coils. 
-      </p>
+      {/* <p className="font-medium md:text-2xl text-white  text-lg  font-poppins border-box"> */}
+       
+       <NewCard/>
+        {/* </p> */}
     
     </div>
-    <div className='lg:w-1/2 w-full'>
+    <div className='w-1/2'>
     <div className="flex justify-center overflow-hidden">
-  <iframe
-    src="https://www.instagram.com/reel/DIwB0C2yVux/embed"
-    width="800"
-    height="400"
-    frameBorder="0"
-    allowFullScreen
-    className="rounded-lg shadow-md"
-  ></iframe>
-</div>
+            <ReactPlayer
+              url="/sonatekvideo.mp4" // Replace with your local or hosted video URL
+              controls
+              width="1000px"
+                height="300px"
+              className="rounded-lg shadow-md"
+            />
+          </div>
 </div>
   </div>
 </div>

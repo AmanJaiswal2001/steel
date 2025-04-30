@@ -10,7 +10,7 @@ export const Expandingcard=()=> {
     },
     { 
       id: 2, 
-      text: "CR Coils", 
+      text: "HR Coils", 
       description: "Explore",
       image: "/cold1.jpg"
     },
@@ -18,13 +18,13 @@ export const Expandingcard=()=> {
       id: 3, 
       text: "CR Sheets", 
       description: "Explore",
-      image: "/cold1.jpg"
+      image: "/hotsheet.jpg"
     },
     { 
         id: 3, 
-        text: "HR Coils", 
+        text: "CR Coils", 
         description: "Explore",
-        image: "/hotsheet.jpg"
+        image: "/coldcoil.jpeg"
       }
   ];
 
@@ -32,12 +32,12 @@ export const Expandingcard=()=> {
     <div className="flex px-10 flex-col items-center justify-center   p-4">
        
       {/* The Card Component */}
-      <div className="w-full  h-[520px] rounded  flex gap-1 p-1">
+      <div className="w-full  h-[520px] rounded-lg outline-none  flex gap-1 p-1">
         {cards.map((card) => (
           <div
             key={card.id}
-            className="relative h-full flex-1 overflow-hidden cursor-pointer rounded
-                     border  flex justify-center items-center
+            className="relative h-full flex-1 overflow-hidden cursor-pointer rounded-lg
+                      flex justify-center items-center
                      hover:flex-[4] transition-all duration-500"
           >
             {/* Base image always visible */}
@@ -56,7 +56,7 @@ export const Expandingcard=()=> {
                             transition-opacity duration-500">
                <h3 className=" font-bold text-3xl font-poppins text-white">{card.text}</h3>
             
-               <p  className="text-white  text-sm font-poppins font-normal">{card.description}</p>
+               <p  className="text-orange-600  text-sm font-poppins font-normal">{card.description}</p>
 
                </div>
             

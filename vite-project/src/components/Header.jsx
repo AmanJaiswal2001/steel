@@ -66,7 +66,7 @@ className='text-xl  '
         
          <div className='sm:flex hidden gap-4 items-center   '>
             {/* user */}
-            <a href="tel:+919891998846" target='_blank' rel="noopener noreferrer" className="font-semibold text-[#12396d] w-28  text-sm font-poppins">91-9891998846</a>
+            <a href="tel:+919891998846" target='_blank' rel="noopener noreferrer" className="font-semibold text-[#12396d] w-36  text-sm font-poppins">+91-9891998846</a>
        <a  href="mailto:sonateksteels@gmail.com" target='_blank'  rel="noopener noreferrer" className="font-semibold  text-[#12396d]  text-sm font-poppins">sonateksteels@gmail.com</a>
         </div> 
 {/* mobile views  */}

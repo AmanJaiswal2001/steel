@@ -11,24 +11,24 @@ import { Link } from "react-router-dom";
 const products = [
     {
       id: 1,
-      image: "/hotrolledsheet.jpg",
-      label: "Hot Rolled Coil",
+      // image: "/hotrolledsheet.jpg",
+      label: " India’s leading supplier and stockist of Cold Rolled (CR), Hot Rolled (HR), Galvanised Iron (GI), and Hot Rolled Pickled Oil (HRPO) steel sheets and coils. ",
     },
-    {
-      id: 2,
-      image: "/hotsheet.jpg",
-      label: "Hot Rolled Sheet",
-    },
-    {
-      id: 3,
-      image: "/cold1.jpg",
-      label: "Cold Rolled Coil",
-    },
-    {
-      id: 4,
-      image: "/coil.jpg",
-      label: "Hot Rolled Sheet",
-    },
+    // {
+    //   id: 2,
+    //   image: "/hotsheet.jpg",
+    //   label: "Hot Rolled Sheet",
+    // },
+    // {
+    //   id: 3,
+    //   image: "/cold1.jpg",
+    //   label: "Cold Rolled Coil",
+    // },
+    // {
+    //   id: 4,
+    //   image: "/coil.jpg",
+    //   label: "Hot Rolled Sheet",
+    // },
   ];
   
   const NewCard = () => {
@@ -52,14 +52,14 @@ const products = [
       textAlign: "center",
       fontFamily: "sans-serif",
       background: "#003375",
-      top: "300px",
-      left: "220px",
+      top: "200px",
+      left: "200px",
      
      
     };
   
     return (
-      <div className="flex flex-wrap gap-2 px-5">
+      <div className="flex flex-wrap gap-2 ">
         <style>
           {`
             .inverted-radius {
@@ -70,7 +70,7 @@ const products = [
   
               width: 300px;
               aspect-ratio: 1;
-              background: #3FB8AF;
+              background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
               border-radius: var(--r);
               position: relative;
               display: flex;
@@ -92,9 +92,12 @@ const products = [
         </style>
   
         {products.map((product) => (
-          <div key={product.id} className="relative flex flex-col   m-auto px-5 ">
+          <div key={product.id} className="relative flex flex-col    ">
             <div className="inverted-radius  ">
-              <img src={product.image} alt={product.label} style={imageStyle} />
+              {/* <img src={product.image} alt={product.label} style={imageStyle} /> */}
+              <span className=" font-poppins font-wrap p-5 overflow-hidden text-lg font-medium">
+              {product.label}
+            </span>
             </div>
             <Link to="#">
             <span style={textStyle}>
@@ -104,11 +107,9 @@ const products = [
   
             </Link>
             
-            <span className="block mt-4 font-poppins text-[20px] font-bold">
-              {product.label}
-            </span>
+            
   
-            <div className="bg-[#12396d] cursor-pointer w-72 rounded-full flex justify-center h-16 items-center gap-2 text-white mt-4">
+            {/* <div className="bg-[#12396d] cursor-pointer w-72 rounded-full flex justify-center h-16 items-center gap-2 text-white mt-4">
               <button className="text-sm font-normal font-poppins">
                 ViewBrochure
               </button>
@@ -123,7 +124,7 @@ const products = [
                   d="m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z"
                 />
               </svg>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

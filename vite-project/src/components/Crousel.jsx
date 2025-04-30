@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { FaSquareWhatsapp } from "react-icons/fa6";
-
+import Slider from "react-slick";
 const image=[
     // "https://images.ctfassets.net/o0otttl8ele8/46U7cIK5AomnCu6Jrt8j2K/4ea2e87838b8eed2a665c8eac35df1f1/Website_banner-04_desktop__1_.jpg?w=1536&h=415&fm=webp",
     // "https://images.ctfassets.net/o0otttl8ele8/46U7cIK5AomnCu6Jrt8j2K/4ea2e87838b8eed2a665c8eac35df1f1/Website_banner-04_desktop__1_.jpg?w=1536&h=415&fm=webp",
 
     // "https://images.ctfassets.net/o0otttl8ele8/46U7cIK5AomnCu6Jrt8j2K/4ea2e87838b8eed2a665c8eac35df1f1/Website_banner-04_desktop__1_.jpg?w=1536&h=415&fm=webp",
 
-    "/SONATEK BANNERS.jpg",
+    "/SONATEKBANNERS.jpg",
      "/sonatch.jpg",
      "/SONATEKbaner2.jpg",
      "/SONATEKbaner3.jpg",
@@ -34,11 +34,21 @@ const Crousel = () => {
    return () => clearInterval(interval); // Cleanup on unmount
  }, []);
    
- 
+ const settings = {
+  className: "",
+  // dots: true,
+  infinite: true,
+  speed: 900,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true
+};
  
  return (
-    <div className='relative     w-full mx-auto '>
-    <div onClick={previousSlide}
+    <div className='relative  slider-container   w-full mx-auto '>
+        <Slider {...settings}>
+   <div className='relative z-20'>
+   <div onClick={previousSlide}
       className="absolute left-2 top-[50%] h-16 w-16  -translate-y-1/2  border-2 border-white hidden  lg:flex items-center justify-center  cursor-pointer text-white p-2 rounded-full  z-20"
   
     >
@@ -53,7 +63,7 @@ current===index&&( <img
 className='w-full h-full object-cover  '
  key={index} src={item}/>
         ))}
-     <div className='relative bottom-20  left-10 md:bottom-32 sm:bottom-24 lg:left-20 lg:w-40'>      
+     <div className='relative bottom-20  left-[80%] md:bottom-32 sm:bottom-24 '>      
      <button className='flex gap-2 lg:items-center  lg:justify-center  cursor-pointer mt-12 lg:mt-0 lg:p-2 rounded-lg sm:w-48 lg:w-64 bg-[#12396d]'>      
      <a href="#" target="_blank">
      <FaSquareWhatsapp
@@ -72,6 +82,8 @@ className='w-full h-full object-cover  '
         {/* right arrow */}
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887t.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75t-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1t-.375-.888t.375-.887z"/></svg>    </div>
     
+   </div>
+   </Slider>
     </div>
   )
 }
@@ -81,13 +93,24 @@ export default Crousel
 
 
 export const CrouselCard=({images})=>{
+ 
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+  
   return (
-    <div className="carousel gap-5 carousel-end ">
+    <div className="carousel gap-5 carousel-end slider-container ">
+        <Slider {...settings}>
       {images.map((src, index) => (
         <div className="carousel-item" key={index}>
           <img className='w-[856px]' src={src} alt={`carousel-${index}`} />
         </div>
       ))}
+      </Slider>
     </div> 
   )
 }

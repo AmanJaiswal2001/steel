@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className='w-full px-5 h-full  bg-[#12396d] border-b-2 border-white '>
+    <div className='w-full px-20 h-full  bg-[#12396d] border-b-2 border-white '>
 <footer className="lg:flex sm:flex bottom-0 h-full  lg:flex-row md:flex-row sm:flex-row  md:flex  flex flex-col   gap-5 w-full border-b-2 border-white justify-evenly  font-poppins sm:footer-horizontal  bg-[#12396d]  p-10  ">
 
  <nav  className='flex flex-col   justify-center pt-2   h-full  gap-5 items-center  w-40'>
