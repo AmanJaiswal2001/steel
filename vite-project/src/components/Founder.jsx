@@ -2,15 +2,15 @@ import React from 'react'
 
 export const Founder = () => {
   return (
-    <div className=" mt-10 justify-between px-10 pt-5 sm:pt-0  flex flex-col  lg:flex lg:flex-row w-full">
+    <div className=" mt-10 justify-between px-10 pt-0 sm:pt-0  flex flex-col  lg:flex lg:flex-row w-full">
     {/* <img
       src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" */}
      
 
 
     <div className='lg:w-[40%]  w-full xl:pl-5 text-wrap flex flex-col  '>
-     <div className='w-[450px]  pl-20 relative '>
-     <img className='w-full h-full  ' src="/eraseb.png"/>
+     <div className='w-[550px]  pl-10 relative '>
+     <img className='w-full h-[500px]  ' src="/founde.png"/>
      
      
      </div>

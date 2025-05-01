@@ -90,7 +90,7 @@ const Rating = ({ rating }) => {
 // TestimonialItem component
 const TestimonialItem = ({ testimonial, isActive }) => (
   <div 
-    className={`shadow-xl rounded-2xl transition-all duration-300 p-6 
+    className={`shadow-xl rounded-2xl  transition-all duration-300 p-6 
       ${isActive 
         ? "scale-110 z-10 bg-[#12396d] text-white" 
         : "scale-90 opacity-70 bg-white text-black "}`}
@@ -173,10 +173,10 @@ export const  Testimonial=()=> {
   }
   const visibleTestimonials = getVisibleTestimonials();
   return (
-    <section className=" px-10 w-[96%] py-10 m-auto  border-t border-gray-900 bg-white  text-zinc-900 dark:text-white">
-      <div className="container px-4 mx-auto">
-        <div className="flex justify-center md:mb-6">
-          <div className="sm:max-w-lg text-center">
+    <section className=" px-10 w-[98%] py-10 m-auto   border-t border-gray-900 bg-white  text-zinc-900 dark:text-white">
+      <div className="container  w-full  mx-auto">
+        <div className="flex w-full justify-center md:mb-6">
+          <div className="sm:w-full text-center">
             <h2 className="text-3xl text-black leading-none md:text-4xl font-bold mb-4">
               Testimonial
             </h2>
@@ -189,7 +189,7 @@ export const  Testimonial=()=> {
         
         <div className="relative mt-5">
           {/* Carousel navigation */}
-          <div className="absolute top-1/2 -translate-y-1/2 cursor-pointer -left-2 z-20">
+          <div className="absolute top-1/2 -translate-y-1/2 cursor-pointer -left-5 z-20">
             <button 
               onClick={goToPrev}
               className="p-2 rounded-full cursor-pointer bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"
@@ -199,7 +199,7 @@ export const  Testimonial=()=> {
           </div>
           
           {/* Carousel items */}
-          <div className="flex justify-center items-center gap-4 py-8 overflow-hidden">
+          <div className="flex w-[100%]   justify-center items-center gap-4 py-8 overflow-hidden">
             {visibleTestimonials.map((item, index) => (
               <div 
                 key={index} 
@@ -214,7 +214,7 @@ export const  Testimonial=()=> {
             ))}
           </div>
           
-          <div className="absolute top-1/2 -translate-y-1/2 -right-2 cursor-pointer z-20">
+          <div className="absolute top-1/2 -translate-y-1/2 -right-5 cursor-pointer z-20">
             <button 
               onClick={goToNext}
               className="p-2 rounded-full cursor-pointer bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"

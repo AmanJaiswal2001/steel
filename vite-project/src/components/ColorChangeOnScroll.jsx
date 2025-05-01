@@ -31,7 +31,7 @@ export default function ColorChangeOnScroll() {
   }, []);
  
   // Text content to display with scroll-based highlighting
-  const topText = "Established in 2014, Sonatek Steels Pvt. Ltd. are the distributors of flat steel roducts in Northern India.";
+  const topText = "Established in 2014, Sonatek Steels Pvt. Ltd. are the distributors of flat steel products in Northern India.";
   const bottomText = "SINGLE CLICK. YOU CAN MIX AND MATCH ALL THE DEMOS AND TEMPLATES!";
   
   // Calculate how much of the text should be visible based on scroll

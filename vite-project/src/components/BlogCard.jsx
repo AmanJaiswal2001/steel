@@ -6,20 +6,20 @@ export  const BlogCard=()=> {
   const cards = [
     {
       id: 0,
-      title: "Nand Ghar",
-      description: "Committed to the Prime Minister's national vision of eradicating child malnutrition, providing education and healthcare, and empowering women with skill development.",
+      title: "TEMPERATURE",
+      description: "Hot rolling primarily involves deforming the slab/bloom at high temperature & roll pressure.",
       image: "/blog1.jpg"
     },
     {
       id: 1,
-      title: "TACO",
-      description: "Supporting animal welfare initiatives across communities with dedicated care programs.",
+      title: "SMOOTH SURFACE",
+      description: "Cold rolling in performed to produce sheets & strips with smooth surfaces, having a better surface finish with accurate dimensions.",
       image: "/blog2.jpg"
     },
     {
       id: 2,
-      title: "Vedanta Sports",
-      description: "Developing young athletes and promoting sports excellence throughout India.",
+      title: "BASICALLY STEEL",
+      description: "Galvanized iron (GI) sheets are basically steel sheets which have been coated with zinc.",
       image: "/blog3.jpg"
     }
   ];
