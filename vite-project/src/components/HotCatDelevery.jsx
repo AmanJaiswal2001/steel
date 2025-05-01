@@ -83,10 +83,10 @@ setSelectedWidth(null)
       
 
 <WidthGrid title="Width" values={widthValues}
-  disable={!selectedThickness} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);setSelectedLength(null);}}
+  disable={!selectedThickness} selected={selectedWidth}  showMessage={!selectedWidth} onSelect={(value)=>{setSelectedWidth(value);setSelectedLength(null);}}
 />
 <LengthGrid title="Length" values={lengthValues}
-   disable={!selectedWidth || (!!customLength && customLength.length > 0)} selected={selectedLength} onSelect={(value)=>setSelectedLength(value)}
+   disable={!selectedWidth || (!!customLength && customLength.length > 0)} showMessage={!selectedLength} selected={selectedLength} onSelect={(value)=>setSelectedLength(value)}
 />
 
 
@@ -103,6 +103,7 @@ setSelectedWidth(null)
             setcustomLength(onlyNumsWithDecimal);
           }
         }}
+        // showMessage={!selectedLength}
         disabled={!selectedWidth || selectedLength} // <-- yeh condition: ya to width nahi ya length selected
         className={`outline-none w-20 lg:h-6 h-8 p-2 rounded-sm border 
           ${!selectedWidth || selectedLength

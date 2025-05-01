@@ -53,13 +53,13 @@ const appRouter = createBrowserRouter([
         element:<SearchPage/>
       },
       {
-        path:"/mild",
-        element:<Section/>
+        path:"/mildStainless",
+        element:<Product/>
       },
-      {
-        path:"/stainless",
-        element:<Strainless/>
-      },
+      // {
+      //   path:"/stainless",
+      //   element:<Strainless/>
+      // },
 
       {
         path:"/about",

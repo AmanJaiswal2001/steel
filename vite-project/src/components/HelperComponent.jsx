@@ -234,13 +234,13 @@ export const ThicknessGrid=({values,title,onSelect,selected})=>{
     </>  );
 };
 
-export const WidthGrid=({values,title,selected,onSelect, disable})=>{
+export const WidthGrid=({values,title,selected,onSelect, disable,showMessage })=>{
   return(
     <>
      <div className='flex flex-col justify-between gap-0 mt-2 '>
          <p className='font-poppins text-[1rem] font-semibold ' >{title} (mm)</p>
    
-    {disable && (
+    {showMessage  && (
           <span className="text-orange-600 font-poppins  text-[12px] lg:text-[1rem]">
            Please select <b>Width (mm)</b> to view available length
           </span>
@@ -265,14 +265,14 @@ export const WidthGrid=({values,title,selected,onSelect, disable})=>{
 
 
 
-export const LengthGrid=({values,title,selected,onSelect, disable})=>{
+export const LengthGrid=({values,title,selected,onSelect, disable,showMessage})=>{
   return(
     <>
      <div className='flex flex-col justify-between gap-0 mt-2 '>
  
     <p className=' font-poppins text-[1rem] font-semibold'>{title} (mm)</p>
     
-    {disable && (
+    {showMessage && (
           <span className="text-orange-600 font-poppins   text-[12px] lg:text-[1rem]">
             Please select <b>Available Length (mm)</b> or add custom length
           </span>

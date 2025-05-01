@@ -33,7 +33,7 @@ const Nav = () => {
           "Cold Rolled",
           "Steel"
          
-        ]} buttonName=" Mild Steel"/>
+        ]} buttonName=" Product"/>
    
   
    

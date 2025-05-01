@@ -96,7 +96,7 @@ const Sheets300 = ({type}) => {
          </div>
          
          <button
-             className={`absolute left-0 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7f16 ${currentIndex===0?"hidden":"block"}`}
+             className={`absolute -left-2 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7f16 ${currentIndex===0?"hidden":"block"}`}
              onClick={prevSlide}
             disabled={currentIndex === 0}
           >

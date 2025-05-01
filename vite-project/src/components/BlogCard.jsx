@@ -32,7 +32,7 @@ export  const BlogCard=()=> {
   };
  
     return (
-        <div className="w-full  mx-auto px-10 py-20">
+        <div className="w-full  mx-auto px-10 py-0 pb-20">
           <h1 className="text-4xl font-bold text-gray-800 mb-10">
             Touching lives of over 44 million people in India
           </h1>

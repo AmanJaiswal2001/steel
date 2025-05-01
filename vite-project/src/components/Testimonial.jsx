@@ -5,19 +5,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonialList = [
   {
     author: {
-      fullName: "Akshay Kumar",
+      fullName: "Arvind Mehta",
       picture: "/testi.avif",
       designation: "Founder / CEO",
     },
     rating: 3.5,
     description:
-      "This is a factor in the economy of a nation, and the administration takes the major choices. This is a factor of a nation.",
+      "Sonatek's technical team is incredibly responsive. Whether it's a custom steel specification or a logistics query, they are always ready to assist with complete professionalism.",
   },
   {
     author: {
-      fullName: "Raima Sen",
+      fullName: "RShruti Verma",
 	  picture: "/testi.avif",
-      designation: "Business Head",
+      designation: "Project Engineer",
     },
     rating: 3.8,
     description:
@@ -25,23 +25,23 @@ const testimonialList = [
   },
   {
     author: {
-      fullName: "Arjun Kapur",
+      fullName: "Neha Singh",
 	  picture: "/testi.avif",
-      designation: "UI Design",
+      designation: "Sustainability Manager,",
     },
     rating: 4.5,
     description:
-      "When it comes to booking a holiday, we know everyone likes something different - so we've designed our getaways with you in mind.",
+      "What impressed us most about Sonatek is their focus on sustainable sourcing and modern processing methods.",
   },
   {
     author: {
-      fullName: "Priya Sharma",
+      fullName: "Ravi Deshmukh",
 	  picture: "/testi.avif",
-      designation: "Marketing Manager",
+      designation: "Operations Lead",
     },
     rating: 5.0,
     description:
-      "The customer support team was incredibly helpful and responsive. I would definitely recommend this service to others.",
+      "Even after the order was fulfilled, Sonatek’s team ensured we had the necessary certifications, documentation, and post-delivery support. That level of care is rare in the steel industry",
   },
   {
     author: {
@@ -173,26 +173,26 @@ export const  Testimonial=()=> {
   }
   const visibleTestimonials = getVisibleTestimonials();
   return (
-    <section className="py-14 md:py-24 bg-white  text-zinc-900 dark:text-white">
+    <section className=" px-10 w-[96%] py-10 m-auto  border-t border-gray-900 bg-white  text-zinc-900 dark:text-white">
       <div className="container px-4 mx-auto">
         <div className="flex justify-center md:mb-6">
           <div className="sm:max-w-lg text-center">
             <h2 className="text-3xl text-black leading-none md:text-4xl font-bold mb-4">
               Testimonial
             </h2>
-            <p className="text-black ">
+            {/* <p className="text-black ">
               It's easier to reach your savings goals when you have the right
               savings account. Take a look and find the right one for you!
-            </p>
+            </p> */}
           </div>
         </div>
         
-        <div className="relative mt-12">
+        <div className="relative mt-5">
           {/* Carousel navigation */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-2 z-20">
+          <div className="absolute top-1/2 -translate-y-1/2 cursor-pointer -left-2 z-20">
             <button 
               onClick={goToPrev}
-              className="p-2 rounded-full bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"
+              className="p-2 rounded-full cursor-pointer bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"
             >
               <ChevronLeft size={24} />
             </button>
@@ -214,10 +214,10 @@ export const  Testimonial=()=> {
             ))}
           </div>
           
-          <div className="absolute top-1/2 -translate-y-1/2 right-2 z-20">
+          <div className="absolute top-1/2 -translate-y-1/2 -right-2 cursor-pointer z-20">
             <button 
               onClick={goToNext}
-              className="p-2 rounded-full bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"
+              className="p-2 rounded-full cursor-pointer bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"
             >
               <ChevronRight size={24} />
             </button>

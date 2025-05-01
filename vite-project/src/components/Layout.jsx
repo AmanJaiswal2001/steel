@@ -8,6 +8,7 @@ import Crousel from './Crousel'
 import Home from './Home'
 import { BlogCard } from './BlogCard'
 import Experience from './Experience'
+import { Testimonial } from './Testimonial'
 
 const Layout = () => {
   return (
@@ -26,6 +27,9 @@ const Layout = () => {
     {/* <Video/> */}
     <Experience/>
     {/* <Workflow/> */}
+    <div>
+   <Testimonial/>
+</div>
     <div>
 <BlogCard/>
 </div>

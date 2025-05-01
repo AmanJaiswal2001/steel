@@ -28,6 +28,7 @@
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.6",
     "tailwindcss": "^4.1.1",
+    "tailwindcss-text-stroke": "^0.0.5",
     "vite": "^6.2.5"
   },
   "devDependencies": {

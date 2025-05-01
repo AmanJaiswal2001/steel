@@ -82,7 +82,7 @@ setSelectedWidth(null)
       
 
 <WidthGrid title="Width" values={widthValues}
-  disable={!selectedThickness} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);setSelectedLength(null);}}
+  disable={!selectedThickness} showMessage={!selectedWidth} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);setSelectedLength(null);}}
 />
 {/* <LengthGrid title="Length" values={lengthValues}
   disable={!selectedWidth || (!!customLength && customLength.length > 0)} selected={selectedLength} onSelect={(value)=>setSelectedLength(value)}

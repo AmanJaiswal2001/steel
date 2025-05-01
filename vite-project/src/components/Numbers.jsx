@@ -52,10 +52,11 @@ const Numbers = () => {
                 <div>
                   <CountUp end={stat.value} duration={5} />
                   <span className='hover:text-white'>{stat.deg}</span>
-                </div>
-                <p className="mt-1 text-[#5e5e5e] hover:text-white text-center text-sm font-normal">
+                  <p className="mt-1  hover:text-white text-center text-sm font-normal">
                   {stat.label}
                 </p>
+                </div>
+                
               </div>
             ))}
           </div>

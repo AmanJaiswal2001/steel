@@ -3,16 +3,16 @@ import React from 'react'
 const Experience = () => {
   return (
     
-  <div className=" justify-between   gap-5 border-0 border-t mt-30 flex flex-col mx-auto lg:flex lg:flex-row w-[96%]">
+  <div className=" justify-between  h-full  gap-5 border-0 border-t mt-40 flex flex-col mx-auto lg:flex lg:flex-row w-[96%]">
   {/* <img
     src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" */}
    
 
 
-  <div className='xl:w-[35%] justify-center px-20 items-center w-full  border-0 border-r   text-wrap flex flex-col  '>
-   <div className='w-full   m-auto  pt-5  '>
+  <div className='xl:w-[35%]   px-20  w-full  border-0 border-r  h-[600px]   text-wrap flex flex-col  '>
+   <div className='w-full   pt-5    '>
 
-   <div className="w-full">
+   <div className="w-full ">
   <div className="w-52 h-12 gap-2 justify-center items-center bg-white flex border-gray-400 border rounded-full">
     <button>Work Experience</button>
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -22,7 +22,7 @@ const Experience = () => {
 
   <div className="flex items-end gap-2 ">
     <span className="text-[200px] font-poppins font-bold leading-[1] ">11</span>
-    <span className="text-3xl font-semibold mb-6">years</span>
+    <span className="text-3xl font-semibold mb-6 text-orange-500">years</span>
   </div>
 </div>
 

@@ -79,9 +79,7 @@ const Home = () => {
 </div>
 
 
-<div>
-   <Testimonial/>
-</div>
+
 
 <div>
 <Founder/>

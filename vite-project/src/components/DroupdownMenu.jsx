@@ -14,8 +14,8 @@ const submenuMapping = {
   ],
 
   "Steel": [
-    { label: "Mild Steel", path: "/mild" },
-    { label: "Stainless Steel", path: "/stainless" },
+    { label: "Mild Steel", path: "/mildStainless" },
+    // { label: "Stainless Steel", path: "/stainless" },
   ],
 };
 const  DropdownMenu = ({menuItems=[],buttonName}) => {
@@ -84,7 +84,7 @@ const  DropdownMenu = ({menuItems=[],buttonName}) => {
                     <li key={subItem.label} className="hover:bg-gray-100  text-[#343a41] font-medium font-poppins">
                       <Link
                         to={subItem.path}
-                        className="block px-4 py-2 hover:text-[#12396d] cursor-pointer"
+                        className="block px-4 py-1 hover:text-[#12396d] cursor-pointer"
                       >
                         {subItem.label}
                       </Link>

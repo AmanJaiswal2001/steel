@@ -39,7 +39,7 @@ export default function ColorChangeOnScroll() {
  
   return (
     <div className="h-full flex bg-gray-50 flex-col px-5">
-      <div className="w-full h-full lg:w-4/5 xl:w-2/3 mt-16 px-4 py-8 relative">
+      <div className="w-full h-full lg:w-4/5 xl:w-4/5 mt-16 px-4 py-8 relative">
         <div className="relative">
           {/* Top text - always visible, highlighted part */}
           <div className=' w-52 h-12 gap-2 justify-center items-center bg-white  flex border-gray-400 border rounded-full '>
