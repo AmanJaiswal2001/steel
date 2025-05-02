@@ -31,7 +31,7 @@ const Home = () => {
         <Crousel />
       </div>
 
-      <div className='bg-gray-50'>
+      <div ref={bannerRef} className='bg-gray-50'>
         <ColorChangeOnScroll />
         <div  className='w-full xl:mt-10'>
           <Expandingcard />

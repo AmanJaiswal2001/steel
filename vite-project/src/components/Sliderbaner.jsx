@@ -80,7 +80,7 @@ const Sliderbaner = ({ onComplete ,onBack}) => {
 
 
   return (
-    <div className="w-full h-screen overflow-hidden relative">
+    <div className="w-full h-[500px] overflow-hidden relative">
       <div ref={containerRef} className="w-full h-full">
         {sliderData.map((item, index) => (
           <div
