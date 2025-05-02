@@ -11,8 +11,10 @@ const Numbers = () => {
   return (
     <div className="w-full mx-auto mt-10 rounded-lg">
       <div className="relative w-full h-96">
-        <img className="w-full h-full object-cover" src="/skyline.jpg" alt="Background" />
-
+      <div
+    className="absolute inset-0 bg-[url('/skyline.jpg')] bg-cover bg-center bg-fixed z-0"
+    aria-hidden="true"
+  ></div>
         <div className="flex w-full absolute top-[32%] left-auto z-20 flex-col lg:flex-row flex-wrap justify-center items-center gap-10">
           {/* Main Card with Hover Effect */}
           <div className="h-40 w-full sm:w-[410px] bg-[#12396d] rounded-2xl relative 

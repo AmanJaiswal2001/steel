@@ -82,7 +82,7 @@ setSelectedWidth(null)
       
 
 <WidthGrid title="Width" values={widthValues}
-  disable={!selectedThickness} showMessage={!selectedWidth} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);setSelectedLength(null);}}
+  disable={!selectedThickness} showMessage={!selectedWidth} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);}}
 />
 {/* <LengthGrid title="Length" values={lengthValues}
   disable={!selectedWidth || (!!customLength && customLength.length > 0)} selected={selectedLength} onSelect={(value)=>setSelectedLength(value)}
@@ -166,7 +166,7 @@ onChange={(e) => {
       {
         window.open(
           `https://wa.me/918447175255?text=${encodeURIComponent(
-            `Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness} mm\nWidth: ${selectedWidth} mm\nLength: ${selectedLength || customLength} mm\nQuantity: ${customNumber} sheets`
+            `Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness} mm\nWidth: ${selectedWidth} mm\nQuantity: ${customNumber} sheets`
           )}`,
           "_blank"
         );

@@ -29,10 +29,10 @@ export const Expandingcard=()=> {
   ];
 
   return (
-    <div className="flex px-10 flex-col items-center justify-center   p-4">
+    <div className="flex sm:px-10 flex-col items-center justify-center   p-4">
        
       {/* The Card Component */}
-      <div className="w-full  h-[520px] rounded-lg outline-none  flex gap-1 p-1">
+      <div className="w-full  h-[520px] rounded-lg outline-none  flex-col  sm:flex-row  sm:flex gap-1 p-1">
         {cards.map((card) => (
           <div
             key={card.id}

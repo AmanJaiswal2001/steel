@@ -1,7 +1,7 @@
 // ProductDetail.jsx
 import { useParams } from "react-router-dom";
 import cardData from "./data/hotrollcoils"; // move cardData to separate file if needed
-import { LengthGrid, ThicknessGrid,WidthGrid } from "./HelperComponent";
+import { ThicknessGrid,WidthGrid } from "./HelperComponent";
 import { useState } from "react";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import hotrolledproductdata from "./data/hotrollcoildata"
@@ -11,8 +11,8 @@ const HotCatCoilsDEl = () => {
 
 const [selectedThickness,setSelectedThickness]=useState(null);
 const [selectedWidth,setSelectedWidth]=useState(null);
-// const [selectedLength,setSelectedLength]=useState(null);
-// const[customLength,setcustomLength]=useState(null);
+//  const [selectedLength,setSelectedLength]=useState(null);
+//  const[customLength,setcustomLength]=useState(null);
 const[customNumber,setcustomNumber]=useState(null);
 const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -82,7 +82,7 @@ setSelectedWidth(null)
       
 
 <WidthGrid title="Width" values={widthValues}
-  disable={!selectedThickness} showMessage={!selectedWidth} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);setSelectedLength(null);}}
+  disable={!selectedThickness} showMessage={!selectedWidth} selected={selectedWidth} onSelect={(value)=>{setSelectedWidth(value);}}
 />
 {/* <LengthGrid title="Length" values={lengthValues}
   disable={!selectedWidth} selected={selectedLength} onSelect={(value)=>setSelectedLength(value)}
@@ -156,14 +156,14 @@ onClick={()=>{
       {
         window.open(
           `https://wa.me/918447175255?text=${encodeURIComponent(
-            `Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness} mm\nWidth: ${selectedWidth} mm\nLength: ${selectedLength || customLength} mm\nQuantity: ${customNumber} sheets`
+            `Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness} mm\nWidth: ${selectedWidth} mm \nQuantity: ${customNumber} sheets`
           )}`,
           "_blank"
         );
 
         setSelectedThickness(null);
     setSelectedWidth(null);
-    // setSelectedLength(null);
+    //  setSelectedLength(null);
     // setcustomLength("");
     setcustomNumber("");
       } 
