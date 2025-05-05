@@ -26,6 +26,10 @@ import Strainless from "./components/Strainless";
 import About from "./components/About";
 import ContactFrom from "./components/ContactForm"
 import { useEffect } from "react";
+import HotRollSheetPage from "./components/HotRollSheetPage";
+import HRCoils from "./components/HRCoils";
+import CRSheets from "./components/CRSheets";
+import CRCoils from "./components/CRCoils";
 
 const appRouter = createBrowserRouter([
   {
@@ -69,7 +73,19 @@ const appRouter = createBrowserRouter([
         path:"/contact",
         element:<ContactFrom/>
       },
-     
+      {
+        path:"/hrsheets",
+        element:<HotRollSheetPage/>
+      },{
+        path:"/hrcoils",
+        element:<HRCoils/>
+      },{
+        path:"/crsheets",
+        element:<CRSheets/>
+      },{
+        path:"/crcoils",
+        element:<CRCoils/>
+      },
       
       { path: "product/:id", element: <HotCatDelevery /> },
       { path: "coilproduct/:id", element: <HotCatCoilsDEl /> },

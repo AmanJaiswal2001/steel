@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Expandingcard=()=> {
   const cards = [
@@ -6,25 +7,29 @@ export const Expandingcard=()=> {
       id: 1, 
       text: "HR Sheets", 
       description: "Explore",
-      image: "/hotrolledsheet.jpg"
+      image: "/hrSheet.jpg",
+       href: "/hrsheets"
     },
     { 
       id: 2, 
       text: "HR Coils", 
       description: "Explore",
-      image: "/cold1.jpg"
+      image: "/hrcn.jpg",
+         href: "/hrcoils"
     },
     { 
       id: 3, 
       text: "CR Sheets", 
       description: "Explore",
-      image: "/hotsheet.jpg"
+      image: "/coldsheet.jpg",
+       href: "/crsheets"
     },
     { 
         id: 3, 
         text: "CR Coils", 
         description: "Explore",
-        image: "/coldcoil.jpeg"
+        image: "/coldcoils.jpg",
+          href: "/crcoils"
       }
   ];
 
@@ -33,8 +38,8 @@ export const Expandingcard=()=> {
        
       {/* The Card Component */}
       <div className="w-full  h-[520px] rounded-lg outline-none  flex-col  sm:flex-row  sm:flex gap-1 p-1">
-        {cards.map((card) => (
-          <div
+      {cards.map((card) => (
+          <Link to={card.href}
             key={card.id}
             className="relative h-full flex-1 overflow-hidden cursor-pointer rounded-lg
                       flex justify-center items-center
@@ -69,7 +74,7 @@ export const Expandingcard=()=> {
             
             {/* Info box that appears on hover */}
            
-          </div>
+          </Link>
         ))}
       </div>
       
