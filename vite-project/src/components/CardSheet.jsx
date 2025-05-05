@@ -7,8 +7,8 @@ const CardSheet= (
     <div
      data-theme="light" 
      className="card hover:shadow-lg hover:bg-transparent  hover:-translate-y-1 transform transition  ease-in-out  duration-300   bg-base-100 h-[450px] w-72  ">
-    <figure className='w-full object-fit '>
-      <img className='w-full object-fit  h-44   '
+    <figure className='w-full  object-fit '>
+      <img className='w-full  object-fit  h-44   '
         src={image}
         alt="card" />
     </figure>
