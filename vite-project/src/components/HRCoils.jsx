@@ -92,24 +92,24 @@ const HRCoils = () => {
 
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <div
         className="w-full h-screen bg-cover bg-center relative"
         style={{ backgroundImage: `url('/bhrc.jpg')` }}
       >
         <motion.div
           ref={ref}
-          className="absolute top-1/2 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+          className="absolute top-1/2 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:text-center"
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut', type: 'spring' }}
         >
-          <div className='relative h-60 -z-10 flex flex-col justify-start pt-6'>
+          <div className='relative sm:h-60 -z-10 flex flex-col justify-start p-5 sm:p-0 sm:pt-6'>
         <div className='absolute inset-0 bg-[#12396d] opacity-50 -z-10'></div> 
-        <h1 className="text-5xl text-white z-10 font-poppins font-bold mx-auto w-[550px]">
+        <h1 className="sm:text-5xl text-2xl text-white z-10 font-poppins font-bold sm:mx-auto mx-0 sm:w-[550px]">
             {contentData.title}
           </h1>
-          <p className="text-white text-lg w-[60%]  mx-auto mt-4">
+          <p className="text-white text-lg sm:w-[60%]  sm:mx-auto mt-4">
             {contentData.description}
           </p>
         {/* </div> */}
@@ -117,7 +117,7 @@ const HRCoils = () => {
         </motion.div>
       </div>
 
-      <div className="px-40 w-full">
+      <div className="lg:px-40 w-full px-10">
         <p className="text-[36px] text-orange-400 uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
         <p className="text-[60px] leading-12 text-orange-400 uppercase  font-poppins font-bold">Hr Coils</p>
         <div className="flex flex-col mt-5 gap-4 w-[80%]">
@@ -137,7 +137,7 @@ const HRCoils = () => {
           ))}
         </div>
       </div>
-      <div className="relative h-screen mt-10 ">
+      <div className="relative min-h-screen  mt-10 ">
   {/* Background Image */}
   <div
     style={{ backgroundImage: `url('/2835.jpg')` }}
@@ -148,16 +148,16 @@ const HRCoils = () => {
   <div className="absolute inset-0 bg-[#12396d] opacity-85"></div>
 
   {/* Content */}
-  <div className="absolute inset-0 flex flex-col lg:flex-row justify-between gap-10 pt-16 px-40">
+  <div className="relative inset-0 flex flex-col lg:flex-row justify-between gap-10 sm:pt-16  px-10 lg:px-40">
     <div className="xl:w-[60%] pt-5 xl:pt-0 w-full flex flex-col">
-      <h1 className="text-[50px] uppercase  font-poppins font-extrabold text-orange-400 mt-5">Features</h1>
-      <div className="w-full pt-10 h-[550px] relative">
+      <h1 className="text-[50px] uppercase  font-poppins font-extrabold text-orange-400 sm:mt-5">Features</h1>
+      <div className="w-full sm:pt-10 lg:h-[550px] h-80  relative">
         <img className="w-full h-full object-cover" src="/hrcn.jpg" />
       </div>
     </div>
 
-    <div className="xl:w-[80%] w-full pr-10 xl:h-96">
-      <div className="flex flex-col h-40 mt-32 xl:pt-0 xl:w-full justify-center">
+    <div className="xl:w-[80%] h-full w-full sm:pr-10 xl:h-96">
+      <div className="flex flex-col sm:h-40 lg:mt-32 xl:pt-0 xl:w-full justify-center">
         <p className="font-medium text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
           {contentData.featureText}
         </p>
@@ -178,92 +178,87 @@ const HRCoils = () => {
   </div>
 </div>
 
-<div className="relative h-screen mt-0 ">
+<div className="relative lg::min-h-screen mt-0 ">
   {/* Background Image */}
   <div
     style={{ backgroundImage: `url('/2835.jpg')` }}
-    className="h-full bg-cover bg-center w-full"
+    className="absolute inset-0 h-full  w-full bg-cover bg-center"
   ></div>
 
   {/* Blue Overlay */}
   <div className="absolute inset-0 bg-[#12396d] opacity-85"></div>
 
   {/* Content */}
-  <div className='absolute w-full px-40 top-0'>
-  <div className="flex  flex-col">
-      <div className="overflow-x-auto">
-        <div className="inline-block min-w-full py-2">
+  <div className="relative z-10 w-full px-4 sm:px-10 md:px-20 lg:px-40 py-10">
+    <h1 className="text-3xl sm:text-4xl lg:text-[50px] uppercase font-poppins font-extrabold text-orange-400 mt-5">
+      MANUFACTURING RANGES
+    </h1>
 
-<p className='text-[50px] uppercase  font-poppins font-extrabold text-orange-400 mt-5'>MANUFACTURING RANGES </p>
-
-          <div className="overflow-hidden mt-5 rounded-lg shadow-md">
-            <table className="min-w-full">
-              <thead>
-                <tr>
-                  <th className="bg-orange-400 font-poppins text-white text-center p-4 font-semibold border border-[#12396d]" rowSpan={2}>
-                    Product
-                  </th>
-                  <th className="bg-orange-400 font-poppins text-white text-center p-4 font-semibold border border-[#12396d]" colSpan={2}>
-                    Max Width
-                  </th>
-                  <th className="bg-orange-400 font-poppins text-white text-center p-4 font-semibold border border-[#12396d]" colSpan={2}>
-                    Thickness
-                  </th>
-                </tr>
-                <tr>
-                  <th className="bg-orange-400 font-poppins text-white text-center p-4 font-semibold border border-[#12396d]">
-                    Min
-                  </th>
-                  <th className="bg-orange-400 font-poppins text-white text-center p-4 font-semibold border border-[#12396d]">
-                    Max
-                  </th>
-                  <th className="bg-orange-400 font-poppins text-white text-center p-4 font-semibold border border-[#12396d]">
-                    Min
-                  </th>
-                  <th className="bg-orange-400 font-poppins text-white text-center p-4 font-semibold border border-[#12396d]">
-                    Max
-                  </th>
-                </tr>
-              </thead>
-              <tbody className='bg-white'>
-                <tr>
-                  <td className="text-center p-4 font-poppins  border border-[#12396d]">Hot Rolled Coil</td>
-                  <td className="text-center p-4 font-poppins border border-[#12396d]">1000</td>
-                  <td className="text-center p-4 font-poppins border border-[#12396d]">1650</td>
-                  <td className="text-center p-4 font-poppins border border-[#12396d]">2.0 *</td>
-                  <td className="text-center p-4 font-poppins border border-[#12396d]">10</td>
-                </tr>
-                <tr>
-                  <td className="text-center p-4 font-poppins border border-[#12396d] bg-gray-50">N1</td>
-                  <td className="text-center p-4 font-poppins border border-[#12396d] bg-gray-50">1000</td>
-                  <td className="text-center p-4 font-poppins border  border-[#12396d] bg-gray-50">1650</td>
-                  <td className="text-center p-4 font-poppins border  border-[#12396d] bg-gray-50">2.0 *</td>
-                  <td className="text-center p-4 font-poppins border border-[#12396d] bg-gray-50">10</td>
-                </tr>
-                <tr>
-                  <td className="text-center font-poppins p-4 border border-[#12396d]">2E</td>
-                  <td className="text-center font-poppins p-4 border border-[#12396d]">1000</td>
-                  <td className="text-center font-poppins p-4 border border-[#12396d]">1600</td>
-                  <td className="text-center font-poppins p-4 border border-[#12396d]">1.4 *</td>
-                  <td className="text-center font-poppins p-4 border border-[#12396d]">6.7</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+    <div className="mt-6 overflow-x-auto snap-start">
+      <table className="min-w-[600px] w-full  rounded-lg overflow-hidden">
+        <thead>
+          <tr>
+            <th
+              rowSpan={2}
+              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+            >
+              Product
+            </th>
+            <th
+              colSpan={2}
+              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+            >
+              Max Width
+            </th>
+            <th
+              colSpan={2}
+              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+            >
+              Thickness
+            </th>
+          </tr>
+          <tr>
+            {["Min", "Max", "Min", "Max"].map((label, idx) => (
+              <th
+                key={idx}
+                className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              >
+                {label}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="bg-white">
+          {[
+            ["Hot Rolled Coil", "1000", "1650", "2.0 *", "10"],
+            ["N1", "1000", "1650", "2.0 *", "10"],
+            ["2E", "1000", "1600", "1.4 *", "6.7"],
+          ].map((row, idx) => (
+            <tr key={idx} className={idx % 2 === 1 ? "bg-gray-50" : ""}>
+              {row.map((cell, cIdx) => (
+                <td
+                  key={cIdx}
+                  className="text-center p-3 sm:p-4 font-poppins border border-[#12396d]"
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-    </div>
+  </div>
 </div>
 
 <div className='w-full mb-20'>
   {/* <HotRolledCatgory filters={filters}/> */}
 
 
-  <div className="relative w-[90%] m-auto px-5 mt-10 ">
+  <div className="relative w-full lg:w-[90%] mx-auto px-5 mt-10 ">
         {/* Previous Button */}
         <button
-          className={`absolute -left-5 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex === 0 ? "invisible" : "visible"}`}
+          className={`absolute left-28 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex === 0 ? "invisible" : "visible"}`}
           onClick={prevSlide}
           disabled={currentIndex === 0}
         >
@@ -273,18 +268,24 @@ const HRCoils = () => {
         </button>
         
         {/* Cards Container */}
-        <div className="overflow-hidden w-full px-5  m-auto">
-          <div 
-            className="flex transition-transform duration-300 ease-in-out gap-0"
-            style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}
-          >
+        <div className="overflow-x-auto w-[80%] m-auto  lg:overflow-hidden">
+        <div
+        className={`flex gap-2  items-center lg:transition-transform duration-300 ease-in-out lg:gap-0 ${currentIndex > 0 ? '' : ''}`}
+        style={{
+          transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
+          width: '100%',
+          flexWrap: 'nowrap',
+        }}
+      >
             {cardData.map((item, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0 transition-opacity  duration-300`}
-                style={{ width: `calc((100% - ${(visibleCards - 1) * 1.25}rem) / ${visibleCards})` }}
-              >
-               <div className="p-2 bg-red-20 w-72 ">
+                className={`flex-shrink-0 snap-start`}
+                style={{
+              width: `calc((100%) / ${visibleCards})`,
+              minWidth: '15rem', // mobile scroll width
+            }}>
+               <div className="p-1 w-72">
                 <Link  className="block " key={index} to={`/product/${index}`}>
                 <Card {...item} />
                 </Link>
@@ -296,7 +297,7 @@ const HRCoils = () => {
         
         {/* Next Button */}
         <button
-          className={`absolute -right-5 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
+          className={`absolute right-40 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
           onClick={nextSlide}
           disabled={currentIndex >= cardData.length - visibleCards}
         >
@@ -307,7 +308,7 @@ const HRCoils = () => {
       </div>
       
       {/* Navigation Dots (Optional) */}
-      <div className="flex justify-center mt-6">
+      <div className="hidden lg:flex justify-center mt-6">
         {Array.from({ length: Math.ceil(cardData.length - visibleCards + 1) }).map((_, index) => (
           <button
             key={index}

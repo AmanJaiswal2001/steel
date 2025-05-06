@@ -33,7 +33,7 @@ export const Founder = () => {
     </div>
     <div className="flex flex-col h-full pt-5 xl:pt-0 pl-5  sm:pl-20 xl:w-full justify-center relative">
     <p className='font-semibold text-[28px]  text-[#12396d] font-poppins'> 
-    At Sonatek Tech, we take pride in our extensive experience in the steel and industrial solutions sector.</p> 
+    At Sonatek , we take pride in our extensive experience in the steel and industrial solutions sector.</p> 
     <br></br>
     <p className='text-[18px] font-medium text-gray-700 mt-5 '>Our team brings decades of expertise in handling Hot Rolled, Cold Rolled, Galvanized, and Pickled & Oiled steel products. We specialize in sourcing, processing, and supplying steel in customized formats — ensuring clients receive precisely what they need, when they need it.  </p>
 

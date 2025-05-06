@@ -18,13 +18,13 @@ const Card = (
   return (
     <div 
      data-theme="light" 
-    className={`transition-all duration-300 ease-in-out transform ${transformClass} card carousel rounded-box hover:shadow-lg bg-base-100 w-72 h-[420px] shadow-sm`}>
+    className={`transition-all duration-300  ease-in-out transform ${transformClass} card carousel rounded-box hover:shadow-lg bg-base-100 w-72 h-[420px] shadow-sm`}>
     <figure className="carousel-item">
       <img className='w-full object-fit  h-44 carousel-item '
         src={image}
         alt="card" />
     </figure>
-    <div className="card-body -z-10 m-0 p-0 px-2 ">
+    <div className="card-body -z-10 m-0 p-0 px-2 border border-gray-50 ">
       <h2 className="  mt-2 font-poppins font-medium h-12  text-[1rem]">{title}</h2>
       <div className='flex gap-2'>
       <span className='font-normal text-[12px] font-poppins text-[#70737a]'>Brand:</span>

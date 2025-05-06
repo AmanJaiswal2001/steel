@@ -23,7 +23,7 @@ const Header = () => {
           <MobileSidebar />
         </div>
    
-    <div className='md:flex w-full  md:items-center gap-0 mt-7  sm:mt-0 md:mt-0  md:gap-10  '> 
+    <div className='md:flex w-full   md:items-center gap-0 mt-7  sm:mt-0 md:mt-0  md:gap-10  '> 
    <div className='xl:w-1/4 w-full '>
    <Link to="/">
            <img 

@@ -154,7 +154,7 @@ onChange={(e) => {
 </div>
 
 
-<div className="h-48  lg:w-80 w-72 hidden    sm:flex md:flex lg:flex flex-col gap-4  rounded-lg">
+<div className="sm:h-48  lg:w-80 w-72     sm:flex md:flex lg:flex flex-col gap-4  rounded-lg">
 <h1 className="font-poppins font-bold text-lg pt-4">Send the all details on whatapps </h1>
 <a 
 >

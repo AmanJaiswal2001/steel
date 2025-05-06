@@ -1,6 +1,6 @@
 const PhoneCall = () => {
   return (
-    <div className="fixed right-4 md:bottom-4 bottom-20 flex flex-col justify-center w-52 h-14 text-[16px] font-normal bg-white font-poppins text-white px-4 py-2 rounded-full z-50 shadow-[0_-4px_8px_rgba(0,0,0,0.1),0_4px_8px_rgba(0,0,0,0.1)]">
+    <div className="fixed right-4 md:bottom-4 bottom-12 flex flex-col justify-center w-56 h-14 text-[16px] font-normal bg-white font-poppins text-white px-4 py-2 rounded-full z-50 shadow-[0_-4px_8px_rgba(0,0,0,0.1),0_4px_8px_rgba(0,0,0,0.1)]">
       <a href="tel:91-9891998846" className="hover:underline flex items-center">
         <svg
           className="text-white bg-[#12396d] p-1 h-9 w-9 rounded-full"
@@ -16,7 +16,7 @@ const PhoneCall = () => {
         </svg>
         <div className="ml-2">
           <p className="text-[16px] font-bold text-black">+91-9891998846</p>
-          <p className="text-[10px] font-light text-[#70737a] -mt-1">Contact us</p>
+          <p className="text-[10px] font-light text-center text-[#70737a] -mt-1">Contact us</p>
         </div>
       </a>
     </div>

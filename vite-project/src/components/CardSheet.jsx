@@ -12,7 +12,7 @@ const CardSheet= (
         src={image}
         alt="card" />
     </figure>
-    <div className="card-body m-0 p-0 -z-10  px-2">
+    <div className="card-body border border-gray-50 m-0 p-0 -z-10  px-2">
       <h2 className="  mt-2 font-poppins font-medium h-12  text-[1rem]">{title}</h2>
       <div className='flex gap-2'>
       <span className='font-normal text-[12px] font-poppins text-[#70737a]'>Brand:</span>

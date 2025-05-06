@@ -21,8 +21,9 @@ const testimonialList = [
     },
     rating: 3.8,
     description:
-      "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis qui.",
+      "Sonatek's technical team is incredibly responsive. Whether it's a custom steel specification or a logistics query, they are always ready to assist with complete professionalism.",
   },
+  
   {
     author: {
       fullName: "Neha Singh",

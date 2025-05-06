@@ -60,6 +60,11 @@ const appRouter = createBrowserRouter([
         path:"/mildStainless",
         element:<Product/>
       },
+
+      // {
+      //   path:"/mild",
+      //   element:<Section/>
+      // },
       // {
       //   path:"/stainless",
       //   element:<Strainless/>
