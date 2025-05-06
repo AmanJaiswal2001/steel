@@ -1,6 +1,40 @@
-import React from 'react'
+import { useEffect, useRef, useState } from 'react';
 
 const About = () => {
+  const expRef = useRef(null);
+  const repeatRef = useRef(null);
+  const [experience, setExperience] = useState(0);
+  const [repeatCustomers, setRepeatCustomers] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+
+          let startExp = 0;
+          let startRepeat = 0;
+          const interval = setInterval(() => {
+            startExp += 1;
+            startRepeat += 1;
+
+            if (startExp <= 10) setExperience(startExp);
+            if (startRepeat <= 95) setRepeatCustomers(startRepeat);
+
+            if (startExp >= 10 && startRepeat >= 95) {
+              clearInterval(interval);
+            }
+          }, 40);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (expRef.current) observer.observe(expRef.current);
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
   return (
     <div>
         <div className="  w-full mb-20  pt-5">
@@ -57,34 +91,25 @@ qualified professionals, we aim to engineer excellence in everything we do.</p>
      
 
 
-    <div className='xl:w-[57%] w-full  text-wrap flex flex-col  sm:pt-5'>
-     <div className='w-full h-[500px] relative '>
-     <img className='w-full h-full ' src="/Galvalume.webp"/>
-     <div className='flex absolute bottom-0 right-0'>
-        <div className='w-48 h-48 bg-[#12396d] flex flex-col  '>
-<p className='font-poppins text-2xl text-white text-center pt-10 '>10+</p>
-<p className='font-poppins text-lg text-center text-white w-32 pl-10'>YEARS OF EXPERIENCE</p>
+      <div className='xl:w-[57%] w-full text-wrap flex flex-col sm:pt-5'>
+      <div className='w-full h-[500px] relative '>
+        <img className='w-full h-full transition-transform duration-500 ease-in-out hover:scale-110' src="/Galvalume.webp" />
+        <div className='flex absolute bottom-0 right-0'>
+          <div ref={expRef} className='w-48 h-48 bg-[#12396d] flex flex-col'>
+            <p className='font-poppins text-5xl text-white text-center pt-10'>{experience}+</p>
+            <p className='font-poppins text-lg text-center text-white w-32 pl-10'>YEARS OF EXPERIENCE</p>
+          </div>
+
+          <div ref={repeatRef} className='w-48 h-48 bg-black flex flex-col'>
+            <p className='font-poppins text-5xl text-center text-white pt-10'>
+              {repeatCustomers}
+              <span className='text-white'>%</span>
+            </p>
+            <p className='font-poppins text-lg text-center text-white w-32 pl-10'>REPEAT CUSTOMERS</p>
+          </div>
         </div>
-
-
-        <div className='w-48 h-48 bg-black flex flex-col  '>
-<p className='font-poppins text-2xl text-center text-white  pt-10'>95<span className='text-[#12396d]'>%</span></p>
-<p className='font-poppins text-lg text-center text-white w-32 pl-10'>REPEAT CUSTOMERS</p>
-        </div>
-
-
-     </div>
-     
-     </div>
-    
-     
-     
-     
-     
-     
-     
       </div>
-
+    </div>
 
 
     <div className='xl:w-1/2 w-full pr-10  xl:h-96'>
@@ -115,7 +140,7 @@ their product portfolio.	</p>
 
     <div className='lg:w-[49%] w-full xl:pl-5 text-wrap flex flex-col  '>
      <div className='w-full  h-96 relative '>
-     <img className='w-full h-full ' src="/coil-steel.jpg"/>
+     <img className='w-full h-full transition-transform duration-500 ease-in-out hover:scale-110 ' src="/coil-steel.jpg"/>
      
      
      </div>
@@ -157,7 +182,7 @@ their product portfolio.	</p>
 
     <div className='xl:w-[55%] pt-5 xl:pt-0 w-full text-wrap flex flex-col  '>
      <div className='w-full  h-96 relative '>
-     <img className='w-full h-full ' src="/health.jpg"/>
+     <img className='w-full h-full transition-transform duration-500 ease-in-out hover:scale-110' src="/health.jpg"/>
      
      
      </div>

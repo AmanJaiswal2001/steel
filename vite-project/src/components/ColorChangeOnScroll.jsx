@@ -50,7 +50,7 @@ export default function ColorChangeOnScroll() {
 </div>
   
    </div>
-          <h1 className="text-3xl pt-5 md:text-5xl h-full lg:text-6xl font-bold  mb-0">
+          <h1 className="sm:text-3xl text-md pt-5 font-poppins md:text-5xl h-full lg:text-6xl font-bold  mb-0">
             {textDivider <= topText.length ? (
               <>
                 <span className="text-gray-800">{topText.substring(0, textDivider)}</span>

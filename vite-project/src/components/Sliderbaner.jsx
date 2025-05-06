@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 const sliderData = [
   {
     image: "/Slide1.jpg",
-    topLeft: { title: "Naraiana", subtitle: "Delhi" },
+    topLeft: { title: "Naraina", subtitle: "Delhi" },
     bottomInfo: [
       { line1: "3.6 MTPA", line2: "Steel Production Capacity" },
       { line1: "1.3 MTPA", line2: "Direct Reduced Iron Plant (DRI)" },
@@ -23,7 +23,7 @@ const sliderData = [
   },
   {
     image: "/slider3.jpg",
-    topLeft: { title: "Faridabad", subtitle: "Hariyana" },
+    topLeft: { title: "Faridabad", subtitle: "Haryana" },
     bottomInfo: [
       { line1: "3.6 MTPA", line2: "Steel Production Capacity" },
       { line1: "1.3 MTPA", line2: "Direct Reduced Iron Plant (DRI)" },
@@ -80,7 +80,8 @@ const Sliderbaner = ({ onComplete ,onBack}) => {
 
 
   return (
-    <div className="w-full h-[500px] overflow-hidden relative">
+    <div className='w-full h-full  sm:mt-0'>
+ <div className="w-full h-[500px] overflow-hidden relative">
       <div ref={containerRef} className="w-full h-full">
         {sliderData.map((item, index) => (
           <div
@@ -97,14 +98,14 @@ const Sliderbaner = ({ onComplete ,onBack}) => {
               <p className="font-bold text-[36px] font-poppins">{item.topLeft.title}</p>
               <p className="font-medium text-[18px] font-poppins">{item.topLeft.subtitle}</p>
             </div>
-            <div className="absolute bottom-10 w-full flex gap-5 text-white px-40">
+            <div className="absolute bottom-10 left-10 sm:left-0 sm:w-full flex-col sm:flex sm:flex-row gap-5 text-white sm:px-40">
               {item.bottomInfo.map((info, idx) => (
                 <div
                   key={idx}
-                  className="flex-1 border-t-2 border-b-2 border-orange-500 px-3 text-center"
+                  className="sm:flex-1   border-t-2 border-b-2 m-auto border-orange-500 px-3 text-center"
                 >
-                  <p className="font-poppins text-[36px] font-bold">{info.line1}</p>
-                  <p className="font-poppins text-[18px] font-normal">{info.line2}</p>
+                  <p className="font-poppins w-40 sm:w-full sm:text-[36px] font-bold">{info.line1}</p>
+                  <p className="font-poppins sm:text-[18px] font-normal">{info.line2}</p>
                 </div>
               ))}
             </div>
@@ -112,6 +113,8 @@ const Sliderbaner = ({ onComplete ,onBack}) => {
         ))}
       </div>
     </div>
+    </div>
+   
   );
 };
 

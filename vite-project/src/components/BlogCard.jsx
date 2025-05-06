@@ -37,12 +37,12 @@ export  const BlogCard=()=> {
             Touching lives of over 44 million people in India
           </h1>
           
-          <div className="flex gap-4 h-96">
+          <div className="hidden sm:flex gap-4 h-96">
             {cards.map((card, index) => (
               <div 
                 key={card.id}
                 className={`relative overflow-hidden rounded-lg transition-all duration-700 cursor-pointer
-                          ${activeIndex === index ? 'w-2/3' : 'w-1/2'}`}
+                          ${activeIndex === index ? 'sm:w-2/3 w-full' : 'sm:w-1/2'}`}
                 onMouseEnter={() => handleMouseEnter(index)}
               >
                 {/* Image */}
@@ -85,6 +85,49 @@ export  const BlogCard=()=> {
               </div>
             ))}
           </div>
+          <div className="sm:hidden space-y-4">
+        {cards.map((card, index) => (
+          <div
+            key={card.id}
+            className="relative h-64 overflow-hidden rounded-lg transition-all duration-700 cursor-pointer"
+            onClick={() => selectCard(index)}
+          >
+            {/* Image */}
+            <img
+              src={card.image}
+              alt={card.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+            
+            {/* Blue gradient overlay */}
+            <div 
+              className={`absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-700/40 to-transparent transition-opacity duration-500
+                        ${activeIndex === index ? 'opacity-70' : 'opacity-0'}`}
+            ></div>
+            
+            {/* Content */}
+            <div className="absolute inset-x-0 bottom-0 text-white p-4">
+              <h2 className="text-xl font-bold mb-2">{card.title}</h2>
+              
+              {/* Description - only visible when active */}
+              <div className={`transition-all duration-700 overflow-hidden
+                             ${activeIndex === index ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <p className="text-sm text-white text-opacity-90">{card.description}</p>
+                <a
+                  href="#"
+                  className="inline-block mt-2 text-sm font-bold text-orange-600 transition-colors"
+                >
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+ 
+        </div>
         </div>
       );
     }

@@ -120,18 +120,18 @@ function ConstructionAwardsSection() {
   return (
     <div 
       ref={sectionRef}
-      className="w-[94%] m-auto rounded-xl mt-10 text-white relative overflow-hidden py-16 px-10"
+      className="w-[94%] sm:h-full h-auto m-auto  rounded-xl sm:mt-10 mt-5 text-white relative overflow-hidden sm:py-16 py-5 px-10"
     >
       <div className="absolute inset-0">
         <img src="/steptodown.jpg" alt="Background" className="w-full blur-xs h-full object-cover" />
         <div className="absolute inset-0"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative">
+      <div className="container sm:mx-auto m-0 sm:px-6 relative">
         <div className="flex flex-col lg:flex-row">
           {/* Left Content */}
           <div className="lg:w-1/2 z-10">
-            <div className="flex items-center gap-2 h-6   justify-center bg-white w-68 rounded-full mb-6">
+            <div className="flex items-center gap-2 h-6   justify-center bg-white w-68 rounded-full sm:mb-6">
               {/* <div className="h-6 w-1 bg-orange-500 mr-2"></div> */}
               
               <p className="text-orange-500 font-medium text-sm tracking-wider"># Stronger Steel, Smarter Solutions</p>
@@ -142,7 +142,7 @@ function ConstructionAwardsSection() {
                 textStroke: '1px orange',
                 color: 'white',
               }}
-              className="text-5xl font-extrabold leading-tight mb-8 stroke-3-4  stroke-orange-600"
+              className="sm:text-5xl text-2xl font-extrabold leading-tight mb-8 stroke-3-4  stroke-orange-600"
             >
               Top Industries Buying<br />
               Steel in Bulk
@@ -156,7 +156,7 @@ function ConstructionAwardsSection() {
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
     transition={{ duration: 0.6 }}
-    className="text-5xl font-bold text-white opacity-80 mb-6"
+    className="sm:text-5xl text-2xl font-bold text-white opacity-80 mb-6"
   >
     {title}
   </motion.div>
@@ -211,20 +211,20 @@ function ConstructionAwardsSection() {
           </div>
 
           {/* Right section */}
-          <div className="lg:w-1/2  mt-12 lg:mt-0 relative">
-            <div className="absolute top-0 right-0 text-right z-20 space-y-2">
+          <div className="lg:w-1/2   sm:mt-12 lg:mt-0 relative">
+            <div className="absolute sm:top-0 top-40 right-0 sm:text-right text-center z-20 space-y-2">
             {industryKeys.map((key, index) => (
   <div
     key={key}
     ref={itemRefs.current[index]}
-    className={`cursor-pointer flex items-center justify-end font-bold transition-all duration-300 ${
+    className={`cursor-pointer hidden sm:flex items-center justify-end font-bold transition-all duration-300 ${
       selectedKey === key ? 'text-orange-500' : 'text-white'
     }`}
     onClick={() => setSelectedKey(key)}
   >
     <div
       className={`transition-all duration-300 ${
-        selectedKey === key ? 'text-3xl' : 'text-2xl'
+        selectedKey === key ? 'sm:text-3xl text-lg' : 'sm:text-2xl text-sm'
       } min-w-[260px] text-right`}
     >
       {key}
@@ -248,7 +248,7 @@ function ConstructionAwardsSection() {
 
             </div>
 
-            <div className="mt-5 pr-24">
+            <div className="mt-5 sm:pr-24 pr-0 grid grid-cols-2 gap-3 sm:block">
             <AnimatePresence mode="wait">
   <motion.div
     key={largeImage}
@@ -256,7 +256,7 @@ function ConstructionAwardsSection() {
     animate={{ opacity: 1, x: 0, scale: 1 }}
     exit={{ opacity: 0, x: 40, scale: 0.95 }}
     transition={{ duration: 0.8 }}
-    className="rounded-full overflow-hidden w-[380px] h-64 mb-6"
+    className="sm:rounded-full rounded-lg overflow-hidden sm:w-[380px] w-40 h-40  sm:h-64 mb-6"
   >
     <img 
       src={largeImage} 
@@ -273,7 +273,7 @@ function ConstructionAwardsSection() {
     animate={{ opacity: 1, x: 0, scale: 1 }}
     exit={{ opacity: 0, x: -40, scale: 0.95 }}
     transition={{ duration: 0.8 }}
-    className="rounded-full overflow-hidden w-[540px] h-52"
+    className="sm:rounded-full rounded-lg overflow-hidden sm:w-[540px] w-40 h-40 sm:h-52"
   >
     <img 
       src={smallImage} 

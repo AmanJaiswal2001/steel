@@ -31,18 +31,18 @@ const Home = () => {
         <Crousel />
       </div>
 
-      <div ref={bannerRef} className='bg-gray-50'>
+      <div ref={bannerRef} className='bg-gray-50 h-full'>
         <ColorChangeOnScroll />
-        <div  className='w-full xl:mt-10'>
+        <div  className='w-full h-full  xl:mt-10'>
           <Expandingcard />
         </div>
       </div>
 
-      <div>
+      <div className=''>
         <Sliderbaner onComplete={handleSliderComplete} onBack={handleBackToTop} />
       </div>
 
-      <div ref={awardsRef}>
+      <div className='' ref={awardsRef}>
         <ConstructionAwardsSection />
       </div>
 

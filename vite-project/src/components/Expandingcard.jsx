@@ -34,18 +34,18 @@ export const Expandingcard=()=> {
   ];
 
   return (
-    <div className="flex sm:px-10 flex-col items-center justify-center   p-4">
+    <div className="flex h-full sm:px-10 flex-col items-center justify-center   p-4">
        
       {/* The Card Component */}
-      <div className="w-full  h-[520px] rounded-lg outline-none  flex-col  sm:flex-row  sm:flex gap-1 p-1">
-      {cards.map((card) => (
+      <div className="w-full sm:h-[520px] h-auto rounded-lg outline-none p-1
+                grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-1">
+   {cards.map((card) => (
           <Link to={card.href}
             key={card.id}
-            className="relative h-full flex-1 overflow-hidden cursor-pointer rounded-lg
-                      flex justify-center items-center
-                     hover:flex-[4] transition-all duration-500"
-          >
-            {/* Base image always visible */}
+            className="relative h-40 sm:h-full flex overflow-hidden cursor-pointer rounded-lg
+           justify-center items-center transition-all duration-500
+           sm:flex-1 hover:sm:flex-[4]">
+        {/* Base image always visible */}
             <img  
               src={card.image}
               alt={card.text}

@@ -2,15 +2,15 @@ import React from 'react'
 
 export const Founder = () => {
   return (
-    <div className=" mt-10 justify-between px-10 pt-0 sm:pt-0  flex flex-col  lg:flex lg:flex-row w-full">
+    <div className=" sm:mt-10 justify-between  sm:px-10 pt-0 sm:pt-0  flex flex-col  lg:flex lg:flex-row w-full">
     {/* <img
       src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" */}
      
 
 
     <div className='lg:w-[40%]  w-full xl:pl-5 text-wrap flex flex-col  '>
-     <div className='w-[550px]  pl-10 relative '>
-     <img className='w-full h-[500px]  ' src="/founde.png"/>
+     <div className='sm:w-[550px]  sm:pl-10 relative '>
+     <img className='w-full sm:h-[500px]  ' src="/founde.png"/>
      
      
      </div>
@@ -40,7 +40,7 @@ export const Founder = () => {
 
 <p className='font-semibold text-[28px] pt-5  text-[#12396d] font-poppins'>Adish Jain</p>
 <p className='text-[18px] font-medium text-gray-700  '>Chairman, Sonatek</p>
-<div className='bg-[#12396d] w-[30%] cursor-pointer  h-16 rounded-2xl mt-5 flex items-center justify-center text-white group overflow-hidden'>
+<div className='bg-[#12396d] sm:w-[30%]  w-[95%] cursor-pointer  h-16 rounded-2xl mt-5 flex items-center justify-center text-white group overflow-hidden'>
 <svg
 className=""
 
