@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown, ChevronUp } from "lucide-react"; // optional icon library
 
 export const MobileSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);
   return (
     <>
       {/* Hamburger Button */}
@@ -52,50 +53,46 @@ export const MobileSidebar = () => {
         {/* Menu */}
         <div></div>
         <ul className="p-4 text-[rgb(52, 58, 65)] h-screen bg-white ">
-          <li className="text-[16px] text-[rgb(52, 58, 65)] leading-6 font-semibold font-poppins">Mild Steel
-            <ul className=" p-2 text-[16px] leading-6 text-[rgb(52, 58, 65)] font-semibold font-poppins">
-             <Link to="/hotRolled/sheet">
-             <li className="  text-[17px]  pt-2 leading-6 font-semibold font-poppins">
-              Hot Rolled Sheet
-              
-              </li>
-             </Link>
-             <Link to="/hotRolled/coils">
-             <li className="  text-[16px] pt-2  leading-6 font-semibold font-poppins">
-              Hot Rolled Coils
-              
-              </li>
-             </Link>
-              <Link to="/coldRolled/sheet">
-              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Cold Rolled Sheet</li>
-          
-              </Link>
-              <Link to="/coldRolled/coils">
-              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Cold Rolled Coils</li>
-          
-              </Link>
-              {/* <Link to="/coldRolled/coils">
-              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Cold Rolled Coils</li>
-          
-              </Link>
-              <Link to="/coldRolled/coils">
-              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Cold Rolled Coils</li>
-          
-              </Link> */}
-              <Link to="/mild">
-              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Mild Steel</li>
-          
-              </Link>
-              <Link to="/stainless">
-              <li className=" text-[16px] pt-2 leading-6 font-semibold font-poppins cursor-pointer">Stainless Steel</li>
-          
-              </Link>
-               </ul>
-          </li>
-         <Link to="/">
+         
+        <Link to="/">
          <li className="text-[16px] leading-6 font-semibold font-poppins">Home</li>
        
          </Link>
+         
+         <li className="relative text-[16px] font-semibold font-poppins text-[rgb(52, 58, 65)]">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center justify-between gap-2 w-full"
+      >
+        Products
+        {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+      </button>
+
+      {/* Dropdown menu */}
+      {open && (
+        <ul className="absolute left-0  mt-2 bg-white shadow-md rounded-md w-56 ">
+          <Link to="/hotRolled/sheet">
+            <li className="px-4 py-2 hover:bg-gray-100">Hot Rolled Sheet</li>
+          </Link>
+          <Link to="/hotRolled/coils">
+            <li className="px-4 py-2 hover:bg-gray-100">Hot Rolled Coils</li>
+          </Link>
+          <Link to="/coldRolled/sheet">
+            <li className="px-4 py-2 hover:bg-gray-100">Cold Rolled Sheet</li>
+          </Link>
+          <Link to="/coldRolled/coils">
+            <li className="px-4 py-2 hover:bg-gray-100">Cold Rolled Coils</li>
+          </Link>
+          <Link to="/mildStainless">
+            <li className="px-4 py-2 hover:bg-gray-100"> Steel</li>
+          </Link>
+          {/* <Link to="/stainless">
+            <li className="px-4 py-2 hover:bg-gray-100">Stainless Steel</li>
+          </Link> */}
+        </ul>
+      )}
+    </li>
+
           
           <Link to="/about">
           <li className="text-[16px] leading-6  pt-2 font-semibold font-poppins">About</li>
