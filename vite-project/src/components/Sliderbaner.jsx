@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect,useState } from 'react';
 
 const sliderData = [
   {
@@ -33,89 +33,102 @@ const sliderData = [
   },
 ];
 
-const Sliderbaner = ({ onComplete ,onBack}) => {
+
+const Sliderbaner = ({ onComplete, onBack }) => {
   const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [canScroll, setCanScroll] = useState(true);
 
   useEffect(() => {
     const container = containerRef.current;
+    if (!container) return;
+
+    const totalSlides = sliderData.length;
+    const slideWidth = container.clientWidth;
+
     container.style.scrollSnapType = 'x mandatory';
-    container.style.overflowX = 'scroll';
-    container.style.overflowY = 'hidden';
+    container.style.overflow = 'hidden';
     container.style.scrollBehavior = 'smooth';
     container.style.display = 'flex';
-    let scrollTimeout;
-    const handleWheel = (e) => {
-      if (Math.abs(e.deltaY) < 2) return;
-      e.preventDefault();
 
-      const maxScrollLeft = container.scrollWidth - container.clientWidth;
-      container.scrollBy({ left: e.deltaY * 80, behavior: 'smooth' });
-
-      clearTimeout(scrollTimeout);
-      
-
-      // trigger vertical scroll after horizontal scroll ends
-      scrollTimeout = setTimeout(() => {
-        const atEnd = container.scrollLeft + 100 >= maxScrollLeft;
-        const atStart = container.scrollLeft <= 5;
-        if (atEnd && e.deltaY > 0) {
-          onComplete?.();
-
-        }
-        if (atStart && e.deltaY < 0) {
-          onBack?.();
-        }
-      }, 80); // Wait for 300ms of no scroll
+    const scrollToIndex = (index) => {
+      container.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
+      setCurrentIndex(index);
     };
 
+    const handleWheel = (e) => {
+      if (!canScroll) return;
+      if (Math.abs(e.deltaY) < 5) return;
 
+      e.preventDefault();
+      setCanScroll(false);
 
-    
+      const direction = e.deltaY > 0 ? 1 : -1;
+      const newIndex = currentIndex + direction;
+
+      if (newIndex >= totalSlides) {
+        onComplete?.();
+      } else if (newIndex < 0) {
+        onBack?.();
+      } else {
+        scrollToIndex(newIndex);
+      }
+
+      // Allow scroll again after delay
+      setTimeout(() => {
+        setCanScroll(true);
+      }, 1000); // 1 second pause
+    };
+
     container.addEventListener('wheel', handleWheel, { passive: false });
-  return () => {
-    container.removeEventListener('wheel', handleWheel);
-    clearTimeout(scrollTimeout);
-  };
-}, [onComplete]);
 
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+    };
+  }, [currentIndex, canScroll, onComplete, onBack]);
 
   return (
-    <div className='w-full h-full  sm:mt-0'>
- <div className="w-full h-[500px] overflow-hidden relative">
-      <div ref={containerRef} className="w-full h-full">
-        {sliderData.map((item, index) => (
-          <div
-            key={index}
-            className="flex-none w-screen h-full relative"
-            style={{ flexShrink: 0 }}
-          >
-            <img
-              src={item.image}
-              alt={`slide-${index}`}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute top-10 left-20 text-white">
-              <p className="font-bold text-[36px] font-poppins">{item.topLeft.title}</p>
-              <p className="font-medium text-[18px] font-poppins">{item.topLeft.subtitle}</p>
+    <div className="w-full h-full sm:mt-0">
+      <div className="w-full h-[500px] overflow-hidden relative">
+        <div
+          ref={containerRef}
+          className="w-full h-full flex scroll-smooth no-scrollbar"
+        >
+          {sliderData.map((item, index) => (
+            <div
+              key={index}
+              className="w-screen h-full flex-shrink-0 relative snap-start"
+            >
+              <img
+                src={item.image}
+                alt={`slide-${index}`}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-10 sm:left-20 left-10 text-white">
+                <p className="font-bold text-[36px] font-poppins">{item.topLeft.title}</p>
+                <p className="font-medium text-[18px] font-poppins">{item.topLeft.subtitle}</p>
+              </div>
+              <div className="absolute bottom-10 left-10 sm:left-0 sm:w-full text-white md:px-20  xl:px-40">
+  <div className="flex-col sm:flex sm:flex-row gap-5 bg-blue-800/60 rounded-xl p-4">
+    {item.bottomInfo.map((info, idx) => (
+      <div
+        key={idx}
+        className="sm:flex-1 border-t-2 border-b-2 border-orange-500 px-3 text-center"
+      >
+        <p className="font-poppins w-40 sm:w-full sm:text-[36px] font-bold">{info.line1}</p>
+        <p className="font-poppins w-40 sm:w-full  sm:text-[18px] font-normal">{info.line2}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
             </div>
-            <div className="absolute bottom-10 left-10 sm:left-0 sm:w-full flex-col sm:flex sm:flex-row gap-5 text-white sm:px-40">
-              {item.bottomInfo.map((info, idx) => (
-                <div
-                  key={idx}
-                  className="sm:flex-1   border-t-2 border-b-2 m-auto border-orange-500 px-3 text-center"
-                >
-                  <p className="font-poppins w-40 sm:w-full sm:text-[36px] font-bold">{info.line1}</p>
-                  <p className="font-poppins sm:text-[18px] font-normal">{info.line2}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
-    </div>
-   
   );
 };
+
 
 export default Sliderbaner;

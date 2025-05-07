@@ -200,17 +200,20 @@ export const  Testimonial=()=> {
           </div>
           
           {/* Carousel items */}
-          <div className="flex w-[100%]   justify-center items-center gap-4 sm:py-8 overflow-hidden">
+          <div className="flex flex-col sm:flex-row w-full justify-center items-center sm:gap-6 gap-4 sm:py-8 px-4  scroll-smooth">
             {visibleTestimonials.map((item, index) => (
               <div 
                 key={index} 
-                className={`transition-all duration-500 w-full 
-                  ${index === 1 ? "z-10" : "z-0"}`}
-              >
-                <TestimonialItem 
-                  testimonial={item} 
-                  isActive={index === 1}
-                />
+                className={`transition-all duration-500 flex-shrink-0 ${
+  index === 1 ? "z-10 scale-100" : "z-0 scale-95"
+}`}
+>
+               <div className="w-[320px] sm:w-[320px] md:w-[350px]">
+        <TestimonialItem 
+          testimonial={item} 
+          isActive={index === 1}
+        />
+      </div>
               </div>
             ))}
           </div>

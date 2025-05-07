@@ -124,7 +124,7 @@ function ConstructionAwardsSection() {
     >
       <div className="absolute inset-0">
         <img src="/steptodown.jpg" alt="Background" className="w-full blur-xs h-full object-cover" />
-        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0 bg-blue-900/60"></div>
       </div>
 
       <div className="container sm:mx-auto m-0 sm:px-6 relative">
@@ -248,7 +248,7 @@ function ConstructionAwardsSection() {
 
             </div>
 
-            <div className="mt-5 sm:pr-24 pr-0 grid grid-cols-2 gap-3 sm:block">
+            <div className="mt-5 sm:pr-24 pr-0 grid grid-cols-2 gap-10 sm:block">
             <AnimatePresence mode="wait">
   <motion.div
     key={largeImage}

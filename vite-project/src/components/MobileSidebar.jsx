@@ -8,16 +8,16 @@ export const MobileSidebar = () => {
     <>
       {/* Hamburger Button */}
       <button
-        onClick={() => setIsOpen(true)}
-        className="p-2  text-black fixed top-4 left-4 z-50 rounded"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path
-            fill="currentColor"
-            d="M4 7q-.425 0-.712-.288T3 6t.288-.712T4 5h16q.425 0 .713.288T21 6t-.288.713T20 7zm0 12q-.425 0-.712-.288T3 18t.288-.712T4 17h16q.425 0 .713.288T21 18t-.288.713T20 19zm0-6q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13z"
-          />
-        </svg>
-      </button>
+  onClick={() => setIsOpen(true)}
+  className="p-2 text-[#12396d] fixed top-4 left-4 z-50 rounded"
+>
+  <svg className="text-[#12396d]" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 18H10" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M4 12L16 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M4 6L20 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+</button>
+
 
       {/* Overlay */}
       {isOpen && (
@@ -29,7 +29,7 @@ export const MobileSidebar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full  w-[60%] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full  w-[60%] bg-white  shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -50,7 +50,8 @@ export const MobileSidebar = () => {
        
 
         {/* Menu */}
-        <ul className="p-4 text-[rgb(52, 58, 65)] ">
+        <div></div>
+        <ul className="p-4 text-[rgb(52, 58, 65)] h-screen bg-white ">
           <li className="text-[16px] text-[rgb(52, 58, 65)] leading-6 font-semibold font-poppins">Mild Steel
             <ul className=" p-2 text-[16px] leading-6 text-[rgb(52, 58, 65)] font-semibold font-poppins">
              <Link to="/hotRolled/sheet">

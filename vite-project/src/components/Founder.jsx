@@ -2,60 +2,55 @@ import React from 'react'
 
 export const Founder = () => {
   return (
-    <div className=" sm:mt-10 justify-between  sm:px-10 pt-0 sm:pt-0  flex flex-col  lg:flex lg:flex-row w-full">
-    {/* <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" */}
-     
-
-
-    <div className='lg:w-[40%]  w-full xl:pl-5 text-wrap flex flex-col  '>
-     <div className='sm:w-[550px]  sm:pl-10 relative '>
-     <img className='w-full sm:h-[500px]  ' src="/founde.png"/>
-     
-     
-     </div>
-    
-     
-     
-     
-     
-     
-     
+    <div className="w-full flex flex-col lg:flex-row justify-between sm:px-6 lg:px-10 pt-5 sm:pt-8 lg:pt-0">
+    {/* Left Image Section */}
+    <div className="w-full lg:w-[40%] flex justify-center mb-8 lg:mb-0">
+      <div className="w-[90%] sm:w-[550px]">
+        <img className="w-full sm:h-[500px] object-cover" src="/founde.png" alt="Founder" />
       </div>
-
-
-
-    <div className='xl:w-[60%] w-full mr-20  xl:h-96'>
-
-    <div>
-    <div className='w-16'>
-        <img src="/quotation-mark-svgrepo-com (2).svg"/>
     </div>
-    <div className="flex flex-col h-full pt-5 xl:pt-0 pl-5  sm:pl-20 xl:w-full justify-center relative">
-    <p className='font-semibold text-[28px]  text-[#12396d] font-poppins'> 
-    At Sonatek , we take pride in our extensive experience in the steel and industrial solutions sector.</p> 
-    <br></br>
-    <p className='text-[18px] font-medium text-gray-700 mt-5 '>Our team brings decades of expertise in handling Hot Rolled, Cold Rolled, Galvanized, and Pickled & Oiled steel products. We specialize in sourcing, processing, and supplying steel in customized formats — ensuring clients receive precisely what they need, when they need it.  </p>
-
-
-<p className='font-semibold text-[28px] pt-5  text-[#12396d] font-poppins'>Adish Jain</p>
-<p className='text-[18px] font-medium text-gray-700  '>Chairman, Sonatek</p>
-<div className='bg-[#12396d] sm:w-[30%]  w-[95%] cursor-pointer  h-16 rounded-2xl mt-5 flex items-center justify-center text-white group overflow-hidden'>
-<svg
-className=""
-
- xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"/></svg>
-<button className='font-medium text-[18px] font-poppins   group-hover:translate-x-1 group-hover:opacity-100  duration-300  relative z-10'>
-Know His Story
-</button>
-</div>
-
-</div>
+  
+    {/* Right Text Section */}
+    <div className="w-full lg:w-[60%] flex flex-col justify-center px-4 sm:px-6 lg:px-0">
+      <div className="w-10 mb-2 hidden md:block">
+        <img src="/quotation-mark-svgrepo-com (2).svg" alt="Quote Mark" />
+      </div>
+  
+      <div className="text-center sm:text-left">
+        <p className="font-semibold text-[24px] sm:text-[28px] text-[#12396d] font-poppins leading-snug">
+          At Sonatek, we take pride in our extensive experience in the steel and industrial solutions sector.
+        </p>
+  
+        <p className="text-[16px] sm:text-[18px] font-medium text-gray-700 mt-5">
+          Our team brings decades of expertise in handling Hot Rolled, Cold Rolled, Galvanized, and Pickled & Oiled steel products. We specialize in sourcing, processing, and supplying steel in customized formats — ensuring clients receive precisely what they need, when they need it.
+        </p>
+  
+        <p className="font-semibold text-[24px] sm:text-[28px] pt-6 text-[#12396d] font-poppins">
+          Adish Jain
+        </p>
+        <p className="text-[16px] sm:text-[18px] font-medium text-gray-700">Chairman, Sonatek</p>
+  
+        <div className="bg-[#12396d] w-[95%] sm:w-[60%] md:w-[40%] h-14 mt-6 rounded-2xl cursor-pointer flex items-center justify-center text-white group overflow-hidden mx-auto sm:mx-0">
+          <svg
+            className="mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+            />
+          </svg>
+          <button className="font-medium text-[16px] sm:text-[18px] font-poppins group-hover:translate-x-1 group-hover:opacity-100 duration-300 relative z-10">
+            Know His Story
+          </button>
+        </div>
+      </div>
     </div>
-   
-</div>
   </div>
-
+  
   )
 }
 

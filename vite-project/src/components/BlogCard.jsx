@@ -105,7 +105,7 @@ export  const BlogCard=()=> {
             {/* Blue gradient overlay */}
             <div 
               className={`absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-700/40 to-transparent transition-opacity duration-500
-                        ${activeIndex === index ? 'opacity-70' : 'opacity-0'}`}
+                        `}
             ></div>
             
             {/* Content */}
@@ -114,7 +114,7 @@ export  const BlogCard=()=> {
               
               {/* Description - only visible when active */}
               <div className={`transition-all duration-700 overflow-hidden
-                             ${activeIndex === index ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
+                             `}>
                 <p className="text-sm text-white text-opacity-90">{card.description}</p>
                 <a
                   href="#"
