@@ -182,7 +182,8 @@ const HRCoils = () => {
   {/* Background Image */}
   <div
     style={{ backgroundImage: `url('/2835.jpg')` }}
-    className="absolute inset-0 h-full  w-full bg-cover bg-center"
+    className="absolute inset-0 h-full w-full bg-[url('/2835.jpg')] bg-cover bg-center"
+
   ></div>
 
   {/* Blue Overlay */}

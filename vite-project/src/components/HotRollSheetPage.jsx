@@ -134,7 +134,8 @@ const HotRollSheetPage = () => {
   {/* Background Image */}
   <div
     style={{ backgroundImage: `url('/2835.jpg')` }}
-    className="h-full bg-cover bg-center w-full"
+    className="absolute inset-0 h-full w-full bg-[url('/2835.jpg')] bg-cover bg-center"
+
   ></div>
 
   {/* Blue Overlay */}
@@ -172,12 +173,12 @@ const HotRollSheetPage = () => {
 </div>
 
 
-<div className="relative lg:min-h-screen mt-0">
+<div className="relative lg:h-full mt-0">
   {/* Background Image */}
   <div
     style={{ backgroundImage: `url('/2835.jpg')` }}
-    className="absolute inset-0 h-full  w-full bg-cover bg-center"
-  ></div>
+    className="absolute inset-0 h-full w-full bg-[url('/2835.jpg')] bg-cover bg-center"
+    ></div>
 
   {/* Blue Overlay */}
   <div className="absolute inset-0 bg-[#12396d] opacity-85"></div>
