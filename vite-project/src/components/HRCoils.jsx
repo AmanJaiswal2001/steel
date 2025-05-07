@@ -141,7 +141,7 @@ const HRCoils = () => {
   {/* Background Image */}
   <div
     style={{ backgroundImage: `url('/2835.jpg')` }}
-    className="h-full bg-cover bg-center w-full"
+    className="absolute inset-0 h-full w-full bg-[url('/2835.jpg')] bg-cover bg-center"
   ></div>
 
   {/* Blue Overlay */}
@@ -269,6 +269,9 @@ const HRCoils = () => {
         
         {/* Cards Container */}
         <div className="overflow-x-auto w-[80%] m-auto  lg:overflow-hidden">
+        <h1 className="sm:text-2xl text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 sm:w-[550px]">
+            {contentData.title}
+          </h1>
         <div
         className={`flex gap-2  items-center lg:transition-transform duration-300 ease-in-out lg:gap-0 ${currentIndex > 0 ? '' : ''}`}
         style={{
@@ -280,7 +283,7 @@ const HRCoils = () => {
             {cardData.map((item, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0 snap-start`}
+                className={`flex-shrink-0 mt-5 snap-start`}
                 style={{
               width: `calc((100%) / ${visibleCards})`,
               minWidth: '15rem', // mobile scroll width
@@ -297,7 +300,7 @@ const HRCoils = () => {
         
         {/* Next Button */}
         <button
-          className={`absolute right-40 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
+          className={`absolute  right-[170px] h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
           onClick={nextSlide}
           disabled={currentIndex >= cardData.length - visibleCards}
         >

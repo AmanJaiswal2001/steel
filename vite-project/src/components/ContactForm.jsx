@@ -149,7 +149,7 @@ const  ContactForm=()=> {
     >
       <div className="w-full sm:h-[720px]  mt-5 rounded-b-xl relative transition-transform duration-300">
         <img 
-          src="contactform.jpg" 
+          src="contact.png" 
           alt="Digital Marketing Tools by Experts"
           className="w-full h-full"
         />
