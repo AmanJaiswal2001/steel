@@ -52,9 +52,9 @@ const HotRollSheetPage = () => {
  
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 840) {
         setVisibleCards(1);
-      } else if (window.innerWidth < 1024) {
+      } else if (window.innerWidth < 1124) {
         setVisibleCards(2);
       } else {
         setVisibleCards(3);
@@ -145,9 +145,25 @@ const HotRollSheetPage = () => {
   <div className="relative inset-0 flex flex-col lg:flex-row justify-between gap-10 sm:pt-16  px-10 lg:px-40">
     <div className="xl:w-[60%] pt-5 xl:pt-0 w-full flex flex-col">
       <h1 className="text-[50px] uppercase  font-poppins font-extrabold text-orange-400 sm:mt-5">Features</h1>
-      <div className="w-full sm:pt-10 lg:h-[550px] h-80  relative">
-        <img className="w-full h-full object-cover" src="/hrSheet.jpg" />
-      </div>
+      <motion.div
+  className="w-full sm:pt-10 lg:h-[550px] h-80 relative"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true, amount: 0.9  }}
+>
+  <motion.img
+    src="/hrSheet.jpg"
+    className="w-full h-full object-cover rounded-xl shadow-xl"
+    animate={{
+      y: [0, -5, 0], // Float effect
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  /></motion.div>
     </div>
 
     <div className="xl:w-[80%] h-full w-full sm:pr-10 xl:h-96">
@@ -249,11 +265,11 @@ const HotRollSheetPage = () => {
 
 
 <div className="w-full mb-20">
-  <div className="relative w-full lg:w-[90%] mx-auto px-5 mt-10">
+  <div className="relative w-full  lg:w-[90%] mx-auto px-5 mt-10">
     
     {/* Previous Button - only on large screens */}
     <button
-      className={`absolute left-28 h-9 w-9 top-[40%] hidden sm:flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex === 0 ? "invisible" : "visible"}`}
+      className={`absolute left-2 xs:left-10 xl:left-36 h-9 z-20 w-9 top-[40%] flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex === 0 ? "invisible" : "visible"}`}
       onClick={prevSlide}
       disabled={currentIndex === 0}
     >
@@ -268,7 +284,7 @@ const HotRollSheetPage = () => {
             {contentData.title}
           </h1>
       <div
-        className={`flex gap-2  items-center lg:transition-transform duration-300 ease-in-out lg:gap-0 ${currentIndex > 0 ? '' : ''}`}
+        className={`flex   items-center lg:transition-transform duration-300 ease-in-out lg:gap-0 ${currentIndex > 0 ? '' : ''}`}
         style={{
           transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
           width: '100%',
@@ -278,7 +294,7 @@ const HotRollSheetPage = () => {
         {cardData.map((item, index) => (
           <div
             key={index}
-            className={`flex-shrink-0 sm:px-2  mt-5 snap-start`}
+            className={`flex-shrink-0 sm:px-2 mx-auto  flex justify-center sm:mx-0 mt-5 snap-start`}
             style={{
               width: `calc((100%) / ${visibleCards})`,
               minWidth: '15rem', // mobile scroll width
@@ -296,7 +312,7 @@ const HotRollSheetPage = () => {
 
     {/* Next Button - only on large screens */}
     <button
-      className={`absolute right-[170px] h-9 w-9 top-[40%] hidden lg:flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
+      className={`absolute xl:right-[140px] xs:right-8 right-0 h-9 w-9 top-[40%] flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
       onClick={nextSlide}
       disabled={currentIndex >= cardData.length - visibleCards}
     >
