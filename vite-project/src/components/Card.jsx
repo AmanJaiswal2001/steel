@@ -18,9 +18,9 @@ const Card = (
   return (
     <div 
      data-theme="light" 
-    className={`transition-all duration-300  ease-in-out transform ${transformClass} card carousel rounded-box hover:shadow-lg bg-base-100 w-72 h-[420px] shadow-sm`}>
-    <figure className="carousel-item">
-      <img className='w-full object-fit  h-44 carousel-item '
+     className="card hover:shadow-lg hover:bg-transparent  hover:-translate-y-1 transform transition  ease-in-out  duration-300   bg-base-100 h-[450px] w-72  ">
+    <figure className="w-full  object-fit">
+      <img className='w-full  object-fit  h-44 '
         src={image}
         alt="card" />
     </figure>
