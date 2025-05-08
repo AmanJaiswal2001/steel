@@ -284,7 +284,7 @@ const HRCoils = () => {
         </button>
         
         {/* Cards Container */}
-        <div className="overflow-x-hidden sm:w-[80%] w-full m-auto  lg:overflow-hidden">
+        <div className="overflow-x-auto sm:w-[80%] w-full m-auto  lg:overflow-hidden">
         <h1 className="sm:text-2xl text-center lg:text-left text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 lg:mx-10 sm:w-[550px]">
             {contentData.title}
           </h1>

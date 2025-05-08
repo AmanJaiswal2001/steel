@@ -130,55 +130,53 @@ const HotRollSheetPage = () => {
         </div>
       </div>
 
-      <div className="relative min-h-screen  mt-10 ">
+      <div className="relative lg:h-full mt-10">
   {/* Background Image */}
   <div
+    className="absolute inset-0 h-full w-full bg-cover bg-center"
     style={{ backgroundImage: `url('/2835.jpg')` }}
-    className="absolute inset-0 h-full w-full bg-[url('/2835.jpg')] bg-cover bg-center"
-
   ></div>
 
   {/* Blue Overlay */}
   <div className="absolute inset-0 bg-[#12396d] opacity-85"></div>
 
   {/* Content */}
-  <div className="relative inset-0 flex flex-col lg:flex-row justify-between gap-10 sm:pt-16  px-10 lg:px-40">
-    <div className="xl:w-[60%] pt-5 xl:pt-0 w-full flex flex-col">
-      <h1 className="text-[50px] uppercase  font-poppins font-extrabold text-orange-400 sm:mt-5">Features</h1>
+  <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10 px-5 sm:px-10 lg:px-20 xl:px-40 pt-10 sm:pt-16">
+    {/* Left Column */}
+    <div className="w-full lg:w-1/2 flex flex-col">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
+        Features
+      </h1>
+
       <motion.div
-  className="w-full sm:pt-10 lg:h-[550px] h-80 relative"
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: true, amount: 0.9  }}
->
-  <motion.img
-    src="/hrSheet.jpg"
-    className="w-full h-full object-cover rounded-xl shadow-xl"
-    animate={{
-      y: [0, -5, 0], // Float effect
-    }}
-    transition={{
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-  /></motion.div>
+        className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.9 }}
+      >
+        <motion.img
+          src="/hrcn.jpg"
+          className="w-full h-full object-cover rounded-lg"
+          animate={{ y: [0, -5, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
     </div>
 
-    <div className="xl:w-[80%] h-full w-full sm:pr-10 xl:h-96">
-      <div className="flex flex-col sm:h-40 lg:mt-32 xl:pt-0 xl:w-full justify-center">
-        <p className="font-medium text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
-          {contentData.featureText}
-        </p>
-        <br />
-      </div>
-      <p className="font-normal text-sm border-l-2 border-orange-400 px-2 text-white font-poppins mt-5">
+    {/* Right Column */}
+    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+      <p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
+        {contentData.featureText}
+      </p>
+
+      <p className="font-normal text-sm sm:text-base border-l-2 border-orange-400 px-2 text-white font-poppins mt-5">
         {contentData.subFeatureText}
       </p>
+
       <div className="mt-6">
-        <h2 className="text-white text-xl font-semibold mb-2">Applications:</h2>
-        <ul className="list-disc list-inside text-white text-sm">
+        <h2 className="text-white text-lg sm:text-xl font-semibold mb-2">Applications:</h2>
+        <ul className="list-disc list-inside text-white text-sm sm:text-base">
           {contentData.applications.map((app, idx) => (
             <li key={idx}>{app}</li>
           ))}
