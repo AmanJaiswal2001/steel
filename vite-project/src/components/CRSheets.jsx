@@ -55,10 +55,10 @@ const CRSheets = () => {
  
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 840) {
         setVisibleCards(1);
-      } else if (window.innerWidth < 1024) {
-        setVisibleCards(2);
+      } else if (window.innerWidth < 1124) {
+          setVisibleCards(2);
       } else {
         setVisibleCards(3);
       }
@@ -133,38 +133,53 @@ const CRSheets = () => {
         </div>
       </div>
 
-      <div className="relative min-h-screen  mt-10 ">
+      <div className="relative lg:h-full mt-10">
   {/* Background Image */}
   <div
+    className="absolute inset-0 h-full w-full bg-cover bg-center"
     style={{ backgroundImage: `url('/2835.jpg')` }}
-    className="absolute inset-0 h-full w-full bg-[url('/2835.jpg')] bg-cover bg-center"
   ></div>
 
   {/* Blue Overlay */}
   <div className="absolute inset-0 bg-[#12396d] opacity-85"></div>
 
   {/* Content */}
-  <div className="relative inset-0 flex flex-col lg:flex-row justify-between gap-10 sm:pt-16  px-10 lg:px-40">
-    <div className="xl:w-[60%] pt-5 xl:pt-0 w-full flex flex-col">
-      <h1 className="text-[50px] uppercase  font-poppins font-extrabold text-orange-400 mt-5">Features</h1>
-      <div className="w-full sm:pt-10 lg:h-[550px] h-80  relative">
-        <img className="w-full h-full object-cover" src="/coldps1.jpg" />
-      </div>
+  <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10 px-5 sm:px-10 lg:px-20 xl:px-40 pt-10 sm:pt-16">
+    {/* Left Column */}
+    <div className="w-full lg:w-1/2 flex flex-col">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
+        Features
+      </h1>
+
+      <motion.div
+        className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.9 }}
+      >
+        <motion.img
+          src="/coldps1.jpg"
+          className="w-full h-full object-cover rounded-lg"
+          animate={{ y: [0, -5, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
     </div>
 
-    <div className="xl:w-[80%] h-full w-full sm:pr-10 xl:h-96">
-      <div className="flex flex-col sm:h-40 lg:mt-32 xl:pt-0 xl:w-full justify-center">
-        <p className="font-medium text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
-          {contentData.featureText}
-        </p>
-        <br />
-      </div>
-      <p className="font-normal text-sm border-l-2 border-orange-400 px-2 text-white font-poppins mt-5">
+    {/* Right Column */}
+    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+      <p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
+        {contentData.featureText}
+      </p>
+
+      <p className="font-normal text-sm sm:text-base border-l-2 border-orange-400 px-2 text-white font-poppins mt-5">
         {contentData.subFeatureText}
       </p>
+
       <div className="mt-6">
-        <h2 className="text-white text-xl font-semibold mb-2">Applications:</h2>
-        <ul className="list-disc list-inside text-white text-sm">
+        <h2 className="text-white text-lg sm:text-xl font-semibold mb-2">Applications:</h2>
+        <ul className="list-disc list-inside text-white text-sm sm:text-base">
           {contentData.applications.map((app, idx) => (
             <li key={idx}>{app}</li>
           ))}
@@ -174,7 +189,7 @@ const CRSheets = () => {
   </div>
 </div>
 
-<div className="relative lg::min-h-screen mt-0 ">
+<div className="relative lg:h-full mt-0 ">
   {/* Background Image */}
   <div
     style={{ backgroundImage: `url('/2835.jpg')` }}
@@ -255,23 +270,52 @@ const CRSheets = () => {
   <div className="relative w-full lg:w-[90%] mx-auto px-5 mt-10 ">
         {/* Previous Button */}
         <button
-          className={`absolute left-28 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex === 0 ? "invisible" : "visible"}`}
-          onClick={prevSlide}
-          disabled={currentIndex === 0}
-        >
-          <svg className='text-center font-normal' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-            <path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/>
-          </svg>
-        </button>
+  className={`
+    absolute 
+    top-[40%] 
+    left-2 
+    sm:left-4 
+    md:left-8 
+    lg:left-16 
+    xl:left-36 
+    z-20 
+    h-8 w-8 
+    sm:h-9 sm:w-9 
+    flex items-center justify-center 
+    bg-[#e6f0ff] bg-opacity-50 
+    text-[#2241a6] 
+    p-1 
+    rounded-lg 
+    cursor-pointer 
+    hover:bg-[#d7e7ff] 
+    ${currentIndex === 0 ? "invisible" : "visible"}
+  `}
+  onClick={prevSlide}
+  disabled={currentIndex === 0}
+>
+  <svg
+    className="text-center font-normal"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill="currentColor"
+      d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"
+    />
+  </svg>
+</button>
+
         
         {/* Cards Container */}
-        <div className="overflow-x-auto w-[80%] m-auto  lg:overflow-hidden">
-        <h1 className="sm:text-2xl text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 sm:w-[550px]">
-            {contentData.title}
+        <div className="overflow-x-auto sm:w-[80%] w-full m-auto  lg:overflow-hidden">
+        <h1 className="sm:text-2xl text-center lg:text-left text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 lg:mx-10 sm:w-[550px]">
+        {contentData.title}
           </h1>
           <div 
-            className="flex transition-transform duration-300 ease-in-out gap-0"
-            style={{
+           className={`flex   items-center lg:transition-transform duration-300 ease-in-out lg:gap-0 ${currentIndex > 0 ? '' : ''}`}
+           style={{
           transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
           width: '100%',
           flexWrap: 'nowrap',
@@ -279,8 +323,8 @@ const CRSheets = () => {
             {cardData.map((item, index) => (
               <div 
                  key={index}
-            className={`flex-shrink-0 mt-5  snap-start`}
-            style={{
+                 className={`flex-shrink-0 sm:px-2 mx-auto   flex justify-center sm:mx-0 mt-5 snap-start`}
+                 style={{
               width: `calc((100%) / ${visibleCards})`,
               minWidth: '15rem', // mobile scroll width
             }} >
@@ -296,8 +340,26 @@ const CRSheets = () => {
         
         {/* Next Button */}
         <button
-          className={`absolute  right-[170px] h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
-          onClick={nextSlide}
+          className={`
+            absolute 
+    top-[40%] 
+    right-2 
+    sm:right-4 
+    md:right-8 
+    lg:right-16 
+    xl:right-32 
+    z-50 
+    h-8 w-8 
+    sm:h-9 sm:w-9 
+    flex items-center justify-center 
+    bg-[#e6f0ff] bg-opacity-50 
+    text-[#2241a6] 
+    p-1 
+    rounded-lg 
+    cursor-pointer 
+    hover:bg-[#d7e7ff] 
+    ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}
+  `}onClick={nextSlide}
           disabled={currentIndex >= cardData.length - visibleCards}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
