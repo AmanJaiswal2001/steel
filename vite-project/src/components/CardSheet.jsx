@@ -37,7 +37,7 @@ const CardSheet= (
       {/* <p className=' font-poppins font-medium   text-[1rem]'><span className='font-semibold'>Length</span>{" "}{length}</p> */}
       <div className='bg-[#f5f6fa]  h-20 rounded-b-lg w-full bottom-0 absolute left-0'>
       <div className="  w-52 m-0 p-0 text-left  h-10 ">
-        <button className=" p-2 w-full m-0  text-[#2241a6] text-left bg-bl-200 font-poppins cursor-pointer font-semibold  text-sm  ">{buttonName}</button>
+        <button className=" p-2 w-full m-0  text-[#12396d] text-left bg-bl-200 font-poppins cursor-pointer font-semibold  text-sm  ">{buttonName}</button>
       </div>
       <hr className='text-gray-300 mx-2 px-2'></hr>
       <div className='flex gap-1 px-2 pt-2'>

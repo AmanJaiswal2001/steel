@@ -102,7 +102,7 @@ className='text-xl  '
     </div>
     <div className={`transition-all duration-300 ${isSidebarOpen ? 'blur-sm pointer-events-none' : ''}`}>
 
-    <div className='flex xl:hidden justify-center items-center w-full mt-10 sm:mt-2 md:mt-2 h-10 md:h-12'>
+    <div className='sm:flex hidden xl:hidden justify-center items-center w-full mt-10 sm:mt-2 md:mt-2 h-10 md:h-12'>
     {/* search  */}
 {/* <div className='flex  md:justify-center h-10  mx-20 items-center'> */}
 <div className='flex w-[90%] sm:w-[90%] md:w-[90%]'>

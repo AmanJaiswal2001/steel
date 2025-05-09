@@ -108,19 +108,24 @@ const Sliderbaner = ({ onComplete, onBack }) => {
                 <p className="font-bold text-[36px] font-poppins">{item.topLeft.title}</p>
                 <p className="font-medium text-[18px] font-poppins">{item.topLeft.subtitle}</p>
               </div>
-              <div className="absolute bottom-10 left-10 sm:left-0 sm:w-full text-white md:px-20  xl:px-40">
-  <div className="flex-col sm:flex sm:flex-row gap-5 bg-blue-800/60 rounded-xl p-4">
+              <div className="absolute bottom-10 left-4 sm:left-0 sm:w-full text-white md:px-20 xl:px-40">
+  <div className="flex-col sm:flex sm:flex-row gap-5 bg-[#2241a6] opacity-80 rounded-xl p-4 shadow-md">
     {item.bottomInfo.map((info, idx) => (
       <div
         key={idx}
         className="sm:flex-1 border-t-2 border-b-2 border-orange-500 px-3 text-center"
       >
-        <p className="font-poppins w-40 sm:w-full sm:text-[36px] font-bold">{info.line1}</p>
-        <p className="font-poppins w-40 sm:w-full  sm:text-[18px] font-normal">{info.line2}</p>
+        <p className="font-poppins w-40 sm:w-full text-white sm:text-[36px] font-bold drop-shadow-md">
+          {info.line1}
+        </p>
+        <p className="font-poppins w-40 sm:w-full text-white sm:text-[18px] font-normal drop-shadow-sm">
+          {info.line2}
+        </p>
       </div>
     ))}
   </div>
 </div>
+
 
             </div>
           ))}

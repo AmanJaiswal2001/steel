@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const Expandingcard=()=> {
   const cards = [
@@ -33,51 +34,71 @@ export const Expandingcard=()=> {
       }
   ];
 
+  const [activeIndex, setActiveIndex] = useState(0);
+  
   return (
     <div className="flex h-full sm:px-10 flex-col items-center justify-center   p-4">
        
       {/* The Card Component */}
-      <div className="w-full sm:h-[520px] h-auto rounded-lg outline-none p-1
-                grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-1">
-   {cards.map((card) => (
-          <Link to={card.href}
-            key={card.id}
-            className="relative h-40 sm:h-full flex overflow-hidden cursor-pointer rounded-lg
-           justify-center items-center transition-all duration-500
-           sm:flex-1 hover:sm:flex-[4]">
-        {/* Base image always visible */}
-            <img  
-              src={card.image}
-              alt={card.text}
-              className="absolute w-full h-full object-cover"
-           
-           
-            />
+      <div className="w-full sm:h-[520px] h-auto rounded-lg outline-none p-1 grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-1">
+  {cards.map((card, index) => (
+    <Link
+      to={card.href}
+      key={card.id}
+      onMouseEnter={() => setActiveIndex(index)}
+      onMouseLeave={() => setActiveIndex(null)}
+      className="relative h-40 sm:h-full flex overflow-hidden cursor-pointer rounded-lg
+                 justify-center items-center transition-all duration-500
+                 sm:flex-1 hover:sm:flex-[4]"
+    >
+      {/* Background Image */}
+      <img
+        src={card.image}
+        alt={card.text}
+        className="absolute w-full h-full object-cover"
+      />
 
-<div className=" absolute top-0 left-0 bg-opacity-60 p-2 
-                            transition-opacity duration-500">
-              </div>
-             <div className=" absolute bottom-2 left-3 bg-opacity-60 p-2 
-                            transition-opacity duration-500">
-               <h3 className=" font-bold text-3xl font-poppins text-white">{card.text}</h3>
-            
-               <p  className="text-orange-600  text-sm font-poppins font-normal">{card.description}</p>
+      {/* Dark base overlay always visible */}
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div> */}
 
-               </div>
-            
-            
-            {/* Blue overlay that disappears on hover */}
-            <div className="absolute inset-0  opacity-60 hover:opacity-0 transition-opacity duration-500"></div>
-            
-            {/* Title that shows in non-expanded state */}
-           
-            
-            {/* Info box that appears on hover */}
-           
-          </Link>
-        ))}
+      {/* Blue overlay (visible only when not active) */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-700/40 to-transparent transition-opacity duration-500
+                    ${activeIndex === index ? 'opacity-0' : 'opacity-60'}`}
+      ></div>
+
+      {/* Content box */}
+      <div
+        className={`absolute inset-x-0 text-white p-6 transition-all duration-500 ${
+          activeIndex === index ? 'bottom-0' : 'bottom-0'
+        }`}
+      >
+        <h2
+          className={`text-3xl font-bold mb-2 transition-all duration-300 
+            // activeIndex === index ? 'translate-y-0' : 'translate-y-16 opacity-0'
+          `}
+        >
+          {card.text}
+        </h2>
+
+        <div
+          className={`transition-all duration-700 overflow-hidden ${
+            activeIndex === index
+              ? 'max-h-40 opacity-100 mt-3'
+              : 'max-h-0 opacity-0'
+          }`}
+        >
+        <motion.div className='flex items-center gap-2'>
+        <p className="text-white text-opacity-90">{card.description}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"/></svg>
+        
+        </motion.div>
+         </div>
       </div>
-      
+    </Link>
+  ))}
+</div>
+
         </div>
   );
 }

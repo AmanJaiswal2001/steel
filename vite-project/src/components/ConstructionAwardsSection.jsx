@@ -124,7 +124,7 @@ function ConstructionAwardsSection() {
     >
       <div className="absolute inset-0">
         <img src="/steptodown.jpg" alt="Background" className="w-full blur-xs h-full object-cover" />
-        <div className="absolute inset-0 bg-blue-900/60"></div>
+        <div className="absolute inset-0 bg-[#2241a6] opacity-60"></div>
       </div>
 
       <div className="container sm:mx-auto m-0 sm:px-6 relative">

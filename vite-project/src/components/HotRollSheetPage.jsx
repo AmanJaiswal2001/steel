@@ -267,8 +267,26 @@ const HotRollSheetPage = () => {
     
     {/* Previous Button - only on large screens */}
     <button
-      className={`absolute left-2 xs:left-10 xl:left-36 h-9 z-20 w-9 top-[40%] flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex === 0 ? "invisible" : "visible"}`}
-      onClick={prevSlide}
+      className={`
+        absolute 
+    top-[40%] 
+    left-2 
+    sm:left-4 
+    md:left-8 
+    lg:left-16 
+    xl:left-32 
+    z-20 
+    h-8 w-8 
+    sm:h-9 sm:w-9 
+    flex items-center justify-center 
+    bg-[#e6f0ff] bg-opacity-50 
+    text-[#2241a6] 
+    p-1 
+    rounded-lg 
+    cursor-pointer 
+    hover:bg-[#d7e7ff] 
+    ${currentIndex === 0 ? "invisible" : "visible"}
+  `}onClick={prevSlide}
       disabled={currentIndex === 0}
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -310,8 +328,26 @@ const HotRollSheetPage = () => {
 
     {/* Next Button - only on large screens */}
     <button
-      className={`absolute xl:right-[140px] xs:right-8 right-0 h-9 w-9 top-[40%] flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
-      onClick={nextSlide}
+      className={`
+        absolute 
+    top-[40%] 
+    right-0 
+    sm:right-4 
+    md:right-8 
+    lg:right-16 
+    xl:right-28 
+    z-50 
+    h-8 w-8 
+    sm:h-9 sm:w-9 
+    flex items-center justify-center 
+    bg-[#e6f0ff] bg-opacity-50 
+    text-[#2241a6] 
+    p-1 
+    rounded-lg 
+    cursor-pointer 
+    hover:bg-[#d7e7ff] 
+    ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}
+  `}onClick={nextSlide}
       disabled={currentIndex >= cardData.length - visibleCards}
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">

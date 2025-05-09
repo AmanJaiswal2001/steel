@@ -11,22 +11,27 @@ const contentData = {
   processIntro: 'At Sonatek Steel, cold rolled sheets are crafted with precision through the following stages:',
   processes: [
     {
+      img:"/CRpickling(1).png",
       title: 'Pickling:',
       text: 'Hot rolled coils are first passed through acid baths to remove surface scale and impurities. This prepares a clean surface essential for high-quality cold rolling.'
     },
     {
+      img:"/coldcoils.jpg",
       title: 'Cold Rolling:',
       text: 'The pickled coils are cold reduced to the desired thickness using multi-stand rolling mills. Sonatek’s advanced mills ensure tight thickness tolerances and consistent mechanical properties.'
     },
     {
+      img:"/cranneling.png",
       title: 'Annealing:',
       text: 'The cold rolled sheets are heat-treated in controlled atmospheres to restore ductility and refine grain structure. Sonatek uses both batch and continuous annealing lines for optimal properties.'
     },
     {
+      img:"/crsskin.png",
       title: 'Skin Passing:',
       text: 'A light rolling pass (skin pass) is applied to improve sheet flatness, surface texture, and mechanical uniformity. This step ensures excellent formability for downstream applications.'
     },
     {
+      img:"/crsfinish.png",
       title: 'Finishing & Inspection:',
       text: 'Sheets are trimmed, leveled, and inspected for surface defects. Sonatek ensures every coil meets stringent surface finish and dimensional standards before dispatch.'
     }
@@ -52,7 +57,8 @@ const CRSheets = () => {
   const isInView = useInView(ref, { once: false, margin: '-10px' });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
- 
+  const [isRevealed, setIsRevealed] = useState({});
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 840) {
@@ -112,24 +118,52 @@ const CRSheets = () => {
         </motion.div>
       </div>
 
-      <div className="lg:px-40 w-full px-10">
+      <div className="lg:px-20 w-full px-10">
         <p className="text-[36px] text-orange-400 uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
         <p className="text-[60px] leading-12 text-orange-400 uppercase  font-poppins font-bold">Cr Sheets</p>
-        <div className="flex flex-col mt-5 gap-4 w-[80%]">
-          <p className="text-[20px] font-poppins font-medium">{contentData.processIntro}</p>
-          {contentData.processes.map((item, index) => (
-            <div key={index} className="flex gap-2 justify-center">
-              <svg className="pt-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
-              </svg>
-              <div>
-                <span className="text-[15px] font-bold font-poppins">
-                  {item.title}
-                  <span className="font-normal text-[15px] font-poppins"> {item.text}</span>
-                </span>
-              </div>
-            </div>
-          ))}
+        <p className="text-[20px] font-poppins pt-3 font-medium">{contentData.processIntro}</p>
+        
+        <div className="flex  mt-5 gap-4 w-full">
+           {contentData.processes.map((item, index) => (
+            <div
+  key={index}
+  className="w-full xl:w-1/3 h-80 relative group cursor-pointer"
+  onClick={() => setIsRevealed((prev) => ({ ...prev, [index]: !prev[index] }))}
+>
+  {/* Hover Overlay */}
+  <div
+    className={`absolute inset-0 w-full h-full bg-gray-300 flex flex-col   z-10 transition-opacity duration-500 ${
+      isRevealed?.[index] ? "opacity-0" : "opacity-100"
+    } group-hover:opacity-0`}
+  >
+    <img src={item.img} className="w-full h-full object-cover rounded absolute inset-0 z-0 opacity-30" alt={item.title} />
+    <div className="z-10 p-4 absolute bottom-0">
+      <p className="text-2xl font-bold text-orange-400 font-poppins ">{item.title}</p>
+      <p className="text-lg text-[#12396d] font-medium font-poppins">
+        {item.text.split(" ").slice(0, 10).join(" ")}...
+      </p>
+    </div>
+  </div>
+
+  {/* Actual Content */}
+  <div className="flex gap-3 items-start h-full w-full p-5 bg-[#12396d]  justify-start relative z-0 rounded-md">
+    <svg
+      className="mt-1 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+    >
+      <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
+    </svg>
+    <div>
+      <span className="font-normal block text-white">{item.text}</span>
+    </div>
+  </div>
+</div>
+
+))}
+
         </div>
       </div>
 
@@ -147,28 +181,55 @@ const CRSheets = () => {
   <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10 px-5 sm:px-10 lg:px-20 xl:px-40 pt-10 sm:pt-16">
     {/* Left Column */}
     <div className="w-full lg:w-1/2 flex flex-col">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
-        Features
-      </h1>
+    <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent sm:mt-5"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    Features
+  </motion.h1>
 
       <motion.div
-        className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.9 }}
-      >
-        <motion.img
-          src="/coldps1.jpg"
-          className="w-full h-full object-cover rounded-lg"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
+  className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative group overflow-hidden rounded-2xl"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: 'easeOut' }}
+  viewport={{ once: true, amount: 0.8 }}
+>
+  {/* Floating image with hover scale */}
+  <motion.img
+    src="/coldps1.jpg"
+    alt="Feature"
+    className="w-full h-full object-cover rounded-2xl shadow-2xl transition-transform duration-500 ease-in-out scale-100 group-hover:scale-[1.05]"
+    animate={{ y: [0, -10, 0] }}
+    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+  />
+
+  {/* Caption with hover animation */}
+  <div className="absolute bottom-4 left-4 z-20">
+    <motion.p
+      className="text-xl sm:text-2xl font-semibold text-orange-400 drop-shadow-md"
+      whileHover={{ scale: 1.05, x: 4 }}
+      transition={{ type: 'spring', stiffness: 300 }}
+    >
+      High Quality HRC
+    </motion.p>
+    <motion.p
+      className="text-sm font-light font-poppins text-orange-400 drop-shadow-sm"
+      whileHover={{ scale: 1.05, x: 4 }}
+      transition={{ type: 'spring', stiffness: 300, delay: 0.05 }}
+    >
+      Engineered for durability & performance
+    </motion.p>
+  </div>
+</motion.div>
+
     </div>
 
     {/* Right Column */}
-    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+    <motion.div className="w-full lg:w-1/2 mt-12 flex flex-col justify-center">
       <p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
         {contentData.featureText}
       </p>
@@ -185,7 +246,7 @@ const CRSheets = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   </div>
 </div>
 
@@ -201,9 +262,16 @@ const CRSheets = () => {
 
   {/* Content */}
   <div className="relative z-10 w-full px-4 sm:px-10 md:px-20 lg:px-40 py-10">
-    <h1 className="text-3xl sm:text-4xl lg:text-[50px] uppercase font-poppins font-extrabold text-orange-400 mt-5">
-      MANUFACTURING RANGES
-    </h1>
+   
+    <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent sm:mt-5"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    MANUFACTURING RANGES
+  </motion.h1>
 
     <div className="mt-6 overflow-x-auto snap-start">
       <table className="min-w-[600px] w-full  rounded-lg overflow-hidden">
@@ -211,19 +279,19 @@ const CRSheets = () => {
           <tr>
             <th
               rowSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa] font-poppins text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Product
             </th>
             <th
               colSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa] font-poppins  text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Max Width
             </th>
             <th
               colSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa]  font-poppins  text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Thickness
             </th>
@@ -232,7 +300,7 @@ const CRSheets = () => {
             {["Min", "Max", "Min", "Max"].map((label, idx) => (
               <th
                 key={idx}
-                className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+                className="bg-[#f5f6fa]  font-poppins  text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
               >
                 {label}
               </th>
@@ -245,11 +313,11 @@ const CRSheets = () => {
             ["N1", "1000", "1650", "2.0 *", "10"],
             ["2E", "1000", "1600", "1.4 *", "6.7"],
           ].map((row, idx) => (
-            <tr key={idx} className={idx % 2 === 1 ? "bg-gray-50" : ""}>
+            <tr key={idx} className={idx % 2 === 1 ? "bg-white" : ""}>
               {row.map((cell, cIdx) => (
                 <td
                   key={cIdx}
-                  className="text-center p-3 sm:p-4 font-poppins border border-[#12396d]"
+                  className="text-center bg-white p-3 sm:p-4 font-poppins border  text-[#12396d]"
                 >
                   {cell}
                 </td>

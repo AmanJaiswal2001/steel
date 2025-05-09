@@ -151,35 +151,53 @@ const HRCoils = () => {
   <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10 px-5 sm:px-10 lg:px-20 xl:px-40 pt-10 sm:pt-16">
     {/* Left Column */}
     <div className="w-full lg:w-1/2 flex flex-col">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
-        Features
-      </h1>
+    <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent sm:mt-5"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    Features
+  </motion.h1>
 
-      <motion.div
-        className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.9 }}
-      >
-        <motion.img
-          src="/hrcn.jpg"
-          className="w-full h-full object-cover rounded-lg"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
+  <motion.div
+    className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative group"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    {/* Glow or gradient overlay */}
+    {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg z-10"></div> */}
+
+    {/* Floating image card */}
+    <motion.img
+      src="/hrcn.jpg"
+      alt="Feature"
+      className="w-full h-full object-cover rounded-2xl shadow-2xl group-hover:scale-[1.05] transition-transform duration-500 ease-in-out"
+      animate={{ y: [0, -10, 0] }}
+      transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+    />
+
+    {/* Optional bottom caption */}
+    <div className="absolute bottom-4 left-4 text-white z-20">
+      <p className="text-xl sm:text-2xl font-semibold drop-shadow-md">High Quality HRC</p>
+      <p className="text-sm font-light drop-shadow-sm">Engineered for durability & performance</p>
     </div>
+  </motion.div>
+</div>
+
 
     {/* Right Column */}
     <div className="w-full lg:w-1/2 flex flex-col justify-center">
-      <p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
+      <motion.p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
         {contentData.featureText}
-      </p>
+      </motion.p>
 
-      <p className="font-normal text-sm sm:text-base border-l-2 border-orange-400 px-2 text-white font-poppins mt-5">
+      <motion.p className="font-normal text-sm sm:text-base border-l-2 border-orange-400 px-2 text-white font-poppins mt-5">
         {contentData.subFeatureText}
-      </p>
+      </motion.p>
 
       <div className="mt-6">
         <h2 className="text-white text-lg sm:text-xl font-semibold mb-2">Applications:</h2>
@@ -274,8 +292,26 @@ const HRCoils = () => {
   <div className="relative w-full lg:w-[90%] mx-auto px-5 mt-10 ">
         {/* Previous Button */}
         <button
-         className={`absolute left-3.5 xs:left-10 xl:left-36 xs:h-9 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-9 lg:h-9 xl:w-9 xl:h-9 h-8 w-8 z-20 top-[40%] flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex === 0 ? "invisible" : "visible"}`}
-         onClick={prevSlide}
+         className={`
+           absolute 
+    top-[40%] 
+    left-2 
+    sm:left-4 
+    md:left-8 
+    lg:left-16 
+    xl:left-32
+    z-20 
+    h-8 w-8 
+    sm:h-9 sm:w-9 
+    flex items-center justify-center 
+    bg-[#e6f0ff] bg-opacity-50 
+    text-[#2241a6] 
+    p-1 
+    rounded-lg 
+    cursor-pointer 
+    hover:bg-[#d7e7ff] 
+    ${currentIndex === 0 ? "invisible" : "visible"}
+  `}onClick={prevSlide}
           disabled={currentIndex === 0}
         >
           <svg className='text-center font-normal' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -316,8 +352,26 @@ const HRCoils = () => {
         
         {/* Next Button */}
         <button
- className={`absolute xl:right-[140px] z-50 xs:right-8 right-1.5 xs:h-9 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-9 lg:h-9 xl:w-9 xl:h-9 h-8 w-8 top-[40%] flex items-center justify-center bg-[#e6f0ff] bg-opacity-50 cursor-pointer text-[#2241a6] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}`}
- onClick={nextSlide}
+ className={`
+   absolute 
+    top-[40%] 
+    right-0 
+    sm:right-4 
+    md:right-8 
+    lg:right-16 
+    xl:right-28 
+    z-50 
+    h-8 w-8 
+    sm:h-9 sm:w-9 
+    flex items-center justify-center 
+    bg-[#e6f0ff] bg-opacity-50 
+    text-[#2241a6] 
+    p-1 
+    rounded-lg 
+    cursor-pointer 
+    hover:bg-[#d7e7ff] 
+    ${currentIndex >= cardData.length - visibleCards ? "invisible" : "visible"}
+  `}onClick={nextSlide}
           disabled={currentIndex >= cardData.length - visibleCards}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">

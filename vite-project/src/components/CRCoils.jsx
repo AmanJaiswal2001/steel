@@ -216,19 +216,19 @@ const CRCoils = () => {
           <tr>
             <th
               rowSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa] font-poppins text-[#12396d]  text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Product
             </th>
             <th
               colSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa] font-poppins text-[#12396d]  text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Max Width
             </th>
             <th
               colSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa] font-poppins text-[#12396d]  text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Thickness
             </th>
@@ -237,7 +237,7 @@ const CRCoils = () => {
             {["Min", "Max", "Min", "Max"].map((label, idx) => (
               <th
                 key={idx}
-                className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+                className="bg-[#f5f6fa]  font-poppins  text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
               >
                 {label}
               </th>
@@ -250,11 +250,11 @@ const CRCoils = () => {
             ["N1", "1000", "1650", "2.0 *", "10"],
             ["2E", "1000", "1600", "1.4 *", "6.7"],
           ].map((row, idx) => (
-            <tr key={idx} className={idx % 2 === 1 ? "bg-gray-50" : ""}>
+            <tr key={idx} className={idx % 2 === 1 ? "bg-white" : ""}>
               {row.map((cell, cIdx) => (
                 <td
                   key={cIdx}
-                  className="text-center p-3 sm:p-4 font-poppins border border-[#12396d]"
+                  className="text-center bg-white p-3 sm:p-4 font-poppins border border-[#12396d]"
                 >
                   {cell}
                 </td>
