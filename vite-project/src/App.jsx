@@ -30,6 +30,7 @@ import HotRollSheetPage from "./components/HotRollSheetPage";
 import HRCoils from "./components/HRCoils";
 import CRSheets from "./components/CRSheets";
 import CRCoils from "./components/CRCoils";
+import Crousel from "./components/Crousel";
 
 const appRouter = createBrowserRouter([
   {
@@ -126,6 +127,7 @@ function AppLayout() {
   <>
   
   <Nav />
+  {/* {location.pathname === '/' && <Crousel />} */}
   <main className="overflow-x-hidden flex-grow ">
         <Outlet />
       </main>

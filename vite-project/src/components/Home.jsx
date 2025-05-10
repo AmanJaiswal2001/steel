@@ -26,8 +26,8 @@ const Home = () => {
   };
 
   return (
-    <div className='w-full h-full'>
-      <div className='w-full xl:h-screen h-auto'>
+    <div className='w-full   h-full'>
+      <div className='w-full   xl:h-screen h-auto'>
         <Crousel />
       </div>
 

@@ -11,28 +11,33 @@ const contentData = {
   processIntro: 'At Sonatek Steel, cold rolled sheets are crafted with precision through the following stages:',
   processes: [
     {
+      num:"1",
       img:"/CRpickling(1).png",
-      title: 'Pickling:',
+      title: 'Pickling',
       text: 'Hot rolled coils are first passed through acid baths to remove surface scale and impurities. This prepares a clean surface essential for high-quality cold rolling.'
     },
     {
+      num:"2",
       img:"/coldcoils.jpg",
-      title: 'Cold Rolling:',
+      title: 'Cold Rolling',
       text: 'The pickled coils are cold reduced to the desired thickness using multi-stand rolling mills. Sonatek’s advanced mills ensure tight thickness tolerances and consistent mechanical properties.'
     },
     {
+      num:"3",
       img:"/cranneling.png",
-      title: 'Annealing:',
+      title: 'Annealing',
       text: 'The cold rolled sheets are heat-treated in controlled atmospheres to restore ductility and refine grain structure. Sonatek uses both batch and continuous annealing lines for optimal properties.'
     },
     {
+      num:"4",
       img:"/crsskin.png",
-      title: 'Skin Passing:',
+      title: 'Skin Passing',
       text: 'A light rolling pass (skin pass) is applied to improve sheet flatness, surface texture, and mechanical uniformity. This step ensures excellent formability for downstream applications.'
     },
     {
+      num:"5",
       img:"/crsfinish.png",
-      title: 'Finishing & Inspection:',
+      title: 'Finishing & Inspection',
       text: 'Sheets are trimmed, leveled, and inspected for surface defects. Sonatek ensures every coil meets stringent surface finish and dimensional standards before dispatch.'
     }
   ],
@@ -119,8 +124,8 @@ const CRSheets = () => {
       </div>
 
       <div className="lg:px-20 w-full px-10">
-        <p className="text-[36px] text-orange-400 uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
-        <p className="text-[60px] leading-12 text-orange-400 uppercase  font-poppins font-bold">Cr Sheets</p>
+        <p className="text-[36px] text-black uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
+        <p className="text-[60px] leading-12 text-black uppercase  font-poppins font-bold">Cr Sheets</p>
         <p className="text-[20px] font-poppins pt-3 font-medium">{contentData.processIntro}</p>
         
         <div className="flex  mt-5 gap-4 w-full">
@@ -132,22 +137,20 @@ const CRSheets = () => {
 >
   {/* Hover Overlay */}
   <div
-    className={`absolute inset-0 w-full h-full bg-gray-300 flex flex-col   z-10 transition-opacity duration-500 ${
-      isRevealed?.[index] ? "opacity-0" : "opacity-100"
-    } group-hover:opacity-0`}
-  >
-    <img src={item.img} className="w-full h-full object-cover rounded absolute inset-0 z-0 opacity-30" alt={item.title} />
-    <div className="z-10 p-4 absolute bottom-0">
-      <p className="text-2xl font-bold text-orange-400 font-poppins ">{item.title}</p>
-      <p className="text-lg text-[#12396d] font-medium font-poppins">
-        {item.text.split(" ").slice(0, 10).join(" ")}...
-      </p>
-    </div>
+  className={`absolute top-0 left-0 inset-0 w-full h-full bg-gray-300 flex  flex-col z-10 transition-opacity duration-500 ${
+    isRevealed?.[index] ? "opacity-0" : "opacity-100"
+  } group-hover:opacity-0`}
+>
+  <div className="top-0 left-0">
+    <p className="text-9xl font-bold text-[#12396d] font-poppins">{item.num}</p>
+    <p className="text-3xl   text-center mt-10  uppercase font-bold text-[#12396d] font-poppins">{item.title}</p>
   </div>
+</div>
+
 
   {/* Actual Content */}
   <div className="flex gap-3 items-start h-full w-full p-5 bg-[#12396d]  justify-start relative z-0 rounded-md">
-    <svg
+    {/* <svg
       className="mt-1 text-white"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
@@ -155,9 +158,10 @@ const CRSheets = () => {
       viewBox="0 0 24 24"
     >
       <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
-    </svg>
-    <div>
-      <span className="font-normal block text-white">{item.text}</span>
+    </svg> */}
+    <div className=' relative'>
+      <span className="font-normal block  h-60  text-white">{item.text}</span>
+      <p className="text-5xl  text-end       font-bold text-white font-poppins">{item.num}</p>
     </div>
   </div>
 </div>
@@ -181,15 +185,7 @@ const CRSheets = () => {
   <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10 px-5 sm:px-10 lg:px-20 xl:px-40 pt-10 sm:pt-16">
     {/* Left Column */}
     <div className="w-full lg:w-1/2 flex flex-col">
-    <motion.h1
-    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent sm:mt-5"
-    initial={{ opacity: 0, x: -30 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-    viewport={{ once: true, amount: 0.8 }}
-  >
-    Features
-  </motion.h1>
+   
 
       <motion.div
   className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative group overflow-hidden rounded-2xl"
@@ -208,7 +204,7 @@ const CRSheets = () => {
   />
 
   {/* Caption with hover animation */}
-  <div className="absolute bottom-4 left-4 z-20">
+  {/* <div className="absolute bottom-4 left-4 z-20">
     <motion.p
       className="text-xl sm:text-2xl font-semibold text-orange-400 drop-shadow-md"
       whileHover={{ scale: 1.05, x: 4 }}
@@ -223,14 +219,25 @@ const CRSheets = () => {
     >
       Engineered for durability & performance
     </motion.p>
-  </div>
+  </div> */}
 </motion.div>
 
     </div>
 
     {/* Right Column */}
-    <motion.div className="w-full lg:w-1/2 mt-12 flex flex-col justify-center">
-      <p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
+    <motion.div className="w-full lg:w-1/2 flex flex-col justify-center">
+     
+    <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-white via-gray-200 to-black bg-clip-text text-transparent "
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    Features
+  </motion.h1>
+     
+      <p className="font-medium text-base sm:text-lg px-2 mt-5 border-l-2 border-orange-400 text-white font-poppins">
         {contentData.featureText}
       </p>
 
@@ -264,7 +271,7 @@ const CRSheets = () => {
   <div className="relative z-10 w-full px-4 sm:px-10 md:px-20 lg:px-40 py-10">
    
     <motion.h1
-    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent sm:mt-5"
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-white via-gray-200 text-center to-white bg-clip-text text-transparent sm:mt-5"
     initial={{ opacity: 0, x: -30 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}

@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import image from "../../public/Group 612.png"
+
 import { Link, useNavigate } from 'react-router-dom'
 import {MobileSidebar} from './MobileSidebar'
 const Header = () => {
@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <>
-   <div className={`flex md:justify-between bg-white w-full gap-5 md:gap-0 fixed lg:static md:static sm:static z-40 lg:z-0 top-0 px-10 transition-transform duration-300 ${
+   <div className={`flex md:justify-between bg-white w-full gap-5 h-20 md:gap-0 fixed lg:static md:static sm:static z-40 lg:z-0 top-0 px-10 transition-transform duration-300 ${
   showHeader ? 'translate-y-0' : '-translate-y-full'
 }`}> <div className="md:hidden bg-white ">
           <MobileSidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
@@ -51,13 +51,7 @@ const Header = () => {
  
 
     <div className='md:flex w-full   md:items-center gap-0 mt-7  sm:mt-0 md:mt-0  md:gap-10  '> 
-   <div className='xl:w-1/4 w-full  flex justify-center sm:block sm: '>
-   <Link to="/">
-           <img 
-           className=' w-56   '
-           src = {image} />
-        </Link>
-   </div>
+  
     
         <div className='xl:flex hidden md:w-full max-w-xxl   mt-1 sm:mt-0 md:mt-0  md:justify-center md:h-12 h-9  md:mx-20 md:items-center'>
             {/* search  */}

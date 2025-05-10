@@ -11,22 +11,27 @@ const contentData = {
   processIntro: 'At Sonatek Steel, cold rolled coils are manufactured through a meticulous multi-step process:',
   processes: [
     {
+      num:"1",
       title: 'Pickling:',
       text: 'Hot rolled coils are descaled using acid solutions to remove oxide layers, ensuring a clean surface for cold reduction. Sonatek’s pickling lines ensure consistent surface preparation across the coil.'
     },
     {
+      num:"2",
       title: 'Cold Rolling:',
       text: 'The pickled coils are passed through precision rolling mills at room temperature to reduce thickness. Sonatek uses advanced multi-stand mills for superior thickness control and surface quality.'
     },
     {
+      num:"3",
       title: 'Annealing:',
       text: 'To restore ductility and improve microstructure, the coils are heat-treated in controlled atmospheres. Sonatek employs both batch and continuous annealing lines to suit diverse product requirements.'
     },
     {
+      num:"4",
       title: 'Skin Passing:',
       text: 'A light skin pass rolling enhances surface texture, eliminates yield point elongation, and improves coil flatness—critical for forming and painting applications.'
     },
     {
+      num:"5",
       title: 'Recoiling & Inspection:',
       text: 'After final processing, the sheet is recoiled and thoroughly inspected for surface quality, dimensions, and uniformity. Each coil at Sonatek is delivered to meet stringent quality benchmarks.'
     }
@@ -51,7 +56,7 @@ const contentData = {
 const CRCoils = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: '-10px' });
-
+  const [isRevealed, setIsRevealed] = useState({});
   const [currentIndex, setCurrentIndex] = useState(0);
   // const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
@@ -116,25 +121,53 @@ const CRCoils = () => {
         </motion.div>
       </div>
 
-      <div className="lg:px-40 w-full px-10">
-        <p className="text-[36px] text-orange-400 uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
-        <p className="text-[60px] leading-12 text-orange-400 uppercase  font-poppins font-bold">Cr coils</p>
-        <div className="flex flex-col mt-5 gap-4 w-[80%]">
+      <div className="lg:px-20 w-full px-10">
+        <p className="text-[36px] text-black uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
+        <p className="text-[60px] leading-12 text-black uppercase  font-poppins font-bold">Cr coils</p>
+        {/* <div className="flex flex-col mt-5 gap-4 w-[80%]"> */}
           <p className="text-[20px] font-poppins font-medium">{contentData.processIntro}</p>
-          {contentData.processes.map((item, index) => (
-            <div key={index} className="flex gap-2 justify-center">
-              <svg className="pt-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
-              </svg>
-              <div>
-                <span className="text-[15px] font-bold font-poppins">
-                  {item.title}
-                  <span className="font-normal text-[15px] font-poppins"> {item.text}</span>
-                </span>
-              </div>
-            </div>
-          ))}
+          <div className="flex  mt-5 gap-4 w-full">
+           {contentData.processes.map((item, index) => (
+            <div
+  key={index}
+  className="w-full xl:w-1/3 h-80 relative group cursor-pointer"
+  onClick={() => setIsRevealed((prev) => ({ ...prev, [index]: !prev[index] }))}
+>
+  {/* Hover Overlay */}
+  <div
+  className={`absolute top-0 left-0 inset-0 w-full h-full bg-gray-300 flex  flex-col z-10 transition-opacity duration-500 ${
+    isRevealed?.[index] ? "opacity-0" : "opacity-100"
+  } group-hover:opacity-0`}
+>
+  <div className="top-0 left-0">
+    <p className="text-9xl font-bold text-[#12396d] font-poppins">{item.num}</p>
+    <p className="text-3xl   text-center mt-10  uppercase font-bold text-[#12396d] font-poppins">{item.title}</p>
+  </div>
+</div>
+
+
+  {/* Actual Content */}
+  <div className="flex gap-3 items-start h-full w-full p-5 bg-[#12396d]  justify-start relative z-0 rounded-md">
+    {/* <svg
+      className="mt-1 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+    >
+      <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
+    </svg> */}
+    <div className=' relative'>
+      <span className="font-normal block  h-60  text-white">{item.text}</span>
+      <p className="text-5xl  text-end       font-bold text-white font-poppins">{item.num}</p>
+    </div>
+  </div>
+</div>
+
+))}
+
         </div>
+        {/* </div> */}
       </div>
 
       <div className="relative lg:h-full mt-10">
@@ -151,29 +184,39 @@ const CRCoils = () => {
   <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10 px-5 sm:px-10 lg:px-20 xl:px-40 pt-10 sm:pt-16">
     {/* Left Column */}
     <div className="w-full lg:w-1/2 flex flex-col">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
+      {/* <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
         Features
-      </h1>
+      </h1> */}
 
       <motion.div
-        className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative"
-        initial={{ opacity: 0, y: 50 }}
+       className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative group overflow-hidden rounded-2xl"
+       initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.9 }}
       >
         <motion.img
           src="/crpc1.jpg"
-          className="w-full h-full object-cover rounded-lg"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
+          alt="Feature"
+    className="w-full h-full object-cover rounded-2xl shadow-2xl transition-transform duration-500 ease-in-out scale-100 group-hover:scale-[1.05]"
+    animate={{ y: [0, -10, 0] }}
+    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+     />
       </motion.div>
     </div>
 
     {/* Right Column */}
-    <div className="w-full lg:w-1/2 flex flex-col justify-center">
-      <p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
+    <motion.div className="w-full lg:w-1/2 flex flex-col justify-center">
+    <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-white via-gray-200 to-black bg-clip-text text-transparent "
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    Features
+  </motion.h1>
+      <p className="font-medium text-base  mt-5 sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
         {contentData.featureText}
       </p>
 
@@ -189,7 +232,7 @@ const CRCoils = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   </div>
 </div>
 
@@ -206,9 +249,15 @@ const CRCoils = () => {
 
   {/* Content */}
   <div className="relative z-10 w-full px-4 sm:px-10 md:px-20 lg:px-40 py-10">
-    <h1 className="text-3xl sm:text-4xl lg:text-[50px] uppercase font-poppins font-extrabold text-orange-400 mt-5">
-      MANUFACTURING RANGES
-    </h1>
+  <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-white via-gray-200 text-center to-white bg-clip-text text-transparent sm:mt-5"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    MANUFACTURING RANGES
+  </motion.h1>
 
     <div className="mt-6 overflow-x-auto snap-start">
       <table className="min-w-[600px] w-full  rounded-lg overflow-hidden">
@@ -306,9 +355,10 @@ const CRCoils = () => {
         
         {/* Cards Container */}
         <div className="overflow-x-auto sm:w-[80%] w-full m-auto  lg:overflow-hidden">
-        <h1 className="sm:text-2xl text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 sm:w-[550px]">
-            {contentData.title}
+        <h1 className="sm:text-2xl text-center lg:text-left text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 lg:mx-10 sm:w-[550px]">
+        {contentData.title}
           </h1>
+      
           <div 
             className="flex transition-transform duration-300 ease-in-out gap-0"
             style={{

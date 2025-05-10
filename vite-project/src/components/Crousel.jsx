@@ -5,10 +5,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const image = [
-  "/SONATEKBANNERS.jpg",
-  "/sonatch.jpg",
+ 
+  
   "/SONATEKbaner2.jpg",
   "/SONATEKbaner3.jpg",
+   "/SONATEKBANNERS.jpg",
+   "/sonatch.jpg",
 ];
 
 const Crousel = () => {
@@ -56,7 +58,7 @@ const Crousel = () => {
   };
   
   return (
-    <div className="relative w-full mx-auto overflow-hidden">
+    <div className="relative  w-full mx-auto overflow-hidden ">
       <Slider ref={sliderRef} {...settings}>
         {image.map((item, index) => (
           <div key={index} className="outline-none">
@@ -66,14 +68,14 @@ const Crousel = () => {
                 src={item} 
                 alt={`slide-${index}`}
               />
-              <div className="absolute bottom-8 right-8 md:bottom-16 md:right-16 transform transition-all duration-700 ease-out">
+              {/* <div className="absolute bottom-8 right-8 md:bottom-16 md:right-16 transform transition-all duration-700 ease-out">
                 <button className="flex items-center gap-2 p-2 rounded-lg bg-[#12396d] shadow-lg hover:bg-[#1a4d8c] transition-all duration-300">
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <FaSquareWhatsapp className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </a>
                   <span className="text-white text-sm font-medium hidden sm:block">Connect on WhatsApp</span>
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
@@ -82,20 +84,25 @@ const Crousel = () => {
       {/* Custom Navigation Arrows */}
       <button 
         onClick={() => sliderRef.current.slickPrev()}
-        className="absolute left-4 top-1/2 -translate-y-1/2 border-2 border-white hidden lg:flex items-center justify-center cursor-pointer text-white p-4 rounded-full z-20 bg-black/30 hover:bg-black/50 transition-all duration-300"
+        className="absolute left-4 top-1/2 -translate-y-1/2 border-2 border-white hidden lg:flex  lg:items-center  lg:justify-center cursor-pointer text-white p-4 rounded-full z-20 bg-black/30 hover:bg-black/50 transition-all duration-300"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/>
-        </svg>
+       <div className="w-10 h-10   rounded-full flex items-center justify-center">
+  <svg className='' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path fill="white" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z"/>
+  </svg>
+</div>
       </button>
       
       <button 
         onClick={() => sliderRef.current.slickNext()}
         className="absolute right-4 top-1/2 -translate-y-1/2 border-2 border-white hidden lg:flex items-center justify-center cursor-pointer text-white p-4 rounded-full z-20 bg-black/30 hover:bg-black/50 transition-all duration-300"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <div className="w-10 h-10  rounded-full flex items-center justify-center">
+
+        <svg  className =" " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path fill="currentColor" d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887t.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75t-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1t-.375-.888t.375-.887z"/>
         </svg>
+        </div>
       </button>
       
       {/* Indicator Dots */}

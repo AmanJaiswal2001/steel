@@ -12,19 +12,23 @@ const contentData = {
   processIntro: 'At Sonatek Steel, hot rolled sheets are manufactured through the following stages:',
   processes: [
     {
-      title: 'Reheating:',
+      num:"1",
+      title: 'Reheating',
       text: 'Steel slabs or blooms are reheated above 900°C to refine the internal grain structure. This eliminates casting defects and prepares the metal for uniform rolling, ensuring superior mechanical properties and finish.'
     },
     {
-      title: 'Roughing & Finishing:',
+      num:"2",
+      title: 'Roughing & Finishing',
       text: 'The heated material undergoes thickness reduction in roughing and finishing mills. Sonatek uses advanced reversible Steckel mills and high-speed Tandem mills to achieve accurate dimensions and optimal surface quality.'
     },
     {
-      title: 'Laminar Cooling:',
+      num:"3",
+      title: 'Laminar Cooling',
       text: 'Controlled cooling using water sprays brings the sheet temperature below 500°C. This process stabilizes the steel’s structure and ensures improved flatness and consistency across the sheet surface.'
     },
     {
-      title: 'Cutting & Shearing:',
+      num:"4",
+      title: 'Cutting & Shearing',
       text: 'After cooling, the sheet is cut to required lengths and widths. Sonatek employs high-precision shearing lines to deliver sheets tailored to customer specifications.'
     }
   ],
@@ -49,7 +53,7 @@ const HotRollSheetPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   // const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
- 
+  const [isRevealed, setIsRevealed] = useState({});
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 840) {
@@ -109,25 +113,53 @@ const HotRollSheetPage = () => {
         </motion.div>
       </div>
 
-      <div className="lg:px-40 w-full px-10">
-        <p className="text-[36px] text-orange-400 uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
-        <p className="text-[60px] leading-12 text-orange-400 uppercase  font-poppins font-bold">Hr Sheets</p>
-        <div className="flex flex-col mt-5 gap-4 w-[80%]">
+      <div className="lg:px-20 w-full px-10">
+        <p className="text-[36px] text-black *:uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
+        <p className="text-[60px] leading-12 text-black uppercase  font-poppins font-bold">Hr Sheets</p>
+        {/* <div className="flex flex-col mt-5 gap-4 w-[80%]"> */}
           <p className="text-[20px] font-poppins font-medium">{contentData.processIntro}</p>
-          {contentData.processes.map((item, index) => (
-            <div key={index} className="flex gap-2 justify-center">
-              <svg className="pt-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
-              </svg>
-              <div>
-                <span className="text-[15px] font-bold font-poppins">
-                  {item.title}
-                  <span className="font-normal text-[15px] font-poppins"> {item.text}</span>
-                </span>
-              </div>
-            </div>
-          ))}
+          <div className="flex  mt-5 gap-4 w-full">
+           {contentData.processes.map((item, index) => (
+            <div
+  key={index}
+  className="w-full xl:w-1/3 h-80 relative group cursor-pointer"
+  onClick={() => setIsRevealed((prev) => ({ ...prev, [index]: !prev[index] }))}
+>
+  {/* Hover Overlay */}
+  <div
+  className={`absolute top-0 left-0 inset-0 w-full h-full bg-gray-300 flex  flex-col z-10 transition-opacity duration-500 ${
+    isRevealed?.[index] ? "opacity-0" : "opacity-100"
+  } group-hover:opacity-0`}
+>
+  <div className="top-0 left-0">
+    <p className="text-9xl font-bold text-[#12396d] font-poppins">{item.num}</p>
+    <p className="text-3xl   text-center mt-10  uppercase font-bold text-[#12396d] font-poppins">{item.title}</p>
+  </div>
+</div>
+
+
+  {/* Actual Content */}
+  <div className="flex gap-3 items-start h-full w-full p-5 bg-[#12396d]  justify-start relative z-0 rounded-md">
+    {/* <svg
+      className="mt-1 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+    >
+      <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
+    </svg> */}
+    <div className=' relative'>
+      <span className="font-normal block  h-60  text-white">{item.text}</span>
+      <p className="text-5xl  text-end       font-bold text-white font-poppins">{item.num}</p>
+    </div>
+  </div>
+</div>
+
+))}
+
         </div>
+        {/* </div> */}
       </div>
 
       <div className="relative lg:h-full mt-10">
@@ -144,29 +176,39 @@ const HotRollSheetPage = () => {
   <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10 px-5 sm:px-10 lg:px-20 xl:px-40 pt-10 sm:pt-16">
     {/* Left Column */}
     <div className="w-full lg:w-1/2 flex flex-col">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
+      {/* <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold text-orange-400 sm:mt-5">
         Features
-      </h1>
+      </h1> */}
 
       <motion.div
-        className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.9 }}
-      >
+      className="w-full sm:pt-8 h-64 sm:h-80 md:h-[400px] lg:h-[500px] relative group overflow-hidden rounded-2xl"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: 'easeOut' }}
+  viewport={{ once: true, amount: 0.8 }}
+  >
         <motion.img
           src="/hrcn.jpg"
-          className="w-full h-full object-cover rounded-lg"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
+          alt="Feature"
+    className="w-full h-full object-cover rounded-2xl shadow-2xl transition-transform duration-500 ease-in-out scale-100 group-hover:scale-[1.05]"
+    animate={{ y: [0, -10, 0] }}
+    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+     />
       </motion.div>
     </div>
 
     {/* Right Column */}
-    <div className="w-full lg:w-1/2 flex flex-col justify-center">
-      <p className="font-medium text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
+    <motion.div className="w-full lg:w-1/2 flex flex-col justify-center">
+    <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-white via-gray-200 to-black bg-clip-text text-transparent "
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    Features
+  </motion.h1>
+      <p className="font-medium mt-5 text-base sm:text-lg px-2 border-l-2 border-orange-400 text-white font-poppins">
         {contentData.featureText}
       </p>
 
@@ -182,7 +224,7 @@ const HotRollSheetPage = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   </div>
 </div>
 
@@ -199,29 +241,35 @@ const HotRollSheetPage = () => {
 
   {/* Content */}
   <div className="relative z-10 w-full px-4 sm:px-10 md:px-20 lg:px-40 py-10">
-    <h1 className="text-3xl sm:text-4xl lg:text-[50px] uppercase font-poppins font-extrabold text-orange-400 mt-5">
-      MANUFACTURING RANGES
-    </h1>
+  <motion.h1
+    className="text-3xl sm:text-4xl md:text-5xl uppercase font-poppins font-extrabold bg-gradient-to-r from-white via-gray-200 text-center to-white bg-clip-text text-transparent sm:mt-5"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.8 }}
+  >
+    MANUFACTURING RANGES
+  </motion.h1>
 
-    <div className="mt-6 overflow-x-auto snap-start">
+  <div className="mt-6 overflow-x-auto snap-start">
       <table className="min-w-[600px] w-full  rounded-lg overflow-hidden">
         <thead>
           <tr>
             <th
               rowSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa] font-poppins text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Product
             </th>
             <th
               colSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa] font-poppins  text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Max Width
             </th>
             <th
               colSpan={2}
-              className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+              className="bg-[#f5f6fa]  font-poppins  text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
             >
               Thickness
             </th>
@@ -230,7 +278,7 @@ const HotRollSheetPage = () => {
             {["Min", "Max", "Min", "Max"].map((label, idx) => (
               <th
                 key={idx}
-                className="bg-orange-400 font-poppins text-white text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
+                className="bg-[#f5f6fa]  font-poppins  text-[#12396d] text-center p-3 sm:p-4 font-semibold border border-[#12396d]"
               >
                 {label}
               </th>
@@ -243,11 +291,11 @@ const HotRollSheetPage = () => {
             ["N1", "1000", "1650", "2.0 *", "10"],
             ["2E", "1000", "1600", "1.4 *", "6.7"],
           ].map((row, idx) => (
-            <tr key={idx} className={idx % 2 === 1 ? "bg-gray-50" : ""}>
+            <tr key={idx} className={idx % 2 === 1 ? "bg-white" : ""}>
               {row.map((cell, cIdx) => (
                 <td
                   key={cIdx}
-                  className="text-center p-3 sm:p-4 font-poppins border border-[#12396d]"
+                  className="text-center bg-white p-3 sm:p-4 font-poppins border  text-[#12396d]"
                 >
                   {cell}
                 </td>
@@ -296,8 +344,8 @@ const HotRollSheetPage = () => {
 
     {/* Cards Container */}
     <div className="overflow-x-auto sm:w-[80%] w-full m-auto  lg:overflow-hidden">
-    <h1 className="sm:text-2xl text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 sm:w-[550px]">
-            {contentData.title}
+    <h1 className="sm:text-2xl text-center lg:text-left text-lg text-[#12396d] z-10 font-poppins font-bold  mx-0 lg:mx-10 sm:w-[550px]">
+        {contentData.title}
           </h1>
       <div
         className={`flex   items-center lg:transition-transform duration-300 ease-in-out lg:gap-0 ${currentIndex > 0 ? '' : ''}`}

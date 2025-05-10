@@ -1,4 +1,4 @@
-import React, { useRef, useEffect,useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 const sliderData = [
   {
@@ -32,7 +32,6 @@ const sliderData = [
     ],
   },
 ];
-
 
 const Sliderbaner = ({ onComplete, onBack }) => {
   const containerRef = useRef(null);
@@ -74,10 +73,9 @@ const Sliderbaner = ({ onComplete, onBack }) => {
         scrollToIndex(newIndex);
       }
 
-      // Allow scroll again after delay
       setTimeout(() => {
         setCanScroll(true);
-      }, 1000); // 1 second pause
+      }, 1000);
     };
 
     container.addEventListener('wheel', handleWheel, { passive: false });
@@ -90,43 +88,47 @@ const Sliderbaner = ({ onComplete, onBack }) => {
   return (
     <div className="w-full h-full sm:mt-0">
       <div className="w-full h-[500px] overflow-hidden relative">
-        <div
-          ref={containerRef}
-          className="w-full h-full flex scroll-smooth no-scrollbar"
-        >
-          {sliderData.map((item, index) => (
+        {/* Slide Indicators (Dots) */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+          {sliderData.map((_, index) => (
             <div
               key={index}
-              className="w-screen h-full flex-shrink-0 relative snap-start"
-            >
-              <img
-                src={item.image}
-                alt={`slide-${index}`}
-                className="w-full h-full object-cover"
-              />
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentIndex === index ? 'bg-white scale-125' : 'bg-gray-400'
+              }`}
+            />
+          ))}
+        </div>
+
+        <div ref={containerRef} className="w-full h-full flex scroll-smooth no-scrollbar">
+          {sliderData.map((item, index) => (
+            <div key={index} className="w-screen h-full flex-shrink-0 relative snap-start">
+              <img src={item.image} alt={`slide-${index}`} className="w-full h-full object-cover" />
+
+              {/* Top Left Text */}
               <div className="absolute top-10 sm:left-20 left-10 text-white">
                 <p className="font-bold text-[36px] font-poppins">{item.topLeft.title}</p>
                 <p className="font-medium text-[18px] font-poppins">{item.topLeft.subtitle}</p>
               </div>
+
+              {/* Bottom Info */}
               <div className="absolute bottom-10 left-4 sm:left-0 sm:w-full text-white md:px-20 xl:px-40">
-  <div className="flex-col sm:flex sm:flex-row gap-5 bg-[#2241a6] opacity-80 rounded-xl p-4 shadow-md">
-    {item.bottomInfo.map((info, idx) => (
-      <div
-        key={idx}
-        className="sm:flex-1 border-t-2 border-b-2 border-orange-500 px-3 text-center"
-      >
-        <p className="font-poppins w-40 sm:w-full text-white sm:text-[36px] font-bold drop-shadow-md">
-          {info.line1}
-        </p>
-        <p className="font-poppins w-40 sm:w-full text-white sm:text-[18px] font-normal drop-shadow-sm">
-          {info.line2}
-        </p>
-      </div>
-    ))}
-  </div>
-</div>
-
-
+                <div className="flex-col sm:flex sm:flex-row gap-5 bg-[#2241a6] opacity-80 rounded-xl p-4 shadow-md">
+                  {item.bottomInfo.map((info, idx) => (
+                    <div
+                      key={idx}
+                      className="sm:flex-1 border-t-2 border-b-2 border-orange-500 px-3 text-center"
+                    >
+                      <p className="font-poppins w-40 sm:w-full text-white sm:text-[36px] font-bold drop-shadow-md">
+                        {info.line1}
+                      </p>
+                      <p className="font-poppins w-40 sm:w-full text-white sm:text-[18px] font-normal drop-shadow-sm">
+                        {info.line2}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -134,6 +136,5 @@ const Sliderbaner = ({ onComplete, onBack }) => {
     </div>
   );
 };
-
 
 export default Sliderbaner;
