@@ -23,8 +23,8 @@ const Strainless= () => {
     <h1 className='font-bold md:text-3xl sm:text-2xl text-xl text-[#262626] leading-6 font-poppins w-96 md:px-10 sm:px-10 px-5'>Stainless Steel</h1>
     {/* sidebar */}
 
-<div className='flex gap-10 md:w-[90%] w-full md:mt-5 mt-0  rounded-lg md:mx-10   '>
-    <div className='w-1/4 hidden lg:block'>
+<div className='flex gap-10 md:w-[80%]  w-full md:mt-5 mt-0  rounded-lg md:mx-10   '>
+    <div className='w-2/6 hidden lg:block'>
 <Sidebar activeType={activeType} setActiveType={setActiveType} 
  items={[
               { type: 'hot', label: 'Hot rolled sheets', link: '/mildStainless' },

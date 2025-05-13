@@ -31,7 +31,7 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
   if (!product) return <div className="font-poppins text-3xl font-bold text-center">Product not found</div>;
 
   return (
-    <div className=" w-full px-5 mb-20 lg:px-20 z-10 pt-10 ">
+    <div className=" w-full px-5 mb-20 lg:px-20 z-10 pt-24 ">
      
      <div className="flex w-full  lg:gap-5 lg:justify-between  ">
     <div className="w-full  lg:px-0 lg:flex lg:gap-5">
@@ -90,34 +90,34 @@ setSelectedWidth(null)
 />
 
 
-<div className="flex items-center gap-2 pt-2">
-  <div className="bg-[#f2f6ff] rounded-sm font-poppins w-64 h-10 flex justify-center items-center">
-    <span className="flex gap-2 justify-center items-center">
-      <h6 className="font-poppins lg:font-sm text-[12px] font-semibold">Custom length (mm):</h6>
-      <input 
-        type="text"
-        value={customLength}
-        onChange={(e) => {
-          if (selectedWidth && !selectedLength) { // width selected ho aur length select NA ho
-            const onlyNumsWithDecimal = e.target.value.replace(/[^0-9.]/g, "");
-            setcustomLength(onlyNumsWithDecimal);
-          }
-        }}
-        // showMessage={!selectedLength}
-        disabled={!selectedWidth || selectedLength} // <-- yeh condition: ya to width nahi ya length selected
-        className={`outline-none w-20 lg:h-6 h-8 p-2 rounded-sm border 
-          ${!selectedWidth || selectedLength
+<div className="flex flex-col sm:flex-row sm:items-center gap-2 pt-2 w-full">
+  <div className="bg-[#f2f6ff] rounded-sm font-poppins w-[40%] sm:w-64 h-auto sm:h-10 flex flex-col sm:flex-row justify-between items-start sm:items-center px-2 py-1">
+    <label className="font-poppins text-[12px] font-semibold mb-1 sm:mb-0">
+      Custom length (mm):
+    </label>
+    <input 
+      type="text"
+      value={customLength}
+      onChange={(e) => {
+        if (selectedWidth && !selectedLength) {
+          const onlyNumsWithDecimal = e.target.value.replace(/[^0-9.]/g, "");
+          setcustomLength(onlyNumsWithDecimal);
+        }
+      }}
+      disabled={!selectedWidth || selectedLength}
+      className={`outline-none w-full sm:w-24 h-8 sm:h-6 p-2 rounded-sm border text-sm
+        ${
+          !selectedWidth || selectedLength
             ? "bg-gray-400 text-gray-500 border-gray-500 cursor-not-allowed"
             : "bg-white text-black border-gray-300"
-          }`}
-      />
-    </span>
+        }`}
+    />
   </div>
-  <p className="text-[#262626] font-poppins font-sm font-normal">
-    Enter a value between 2500 to 12000
+
+  <p className="text-[#262626] font-poppins text-xs sm:text-sm font-normal">
+    Enter a value custom length value
   </p>
 </div>
-
 
 
 
@@ -179,7 +179,10 @@ onChange={(e) => {
     setcustomLength("");
     setcustomNumber("");
       } 
-    }}>      
+    }}
+    disabled={!(selectedThickness && selectedWidth &&selectedLength ||customLength || customNumber)}    
+   
+    >      
      <a  >
      <FaSquareWhatsapp
      className='w-10 h-10 text-white '

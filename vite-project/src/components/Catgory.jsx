@@ -7,7 +7,7 @@ const Catgory = () => {
     Width: null,
     Length: null });
   return (
-    <div className='  h-full mt-10 flex w-full  xl:gap-10 px-5 gap-5 lg:px-16 lg:gap-8 md:px-10 md:gap-8 xl:px-10' >
+    <div className='  h-full mt-24 flex w-full px-0  xl:gap-10  gap-5 lg:px-16 lg:gap-8 md:px-10 md:gap-8 xl:px-10' >
     {/* filter */}
    
     <div className='w-96 hidden   lg:block xl:block   '>
@@ -15,10 +15,10 @@ const Catgory = () => {
     </div>
   
     {/* catgory */}
-    <div className=' flex flex-col gap-2 h-full w-full lg:w-3/4'>
+    <div className=' flex flex-col gap-2   h-full w-full lg:w-3/4'>
    
-    <h1 className='font-extrabold text-2xl text-[#262626] font-poppins text-left '>Hot Rolled Mild Steel Sheets</h1>
-    <div className='relative  max-w-full mx-auto mb-10  lg:mx-0 xl:mx-0'>
+    <h1 className='font-extrabold text-2xl text-[#262626] font-poppins text-center sm:text-left '>Hot Rolled Mild Steel Sheets</h1>
+    <div className='relative  max-w-full  mb-10 m-auto   lg:mx-0 xl:mx-0'>
     <HotRolledCatgory filters={filters}/>
     </div>
     </div>

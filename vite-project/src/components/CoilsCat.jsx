@@ -113,7 +113,7 @@ const  CoilsCat = ({filters}) => {
 
 
 
-<div class="grid w-[95%]  grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-10  place-items-center "> 
+<div class="grid w-[95%]  grid-cols-1  md:grid-cols-2 mx-auto sm:mx-0 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-0  place-items-center "> 
 {/* <div> */}
 
 

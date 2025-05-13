@@ -122,7 +122,7 @@ const ColdRolledCatgory = ({filters}) => {
       No products found matching the selected filters.
     </p>
   ) : (
-    <div class="grid w-[90%]  grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-10  place-items-center ">    {filteredData.map((card, index) => (
+    <div class="grid w-[90%]  grid-cols-1 m-auto sm:m-0 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-10  place-items-center ">    {filteredData.map((card, index) => (
         <Link key={index} to={`/coldproductsheet/${index}`}>
           <CardSheet {...card} />
         </Link>

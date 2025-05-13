@@ -31,7 +31,7 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
   if (!product) return <div className="font-poppins text-3xl font-bold text-center">Product not found</div>;
 
   return (
-    <div className=" w-full px-5 mb-20 lg:px-20 z-10 pt-10 ">
+    <div className=" w-full px-5 mb-20 lg:px-20 z-10 pt-24 ">
      
      <div className="flex w-full  lg:gap-5 lg:justify-between  ">
     <div className="w-full  lg:px-0 lg:flex lg:gap-5">

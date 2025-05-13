@@ -98,7 +98,7 @@ const Sheets300 = ({type}) => {
 
          {filteredCards.length>visibleCards&&(
           <button
-             className={`absolute -left-5 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7f16 ${currentIndex===0?"hidden":"block"}`}
+             className={`absolute -left-10 h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7f16 ${currentIndex===0?"hidden":"block"}`}
              onClick={prevSlide}
             disabled={currentIndex === 0}
           >
@@ -111,7 +111,7 @@ const Sheets300 = ({type}) => {
           {/* Next Button */}
           {filteredCards.length>visibleCards&&(
             <button
-            className={`absolute -right-5  h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
+            className={`absolute -right-10  h-9 w-9 top-[40%] hidden bg-[#e6f0ff] lg:flex items-center justify-center bg-opacity-50 cursor-pointer text-[#12396d] p-1 rounded-lg hover:bg-[#d7e7ff] ${currentIndex + visibleCards >= filteredCards.length ?"hidden":"block"}`}
             onClick={nextSlide}
             disabled={currentIndex + visibleCards >= cardData.length}
           >

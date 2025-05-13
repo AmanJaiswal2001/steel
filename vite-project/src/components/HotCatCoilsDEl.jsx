@@ -32,7 +32,7 @@ const [isMobileOpen, setIsMobileOpen] = useState(false);
   if (!product) return <div className="font-poppins text-3xl font-bold text-center">Product not found</div>;
 
   return (
-    <div className=" w-full px-5  mb-20 lg:px-20 z-10 pt-10  ">
+    <div className=" w-full px-5  mb-20 lg:px-20 z-10 pt-24  ">
      
      <div className="flex w-full  lg:gap-5 lg:justify-between  ">
      <div className="w-full  lg:px-0 lg:flex lg:gap-5">
@@ -141,14 +141,15 @@ onClick={()=>{
 </div>
 
 
-<div className="sm:h-48  lg:w-80 w-72     sm:flex md:flex lg:flex flex-col gap-4  rounded-lg">
+<div className="sm:h-48  lg:w-80 w-52     sm:flex md:flex lg:flex flex-col gap-4  rounded-lg">
 <h1 className="font-poppins font-bold text-lg pt-4">Send the all details on whatapps </h1>
-<a 
->
+{/* <a 
+> */}
       
         {/* whatapps buttom*/}
-       <button className={`flex gap-2 items-center justify-center p-2 rounded-lg w-64 
-      ${selectedThickness && selectedWidth || customNumber 
+       <button 
+       className={`flex gap-2 items-center justify-center p-2 rounded-lg w-full sm:w-64 transition-colors duration-200
+  ${selectedThickness && selectedWidth || customNumber 
         ? 'bg-green-500 cursor-pointer' 
         : 'bg-gray-400 cursor-not-allowed'}`}
        onClick={() => {
@@ -167,14 +168,16 @@ onClick={()=>{
     // setcustomLength("");
     setcustomNumber("");
       } 
-    }}>      
-     <a  >
+    }}
+      disabled={!(selectedThickness && selectedWidth || customNumber)}    
+    
+    > <a  >
      <FaSquareWhatsapp
-     className='w-10 h-10 text-white '
+    className="w-6 h-6 sm:w-10 sm:h-10 text-white"
       />
-        </a><span className='text-white font-poppins font-medium'>Enquire On Whatsapp</span>
+        </a><span className='text-white font-poppins font-medium text-sm sm:text-base'>Enquire On Whatsapp</span>
 </button>
-      </a>
+      {/* </a> */}
 </div>
 
 
