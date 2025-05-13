@@ -8,19 +8,22 @@ export  const BlogCard=()=> {
       id: 0,
       title: "TEMPERATURE",
       description: "Hot rolling primarily involves deforming the slab/bloom at high temperature & roll pressure.",
-      image: "/blog1.jpg"
+      image: "/blog1.jpg",
+      href:"/temp"
     },
     {
       id: 1,
       title: "SMOOTH SURFACE",
       description: "Cold rolling in performed to produce sheets & strips with smooth surfaces, having a better surface finish with accurate dimensions.",
-      image: "/blog2.jpg"
+      image: "/blog2.jpg",
+        href:"/smooth"
     },
     {
       id: 2,
       title: "BASICALLY STEEL",
-      description: "Galvanized iron (GI) sheets are basically steel sheets which have been coated with zinc.",
-      image: "/blog3.jpg"
+      description: "Steel is an alloy primarily composed of iron and a small percentage of carbon, which enhances its strength and fracture resistance.",
+      image: "/blog3.jpg",
+        href:"/basic"
     }
   ];
 
@@ -75,7 +78,7 @@ export  const BlogCard=()=> {
                                  ${activeIndex === index ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-20'}`}>
                     <p className="text-white text-opacity-90">{card.description}</p>
                     <a 
-                      href="#" 
+                      href={card.href}
                       className="inline-block mt-4 font-poppins  font-bold  text-orange-600   transition-colors"
                     >
                       Read More →
@@ -117,7 +120,7 @@ export  const BlogCard=()=> {
                              `}>
                 <p className="text-sm text-white text-opacity-90">{card.description}</p>
                 <a
-                  href="#"
+                  href={card.href}
                   className="inline-block mt-2 text-sm font-bold text-orange-600 transition-colors"
                 >
                   Read More →

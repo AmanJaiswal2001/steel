@@ -7,7 +7,7 @@ const PhoneCall = () => {
     transition={{ duration: 0.5, delay: 0.3 }}
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
-    className="fixed right-2 sm:right-4 bottom-16 sm:bottom-6 md:bottom-4 flex  items-center justify-start font-poppins    z-50 "
+    className="fixed right-2 sm:right-4 bottom-4 sm:bottom-6 md:bottom-4 flex  items-center justify-start font-poppins    z-50 "
   >   <a 
       
       href="https://wa.me/919891998846"

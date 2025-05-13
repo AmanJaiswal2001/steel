@@ -61,7 +61,7 @@ const Footer = () => {
         <nav className='flex flex-col gap-3'>
           <h3 className="text-lg text-white font-semibold">Policy</h3>
           <a className="text-white hover:underline font-light text-sm">Terms & Conditions</a>
-          <a className="text-white hover:underline font-light text-sm">Privacy Policy</a>
+          <a href='/privacy' className="text-white hover:underline font-light text-sm">Privacy Policy</a>
           <a className="text-white hover:underline font-light text-sm">Return Policy</a>
         </nav>
 
@@ -90,14 +90,14 @@ const Footer = () => {
       </footer>
 
       <div className='h-16 w-[90%] mx-auto flex items-center border-t border-t-white justify-center'>
-        <p className='text-white font-poppins text-sm pt-2'>© Copyright 2025 Sonatek</p>
+        <p className='text-white font-poppins text-sm pt-2'>© Copyright 2025 Sonatek design by</p>
         <a
           target='_blank'
           rel='noopener noreferrer'
           href='https://ganesyx.com/'
           className='text-white font-bold font-poppins mx-2 text-sm pt-2 hover:underline'
         >
-          Design by Ganesyx
+           Ganesyx
         </a>
       </div>
     </div>

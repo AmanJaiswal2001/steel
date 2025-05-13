@@ -1,27 +1,58 @@
 import { createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
-import './App.css';
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 
-import Nav from './components/Nav';
-import Layout from './components/Layout';
-import Footer from './components/Footer';
-import Catgory from './components/Catgory';
-import ColdCatgory from './components/ColdCatgory';
-import HotCatDelevery from './components/HotCatDelevery';
-import Hotrolledcoilcat from './components/Hotrolledcoilcat';
-import HotCatCoilsDEl from './components/HotCatCoilsDEl';
-import ColdSheetDel from './components/ColdSheetDel';
-import ColdCoils from './components/ColdCoils';
-import ColdCoilsdel from './components/ColdCoilsdel';
-import PhoneCall from './components/PhoneCall';
-import SearchPage from './components/SearchPage';
-import Product from './components/Product';
-import About from './components/About';
-import ContactFrom from './components/ContactForm';
-import HotRollSheetPage from './components/HotRollSheetPage';
-import HRCoils from './components/HRCoils';
-import CRSheets from './components/CRSheets';
-import CRCoils from './components/CRCoils';
+const Nav = lazy(() => import('./components/Nav'));
+const Footer = lazy(() => import('./components/Footer'));
+const PhoneCall = lazy(() => import('./components/PhoneCall'));
+const Layout = lazy(() => import('./components/Layout'));
+const Catgory = lazy(() => import('./components/Catgory'));
+const ColdCatgory = lazy(() => import('./components/ColdCatgory'));
+const HotCatDelevery = lazy(() => import('./components/HotCatDelevery'));
+const Hotrolledcoilcat = lazy(() => import('./components/Hotrolledcoilcat'));
+const HotCatCoilsDEl = lazy(() => import('./components/HotCatCoilsDEl'));
+const ColdSheetDel = lazy(() => import('./components/ColdSheetDel'));
+const ColdCoils = lazy(() => import('./components/ColdCoils'));
+const ColdCoilsdel = lazy(() => import('./components/ColdCoilsdel'));
+const SearchPage = lazy(() => import('./components/SearchPage'));
+const Product = lazy(() => import('./components/Product'));
+const About = lazy(() => import('./components/About'));
+const ContactFrom = lazy(() => import('./components/ContactForm'));
+const HotRollSheetPage = lazy(() => import('./components/HotRollSheetPage'));
+const HRCoils = lazy(() => import('./components/HRCoils'));
+const CRSheets = lazy(() => import('./components/CRSheets'));
+const CRCoils = lazy(() => import('./components/CRCoils'));
+const PrivacyPage = lazy(() => import('./components/PrivacyPage'));
+const Blog1 = lazy(() => import('./components/Blog1'));
+const Blog2 = lazy(() => import('./components/Blog2'));
+const Blog3 = lazy(() => import('./components/Blog3'));
+
+const AppLayout = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-screen w-full">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-orange-500"></div>
+          <p className="ml-4 text-orange-600 font-semibold text-lg">Loading...</p>
+        </div>
+      }
+    >
+      <div className="w-full overflow-x-hidden">
+        <Nav />
+        <main className="w-full overflow-x-hidden">
+          <Outlet />
+        </main>
+        <Footer />
+        <PhoneCall />
+      </div>
+    </Suspense>
+  );
+};
 
 const appRouter = createBrowserRouter([
   {
@@ -45,28 +76,15 @@ const appRouter = createBrowserRouter([
       { path: "hrcoils", element: <HRCoils /> },
       { path: "crsheets", element: <CRSheets /> },
       { path: "crcoils", element: <CRCoils /> },
+      { path: "privacy", element: <PrivacyPage /> },
+      { path: "temp", element: <Blog1 /> },
+
+{ path: "smooth", element: <Blog2 /> },
+{ path: "basic", element: <Blog3 /> },
+      
     ],
   },
 ]);
-
-function AppLayout() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
-  return (
-    <div className="w-full overflow-x-hidden">
-      <Nav />
-      <main className="w-full overflow-x-hidden">
-        <Outlet />
-      </main>
-      <Footer />
-      <PhoneCall />
-    </div>
-  );
-}
 
 function App() {
   return <RouterProvider router={appRouter} />;

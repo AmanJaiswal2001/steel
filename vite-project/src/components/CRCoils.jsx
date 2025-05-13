@@ -126,12 +126,12 @@ const CRCoils = () => {
         <p className="sm:text-[60px] text-3xl leading-12 text-black uppercase  font-poppins font-bold">Cr coils</p>
         {/* <div className="flex flex-col mt-5 gap-4 w-[80%]"> */}
           <p className="text-[20px] font-poppins font-medium">{contentData.processIntro}</p>
-          <div className=" mt-5  w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2">
+          <div className=" mt-5  w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-2">
 
            {contentData.processes.map((item, index) => (
             <div
   key={index}
-  className="w-full xl:w-1/3 h-80 relative group cursor-pointer"
+  className="relative group cursor-pointer w-full h-80 rounded-lg shadow-lg overflow-hidden"
   onClick={() => setIsRevealed((prev) => ({ ...prev, [index]: !prev[index] }))}
 >
   {/* Hover Overlay */}
