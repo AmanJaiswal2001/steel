@@ -91,14 +91,14 @@ const Rating = ({ rating }) => {
 // TestimonialItem component
 const TestimonialItem = ({ testimonial, isActive }) => (
   <div 
-    className={`shadow-xl rounded-2xl  transition-all duration-300 p-6 
+    className={`shadow-xl rounded-2xl mt-4 transition-all duration-300 p-4 sm:p-6 
       ${isActive 
         ? "scale-110 z-10 bg-[#12396d] text-white" 
         : "scale-90 opacity-70 bg-white text-black "}`}
   >
-    <div className="mt-4">
+    <div className="sm:mt-4  h-full">
       <Rating rating={testimonial.rating} />
-      <p className={`mb-6 h-20 text-sm ${isActive ? "opacity-90" : "opacity-50"}`}>
+      <p className={`sm:mb-6 sm:h-24 text-sm h-36 ${isActive ? "opacity-90" : "opacity-50"}`}>
         {testimonial.description}
       </p>
       <div className="flex items-center">
@@ -174,11 +174,11 @@ export const  Testimonial=()=> {
   }
   const visibleTestimonials = getVisibleTestimonials();
   return (
-    <section className=" px-10 w-[98%] py-10 m-auto mt-5 sm:mt-0   border-t border-gray-900 bg-white  text-zinc-900 dark:text-white">
+    <section className=" px-10 w-[98%] py-5 sm:py-10 m-auto mt-5 sm:mt-0   border-t border-gray-900 bg-white  text-zinc-900 dark:text-white">
       <div className="container  w-full  mx-auto">
         <div className="flex w-full justify-center md:mb-6">
           <div className="sm:w-full text-center">
-            <h2 className="text-3xl text-black leading-none md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl text-black leading-none md:text-4xl font-bold sm:mb-4">
               Testimonial
             </h2>
             {/* <p className="text-black ">
@@ -188,9 +188,9 @@ export const  Testimonial=()=> {
           </div>
         </div>
         
-        <div className="relative mt-5">
+        <div className="relative sm:mt-5">
           {/* Carousel navigation */}
-          <div className="absolute top-1/2 -translate-y-1/2 cursor-pointer -left-8 z-20">
+          <div className="absolute top-1/2 -translate-y-1/2 cursor-pointer -left-10 z-20">
             <button 
               onClick={goToPrev}
               className="p-2 rounded-full cursor-pointer bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"
@@ -200,25 +200,23 @@ export const  Testimonial=()=> {
           </div>
           
           {/* Carousel items */}
-          <div className="flex flex-col sm:flex-row w-full justify-center items-center sm:gap-6 gap-4 sm:py-8 px-4  scroll-smooth">
-            {visibleTestimonials.map((item, index) => (
-              <div 
-                key={index} 
-                className={`transition-all duration-500 flex-shrink-0 ${
-  index === 1 ? "z-10 scale-100" : "z-0 scale-95"
-}`}
->
-               <div className="w-[320px] sm:w-[320px] md:w-[350px]">
-        <TestimonialItem 
-          testimonial={item} 
-          isActive={index === 1}
-        />
+          <div className="grid grid-cols-1  sm:grid-cols-3 gap-0 sm:py-2 xl:px-20   px-5 ">
+  {visibleTestimonials.map((item, index) => (
+    <div 
+      key={index}
+      className={`transition-all duration-500 ${
+        item.isActive ? "z-10 scale-100" : "z-0 scale-95"
+      }`}
+    >
+      <div className="w-full   md:w-[350px] ">
+        <TestimonialItem testimonial={item} isActive={item.isActive} />
       </div>
-              </div>
-            ))}
-          </div>
+    </div>
+  ))}
+</div>
+
           
-          <div className="absolute top-1/2 -translate-y-1/2 -right-8 cursor-pointer z-20">
+          <div className="absolute top-1/2 -translate-y-1/2 -right-10 cursor-pointer z-20">
             <button 
               onClick={goToNext}
               className="p-2 rounded-full cursor-pointer bg-white shadow-lg dark:bg-slate-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600"
@@ -229,7 +227,7 @@ export const  Testimonial=()=> {
         </div>
         
         {/* Carousel indicators */}
-        <div className="flex justify-center sm:mt-6 gap-2">
+        <div className="flex justify-center mt-6 gap-2">
           {testimonialList.map((_, index) => (
             <button
               key={index}

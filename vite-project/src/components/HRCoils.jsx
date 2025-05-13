@@ -121,13 +121,13 @@ const HRCoils = () => {
         </motion.div>
       </div>
 
-      <div className="lg:px-40 w-full px-10">
-        <p className="text-[36px] text-black uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
-        <p className="text-[60px] leading-12 text-black uppercase  font-poppins font-bold">Hr Coils</p>
+      <div className="lg:px-20 w-full px-10">
+        <p className="sm:text-[36px] text-xl text-black uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
+        <p className="sm:text-[60px] text-3xl leading-12 text-black uppercase  font-poppins font-bold">Hr Coils</p>
         {/* <div className="flex flex-col mt-5 gap-4 w-[80%]"> */}
           <p className="text-[20px] font-poppins font-medium">{contentData.processIntro}</p>
-          <div className="flex  mt-5 gap-4 w-full">
-           {contentData.processes.map((item, index) => (
+          <div className=" mt-5  w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2">
+          {contentData.processes.map((item, index) => (
             <div
   key={index}
   className="w-full xl:w-1/3 h-80 relative group cursor-pointer"
@@ -135,13 +135,13 @@ const HRCoils = () => {
 >
   {/* Hover Overlay */}
   <div
-  className={`absolute top-0 left-0 inset-0 w-full h-full bg-gray-300 flex  flex-col z-10 transition-opacity duration-500 ${
+  className={`absolute top-0 left-0 inset-0 w-full h-full bg-black flex  flex-col z-10 transition-opacity duration-500 ${
     isRevealed?.[index] ? "opacity-0" : "opacity-100"
   } group-hover:opacity-0`}
 >
   <div className="top-0 left-0">
-    <p className="text-9xl font-bold text-[#12396d] font-poppins">{item.num}</p>
-    <p className="text-3xl   text-center mt-10  uppercase font-bold text-[#12396d] font-poppins">{item.title}</p>
+    <p className="text-9xl font-bold px-2 text-white font-poppins">{item.num}</p>
+    <p className="text-3xl   text-center mt-10  uppercase font-bold text-white font-poppins">{item.title}</p>
   </div>
 </div>
 

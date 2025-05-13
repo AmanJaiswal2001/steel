@@ -58,10 +58,10 @@ const Crousel = () => {
   };
   
   return (
-    <div className="relative  w-full mx-auto overflow-hidden ">
+    <div className="relative h-full    w-full mx-auto overflow-hidden ">
       <Slider ref={sliderRef} {...settings}>
         {image.map((item, index) => (
-          <div key={index} className="outline-none">
+          <div key={index} className="pt-20 md:pt-0 w-full outline-none">
             <div className="relative">
               <img 
                 className="w-full h-full object-cover transform transition-transform duration-500" 
@@ -106,7 +106,7 @@ const Crousel = () => {
       </button>
       
       {/* Indicator Dots */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute bottom-4  left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {image.map((_, index) => (
           <button
             key={index}
@@ -141,10 +141,10 @@ export const CrouselCard = ({ images }) => {
   };
 
   return (
-    <div className="carousel-container w-full max-w-4xl mx-auto overflow-hidden">
+    <div className="carousel-container w-full shrink-0 sm:max-w-4xl mx-auto overflow-hidden">
       <Slider ref={sliderRef} {...settings}>
         {images.map((src, index) => (
-          <div className="outline-none px-2" key={index}>
+          <div className="outline-none sm:px-2" key={index}>
             <div className="transform transition-all duration-500 ease-out">
               <img 
                 className="w-full rounded-lg shadow-lg" 

@@ -78,10 +78,16 @@ const Sliderbaner = ({ onComplete, onBack }) => {
       }, 1000);
     };
 
+    const interval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % totalSlides;
+      scrollToIndex(nextIndex);
+    }, 5000);
+  
     container.addEventListener('wheel', handleWheel, { passive: false });
-
+  
     return () => {
       container.removeEventListener('wheel', handleWheel);
+      clearInterval(interval);
     };
   }, [currentIndex, canScroll, onComplete, onBack]);
 
@@ -112,12 +118,12 @@ const Sliderbaner = ({ onComplete, onBack }) => {
               </div>
 
               {/* Bottom Info */}
-              <div className="absolute bottom-10 left-4 sm:left-0 sm:w-full text-white md:px-20 xl:px-40">
-                <div className="flex-col sm:flex sm:flex-row gap-5 bg-[#2241a6] opacity-80 rounded-xl p-4 shadow-md">
+              <div className="absolute bottom-10 left-[20%] sm:left-0 sm:w-full text-white md:px-20 xl:px-40">
+                <div className="flex-col sm:flex sm:flex-row gap-5  bg-[#2241a6] opacity-80 rounded-xl p-4 shadow-md">
                   {item.bottomInfo.map((info, idx) => (
                     <div
                       key={idx}
-                      className="sm:flex-1 border-t-2 border-b-2 border-orange-500 px-3 text-center"
+                      className="sm:flex-1 border-t-2 border-b-2  my-2 border-orange-500 px-3 text-center"
                     >
                       <p className="font-poppins w-40 sm:w-full text-white sm:text-[36px] font-bold drop-shadow-md">
                         {info.line1}

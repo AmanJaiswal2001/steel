@@ -11,8 +11,8 @@ const yearData = {
   },
   "Automotive ": {
     label: "Manufacturing cars, buses, trucks, rail coaches, and parts",
-    largeImage: '/bushes.jpg',
-    smallImage: '/trucks.jpg',
+    largeImage: '/busmaking.jpg',
+    smallImage: '/truckmaking.jpg',
     title: "Automotive & Transportation"
   },
   "Oil & Gas ": {
@@ -120,7 +120,7 @@ function ConstructionAwardsSection() {
   return (
     <div 
       ref={sectionRef}
-      className="w-[94%] sm:h-full h-auto m-auto  rounded-xl sm:mt-10 mt-5 text-white relative overflow-hidden sm:py-16 py-5 px-10"
+      className="w-[94%] sm:h-full h-auto m-auto  rounded-xl sm:mt-10 mt-5 text-white relative overflow-hidden sm:py-16 py-5 px-5 sm:px-10"
     >
       <div className="absolute inset-0">
         <img src="/steptodown.jpg" alt="Background" className="w-full blur-xs h-full object-cover" />
@@ -142,7 +142,7 @@ function ConstructionAwardsSection() {
                 textStroke: '1px orange',
                 color: 'white',
               }}
-              className="sm:text-5xl text-2xl font-extrabold leading-tight mb-8 stroke-3-4  stroke-orange-600"
+              className="sm:text-5xl pt-5 sm:pt-0  text-2xl font-extrabold leading-tight mb-8 stroke-3-4  stroke-orange-600"
             >
               Top Industries Buying<br />
               Steel in Bulk
@@ -248,42 +248,43 @@ function ConstructionAwardsSection() {
 
             </div>
 
-            <div className="mt-5 sm:pr-24 pr-0 grid grid-cols-2 gap-10 sm:block">
-            <AnimatePresence mode="wait">
-  <motion.div
-    key={largeImage}
-    initial={{ opacity: 0, x: -40, scale: 0.95 }}
-    animate={{ opacity: 1, x: 0, scale: 1 }}
-    exit={{ opacity: 0, x: 40, scale: 0.95 }}
-    transition={{ duration: 0.8 }}
-    className="sm:rounded-full rounded-lg overflow-hidden sm:w-[380px] w-40 h-40  sm:h-64 mb-6"
-  >
-    <img 
-      src={largeImage} 
-      alt="Main" 
-      className="w-full shadow-2xl h-full object-cover" 
-    />
-  </motion.div>
-</AnimatePresence>
+            <div className="mt-5 pr-0    sm:pr-24 grid grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-10">
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={largeImage}
+      initial={{ opacity: 0, x: -40, scale: 0.95 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      exit={{ opacity: 0, x: 40, scale: 0.95 }}
+      transition={{ duration: 0.8 }}
+      className="rounded-lg sm:rounded-full   overflow-hidden w-full h-32 xs:h-52 sm:w-[380px] sm:h-64"
+    >
+      <img 
+        src={largeImage} 
+        alt="Main" 
+        className="w-full h-full object-cover shadow-2xl" 
+      />
+    </motion.div>
+  </AnimatePresence>
 
-<AnimatePresence mode="wait">
-  <motion.div
-    key={smallImage}
-    initial={{ opacity: 0, x: 40, scale: 0.95 }}
-    animate={{ opacity: 1, x: 0, scale: 1 }}
-    exit={{ opacity: 0, x: -40, scale: 0.95 }}
-    transition={{ duration: 0.8 }}
-    className="sm:rounded-full rounded-lg overflow-hidden sm:w-[540px] w-40 h-40 sm:h-52"
-  >
-    <img 
-      src={smallImage} 
-      alt="Sub" 
-      className="w-full shadow-2xl h-full object-cover" 
-    />
-  </motion.div>
-</AnimatePresence>
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={smallImage}
+      initial={{ opacity: 0, x: 40, scale: 0.95 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      exit={{ opacity: 0, x: -40, scale: 0.95 }}
+      transition={{ duration: 0.8 }}
+      className="rounded-lg sm:rounded-full overflow-hidden w-full h-32 xs:h-40 sm:w-[540px] sm:h-52"
+    >
+      <img 
+        src={smallImage} 
+        alt="Sub" 
+        className="w-full h-full object-cover shadow-2xl" 
+      />
+    </motion.div>
+  </AnimatePresence>
+</div>
 
-            </div>
+
           </div>
         </div>
       </div>

@@ -113,52 +113,41 @@ const HotRollSheetPage = () => {
         </motion.div>
       </div>
 
-      <div className="lg:px-20 w-full px-10">
-        <p className="text-[36px] text-black *:uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
-        <p className="text-[60px] leading-12 text-black uppercase  font-poppins font-bold">Hr Sheets</p>
+      <div className="lg:px-20 w-full px-10 ">
+        <p className="sm:text-[36px] text-xl text-black *:uppercase mt-10 font-poppins font-bold">{contentData.processTitle}</p>
+        <p className="sm:text-[60px] text-3xl leading-12 text-black uppercase  font-poppins font-bold">Hr Sheets</p>
         {/* <div className="flex flex-col mt-5 gap-4 w-[80%]"> */}
           <p className="text-[20px] font-poppins font-medium">{contentData.processIntro}</p>
-          <div className="flex  mt-5 gap-4 w-full">
-           {contentData.processes.map((item, index) => (
-            <div
-  key={index}
-  className="w-full xl:w-1/3 h-80 relative group cursor-pointer"
-  onClick={() => setIsRevealed((prev) => ({ ...prev, [index]: !prev[index] }))}
->
-  {/* Hover Overlay */}
-  <div
-  className={`absolute top-0 left-0 inset-0 w-full h-full bg-gray-300 flex  flex-col z-10 transition-opacity duration-500 ${
-    isRevealed?.[index] ? "opacity-0" : "opacity-100"
-  } group-hover:opacity-0`}
->
-  <div className="top-0 left-0">
-    <p className="text-9xl font-bold text-[#12396d] font-poppins">{item.num}</p>
-    <p className="text-3xl   text-center mt-10  uppercase font-bold text-[#12396d] font-poppins">{item.title}</p>
-  </div>
-</div>
-
-
-  {/* Actual Content */}
-  <div className="flex gap-3 items-start h-full w-full p-5 bg-[#12396d]  justify-start relative z-0 rounded-md">
-    {/* <svg
-      className="mt-1 text-white"
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
+          <div className=" mt-5  w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2">
+  {contentData.processes.map((item, index) => (
+    <div
+      key={index}
+      className="relative group cursor-pointer w-full h-80 rounded-lg shadow-lg overflow-hidden"
+      onClick={() => setIsRevealed((prev) => ({ ...prev, [index]: !prev[index] }))}
     >
-      <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
-    </svg> */}
-    <div className=' relative'>
-      <span className="font-normal block  h-60  text-white">{item.text}</span>
-      <p className="text-5xl  text-end       font-bold text-white font-poppins">{item.num}</p>
+      {/* Hover Overlay */}
+      <div
+        className={`absolute top-0 left-0 inset-0 w-full h-full bg-black flex flex-col z-10 transition-opacity duration-500 ${
+          isRevealed?.[index] ? "opacity-0" : "opacity-100"
+        } group-hover:opacity-0`}
+      >
+        <div className="top-0 left-0">
+          <p className="text-9xl font-bold px-2 text-white font-poppins">{item.num}</p>
+          <p className="text-3xl text-center mt-10 uppercase font-bold text-white font-poppins">{item.title}</p>
+        </div>
+      </div>
+
+      {/* Actual Content */}
+      <div className="flex gap-3 items-start h-full w-full p-5 bg-[#12396d] justify-start relative z-0 rounded-md">
+        <div className="relative">
+          <span className="font-normal block h-60 text-white">{item.text}</span>
+          <p className="text-5xl text-end font-bold text-white font-poppins">{item.num}</p>
+        </div>
+      </div>
     </div>
-  </div>
+  ))}
 </div>
 
-))}
-
-        </div>
         {/* </div> */}
       </div>
 

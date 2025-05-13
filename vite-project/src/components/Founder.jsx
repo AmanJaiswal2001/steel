@@ -1,17 +1,29 @@
 import React from 'react'
-
+import { motion } from "framer-motion"
 export const Founder = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row justify-between sm:px-6 lg:px-10 pt-5 sm:pt-8 lg:pt-0">
+    <div className="w-full flex flex-col gap-5 lg:flex-row justify-between sm:px-6 lg:px-10  sm:pt-8 lg:pt-0">
     {/* Left Image Section */}
-    <div className="w-full lg:w-[40%] flex justify-center mb-8 lg:mb-0">
-      <div className="w-[90%] sm:w-[550px]">
-        <img className="w-full sm:h-[500px] object-cover" src="/founde.png" alt="Founder" />
-      </div>
-    </div>
+    <div className="w-full lg:w-[40%] flex justify-center sm:mb-8 lg:mb-0">
+  <motion.div
+    className="w-[90%] sm:w-[550px]"
+    initial={{ opacity: 0, y: 60, scale: 0.9, rotate: -5 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+    whileHover={{ scale: 1.05 }}
+    viewport={{ once: true, amount: 0.5 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+  >
+    <img
+      className="w-full h-full sm:h-[500px] object-cover"
+      src="/indus.png"
+      alt="Founder"
+    />
+  </motion.div>
+</div>
+
   
     {/* Right Text Section */}
-    <div className="w-full lg:w-[60%] flex flex-col justify-center px-4 sm:px-6 lg:px-0">
+    <div className="w-full lg:w-[60%] flex flex-col justify-center  px-4 sm:px-6 lg:px-0">
       <div className="w-10 mb-2 hidden md:block">
         <img src="/quotation-mark-svgrepo-com (2).svg" alt="Quote Mark" />
       </div>
@@ -28,7 +40,7 @@ export const Founder = () => {
         <p className="font-semibold text-[24px] sm:text-[28px] pt-6 text-[#12396d] font-poppins">
           Adish Jain
         </p>
-        <p className="text-[16px] sm:text-[18px] font-medium text-gray-700">Chairman, Sonatek</p>
+        <p className="text-[16px] sm:text-[18px] font-medium text-gray-700">Director, Sonatek</p>
   
         <div className="bg-[#12396d] w-[95%] sm:w-[60%] md:w-[40%] h-14 mt-6 rounded-2xl cursor-pointer flex items-center justify-center text-white group overflow-hidden mx-auto sm:mx-0">
           <svg

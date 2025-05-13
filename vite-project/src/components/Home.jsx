@@ -21,34 +21,40 @@ const Home = () => {
   const handleSliderComplete = () => {
     awardsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
   const handleBackToTop = () => {
     bannerRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className='w-full   h-full'>
-      <div className='w-full   xl:h-screen h-auto'>
+    <div className="w-full min-h-screen overflow-x-hidden">
+      {/* Carousel Section */}
+      <section className="w-full h-auto md:h-screen overflow-hidden">
         <Crousel />
-      </div>
+      </section>
 
-      <div ref={bannerRef} className='bg-gray-50 h-full'>
+      {/* Expanding Cards + Scroll Section */}
+      <section ref={bannerRef} className="bg-gray-50 w-full overflow-hidden">
         <ColorChangeOnScroll />
-        <div  className='w-full h-full  xl:mt-10'>
+        <div className="w-full  mx-auto px-0 sm:px-6 lg:px-8 py-10">
           <Expandingcard />
         </div>
-      </div>
+      </section>
 
-      <div className=''>
+      {/* Slider Section */}
+      <section className="w-full overflow-hidden">
         <Sliderbaner onComplete={handleSliderComplete} onBack={handleBackToTop} />
-      </div>
+      </section>
 
-      <div className='' ref={awardsRef}>
+      {/* Awards Section */}
+      <section ref={awardsRef} className="w-full bg-white py-10 overflow-hidden">
         <ConstructionAwardsSection />
-      </div>
+      </section>
 
-      <div>
+      {/* Founder Section */}
+      <section className="w-full bg-gray-50  overflow-hidden">
         <Founder />
-      </div>
+      </section>
     </div>
   );
 };

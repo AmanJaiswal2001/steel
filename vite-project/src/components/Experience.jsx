@@ -52,7 +52,7 @@ const Experience = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-[96%] mx-auto flex flex-col lg:flex-row justify-between gap-10 mt-20  border-t border-gray-200 "
+      className="w-[96%] mx-auto flex flex-col lg:flex-row justify-between sm:gap-10  gap-0 sm:mt-20  mt-10 border-t border-gray-200 "
     >
       {/* Left Column */}
       <div className="w-full lg:w-[40%] pt-10 sm:px-10 flex flex-col items-center  border-gray-200 lg:border-r">
@@ -87,13 +87,20 @@ const Experience = () => {
 
           {/* Logos */}
           <div className="relative flex items-center gap-4">
-            <div className="w-24 sm:w-28 h-24 sm:h-28 border-2 border-[#2241a6] rounded-full overflow-hidden">
-              <img src="/SAIL_Logo.PNG" alt="SAIL" className="w-full h-full object-cover" />
-            </div>
-            <div className="w-24 sm:w-28 h-24 sm:h-28 border-2 border-[#2241a6] rounded-full overflow-hidden -ml-6">
-              <img src="/tata-steel.jpg" alt="Tata" className="w-full h-full object-cover" />
-            </div>
-          </div>
+  {/* SAIL Logo */}
+  <div className="w-24 sm:w-28 h-24 sm:h-28 rounded-full p-[2px] bg-gradient-to-r from-blue-600 to-orange-500">
+    <div className="w-full h-full rounded-full overflow-hidden bg-white">
+      <img src="/SAIL_Logo.PNG" alt="SAIL" className="w-full h-full object-cover" />
+    </div>
+  </div>
+
+  {/* Tata Logo */}
+  <div className="w-24 sm:w-28 h-24 sm:h-28 rounded-full p-[2px] bg-gradient-to-r from-blue-600 to-orange-500 -ml-6">
+    <div className="w-full h-full rounded-full overflow-hidden bg-white">
+      <img src="/tata-steel.jpg" alt="Tata" className="w-full h-full object-cover" />
+    </div>
+  </div>
+</div>
 
           <p className="text-[#333] text-[18px] font-light font-poppins mt-5 text-center lg:text-left">
             Sustainable creativity,<br /> timeless appeal.
@@ -102,7 +109,7 @@ const Experience = () => {
       </div>
 
       {/* Right Column */}
-      <div className="w-full lg:w-[60%] pt-10 px-5 sm:px-10">
+      <div className="w-full lg:w-[60%] sm:pt-10  px-5 sm:px-10">
         <div ref={textRef} className="flex flex-col justify-center h-full">
           <p className="uppercase font-normal text-[32px] sm:text-[48px] xl:text-[64px] leading-snug font-poppins whitespace-pre-wrap break-words">
             <span className="text-gray-800">{topText.substring(0, textDivider)}</span>
@@ -110,7 +117,7 @@ const Experience = () => {
           </p>
 
           <p className="text-[#5c5c5c] font-poppins font-light text-[18px] sm:text-[20px] xl:text-[22px] mt-5">
-            "Our customer-first approach, backed by robust supply chain management and strict quality control, has positioned Sonatek Tech as a trusted partner for leading construction, automotive, and infrastructure companies across India."
+            "Our customer-first approach, backed by robust supply chain management and strict quality control, has positioned Sonatek  as a trusted partner for leading construction, automotive, and infrastructure companies across India."
           </p>
         </div>
       </div>

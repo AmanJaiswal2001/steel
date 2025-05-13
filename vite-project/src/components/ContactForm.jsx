@@ -29,7 +29,7 @@ const  ContactForm=()=> {
   };
 
   return (
-    <div className="flex md:flex-row flex-col bg-white rounded-lg lg:w-[80%] mt-10 mb-20 m-auto h-full shadow-md overflow-hidden">
+    <div className="flex md:flex-row flex-col bg-white rounded-lg lg:w-[80%] mt-20 mb-20 m-auto h-full shadow-md overflow-hidden">
       {/* Left side - Form */}
       <div className="md:w-2/3 w-full p-10">
         <div className="mb-8">

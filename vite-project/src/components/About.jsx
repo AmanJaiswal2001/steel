@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <div>
-        <div className="  w-full mb-20  pt-5">
+        <div className="  w-full mb-20  pt-20 sm:pt-0">
         <div className="w-full relative">
         <img className='w-full' src="/about.jpg" />
 <div className='flex items-center justify-center'>
