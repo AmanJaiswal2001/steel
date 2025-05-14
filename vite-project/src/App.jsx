@@ -37,8 +37,8 @@ const AppLayout = () => {
     <Suspense
       fallback={
         <div className="flex items-center justify-center h-screen w-full">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-orange-500"></div>
-          <p className="ml-4 text-orange-600 font-semibold text-lg">Loading...</p>
+          <img src="/steelpic.jpg" className=" rounded-full h-24 w-24 border-t-4 border-b-4 border-[#12396d]"></img>
+          <p className="ml-4 text-[#12396d]  font-semibold text-lg">Loading...</p>
         </div>
       }
     >

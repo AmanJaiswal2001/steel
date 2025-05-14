@@ -72,10 +72,10 @@ const Blog3 = () => {
         <div>
             <div className="  w-full mb-20  pt-20 sm:pt-0">
             <div className="w-full relative">
-            <img className='w-full h-[500px]' src="/blog3.jpg" />
+            <img className='w-full h-[500px] object-cover' src="/blog3.jpg" />
     <div className='flex w-full '>
-    <p className='absolute text-white top-[60%] left-20  font-extrabold flex  md:text-4xl  m-auto font-poppins'>Steel Description</p>
-     <p className='absolute w-[60%] text-white top-[70%] left-20  font-semibold flex  md:text-xl  m-auto font-poppins'>Steel is an alloy primarily composed of iron and a small percentage of carbon, which enhances its strength and fracture resistance.</p>
+    <p className='absolute text-white top-[60%] sm:left-20  left-0 px-5 font-extrabold flex  md:text-4xl  m-auto font-poppins'>Steel Description</p>
+     <p className='absolute sm:w-[60%] px-5 text-white top-[70%] sm:left-20 left-0  font-semibold flex  text-xl md:text-2xl  m-auto font-poppins'>Steel is an alloy primarily composed of iron and a small percentage of carbon, which enhances its strength and fracture resistance.</p>
     </div>
                </div>
     
@@ -83,12 +83,12 @@ const Blog3 = () => {
                <div className="w-full sm:px-20 px-5  mx-auto  py-10 font-poppins text-[#262626]">
                { basicallySteelBlogContent.map((block, idx) => {
   if (block.type === "heading") {
-    return <h3 key={idx} className="text-3xl font-poppins font-semibold mb-2 ">{block.text}</h3>;
+    return <h3 key={idx} className="sm:text-3xl text-lg font-poppins font-semibold mb-2 ">{block.text}</h3>;
   } else if (block.type === "paragraph") {
     return <p key={idx} className=" text-lg leading-relaxed">{block.text}</p>;
   } else if (block.type === "list") {
     return (
-      <ul key={idx} className="list-disc ml-6 mb-4 text-sm text-gray-700 space-y-1">
+      <ul key={idx} className="list-disc ml-6 mb-2 text-sm text-gray-700 space-y-1">
         {block.items.map((item, i) => (
           <li key={i}>{item}</li>
         ))}

@@ -8,9 +8,9 @@ const Footer = () => {
     <div className='w-full  bg-[#12396d] '>
       <footer className="grid grid-cols-2  sm:flex sm:flex-row gap-5 w-full bottom-0 h-full justify-evenly font-poppins bg-[#12396d] p-10">
 
-        <nav className='flex flex-col justify-center items-center gap-5 w-56 col-span-2 sm:col-span-auto pt-2'>
+        <nav className='flex flex-col sm:justify-center sm:items-center gap-5 w-56 col-span-2 sm:col-span-auto pt-2'>
           <img src="/Group 611.png" className='w-56' alt="Sonatek Logo" />
-          <div className='flex justify-center gap-5 w-40'>
+          <div className='flex sm:justify-center justify-items-start  gap-5 w-40'>
           <a className="link link-hover">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24px" height="24px" fill="white">
                   <g transform="scale(10.66667,10.66667)">
@@ -80,7 +80,7 @@ const Footer = () => {
             <span className="text-white  w-52 hover:underline font-light text-sm  overflow-hidden whitespace-nowrap text-ellipsis" title="sonateksteels@gmail.com">
                     sonateksteels@gmail.com
                   </span>   </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=X-7,+Loha+Mandi,+Naraina,+New+Delhi+-+110028" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
+          <a href="https://maps.app.goo.gl/7yYhBbbtVX3gRJMQ9?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
             <svg className='text-white w-16 sm:w-6' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" d="M12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2h.5q.25 0 .5.05v2.025q-.25-.05-.488-.063T12 4Q9.475 4 7.738 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35q3.05-2.8 4.525-5.087T18 10.2V10h2v.2q0 2.5-1.987 5.438T12 22m0-10q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m6-4h2V5h3V3h-3V0h-2v3h-3v2h3z"/>
             </svg>

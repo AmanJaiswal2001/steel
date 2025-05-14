@@ -41,13 +41,13 @@ const  ContactForm=()=> {
         </div>
         
         <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <div>
               <input
                 type="text"
                 name="name"
                 placeholder="YOUR NAME*"
-                className="w-full px-4 py-3 border font-poppins border-gray-300 rounded"
+                className="w-full px-4 py-3 border outline-none font-poppins border-gray-300 rounded"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -56,54 +56,40 @@ const  ContactForm=()=> {
             <div>
               <input
                 type="text"
+                name="address"
+                placeholder="ADDRESS"
+                className="w-full px-4 py-3 outline-none border font-poppins border-gray-300 rounded"
+                value={formData.address}
+                onChange={handleChange}
+              />
+            </div>
+            {/* <div>
+              <input
+                type="text"
                 name="website"
                 placeholder="WEB SITE"
                 className="w-full px-4 py-3 border font-poppins border-gray-300 rounded"
                 value={formData.website}
                 onChange={handleChange}
               />
-            </div>
+            </div> */}
           </div>
           
-          <div className="grid grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <div>
               <input
                 type="tel"
                 name="phone"
                 placeholder="YOUR PHONE"
-                className="w-full px-4 py-3 border font-poppins border-gray-300 rounded"
+                className="w-full px-4 py-3 border outline-none font-poppins border-gray-300 rounded"
                 value={formData.phone}
                 onChange={handleChange}
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="address"
-                placeholder="ADDRESS"
-                className="w-full px-4 py-3 border font-poppins border-gray-300 rounded"
-                value={formData.address}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-6 mb-6">
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="EMAIL*"
-                className="w-full px-4 py-3 border font-poppins border-gray-300 rounded"
-                value={formData.email}
-                onChange={handleChange}
-                required
               />
             </div>
             <div className="relative">
               <select
                 name="inquiryType"
-                className="w-full px-4 py-3 border font-poppins border-gray-300 rounded appearance-none"
+                className="w-full px-4 py-3 border outline-none font-poppins border-gray-300 rounded appearance-none"
                 value={formData.inquiryType}
                 onChange={handleChange}
               >
@@ -119,12 +105,27 @@ const  ContactForm=()=> {
             </div>
           </div>
           
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="EMAIL*"
+                className="w-full px-4 py-3 outline-none border font-poppins border-gray-300 rounded"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+           
+          </div>
+          
           <div className="mb-6">
             <textarea
               name="message"
               placeholder="WRITE HERE*"
               rows="6"
-              className="w-full px-4 font-poppins py-3 border border-gray-300 rounded resize-none"
+              className="w-full px-4 font-poppins py-3 outline-none border border-gray-300 rounded resize-none"
               value={formData.message}
               onChange={handleChange}
               required
@@ -133,7 +134,7 @@ const  ContactForm=()=> {
           
           <button 
             type="submit" 
-            className="flex items-center justify-center bg-[#12396d] hover:bg-yellow-600 text-white font-medium px-6 py-3 rounded transition duration-300"
+            className="flex items-center justify-center bg-[#12396d] hover:bg-[#12396d] text-white font-medium px-6 py-3 rounded transition duration-300"
           >
             <span className="mr-2 font-poppins">SEND NOW</span>
             <Send size={16} />

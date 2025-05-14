@@ -177,7 +177,7 @@ export const  Testimonial=()=> {
     <section className=" px-10 w-[98%] py-5 sm:py-10 m-auto mt-5 sm:mt-0   border-t border-gray-900 bg-white  text-zinc-900 dark:text-white">
       <div className="container  w-full  mx-auto">
         <div className="flex w-full justify-center md:mb-6">
-          <div className="sm:w-full text-center">
+          <div className="sm:w-full  text-center">
             <h2 className="text-3xl text-black leading-none md:text-4xl font-bold sm:mb-4">
               Testimonial
             </h2>
@@ -188,7 +188,7 @@ export const  Testimonial=()=> {
           </div>
         </div>
         
-        <div className="relative sm:mt-5">
+        <div className="relative mt-5 sm:mt-5">
           {/* Carousel navigation */}
           <div className="absolute top-1/2 -translate-y-1/2 cursor-pointer -left-10 z-20">
             <button 
@@ -227,7 +227,7 @@ export const  Testimonial=()=> {
         </div>
         
         {/* Carousel indicators */}
-        <div className="flex justify-center mt-6 gap-2">
+        <div className="flex justify-center mt-10 gap-2">
           {testimonialList.map((_, index) => (
             <button
               key={index}
