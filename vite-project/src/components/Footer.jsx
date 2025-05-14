@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className='w-full  bg-[#12396d] '>
-      <footer className="grid grid-cols-2  sm:flex sm:flex-row gap-5 w-full bottom-0 h-full justify-evenly font-poppins bg-[#12396d] p-10">
+    <div className='w-full  bg-white  '>
+      <footer className=" gap-5 w-full bottom-0 h-full justify-between font-poppins bg-[linear-gradient(to_right,_#000000,_#111111cc,_#000000)] text-white   pt-5">
 
-        <nav className='flex flex-col sm:justify-center sm:items-center gap-5 w-56 col-span-2 sm:col-span-auto pt-2'>
+        {/* <nav className='flex flex-col sm:justify-center sm:items-center gap-5 w-56 col-span-2 sm:col-span-auto pt-2'>
           <img src="/Group 611.png" className='w-56' alt="Sonatek Logo" />
           <div className='flex sm:justify-center justify-items-start  gap-5 w-40'>
           <a className="link link-hover">
@@ -40,9 +40,11 @@ const Footer = () => {
                 </svg>
               </a>
           </div>
-        </nav>
-
-        <nav className='flex flex-col gap-3'>
+        </nav> */}
+<section className="grid grid-cols-2  sm:flex sm:flex-row gap-5 w-full bottom-0 h-full justify-between font-poppins" >
+      
+      <div className='grid grid-cols-2  sm:flex sm:flex-row justify-between px-20 gap-5 w-full'>
+        <nav className='flex flex-col w-1/4  gap-3'>
           <h3 className="text-lg text-white font-semibold">Buy online</h3>
           <Link to="/hotRolled/sheet" className="text-white hover:underline font-light text-sm">Hot Rolled Sheets</Link>
           <Link to="/hotRolled/coils" className="text-white hover:underline font-light text-sm">Hot Rolled Coils</Link>
@@ -50,7 +52,7 @@ const Footer = () => {
           <Link to="/coldRolled/coils" className="text-white hover:underline font-light text-sm">Cold Rolled Coils</Link>
         </nav>
 
-        <nav className='flex flex-col gap-3'>
+        <nav className='flex flex-col w-1/4 gap-3'>
           <h3 className="text-lg text-white font-semibold">Sonatek</h3>
           <Link to="/about" className="text-white hover:underline font-light text-sm">About us</Link>
           <Link to="#" className="text-white hover:underline font-light text-sm">Blogs</Link>
@@ -58,14 +60,14 @@ const Footer = () => {
           {/* <Link to="#" className="text-white hover:underline font-light text-sm">Sonatek</Link> */}
         </nav>
 
-        <nav className='flex flex-col gap-3'>
+        <nav className='flex flex-col w-1/4 gap-3  '>
           <h3 className="text-lg text-white font-semibold">Policy</h3>
           <a className="text-white hover:underline font-light text-sm">Terms & Conditions</a>
           <a href='/privacy' className="text-white hover:underline font-light text-sm">Privacy Policy</a>
           <a className="text-white hover:underline font-light text-sm">Return Policy</a>
         </nav>
-
-        <nav className='flex flex-col gap-3'>
+</div>
+        <nav className='flex flex-col w-1/2 gap-3  border-l-1 px-10 border-l-gray-50'>
           <h3 className="text-lg text-white font-semibold">Support</h3>
           <a href="tel:+919891998846" className="flex gap-2 items-center">
             <svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -86,18 +88,40 @@ const Footer = () => {
             </svg>
             <span className="text-white hover:underline font-light text-sm">X-7, Loha Mandi, Naraina, New Delhi - 110028</span>
           </a>
-        </nav>
-      </footer>
+          {/* <iframe
+  title="Sonatek Location"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.177416217808!2d77.12863467544926!3d28.64403307564907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0346b30ab7fb%3A0x59f12276fefde7f4!2sX-7%2C%20Loha%20Mandi%2C%20Naraina%2C%20New%20Delhi%2C%20Delhi%20110028!5e0!3m2!1sen!2sin!4v1715687450919!5m2!1sen!2sin"
+  width="100%"
+  height="100"
+  className="rounded-md border-0"
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/> */}
+<div className='flex justify-left w-full h-32 mt-5'>
+<img src="/map.png" className='w-full object-cover' alt="Sonatek Logo" />
+         
+</div>
 
-      <div className='h-16 w-[90%] mx-auto flex items-center border-t border-t-white justify-center'>
-        <p className='text-white font-poppins text-sm pt-2'>© Copyright 2025 Sonatek design by</p>
+        </nav>
+</section>
+<div className='flex justify-left px-20 mt-5'>
+<img src="/Group 611.png" className='w-[50%]' alt="Sonatek Logo" />
+         
+</div>
+     
+      </footer>
+     
+
+      <div className='h-16 w-[90%] w-full  bg-black  mx-auto flex items-center  justify-center'>
+        <hr className=' bg-white'></hr>
+        <p className='text-white  font-poppins text-sm pt-2'>© Copyright 2025 Sonatek. Designed by</p>
         <a
           target='_blank'
           rel='noopener noreferrer'
           href='https://ganesyx.com/'
           className='text-white font-bold font-poppins mx-2 text-sm pt-2 hover:underline'
-        >
-           Ganesyx
+        >Ganesyx
         </a>
       </div>
     </div>
