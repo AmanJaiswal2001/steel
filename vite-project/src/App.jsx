@@ -87,7 +87,7 @@ const appRouter = createBrowserRouter([
 ]);
 
 function App() {
-  const location = useLocation();
+
   useEffect(() => {
     if (window.gtag) {
       window.gtag('event', 'conversion', {
