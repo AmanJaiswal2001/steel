@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 
 const yearData = {
@@ -198,16 +199,21 @@ function ConstructionAwardsSection() {
               {label}
             </div> */}
 
-            <button 
-              className="bg-orange-500 rounded-md hover:bg-orange-600 text-white font-bold py-3 px-8 transition-all duration-500"
+
+<Link to="/mildStainless">
+
+<button 
+              className="bg-orange-500 rounded-md cursor-pointer hover:bg-orange-600 text-white font-bold py-3 px-8 transition-all duration-500"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
                 transitionDelay: '0.4s'
               }}
             >
-              MORE EXPLORE
+            EXPLORE MORE
             </button>
+</Link>
+          
           </div>
 
           {/* Right section */}

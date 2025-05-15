@@ -69,7 +69,7 @@ export  const BlogCard=()=> {
             ></div> 
                 {/* Content */}
                 <div className={`absolute inset-x-0 text-white p-6 transition-all duration-500
-                              ${activeIndex === index ? 'bottom-0' : 'bottom-10'}`}>
+                              ${activeIndex === index ? 'bottom-0' : 'bottom-14'}`}>
                   <h2 className={`text-3xl font-bold mb-2 transition-all duration-300
                                 ${activeIndex === index ? 'translate-y-0' : 'translate-y-16'}`}>
                     {card.title}

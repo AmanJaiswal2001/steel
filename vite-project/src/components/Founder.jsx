@@ -14,7 +14,7 @@ export const Founder = () => {
     transition={{ duration: 1, ease: "easeOut" }}
   >
     <img
-      className="w-full h-full sm:h-[500px] object-cover"
+      className="w-full h-full rounded-lg sm:h-[500px] object-cover"
       src="/indus.png"
       alt="Founder"
     />

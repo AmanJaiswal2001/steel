@@ -15,13 +15,19 @@ export const MobileSidebar = () => {
   
   // Add event listener to document body for global click detection
   useEffect(() => {
+    const handleOutsideClick = (e) => {
+      const sidebar = document.getElementById("mobile-sidebar");
+      if (sidebar && !sidebar.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+  
     if (isOpen) {
-      document.addEventListener('click', closeSidebar);
+      document.addEventListener("click", handleOutsideClick);
     }
-    
-    // Cleanup the event listener when component unmounts or sidebar closes
+  
     return () => {
-      document.removeEventListener('click', closeSidebar);
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, [isOpen]);
   
@@ -85,6 +91,7 @@ export const MobileSidebar = () => {
 
       {/* Sidebar - with stopPropagation to prevent clicks inside from closing */}
       <motion.div
+        id="mobile-sidebar"
         onClick={(e) => e.stopPropagation()}
         className="fixed top-0 left-0 h-screen w-[70%] bg-black/60 shadow-lg z-50 flex flex-col"
         initial={{ x: "-100%" }}

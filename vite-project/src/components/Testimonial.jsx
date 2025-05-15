@@ -91,14 +91,14 @@ const Rating = ({ rating }) => {
 // TestimonialItem component
 const TestimonialItem = ({ testimonial, isActive }) => (
   <div 
-    className={`shadow-xl rounded-2xl mt-4 transition-all duration-300 p-4 sm:p-6 
+    className={`shadow-xl rounded-2xl w-full mt-4 h-64 transition-all duration-300 p-4 sm:p-6 
       ${isActive 
         ? "scale-110 z-10 bg-[#12396d] text-white" 
         : "scale-90 opacity-70 bg-white text-black "}`}
   >
-    <div className="sm:mt-4  h-full">
+    <div className="sm:mt-0   h-full">
       <Rating rating={testimonial.rating} />
-      <p className={`sm:mb-6 sm:h-24 text-sm h-36 ${isActive ? "opacity-90" : "opacity-50"}`}>
+      <p className={`sm:mb-6 sm:h-14 text-sm h-36 ${isActive ? "opacity-90" : "opacity-50"}`}>
         {testimonial.description}
       </p>
       <div className="flex items-center">
@@ -106,7 +106,7 @@ const TestimonialItem = ({ testimonial, isActive }) => (
           <img
             src={testimonial.author.picture}
             alt={testimonial.author.fullName}
-            className="rounded-full border w-12 h-12 sm:w-24 sm:h-24"
+            className="rounded-full border w-12 h-12 sm:w-20 sm:h-20"
            
           />
         </div>
@@ -200,15 +200,16 @@ export const  Testimonial=()=> {
           </div>
           
           {/* Carousel items */}
-          <div className="grid grid-cols-1  sm:grid-cols-3 gap-0 sm:py-2 xl:px-20   px-5 ">
+          <div className="grid grid-cols-1 w-full   md:grid-cols-3 gap-0 sm:py-2 xl:px-5    px-5 ">
   {visibleTestimonials.map((item, index) => (
     <div 
       key={index}
-      className={`transition-all duration-500 ${
+      className={`transition-all w-full  duration-500 ${
+
         item.isActive ? "z-10 scale-100" : "z-0 scale-95"
       }`}
     >
-      <div className="w-full   md:w-[350px] ">
+      <div className="w-full     md:w-[450px] ">
         <TestimonialItem testimonial={item} isActive={item.isActive} />
       </div>
     </div>

@@ -66,7 +66,7 @@ export const Expandingcard=()=> {
     className={`absolute inset-0 transition-opacity duration-300
       ${activeIndex === index
         ? 'bg-transparent'
-        : 'sm:bg-gray-100/60 sm:group-hover:bg-gray-100/40'}`}
+        : ' sm:group-hover:bg-gray-100/40'}`}
   ></div>
 
       {/* Content box */}

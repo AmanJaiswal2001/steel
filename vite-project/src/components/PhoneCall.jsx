@@ -10,7 +10,7 @@ const PhoneCall = () => {
     className="fixed right-2 sm:right-4 bottom-4 sm:bottom-6 md:bottom-4 flex  items-center justify-start font-poppins    z-50 "
   >   <a 
       
-      href="https://wa.me/919891998846"
+  href="https://wa.me/918062960347?text=hello"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center w-full space-x-3"

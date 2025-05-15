@@ -139,7 +139,7 @@ their product portfolio.	</p>
 
 
     <div className='lg:w-[49%] w-full xl:pl-5 text-wrap flex flex-col  '>
-     <div className='w-full  h-96 relative '>
+     <div className='w-full   relative '>
      <img className='w-full h-full transition-transform duration-500 ease-in-out hover:scale-110 ' src="/coil-steel.jpg"/>
      
      
@@ -181,7 +181,7 @@ their product portfolio.	</p>
 
 
     <div className='xl:w-[55%] pt-5 xl:pt-0 w-full text-wrap flex flex-col  '>
-     <div className='w-full  h-96 relative '>
+     <div className='w-full   relative '>
      <img className='w-full h-full transition-transform duration-500 ease-in-out hover:scale-110' src="/health.jpg"/>
      
      

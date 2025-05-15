@@ -165,7 +165,7 @@ onChange={(e) => {
       if (selectedThickness && selectedWidth  || customNumber)
       {
         window.open(
-          `https://wa.me/918447175255?text=${encodeURIComponent(
+          `https://wa.me/918062960347?text=${encodeURIComponent(
             `Product: ${product.title}\nBrand: ${product.brand}\nThickness: ${selectedThickness} mm\nWidth: ${selectedWidth} mm\nQuantity: ${customNumber} sheets`
           )}`,
           "_blank"
