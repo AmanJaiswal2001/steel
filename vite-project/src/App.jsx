@@ -87,6 +87,14 @@ const appRouter = createBrowserRouter([
 ]);
 
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-17041977731/C92DCJmT7scaEIPjn74_'
+      });
+    }
+  }, [location]);
   return <RouterProvider router={appRouter} />;
 }
 

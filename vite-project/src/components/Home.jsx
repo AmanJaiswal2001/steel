@@ -27,9 +27,9 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full min-h-screen overflow-x-hidden">
-      {/* Carousel Section */}
-      <section className="w-full h-auto md:h-screen overflow-hidden">
+    <div className="w-full min-h-screen  overflow-x-hidden scroll-smooth snap-y snap-mandatory">
+   {/* Carousel Section */}
+   <section className="snap-start w-full h-auto sm:h-screen overflow-hidden">
         <Crousel />
       </section>
 

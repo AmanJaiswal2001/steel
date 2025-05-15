@@ -41,10 +41,10 @@ const Footer = () => {
               </a>
           </div>
         </nav> */}
-<section className="grid grid-cols-2  sm:flex sm:flex-row gap-5 w-full bottom-0 h-full justify-between font-poppins" >
-      
-      <div className='grid grid-cols-2  sm:flex sm:flex-row justify-between px-20 gap-5 w-full'>
-        <nav className='flex flex-col w-1/4  gap-3'>
+<section className="grid grid-cols-1   pb-2 sm:flex sm:flex-row sm:gap-5 gap-5 w-full bottom-0 h-full justify-between font-poppins" >
+      <div className='w-full '>
+      <div className='grid grid-cols-2 px-5   sm:flex sm:flex-row justify-between lg:px-20 gap-10 sm:gap-5 w-full'>
+        <nav className='flex flex-col sm:w-1/4  gap-3'>
           <h3 className="text-lg text-white font-semibold">Buy online</h3>
           <Link to="/hotRolled/sheet" className="text-white hover:underline font-light text-sm">Hot Rolled Sheets</Link>
           <Link to="/hotRolled/coils" className="text-white hover:underline font-light text-sm">Hot Rolled Coils</Link>
@@ -52,7 +52,7 @@ const Footer = () => {
           <Link to="/coldRolled/coils" className="text-white hover:underline font-light text-sm">Cold Rolled Coils</Link>
         </nav>
 
-        <nav className='flex flex-col w-1/4 gap-3'>
+        <nav className='flex flex-col sm:w-1/4 gap-3'>
           <h3 className="text-lg text-white font-semibold">Sonatek</h3>
           <Link to="/about" className="text-white hover:underline font-light text-sm">About us</Link>
           <Link to="#" className="text-white hover:underline font-light text-sm">Blogs</Link>
@@ -60,14 +60,20 @@ const Footer = () => {
           {/* <Link to="#" className="text-white hover:underline font-light text-sm">Sonatek</Link> */}
         </nav>
 
-        <nav className='flex flex-col w-1/4 gap-3  '>
+        <nav className='flex flex-col sm:w-1/4 gap-3  '>
           <h3 className="text-lg text-white font-semibold">Policy</h3>
           <a className="text-white hover:underline font-light text-sm">Terms & Conditions</a>
           <a href='/privacy' className="text-white hover:underline font-light text-sm">Privacy Policy</a>
           <a className="text-white hover:underline font-light text-sm">Return Policy</a>
         </nav>
 </div>
-        <nav className='flex flex-col w-1/2 gap-3  border-l-1 px-10 border-l-gray-50'>
+<div className='sm:flex hidden justify-left sm:px-20 mt-5'>
+<img src="/Group 611.png" className='w-full' alt="Sonatek Logo" />
+         
+</div>
+</div>
+
+        <nav className='flex flex-col sm:w-1/2 gap-3 px-5  border-l-1 sm:px-10 border-l-gray-50'>
           <h3 className="text-lg text-white font-semibold">Support</h3>
           <a href="tel:+919891998846" className="flex gap-2 items-center">
             <svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -76,14 +82,14 @@ const Footer = () => {
             <span className="text-white hover:underline font-light text-sm">+91-9891998846</span>
           </a>
           <a href="mailto:sonateksteels@gmail.com" className="flex gap-2 items-center">
-            <svg className='text-white w-10 sm:w-6 ' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <svg className='text-white  sm:w-6 ' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zM20 8l-7.475 4.675q-.125.075-.262.113t-.263.037t-.262-.037t-.263-.113L4 8v10h16zm-8 3l8-5H4z"/>
             </svg>
             <span className="text-white  w-52 hover:underline font-light text-sm  overflow-hidden whitespace-nowrap text-ellipsis" title="sonateksteels@gmail.com">
                     sonateksteels@gmail.com
                   </span>   </a>
           <a href="https://maps.app.goo.gl/7yYhBbbtVX3gRJMQ9?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-            <svg className='text-white w-16 sm:w-6' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <svg className='text-white  sm:w-6' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" d="M12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2h.5q.25 0 .5.05v2.025q-.25-.05-.488-.063T12 4Q9.475 4 7.738 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35q3.05-2.8 4.525-5.087T18 10.2V10h2v.2q0 2.5-1.987 5.438T12 22m0-10q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m6-4h2V5h3V3h-3V0h-2v3h-3v2h3z"/>
             </svg>
             <span className="text-white hover:underline font-light text-sm">X-7, Loha Mandi, Naraina, New Delhi - 110028</span>
@@ -98,22 +104,27 @@ const Footer = () => {
   loading="lazy"
   referrerPolicy="no-referrer-when-downgrade"
 /> */}
-<div className='flex justify-left w-full h-32 mt-5'>
-<img src="/map.png" className='w-full object-cover' alt="Sonatek Logo" />
+<a href="https://maps.app.goo.gl/7yYhBbbtVX3gRJMQ9?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
+       
+<div className='flex justify-left w-full sm:h-28 h-full rounded-lg mt-0'>
+<img src="/map.png" className='w-full f-full object-cover rounded-lg' alt="Sonatek Logo" />
          
 </div>
+</a>
 
         </nav>
-</section>
-<div className='flex justify-left px-20 mt-5'>
-<img src="/Group 611.png" className='w-[50%]' alt="Sonatek Logo" />
+
+        <div className='flex sm:hidden justify-left px-5 sm:px-20 sm:mt-5'>
+<img src="/Group 611.png" className='w-full' alt="Sonatek Logo" />
          
 </div>
+</section>
+
      
       </footer>
      
 
-      <div className='h-16 w-[90%] w-full  bg-black  mx-auto flex items-center  justify-center'>
+      <div className='h-16  w-full   bg-black  mx-auto flex items-center  justify-center'>
         <hr className=' bg-white'></hr>
         <p className='text-white  font-poppins text-sm pt-2'>© Copyright 2025 Sonatek. Designed by</p>
         <a

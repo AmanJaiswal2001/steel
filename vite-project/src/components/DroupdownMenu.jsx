@@ -236,9 +236,12 @@ export default DropdownMenu;
   export const DropdownMenu2=({buttonName})=>{
     const [open, setOpen] = useState(false);
    return(
-   <div className=" relative group   ">
-    
-          
+   <div className=" relative group   "
+      onMouseEnter={() => setOpen(true)}
+  onMouseLeave={() => {
+    setOpen(false);
+    // setSubMenu(null);
+       }}     >  
     <button
   onClick={() => setOpen(!open)}
   className="py-[0.45rem] relative font-medium font-poppins text-[16px] rounded flex items-center gap-1 cursor-pointer transition-colors"
@@ -267,7 +270,7 @@ export default DropdownMenu;
     
               
  
-    <ul className="absolute mt-5  z-40 pb-4 flex flex-col gap-5 p-5 text-[16px] right-0.5 bg-black/40 rounded-2xl shadow-lg" 
+    <ul className="absolute z-40 pb-4 flex flex-col gap-5 p-5 text-[16px] right-0.5 bg-black/40 rounded-2xl shadow-lg" 
     >
       <li>
       <div className="flex gap-5">
